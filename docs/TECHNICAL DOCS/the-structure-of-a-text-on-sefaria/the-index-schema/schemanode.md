@@ -1,0 +1,27 @@
+---
+title: SchemaNode
+excerpt: >-
+  Intermediate nodes used in defining the schema of an Index, creating the
+  structure of a book.
+deprecated: false
+hidden: false
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+  pages:
+    - type: basic
+      slug: the-structure-of-a-simple-text
+      title: The Structure of a Simple Text
+---
+# `SchemaNode`
+
+A `SchemaNode` is an intermediate node in the `Index` schema tree.  A `SchemaNode` generally serves to position multiple child nodes in an order.  Together, the nodes form trees which define a storage format.  Versions of a text will follow the structure as defined by the schema [tree](https://en.wikipedia.org/wiki/Tree_(data_structure)). 
+
+The easiest way to think of a `SchemaNode` in the context of most texts on Sefaria: it is a node positioning other nodes, as opposed to a `JaggedArrayNode` which indicates that text will be stored at this location. (i.e. the `Version` has a `JaggedArray` at this point in the structure, containing the text in nested arrays). 
+
+A complex text will be comprised of a `SchemaNode` with other nodes as children. The nodes at the leaves, indicating locations where text can be stored, will be of type`JaggedArrayNode`.
+
+For more on `SchemaNode`, and to view examples, see [The Structure of a Complex Text](doc:the-structure-of-a-complex-text).
