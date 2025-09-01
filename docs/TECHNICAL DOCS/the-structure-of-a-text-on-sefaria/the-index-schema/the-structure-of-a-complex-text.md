@@ -20,9 +20,9 @@ next:
 
 Texts which are more complex than a simple `Jagged Array` need a complex Index schema.  Complex schemas are always structured as trees made up of many nodes, usually a combination of type `SchemaNode` and `JaggedArrayNode`.  Each node has a `key` and `titles`. If it is a `SchemaNode`, it will have other nodes as children; otherwise it is a `JaggedArrayNode` describing `JaggedArray` content.  
 
-_Note: The `titles` blocks in all of the examples below were left as empty arrays for the sake of brevity, and `sharedTitle` were omitted for the same reasons. We will dive deeper on titles in [Schema Node Titles](doc:node-titles)_
+*Note: The`titles` blocks in all of the examples below were left as empty arrays for the sake of brevity, and `sharedTitle` were omitted for the same reasons. We will dive deeper on titles in [Schema Node Titles](doc:node-titles)*
 
-### 
+###
 
 ## Example 1: A "Simple" Complex Text
 
@@ -86,22 +86,7 @@ The root node in the schema, besides the required `key` and `titles` attributes,
 
 Let's take a step back, and conceptualize the structure of this Index record as a tree:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/ef788d0-complex_schema.drawio.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "75% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="75% " src="https://files.readme.io/ef788d0-complex_schema.drawio.png" />
 
 You'll see that at the root of the tree there is a `SchemaNode` representing the entirety of the text. This `SchemaNode` has three `JaggedArrayNode` children, each representing the content of that section which is stored on the `Version` in an associated `JaggedArray`. 
 
@@ -236,23 +221,9 @@ You'll see that the `schema` is a JSON object, with a `nodes` key that contains 
 
 Let's visualize this as a tree:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/79a8c38-abarbanel_complex.drawio.png",
-        null,
-        "The Schema of Abarbanel on Torah as a Tree"
-      ],
-      "align": "center",
-      "sizing": "125% ",
-      "caption": "The Schema of Abarbanel on Torah as a Tree"
-    }
-  ]
-}
-[/block]
-
+<Image alt="The Schema of Abarbanel on Torah as a Tree" align="center" width="125% " src="https://files.readme.io/79a8c38-abarbanel_complex.drawio.png">
+  The Schema of Abarbanel on Torah as a Tree
+</Image>
 
 You can see in the above diagram that the Abarbanel on Torah has two layers of `SchemaNode` nodes (represented by the purple circles). The root is the `SchemaNode` representing the entire Index. The immediate children are each a `SchemaNode` representing the Abarbanel's commentary on one of the Five Books of Torah. The children of each "book-level" `SchemaNode` are `JaggedArrayNode`nodes (represented by the yellow rectangles). Each book has a `JaggedArrayNode` for the Introduction (with a key of `Introduction`) and a `JaggedArrayNode` for the main body of the commentary on that book (with a key of `default`, more on that in [Default Nodes](doc:default-nodes)). Each `JaggedArrayNode` corresponds to an actual `JaggedArray` (i.e. a list of lists, represented by the loosely associated blue rectangles) on the `Version` of the text containing the actual text of that corresponding section of the Index. 
 
