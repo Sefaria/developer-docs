@@ -40,7 +40,7 @@ Category objects require `path`, which is a list of primary titles of categories
 
 Categories also must contain either `titles` or `sharedTitle`:
 
-- `titles` is a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this title is primary. An example of the titles list on the `Index` of `Bamidbar` can be found below: 
+* `titles` is a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this title is primary. An example of the titles list on the `Index` of `Bamidbar` can be found below: 
 
 ```
 [
@@ -57,7 +57,7 @@ Categories also must contain either `titles` or `sharedTitle`:
 ]
 ```
 
-- `sharedTitle`: a string key for an existing `Term` object. A `Term` is a shared title block which can be used across multiple `Index` objects and `Category` objects. **Note:** This Term must exist before attempting to create the category. 
+* `sharedTitle`: a string key for an existing `Term` object. A `Term` is a shared title block which can be used across multiple `Index` objects and `Category` objects. **Note:** This Term must exist before attempting to create the category. 
 
 ### Derived Attributes:
 
@@ -71,10 +71,10 @@ Categories also must contain either `titles` or `sharedTitle`:
 
 ### Optional Attributes
 
-- `enDesc`: An English language description of the category.
-- `heDesc`: A Hebrew language description of the category. 
-- `isPrimary`: A boolean flag.  When `True`, this category won't be nested within another, but will have its own page. An example of this is the Mishnah category, which you can see [here](https://sefaria.org/texts/Mishnah)
-- `searchRoot`: A string.  When present, this category will be moved within the specified root category, in the context of search filters.
+* `enDesc`: An English language description of the category.
+* `heDesc`: A Hebrew language description of the category. 
+* `isPrimary`: A boolean flag.  When `True`, this category won't be nested within another, but will have its own page. An example of this is the Mishnah category, which you can see [here](https://sefaria.org/texts/Mishnah)
+* `searchRoot`: A string.  When present, this category will be moved within the specified root category, in the context of search filters.
 
 ## Example Category Objects
 
