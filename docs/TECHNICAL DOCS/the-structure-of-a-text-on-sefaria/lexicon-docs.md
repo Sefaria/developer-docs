@@ -24,11 +24,11 @@ To see documentation on our lexicon APIs, see [here](https://developers.sefaria.
 
 If the Lexicon has an associated `Index`, `Lexicon.index_title` must match the `title` of the `Index` object, and on the Index, `lexiconName` must match the `name` of the `Lexicon` object.  If it has a `Version` associated with it, the title of the version should be placed in the `version_title`attribute, and language of the version in the`version_lang` attribute of the Lexicon.
 
-- `name` is the key field for the Lexicon
-- `attribution`, `source` and `source_url` are descriptive.  
-- `language`  
-- `to_language` 
-- `text_categories`
+* `name` is the key field for the Lexicon
+* `attribution`, `source` and `source_url` are descriptive.  
+* `language`  
+* `to_language` 
+* `text_categories`
 
 Example of a `Lexicon` object in our database: 
 
@@ -53,11 +53,11 @@ Recall that every `Lexicon` object is comprised of `LexiconEntry` objects which 
 
 Notes:
 
-- `parent_lexicon` must match `Lexicon.name`
-- `headword` - together with `parent_lexicon`, `headword `is the key for the Lexicon entry.  Must be unique for this Lexicon. 
-- `prev_hw` - The headword for the entry just before this one.  (required when Lexicon is presented as a text, with an `Index`.)  
-- `next_hw` - The headword for the entry just after this one.  (required when Lexicon is presented as a text, with an `Index`)  
-- `rid` - unique ID.  Used for lexical sorting.  When presented in order, the rid should be in order.  `rid` values should begin with a letter, to ensure lexical and not numeric sorting. 
+* `parent_lexicon` must match `Lexicon.name`
+* `headword` - together with `parent_lexicon`, `headword `is the key for the Lexicon entry.  Must be unique for this Lexicon. 
+* `prev_hw` - The headword for the entry just before this one.  (required when Lexicon is presented as a text, with an `Index`.)  
+* `next_hw` - The headword for the entry just after this one.  (required when Lexicon is presented as a text, with an `Index`)  
+* `rid` - unique ID.  Used for lexical sorting.  When presented in order, the rid should be in order.  `rid` values should begin with a letter, to ensure lexical and not numeric sorting. 
 
 ```
 { 
@@ -143,12 +143,12 @@ When a dictionary is presented as a text, it has a special `Index` record with a
 
 A `DictionaryNode` can be placed anywhere within a complex schema tree.  
 
-- `nodeType` - will be `DictionaryNode`
-- `lexiconName`
-- `default` - If it's true, entries can be referenced just with the dictionary name.
-- `lastWord` 
-- `firstWord`
-- `headwordMap`
+* `nodeType` - will be `DictionaryNode`
+* `lexiconName`
+* `default` - If it's true, entries can be referenced just with the dictionary name.
+* `lastWord` 
+* `firstWord`
+* `headwordMap`
 
 Below is the full record for the Jastrow dictionary.  Note the `lexiconName` and `DictionaryNode` element in the schema.  
 
@@ -366,6 +366,6 @@ Necessary for any regular (non-definition) text.
 
 ## Important Notes
 
-- In `sefaria/model/lexicon.py`, each dictionary relates to a subclass of `DictionaryEntry`.  Those correspondences are listed in `LexiconEntrySubClassMapping`
-- In `sefaria.js`, there is a line that lists the dictionaries:  `Sefaria.virtualBooksDict = [...]`
-- If this lexicon participates in the cross-dictionary auto-completer, it needs to be listed in `library.build_lexicon_auto_completers`
+* In `sefaria/model/lexicon.py`, each dictionary relates to a subclass of `DictionaryEntry`.  Those correspondences are listed in `LexiconEntrySubClassMapping`
+* In `sefaria.js`, there is a line that lists the dictionaries:  `Sefaria.virtualBooksDict = [...]`
+* If this lexicon participates in the cross-dictionary auto-completer, it needs to be listed in `library.build_lexicon_auto_completers`
