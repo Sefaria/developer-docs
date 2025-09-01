@@ -26,9 +26,9 @@ Each text on Sefaria varies slightly with regard to its copyright status, and it
 >
 > **Texts with a Creative Commons license** may carry requirements to give attribution, share derived work, or limit usage in commercial contexts. Click on the CC license link, to learn about its requirements or restrictions. Please note that most of the time, if a text requires attribution, this means giving credit to the original source of the text, not to Sefaria.
 >
-> - Texts with an attribution ("BY") clause require attribution if used.
-> - Texts with a non-commercial ("NC") clause can not be legally used for commercial purposes without the explicit license of the copyright holderIf a text includes a copyright notice, you may not reuse the text without permission from the copyright holder.
-> - Finally, if no license or "Public Domain" notice is listed, it means Sefaria has not verified the copyright status of a text.
+> * Texts with an attribution ("BY") clause require attribution if used.
+> * Texts with a non-commercial ("NC") clause can not be legally used for commercial purposes without the explicit license of the copyright holderIf a text includes a copyright notice, you may not reuse the text without permission from the copyright holder.
+> * Finally, if no license or "Public Domain" notice is listed, it means Sefaria has not verified the copyright status of a text.
 
 ## Usage of our Name and Logo
 
