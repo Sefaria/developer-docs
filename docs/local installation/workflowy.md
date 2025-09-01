@@ -49,11 +49,11 @@ Below are instructions for using Workflowy to define a book structure:
 
 #### An Example:
 
-- Siddur A / סידור א
-  - Shacharit / תפילת שחרית
-    - Minchah / תפילת מנחה
-    - Maariv|Arvit / מעריב|ערבית
-      - Vehu Rachum / והוא רחום
+* Siddur A / סידור א
+  * Shacharit / תפילת שחרית
+    * Minchah / תפילת מנחה
+    * Maariv|Arvit / מעריב|ערבית
+      * Vehu Rachum / והוא רחום
 
 ## Specifying Segment Depth
 
@@ -65,37 +65,37 @@ This means that if you want a certain bullet title to also use numeric continuat
 
 ##### Using only a number to denote depth
 
-- Midrash on Kings
-  - Introduction
-  - The Tale of the Four Kings [2]
+* Midrash on Kings
+  * Introduction
+  * The Tale of the Four Kings \[2]
 
 ##### Using section names (and the depth is implied from the number of section names):
 
-- Midrash on Kings
-  - Introduction
-  - The Tale of the Four Kings ['Chapter', 'Verse']
+* Midrash on Kings
+  * Introduction
+  * The Tale of the Four Kings ['Chapter', 'Verse']
 
 ##### Using both section names and types:
 
-- Midrash on Kings
-  - Introduction
-  - The Tale of the Four Kings ["Chapter:Integer", "Verse:Integer"]
+* Midrash on Kings
+  * Introduction
+  * The Tale of the Four Kings ["Chapter:Integer", "Verse:Integer"]
 
 ## Default Titles
 
 Sometimes you will find yourself with a structure like this:
 
-- The Tale of the Four Kings
-  - Introduction
-  - The Tale of the Four Kings
+* The Tale of the Four Kings
+  * Introduction
+  * The Tale of the Four Kings
 
 In such a case, we use a notion called a default node in order to eliminate the title repetition. To accomplish this, simply replace the redundant title with the special string `\*\*default\*\*`:
 
 #### Example of an Index Outline with a Default String
 
-- The Tale of the Four Kings
-  - Introduction
-  - `\*\*default\*\*`
+* The Tale of the Four Kings
+  * Introduction
+  * `\*\*default\*\*`
 
 ## Specifying Categories
 
@@ -103,11 +103,11 @@ If you wish to specify categories in the Sefaria table of contents (e.g. Talmud-
 
 #### Example of a Text with Categories
 
-- Modern Commentary on Esther / פירוש מודרני על מגילת אסתר %Tanakh,Commentary,Modern Commentary%
-  - Introduction / הקדמה
-    - Part One / חלק א׳
-    - Part Two / חלק ב׳
-  - `\*\*default\*\*`
+* Modern Commentary on Esther / פירוש מודרני על מגילת אסתר %Tanakh,Commentary,Modern Commentary%
+  * Introduction / הקדמה
+    * Part One / חלק א׳
+    * Part Two / חלק ב׳
+  * `\*\*default\*\*`
 
 ## Important Notes
 
@@ -115,8 +115,8 @@ If you wish to specify categories in the Sefaria table of contents (e.g. Talmud-
 
 The following characters are used as delimiters, and therefore may **NOT** be used inside of any title:
 
-- `/` - The forward slash
-- `|` - The pipe character
+* `/` - The forward slash
+* `|` - The pipe character
 
 Additionally, do **not** use a hyphen (i.e. `-`) inside titles. The titles are used to craft URLs to Sefaria and a hyphen is an illegal character inside a URL. 
 
@@ -126,11 +126,11 @@ Should you need to make a comment that will not be parsed, please place the text
 
 #### Example
 
-- Modern Commentary on Esther / פירוש מודרני על מגילת אסתר %Tanakh,Commentary,Modern Commentary%
-  - Introduction / הקדמה
-    - Part One / חלק א׳ # Remember to get the text for this!
-    - Part Two / חלק ב׳ # I have the text in a .docx file, must convert!
-  - `\*\*default\*\*`
+* Modern Commentary on Esther / פירוש מודרני על מגילת אסתר %Tanakh,Commentary,Modern Commentary%
+  * Introduction / הקדמה
+    * Part One / חלק א׳ # Remember to get the text for this!
+    * Part Two / חלק ב׳ # I have the text in a .docx file, must convert!
+  * `\*\*default\*\*`
 
 ## Optional Step: Adding optional text to the Workflowy ouline
 
@@ -140,10 +140,10 @@ In some cases, entering the version text into the Workflowy rather than later th
 
 A few standards are used by this script when parsing:
 
-- Text inside parenthesis `()` - is italicized (`<em>`).
-- A paragraph break [ie: the enter key] separates paragraphs.
-- Forward slashes `/` are interpreted as line breaks.
-- iI you need to list version attributes (i.e. versionTitle, versionSource, etc) use the notes on the primary text title (the topmost title- for the whole book) as that will usually not have other text under it. 
+* Text inside parenthesis `()` - is italicized (`<em>`).
+* A paragraph break \[ie: the enter key] separates paragraphs.
+* Forward slashes `/` are interpreted as line breaks.
+* iI you need to list version attributes (i.e. versionTitle, versionSource, etc) use the notes on the primary text title (the topmost title- for the whole book) as that will usually not have other text under it. 
 
 ## Exporting the Workflowy:
 
@@ -178,46 +178,14 @@ To upload the text to Sefaria, make sure your local installation of the project 
 
 Log-in to your local user account, make sure you have admin permissions set.
 
-Navigate to `/modtools`, on most machines this will be at <http://127.0.0.1:8000/modtools>. Scroll down to the `Workflowy Outline Upload` section, pictured below:
+Navigate to `/modtools`, on most machines this will be at [http://127.0.0.1:8000/modtools](http://127.0.0.1:8000/modtools). Scroll down to the `Workflowy Outline Upload` section, pictured below:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a93b28b-Screen_Shot_2024-02-21_at_12.58.33.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "60% ",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="60% " border={true} src="https://files.readme.io/a93b28b-Screen_Shot_2024-02-21_at_12.58.33.png" />
 
 Hit the button `choose file`, and select the `.opml` file downloaded from Workflowy. Select whether or not you are just creating an `Index` or also adding a `Version` of text. When complete, hit `upload` to upload your text to your local Sefaria database. 
 
 Upon success, in the text box beneath the `upload` button you will see the full `Index` record for the newly created text:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e067bb5-Screen_Shot_2024-02-21_at_12.47.22.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "60% ",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" width="60% " border={true} src="https://files.readme.io/e067bb5-Screen_Shot_2024-02-21_at_12.47.22.png" />
 
 (To see this in the code, navigate to [Sefaria-Project/sefaria/views.py](https://github.com/Sefaria/Sefaria-Project/blob/54f78cb72a2c071261cee3cfd8317141fc5bed9d/sefaria/views.py#L1334) to see the `modtools_upload_workflowy()` function).
