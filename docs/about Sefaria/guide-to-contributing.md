@@ -38,11 +38,11 @@ You may be able to look up connections in resources like the Torah Temimah, or y
 
 There are many types of connections we're looking for:
 
-**Commentary:** One text explicitly comments on another.  
-**Quotation:** The words of one text appear quoted in another.  
-**Reference:** One text refers to another.  
-**Summary:** One text summarizes the other.  
-**Explication:** One text explicates the meaning of another.  
+**Commentary:** One text explicitly comments on another.\
+**Quotation:** The words of one text appear quoted in another.\
+**Reference:** One text refers to another.\
+**Summary:** One text summarizes the other.\
+**Explication:** One text explicates the meaning of another.\
 **Related Passage:** Two texts are related or parallel in a way worth comparing.
 
 To add a connection follow these steps:
@@ -65,4 +65,4 @@ If you recognize a problem but don't know how to fix it, please report it to [co
 
 If you're comfortable translating Hebrew, creating new translations of classic texts and offering them to the world is an incredibly impactful way to share talents. There's a huge opportunity here, because so much of the basics have yet to be started. Search online and you'll find dozens of translations of Rashi on Tanakh; but what about Rambam, Ibn Ezra or Sforno?
 
-Following the success of sites like Wikipedia and Wikisource, Sefaria has adopted a collaborative approach. Anyone may start a new Community Translation, and anyone else may step in to suggest improvements. For more on adding and editing Community Translations, see [here](https://www.sefaria.org/sheets/483970.2?lang=bi&with=all&lang2=en).
+Following the success of sites like Wikipedia and Wikisource, Sefaria has adopted a collaborative approach. Anyone may start a new Community Translation, and anyone else may step in to suggest improvements. For more on adding and editing Community Translations, see [here](https://www.sefaria.org/sheets/483970.2?lang=bi\&with=all\&lang2=en).
