@@ -26,41 +26,74 @@ The shape API allows one to retrieve information about the shape of an `Index` o
 
 ### Example requests:
 
-- `/api/shape/Genesis`
-- `/api/shape/Pesach_Haggadah`
-- `/api/shape/Talmud/Bavli`
+* `/api/shape/Genesis`
+* `/api/shape/Pesach_Haggadah`
+* `/api/shape/Talmud/Bavli`
 
 ### Query Parameters
 
 The following two query parameters can be passed in calls to the Shape API to further filter results. 
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Parameter",
-    "h-1": "Type",
-    "h-2": "Default value",
-    "h-3": "Explanation",
-    "0-0": "`depth`",
-    "0-1": "`int`",
-    "0-2": "`2`",
-    "0-3": "The `depth` parameter in the query string indicates how many levels in the category tree to descend.  \nIf `depth=0`is passed, then the returned JSON descends to end of tree.",
-    "1-0": "`dependents`",
-    "1-1": "`bool`",
-    "1-2": "`false`",
-    "1-3": "The `dependents` parameter, if true, includes dependent texts.  By default, they are filtered out."
-  },
-  "cols": 4,
-  "rows": 2,
-  "align": [
-    "left",
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Parameter
+      </th>
 
+      <th>
+        Type
+      </th>
+
+      <th>
+        Default value
+      </th>
+
+      <th>
+        Explanation
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        `depth`
+      </td>
+
+      <td>
+        `int`
+      </td>
+
+      <td>
+        `2`
+      </td>
+
+      <td>
+        The `depth` parameter in the query string indicates how many levels in the category tree to descend.\
+        If `depth=0`is passed, then the returned JSON descends to end of tree.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `dependents`
+      </td>
+
+      <td>
+        `bool`
+      </td>
+
+      <td>
+        `false`
+      </td>
+
+      <td>
+        The `dependents` parameter, if true, includes dependent texts.  By default, they are filtered out.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Example Responses
 
