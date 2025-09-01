@@ -20,23 +20,23 @@ But complex web applications require structures (e.g. interactive controls) that
 
 ![Screen shot of Sefaria Source Sheet header](https://i.imgur.com/G567peP.png)
 
-Original Code:  
+Original Code:\
 `<div id="save" class="button" onclick="...">...</div>`
 
 This example is visible and clickable to sighted-users, but is unselectable by users navigating via the keyboard, and is functionally invisible to a screen reader and other assistive technology which understands this to be identical to just regular text.
 
-Better:  
+Better:\
 `<div id="save" class="button" tabindex="0" onkeyup="..." onclick="...">...</div>`
 
 This adds keyboard navigation to the element, but it's still functionally invisible to a screen reader.
 
-Best:  
+Best:\
 `<div id="save" role="button" class="button" tabindex="0" onkeyup="..." onclick="...">...</div>`
 
 This adds the ARIA role attribute so that assistive technologies can now render it properly.
 
-Another Best Alternative:  
-`<button id="save" class="button">`  
+Another Best Alternative:\
+`<button id="save" class="button">`\
 No JS required, however requires additional CSS hacking to get it to look the same cross-browser, and isn't always possible in all situations
 
 ## A digression on ARIA
@@ -45,7 +45,7 @@ No JS required, however requires additional CSS hacking to get it to look the sa
 
 This information is mapped by the browser to the operating system's accessibility API and exposed to assistive technologies. Which (ideally) will automatically announce widget-specific hints and prompts (e.g. JAWS "... button - to activate, press SPACE bar")
 
-More details: <https://www.w3.org/TR/wai-aria/>
+More details: [https://www.w3.org/TR/wai-aria/](https://www.w3.org/TR/wai-aria/)
 
 ***
 
@@ -59,23 +59,23 @@ Old standby native HTML elements such as `<button>` `<a>` `<h1>` and newer seman
 
 If you’re stuck with markup that you can’t change easily or really need to display it differently add the tags in. We’ve now tried to bake as many of these as possible into our existing React Components where we’ve already deployed them, and we will be deploying these as we move forward. 
 
-_The general principle is to just tack on a role and and a specific aria-tag where appropriate._  
+*The general principle is to just tack on a role and and a specific aria-tag where appropriate.*\
 e.g.:
 
-- Headings -- if you can’t use `h1-h6`: 
-  - `<p class="heading1" role="heading" aria-level="1">Fake Level Heading 1</p>`
-  - `<p class="heading2" role="heading" aria-level="2">Fake Level Heading 2</p>`  
-    _[Example](https://github.com/Sefaria/Sefaria-Project/blob/f4fbdd4c1033a0ad77ac5d226b5fc17a8ffc7e1a/static/js/ReaderTextTableOfContents.jsx#L290)_
+* Headings -- if you can’t use `h1-h6`: 
+  * `<p class="heading1" role="heading" aria-level="1">Fake Level Heading 1</p>`
+  * `<p class="heading2" role="heading" aria-level="2">Fake Level Heading 2</p>`\
+    *[Example](https://github.com/Sefaria/Sefaria-Project/blob/f4fbdd4c1033a0ad77ac5d226b5fc17a8ffc7e1a/static/js/ReaderTextTableOfContents.jsx#L290)*
 
-- Toggle Button: 
-  - `<span tabindex="0" role="button" aria-pressed="false" class="...">Option</span>`
-  - `<span tabindex="0" role="button" aria-pressed="true" class="...">Option</span>`
+* Toggle Button: 
+  * `<span tabindex="0" role="button" aria-pressed="false" class="...">Option</span>`
+  * `<span tabindex="0" role="button" aria-pressed="true" class="...">Option</span>`
 
-- Radio Button: 
-  - `<span tabindex="-1" role="radio" aria-checked="false" class="...">Yes</span>`
-  - `<span tabindex="0" role="radio" aria-checked="true" class="... selected">No</span>`
-  - `<span tabindex="-1" role="radio" aria-checked="false" class="...">Maybe</span>`  
-    _[Example](https://github.com/Sefaria/Sefaria-Project/blob/585935056248a536cccc019d96361f201c906c84/templates/account_settings.html#L32)_
+* Radio Button: 
+  * `<span tabindex="-1" role="radio" aria-checked="false" class="...">Yes</span>`
+  * `<span tabindex="0" role="radio" aria-checked="true" class="... selected">No</span>`
+  * `<span tabindex="-1" role="radio" aria-checked="false" class="...">Maybe</span>`\
+    *[Example](https://github.com/Sefaria/Sefaria-Project/blob/585935056248a536cccc019d96361f201c906c84/templates/account_settings.html#L32)*
 
 ***
 
@@ -87,14 +87,14 @@ This ARIA attribute effectively tacks on whatever message you assign to it, to w
 
 Some places we currently use this include:
 
-- [Text Segments which toggle a new panel opening](https://github.com/Sefaria/Sefaria-Project/blob/f4fbdd4c1033a0ad77ac5d226b5fc17a8ffc7e1a/static/js/TextRange.jsx#L444)
-- [Within the search filter box to explain how to navigate it](https://github.com/Sefaria/Sefaria-Project/blob/785da2b25fa6e354eb29d44285df58614328f9a2/static/js/SearchFilters.jsx#L458)
+* [Text Segments which toggle a new panel opening](https://github.com/Sefaria/Sefaria-Project/blob/f4fbdd4c1033a0ad77ac5d226b5fc17a8ffc7e1a/static/js/TextRange.jsx#L444)
+* [Within the search filter box to explain how to navigate it](https://github.com/Sefaria/Sefaria-Project/blob/785da2b25fa6e354eb29d44285df58614328f9a2/static/js/SearchFilters.jsx#L458)
 
 ***
 
 #### Set the `tabindex` to 0 on all clickable elements that don't already have focus by default (e.g. `<div>` & `<span>`)
 
-- When these elements become disabled be sure to set the `tabindex` to -1
+* When these elements become disabled be sure to set the `tabindex` to -1
 
 ***
 
@@ -102,9 +102,9 @@ Some places we currently use this include:
 
 e.g.:
 
-- [Popup modals](https://github.com/Sefaria/Sefaria-Project/blob/c5bc8cefec7ab6ab88cfdf6150a1318d28b73f13/templates/js/linker.js#L306)
-- [New reader panels](https://github.com/Sefaria/Sefaria-Project/blob/f4fbdd4c1033a0ad77ac5d226b5fc17a8ffc7e1a/static/js/ReaderApp.jsx#L708)
-- [Search filter box](https://github.com/Sefaria/Sefaria-Project/blob/785da2b25fa6e354eb29d44285df58614328f9a2/static/js/SearchFilters.jsx#L402)
+* [Popup modals](https://github.com/Sefaria/Sefaria-Project/blob/c5bc8cefec7ab6ab88cfdf6150a1318d28b73f13/templates/js/linker.js#L306)
+* [New reader panels](https://github.com/Sefaria/Sefaria-Project/blob/f4fbdd4c1033a0ad77ac5d226b5fc17a8ffc7e1a/static/js/ReaderApp.jsx#L708)
+* [Search filter box](https://github.com/Sefaria/Sefaria-Project/blob/785da2b25fa6e354eb29d44285df58614328f9a2/static/js/SearchFilters.jsx#L402)
 
 ***
 
@@ -118,9 +118,9 @@ Much of this will be done for you automatically if you're following the rules ab
 
 These are often difficult to manage and require a whole host of other javascript trickery including:
 
-- [Tracking keyboard tab keystrokes and forcing them to stay inside an interface until it's closed](https://github.com/Sefaria/Sefaria-Project/blob/785da2b25fa6e354eb29d44285df58614328f9a2/static/js/SearchFilters.jsx#L340)
-- Adding keyboard listener events for arrow keys to allow keyboard navigation  
-  _In general, we're trying to build these in higher in the code so you won't need to worry about them, but be aware that this issue exists._
+* [Tracking keyboard tab keystrokes and forcing them to stay inside an interface until it's closed](https://github.com/Sefaria/Sefaria-Project/blob/785da2b25fa6e354eb29d44285df58614328f9a2/static/js/SearchFilters.jsx#L340)
+* Adding keyboard listener events for arrow keys to allow keyboard navigation\
+  *In general, we're trying to build these in higher in the code so you won't need to worry about them, but be aware that this issue exists.*
 
 ## Current state and known issues
 
