@@ -13,18 +13,18 @@ next:
   description: ''
 ---
 > 🚧 Prefer API to Local Install
-> 
+>
 > We recommend that users wishing to interact with Sefaria use our public [API](ref:getting-started-with-your-api) to do so. For those wanting a more in-depth interaction with our code, we provide these installation instructions.
-> 
+>
 > **This page is under review**. While we are working to make it as accurate as up to date as possible, there may still be some inaccuracies.
 
 # Getting Started
 
 First clone the [Sefaria-Project](https://github.com/Sefaria/Sefaria-Project) repository to a directory on your computer, then follow the instructions:
 
-_Note: if you are a developer that might want to contribute code to Sefaria, we suggest first making a fork of this repository by clicking the "Fork" button when logged in to GitHub._
+*Note: if you are a developer that might want to contribute code to Sefaria, we suggest first making a fork of this repository by clicking the "Fork" button when logged in to GitHub.*
 
-_Note for macOS users - Install `Homebrew`:_
+*Note for macOS users - Install`Homebrew`:*
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -35,7 +35,7 @@ There are two methods with which you can run the Sefaria-Project, docker-compose
 We recommend the local installation, however if you are interested in exploring the experimental `docker-compose` approach, please see [here](https://developers.sefaria.org/docs/docker-compose-sefaria). 
 
 > ❗️ Note
-> 
+>
 > These installation instructions are optimized for users of Mac OS. We strongly encourage Windows users to explore our experimental [docker-compose method](https://developers.sefaria.org/docs/docker-compose-sefaria) of set up, or to retrieve our data entirely via the API.
 
 ***
@@ -44,7 +44,7 @@ We recommend the local installation, however if you are interested in exploring 
 
 #### 1\) Install Python 3.9
 
-_We Recommend using the latest Python 3.9 as opposed to later versions of Python (esp 3.10 and up) since it has been known to cause some compatibility issues. These are solvable, but for an easier install experience, we currently recommend 3.8-3.9_
+*We Recommend using the latest Python 3.9 as opposed to later versions of Python (esp 3.10 and up) since it has been known to cause some compatibility issues. These are solvable, but for an easier install experience, we currently recommend 3.8-3.9*
 
 ###### Linux and macOS
 
@@ -58,9 +58,9 @@ The Pyenv repository above also has recommendations for Windows.
 
 In order to simply install Python:
 
-- Read the [Official Python documentation on Windows](https://docs.python.org/3.7/using/windows.html) 
-- Go to the [Python Download Page](https://www.python.org/downloads/release/python-375/) and download and install Python.
-- Add the python directory to your OS' PATH variable if the installer has not done so. 
+* Read the [Official Python documentation on Windows](https://docs.python.org/3.7/using/windows.html) 
+* Go to the [Python Download Page](https://www.python.org/downloads/release/python-375/) and download and install Python.
+* Add the python directory to your OS' PATH variable if the installer has not done so. 
 
 #### 2\) Install virtualenv (Recommended, but optional):
 
@@ -82,17 +82,17 @@ Create [a pyenv virtualenv](https://github.com/pyenv/pyenv-virtualenv#using-pyen
 
 In your Sefaria directory, run `pyenv local [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g. `3.7.5/envs/sefaria-venv`). This should serve to activate the virtualenv whenever you are in the Sefaria directory. 
 
-_Note: If, after following the installation and configuration instructions, running `python -V` still displays the system version, you may have to manually add the shims directory to your path._ If that does not correct the issue, you should check your bash init file (.zshrc, .bashrc, or the like) for the line `eval "$(pyenv init -)"` (not inside an if statement) and change it to `eval "$(pyenv init --path)"` and restart the shell.
+*Note: If, after following the installation and configuration instructions, running`python -V` still displays the system version, you may have to manually add the shims directory to your path.* If that does not correct the issue, you should check your bash init file (.zshrc, .bashrc, or the like) for the line `eval "$(pyenv init -)"` (not inside an if statement) and change it to `eval "$(pyenv init --path)"` and restart the shell.
 
-_Note: If you are using an IDE like PyCharm, you can (and should) configure the interpreter options on your Sefaria-Project to point to the Python executable of this virtualenv (e.g. `~/.pyenv/versions/3.7.5/envs/sefaria-venv/bin/python3.7`)_
+*Note: If you are using an IDE like PyCharm, you can (and should) configure the interpreter options on your Sefaria-Project to point to the Python executable of this virtualenv (e.g.`~/.pyenv/versions/3.7.5/envs/sefaria-venv/bin/python3.7`)*
 
 ##### Classic virtualenv
 
 Install [virtualenv](http://pypi.python.org/pypi/virtualenv), then enter these commands:
 
-_Note: You may need to install Pip (see below) first in order to install virtualenv_
+*Note: You may need to install Pip (see below) first in order to install virtualenv*
 
-_Note: You can perform this step from anywhere in your command line, but it might be easier and tidier to run this step from the root of your project directory that you just cloned. e.g `~/web-projects/Sefaria-Project $`_
+*Note: You can perform this step from anywhere in your command line, but it might be easier and tidier to run this step from the root of your project directory that you just cloned. e.g`~/web-projects/Sefaria-Project $`*
 
 ```
 virtualenv venv --distribute
@@ -113,7 +113,7 @@ If you don't already have it in your Python installation, install [Pip](https://
 
 Use instructions [here](http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/) and then make sure that the scripts subfolder of the python installation directory is also in PATH.
 
-_Note: this step (and **most** of the following command line instructions) must be run from the Sefaria-Project root directory_
+*Note: this step (and**most** of the following command line instructions) must be run from the Sefaria-Project root directory*
 
 Run the following command: 
 
@@ -122,16 +122,16 @@ pip install -r requirements.txt
 ```
 
 > 🚧 Warning
-> 
+>
 > Please note, sometimes the `psycopg2` package can cause installation issues, and it is not usually needed for a local installation.
-> 
+>
 > If you run into trouble, there is a recommended change in the `requirements.txt` file. Just comment out the existing line and uncomment the recommended line. 
-> 
-> If that doesn't work, we recommend _temporarily_ commenting out the line `psycopg2==2.8.6` in `requirements.txt` and then re-running `pip install -r requirements.txt`:
+>
+> If that doesn't work, we recommend *temporarily* commenting out the line `psycopg2==2.8.6` in `requirements.txt` and then re-running `pip install -r requirements.txt`:
 
-If you are _not_ using virtualenv, you may have to run it with sudo: `sudo pip install -r requirements.txt`
+If you are *not* using virtualenv, you may have to run it with sudo: `sudo pip install -r requirements.txt`
 
-_Note: You'll probably need to install the Python development libraries as well:_
+*Note: You'll probably need to install the Python development libraries as well:*
 
 ###### On Debian systems:
 
@@ -145,7 +145,7 @@ sudo apt-get install python-dev python3-dev libpq-dev
 sudo dnf install python3-devel libpq-devel
 ```
 
-_Note: If you see an error that `pg_config executable not found`, you need to install PostgreSQL. If on macOS you see an error while `Building wheel for psycopg2` for`linker command failed with exit code 1`, you may need to add the path to OpenSSL_
+*Note: If you see an error that`pg_config executable not found`, you need to install PostgreSQL. If on macOS you see an error while `Building wheel for psycopg2` for`linker command failed with exit code 1`, you may need to add the path to OpenSSL*
 
 ```
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
@@ -179,7 +179,7 @@ sudo apt-get install gettext
 
 #### 5\) Create a local settings file:
 
-_Note: this step must be run from the Sefaria-Project root directory_
+*Note: this step must be run from the Sefaria-Project root directory*
 
 ```
 cd sefaria
@@ -243,8 +243,8 @@ If you used the recommended dump, `dump_small.tar.gz`, create an empty collectio
 
 #### 9\) Set up Django's local server
 
-Sefaria is using Google's reCAPTCHA to verify the user is not a bot. For a deployment, you should register and use your own reCAPTCHA keys (<https://pypi.org/project/django-recaptcha/#installation>).  
-For local development, the default test keys would suffice. The warning can be suppressed by uncommenting the following in the local_settings.py file:
+Sefaria is using Google's reCAPTCHA to verify the user is not a bot. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)).\
+For local development, the default test keys would suffice. The warning can be suppressed by uncommenting the following in the local\_settings.py file:
 
 ```
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
@@ -260,7 +260,7 @@ python manage.py migrate
 
 #### 10\) Install Node:
 
-_Note: Older versions of `Node` and `npm` ran into a file name length limit on Windows OS. This problem should be mitigated in newer versions on Windows 10._
+*Note: Older versions of`Node` and `npm` ran into a file name length limit on Windows OS. This problem should be mitigated in newer versions on Windows 10.*
 
 Node is now required to run the site. Even if you choose to have Javascript run only on the client, we are also using [Webpack](https://webpack.js.org/) to bundle our Javascript. 
 
