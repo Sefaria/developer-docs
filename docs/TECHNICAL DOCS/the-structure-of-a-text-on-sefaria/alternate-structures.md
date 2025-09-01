@@ -22,14 +22,14 @@ The structure with the greatest detail is used as the storage format of the text
 
 `alt_structs` is a dictionary, mapping structure keys (which can be arbitrary) to alt structures.  Alt structures look very much like [the Index Schema](doc:the-index-schema) but with a few differences:
 
-- The `nodeType` is generally `ArrayMapNode`
-- The root node has no titles.  It uses the titles of the schema root. 
-- All nodes of the alt structure do not have `key` fields.  
-- Terminal nodes in an alt structure have mappings to underlying references, using one or two attributes:
-  - `wholeRef`: A single string, which has a ref to the whole range covered by this node
-  - `refs`: (required only when `depth` is greater than zero) A jagged array of refs that correspond to how `wholeRef` is broken into sections named by `sectionNames`.
-- You can set display attributes, which affect how an alternate structure is visualized in its Table of Contents:
-  - `includeSections`: when True, the node will include links to each individual section within `wholeRef` underneath the alternate node name (e.g., [Zohar](http://www.sefaria.org/Zohar)).
+* The `nodeType` is generally `ArrayMapNode`
+* The root node has no titles.  It uses the titles of the schema root. 
+* All nodes of the alt structure do not have `key` fields.  
+* Terminal nodes in an alt structure have mappings to underlying references, using one or two attributes:
+  * `wholeRef`: A single string, which has a ref to the whole range covered by this node
+  * `refs`: (required only when `depth` is greater than zero) A jagged array of refs that correspond to how `wholeRef` is broken into sections named by `sectionNames`.
+* You can set display attributes, which affect how an alternate structure is visualized in its Table of Contents:
+  * `includeSections`: when True, the node will include links to each individual section within `wholeRef` underneath the alternate node name (e.g., [Zohar](http://www.sefaria.org/Zohar)).
 
 Here is an example of one section of the alternate structure of the book of Exodus:
 
