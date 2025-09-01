@@ -13,7 +13,7 @@ next:
 ## Run with `docker-compose`
 
 > 🚧 Note
-> 
+>
 > This approach is **experimental** and **has not yet been fully tested**. If this is a method that would help you, please [contact us](page:contact-us) and let us know.
 
 ##### 1\) Install Docker and Docker Compose
