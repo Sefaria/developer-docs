@@ -26,8 +26,8 @@ A number of API calls depend on creating valid text references (citations), whic
 
 The following endpoints have not (yet) been documented in our API playground. To learn a bit more about these endpoints and their use in the Sefaria ecosystem, you can read the doc linked below. 
 
-- [Elastic Search Proxy](doc:search-api)
-- [Shape API](doc:shape-api)
-- [Categories API](doc:categories-api)
+* [Elastic Search Proxy](doc:search-api)
+* [Shape API](doc:shape-api)
+* [Categories API](doc:categories-api)
 
 To see a complete list of known texts, please view the [Sefaria Table of Contents](https://www.sefaria.org/texts).
