@@ -34,7 +34,7 @@ term_obj = {
 full_url = "http://whatever.server.exmp/api/terms/{}".format(urllib.quote("Ramban"))
 ```
 
-Alternatively, you can use the post_term method located in `sources/functions.py` in `Sefaria-Data`:
+Alternatively, you can use the post\_term method located in `sources/functions.py` in `Sefaria-Data`:
 
 ```
 from sources.functions import post_term
