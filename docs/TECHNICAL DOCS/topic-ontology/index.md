@@ -14,7 +14,7 @@ next:
       slug: api-wiki
       title: The Sefaria API
 ---
-To learn more about topics, see the [Topics API](ref:get_api-topics-topic-slug).
+To learn more about topics, see the [Topics API](ref:get_api-topics-topic-slug). 
 
 Sefaria's Topics collection is organized as an ontology based on [BFO](https://en.wikipedia.org/wiki/Basic_Formal_Ontology). Below is a basic overview of BFO's structure, followed by some of the more important nodes Sefaria has added. The `slug` is the unique ID used in our database.
 
