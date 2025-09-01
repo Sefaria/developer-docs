@@ -20,7 +20,7 @@ Want to get this quarterly newsletter in your inbox? [Sign up today ](https://se
 
 Issue #3 | December 19, 2024 | 18 Kislev, 5785
 
-Which specific texts should one study to fulfill the mitzvah of studying Torah? This can be a tricky question for many. The Talmud offers one potential answer, though! In tractate Kiddushin ([30a](https://www.sefaria.org.il/Kiddushin.30a.10?vhe=hebrew|William_Davidson_Edition_-_Vocalized_Aramaic&lang=he)), the rabbis posit that we should ensure our study is evenly divided among three significant categories of the Jewish canon: Tanakh, Mishnah, and Talmud.
+Which specific texts should one study to fulfill the mitzvah of studying Torah? This can be a tricky question for many. The Talmud offers one potential answer, though! In tractate Kiddushin ([30a](https://www.sefaria.org.il/Kiddushin.30a.10?vhe=hebrew|William_Davidson_Edition_-_Vocalized_Aramaic\&lang=he)), the rabbis posit that we should ensure our study is evenly divided among three significant categories of the Jewish canon: Tanakh, Mishnah, and Talmud.
 
 Recently, as I was participating in the technical aspects of curating sources for Sefaria's topic pages, this verse came to mind. Our team was using LLMs and text embeddings to facilitate curation of sources for approximately 1,000 topics, with a goal of creating engaging, relevant, and diverse pages. Following the wisdom of our sages, we aimed to represent as many different categories as possible from the library.
 
@@ -32,8 +32,8 @@ I found this project fascinating — it took software engineering, theoretical c
 
 Thank you for being part of Sefaria's developer community!
 
-Until next time,  
-Yonadav Leibowitz  
+Until next time,\
+Yonadav Leibowitz\
 Junior Research Engineer
 
 ## HOT OFF THE PRESSES: Sefaria @ PyCon Israel
@@ -52,22 +52,7 @@ In the example below, you'd follow Siddur Edot HaMizrach → Preparatory Prayers
 
 Once you get the hang of it, you can shortcut the whole process by deriving the ref from the work's Table of Contents (ToC). The ref is often a sequence of the path through the ToC.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e2e52bd8b7e647a1dc4106f22b0c25d28c925f989ea11f3a8f16123e15261686-Screenshot_2025-01-26_at_11.23.41.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="500px" src="https://files.readme.io/e2e52bd8b7e647a1dc4106f22b0c25d28c925f989ea11f3a8f16123e15261686-Screenshot_2025-01-26_at_11.23.41.png" />
 
 ## Behind the Scenes
 
@@ -81,26 +66,11 @@ Since our text is returned in a nested array structure, combining the dimensions
 
 The basic logic was a simple nested `for` loop:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e0f8b68b640bd4ebb06e887603815c4c485c4e1657c3b3611d5e7cf6085036ed-Screenshot_2025-01-26_at_11.26.41.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
+<Image align="center" width="500px" src="https://files.readme.io/e0f8b68b640bd4ebb06e887603815c4c485c4e1657c3b3611d5e7cf6085036ed-Screenshot_2025-01-26_at_11.26.41.png" />
 
-
-- `toSections` - If there's a start segment explicit in the data, set the counter to start at that value. If not, set it to `1`. In the above, example, the counter would be set to `23` as seen in `sections`. **Note**: In cases where the `ref` is an entire chapter, there is no second value in the arrays `sections` or `toSections`.
-- Iterate verse by verse through the length of the chapter until the end of the text, incrementing the verse number. Upon beginning the next chapter, restart the verse counter at `1`.
-- Prior to insertion into the text (via simple text concatenation), we call another function to convert the number to Hebrew gematria for Hebrew texts.
+* `toSections` - If there's a start segment explicit in the data, set the counter to start at that value. If not, set it to `1`. In the above, example, the counter would be set to `23` as seen in `sections`. **Note**: In cases where the `ref` is an entire chapter, there is no second value in the arrays `sections` or `toSections`.
+* Iterate verse by verse through the length of the chapter until the end of the text, incrementing the verse number. Upon beginning the next chapter, restart the verse counter at `1`.
+* Prior to insertion into the text (via simple text concatenation), we call another function to convert the number to Hebrew gematria for Hebrew texts.
 
 We're thrilled to have used this logic to deploy a new enhancement for Tanakh sources this past month and hope to continue iterating in the future!
 
@@ -112,22 +82,7 @@ Hadran is an online educational resources dedicated to making Talmud study acces
 
 ...and it's also powered by Sefaria! By using our API to integrate relevant texts, Hadran learners have access to the entire Talmud alongside lessons by season women teachers and explanatory essays. In short, Hadran's site doesn't have to build the entire infrastructure or digitize the whole Talmud from scratch — they can just use our systems and data to connect their learns to a wealth of resources.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0aa9b75dd89d91b7f001fc7eafc01efd964193465feefa324e7e45fb3dd49b4e-Screenshot_2025-01-26_at_11.28.38.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "500px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="500px" src="https://files.readme.io/0aa9b75dd89d91b7f001fc7eafc01efd964193465feefa324e7e45fb3dd49b4e-Screenshot_2025-01-26_at_11.28.38.png" />
 
 To see more projects powered by our data, [check out the complete list](https://developers.sefaria.org/docs/powered-by-sefaria).
 
@@ -141,7 +96,7 @@ To see more projects powered by our data, [check out the complete list](https://
 
 Want to get this quarterly newsletter in your inbox? [Sign up](🔗) today for the Sefaria Developer's Digest. 
 
-### Your donation powers the future of Torah - for _all_.
+### Your donation powers the future of Torah - for *all*.
 
-Sefaria’s resources have always been free to use — and that will always be true.  
+Sefaria’s resources have always been free to use — and that will always be true.\
 [Join the community of Sefaria supporters](🔗https://donate.sefaria.org/) who are the force behind new resources, new tech, new tools, and more.
