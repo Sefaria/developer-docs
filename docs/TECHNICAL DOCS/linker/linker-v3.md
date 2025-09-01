@@ -45,9 +45,9 @@ The `mode` option affects how the found references behave.  If not specified, th
 
 The value of `mode` is one of the following strings:
 
-- `"popup-click"` - when the the user clicks on a reference, a popup is displayed with the textual content.  Within the popup is a link to Sefaria.  
+* `"popup-click"` - when the the user clicks on a reference, a popup is displayed with the textual content.  Within the popup is a link to Sefaria.  
 
-- `"link"` - The references are turned into links, which open in a new browser tab when clicked.  There is no popup with textual content. 
+* `"link"` - The references are turned into links, which open in a new browser tab when clicked.  There is no popup with textual content. 
 
 ### `contentLang`
 
@@ -59,7 +59,7 @@ Sets the language of the popup interface which controls the text in the bottom b
 
 ### `excludeFromLinking`
 
-Sets a CSS selector that defines elements on the page that you do _not_ want to be linked. This may be useful, for example, if you have page headers where links or popups could be distracting. Anything within an existing `<a>` tag will be excluded by default. Citations that are found but excluded are still tracked for usage in the Web Pages section on Sefaria. The value of the parameter is a string which is any valid CSS selector.
+Sets a CSS selector that defines elements on the page that you do *not* want to be linked. This may be useful, for example, if you have page headers where links or popups could be distracting. Anything within an existing `<a>` tag will be excluded by default. Citations that are found but excluded are still tracked for usage in the Web Pages section on Sefaria. The value of the parameter is a string which is any valid CSS selector.
 
 ### `whitelistSelector`
 
@@ -67,12 +67,12 @@ Sets a CSS selector that defines elements on the page that should always be sear
 
 ### `dynamic`
 
-Set this to true if the linker is being called dynamically-your page content changes dynamically after the initial page load. Normally, the linker sends a tracking signal back to Sefaria and determines the page URL by checking the first canonical link tag on your page. However, most dynamic pages do not update this tag when their content changes. By setting `dynamic `to true, the linker will instead use window.href to get the current URL, ensuring that dynamically generated pages are tracked correctly.
+Set this to true if the linker is being called dynamically-your page content changes dynamically after the initial page load. Normally, the linker sends a tracking signal back to Sefaria and determines the page URL by checking the first canonical link tag on your page. However, most dynamic pages do not update this tag when their content changes. By setting `dynamic `to true, the linker will instead use window\.href to get the current URL, ensuring that dynamically generated pages are tracked correctly.
 
 ### `popupStyles`
 
-The `popupStyles` option allows for custom styling of the popup box - colors, borders, fonts, etc.  
-If present, it must be a dictionary of JavaScript style attributes and their values.  
+The `popupStyles` option allows for custom styling of the popup box - colors, borders, fonts, etc.\
+If present, it must be a dictionary of JavaScript style attributes and their values.\
 See examples below. 
 
 ### `hidePopupsOnMobile`
@@ -117,9 +117,9 @@ In this example, "The Koren Jerusalem Bible" version will be used for English fo
 
 If true, will turn on debug mode, which may help to determine why a certain citation isn't being linked. In debug mode, citations will be surrounded by a colored border with the following meanings:
 
-- green border: citation successfully linked
-- red border: citation recognized but not successfully linked. Either Sefaria doesn't have this text, the citation was incorrectly marked, or the linker has a bug. Note, these citations will not appear when debug mode is false.
-- yellow border: citation was linked to multiple possible links because it was determined to be ambiguous. Note, ambiguous citations will not appear when debug mode is off.
+* green border: citation successfully linked
+* red border: citation recognized but not successfully linked. Either Sefaria doesn't have this text, the citation was incorrectly marked, or the linker has a bug. Note, these citations will not appear when debug mode is false.
+* yellow border: citation was linked to multiple possible links because it was determined to be ambiguous. Note, ambiguous citations will not appear when debug mode is off.
 
 To report an issue with a citation in debug mode, click the citation you want to report and click "Report" (this button only appears in debug mode).
 
@@ -127,10 +127,10 @@ To report an issue with a citation in debug mode, click the citation you want to
 
 As of version 3 of the linker, the following options are no longer supported:
 
-- `selector`
-- `excludeFromTracking`
-- `parenthesesOnly`
-- `quotationOnly`
+* `selector`
+* `excludeFromTracking`
+* `parenthesesOnly`
+* `quotationOnly`
 
 ## Dynamic Sites
 
@@ -191,12 +191,12 @@ Use only Hebrew for the interface and content:
 
 As of version 3, the linker should be able to recognize most types of citations. Below are a few examples of the types of citations which should work:
 
-- בראשית א
-- רשי ראש השנה ד״ה אלא ביבנה
-- פרק מאימתי
-- פרק בתרא דפסחים
-- שם פרק ג
-- בראשית פרק א עד פרק ד
+* בראשית א
+* רשי ראש השנה ד״ה אלא ביבנה
+* פרק מאימתי
+* פרק בתרא דפסחים
+* שם פרק ג
+* בראשית פרק א עד פרק ד
 
 Note, the linker supports ibid / שם citations, although in practice one should be cautious when linking these since they currently cause many false positives. 
 
