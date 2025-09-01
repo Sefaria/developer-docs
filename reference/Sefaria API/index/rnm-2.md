@@ -1,5 +1,5 @@
 ---
-title: rnm-2
+title: Get v2 index
 excerpt: >-
   This API endpoint will retrieve the full mongo record of the given `Index` as
   it appears in the database.
