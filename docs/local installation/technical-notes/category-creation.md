@@ -35,7 +35,7 @@ POST requests need a full valid category object in the `json` attribute of the P
 
 Send a POST request to `/api/category` with a complete serialized category record in the `json` attribute of the POST body.
 
-**Sample `body` of a POST Request to Create a New Category**
+**Sample`body` of a POST Request to Create a New Category**
 
 ```
 {
