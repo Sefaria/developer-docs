@@ -16,21 +16,7 @@ In this tutorial, we're going to using the [Topics API](https://developers.sefar
 
 You can see the entire repository [here](https://github.com/Sefaria/dataviz-tutorial). 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9336436205922c01d519d8a7bdb15182a5721f407e1c19ed0c14192e6eade1a9-Screenshot_2025-03-06_at_11.30.03.png",
-        "",
-        "Visualization Screenshot"
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/9336436205922c01d519d8a7bdb15182a5721f407e1c19ed0c14192e6eade1a9-Screenshot_2025-03-06_at_11.30.03.png" />
 
 ## Tutorial Set Up
 
@@ -73,7 +59,7 @@ import {Treemap} from "d3plus-react";
 ```
 
 > 🚧 Component Structure
-> 
+>
 > For the sake of simplicity and for the flow of a tutorial (where text is interwoven with code) we chose to keep everything in one big component. However, ideally it would be better if each aspect of the page was its own component rendered inside of the `<App />` component.
 
 ## useState() Hooks
@@ -230,9 +216,11 @@ The `<Treemap/>` component takes one prop, `config`, where we can pass the data 
 
 The next few lines arrange the desired height and width of the visualization, as well as overriding some defaults to make things clean and presentable. (`shapeConfig` allows us to hide percentage values, which make less sense in this case... and `tooltipConfig` does the same, just in the context of the hover-able tooltip).
 
-> 🎉 Congratulations!
-> 
-> You've officially built your first data visualization using data from the Sefaria API!
+<Callout icon="🎉" theme="default">
+  ### Congratulations!
+
+  You've officially built your first data visualization using data from the Sefaria API!
+</Callout>
 
 # Further Expansion
 
@@ -240,9 +228,9 @@ Obviously, this example is extremely bare-bones and just meant as a proof of con
 
 Some possibilities:
 
-- Experimenting with the use of different visualizations
-- Experimenting with a different visualization library
-- Experimenting with different API endpoints, what's most the most useful visualization you can make based on the Jewish canon?
+* Experimenting with the use of different visualizations
+* Experimenting with a different visualization library
+* Experimenting with different API endpoints, what's most the most useful visualization you can make based on the Jewish canon?
 
 If you build something, [let us know](https://developers.sefaria.org/page/contact-us)! We love seeing all of the projects [powered by our data](https://developers.sefaria.org/docs/powered-by-sefaria)!
 
