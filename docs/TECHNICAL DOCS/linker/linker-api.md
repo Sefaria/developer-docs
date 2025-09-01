@@ -84,8 +84,8 @@ When `with_text` URL param is `1`, the following keys are added to the response 
 
 | Field       | Description                                                              |
 | ----------- | ------------------------------------------------------------------------ |
-| he          | Hebrew text of <ref> where `<ref>` is the key of the `refData` element.  |
-| en          | English text of <ref> where `<ref>` is the key of the `refData` element. |
+| he          | Hebrew text of `<ref>` where `<ref>` is the key of the `refData` element.  |
+| en          | English text of `<ref>` where `<ref>` is the key of the `refData` element. |
 | isTruncated | Was text truncated according to `max_segments` URL param.                |
 
 ### debug format
