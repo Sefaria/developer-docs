@@ -37,9 +37,9 @@ The `mode` option affects how the found references behave.  If not specified, th
 
 The value of `mode` is one of the following strings:
 
-- "popup-click" - when the the user clicks on a reference, a popup is displayed with the textual content.  Within the popup is a link to Sefaria.  
+* "popup-click" - when the the user clicks on a reference, a popup is displayed with the textual content.  Within the popup is a link to Sefaria.  
 
-- "link" - The references are turned into links, which open in a new browser tab when clicked.  There is no popup with textual content. 
+* "link" - The references are turned into links, which open in a new browser tab when clicked.  There is no popup with textual content. 
 
 ### `contentLang`
 
@@ -51,11 +51,11 @@ Sets the language of the popup interface which controls the text in the bottom b
 
 ### `excludeFromLinking`
 
-Sets a CSS selector that defines elements on the page that you do _not_ want to be linked. This may be useful, for example, if you have page headers where links or popups could be distracting. Anything within an existing `<a>` tag will be excluded by default. Citations that are found but excluded are still tracked for usage in the Web Pages section on Sefaria. The value of the parameter is a string which is any valid CSS selector.
+Sets a CSS selector that defines elements on the page that you do *not* want to be linked. This may be useful, for example, if you have page headers where links or popups could be distracting. Anything within an existing `<a>` tag will be excluded by default. Citations that are found but excluded are still tracked for usage in the Web Pages section on Sefaria. The value of the parameter is a string which is any valid CSS selector.
 
 ### `excludeFromTracking`
 
-Sets a CSS selector that defines elements on the page that you do _not_ want tracked to be displayed on the Web Pages section on Sefaria. This may be useful if you have recurring citations on your page that are not specifically relevant to that page in particular. For example, a widget that always shows today's daf in Daf Yomi. The value of the parameter is a string which is any valid CSS selector.
+Sets a CSS selector that defines elements on the page that you do *not* want tracked to be displayed on the Web Pages section on Sefaria. This may be useful if you have recurring citations on your page that are not specifically relevant to that page in particular. For example, a widget that always shows today's daf in Daf Yomi. The value of the parameter is a string which is any valid CSS selector.
 
 ### `quotationOnly`
 
@@ -77,12 +77,12 @@ Will limit search for references to text in parentheses (`()`) or brackets (`[]`
 
 ### `dynamic`
 
-Set this to true if the linker is being called dynamically-your page content changes dynamically after the initial page load. Normally, the linker sends a tracking signal back to Sefaria and determines the page URL by checking the first canonical link tag on your page. However, most dynamic pages do not update this tag when their content changes. By setting `dynamic `to true, the linker will instead use window.href to get the current URL, ensuring that dynamically generated pages are tracked correctly.
+Set this to true if the linker is being called dynamically-your page content changes dynamically after the initial page load. Normally, the linker sends a tracking signal back to Sefaria and determines the page URL by checking the first canonical link tag on your page. However, most dynamic pages do not update this tag when their content changes. By setting `dynamic `to true, the linker will instead use window\.href to get the current URL, ensuring that dynamically generated pages are tracked correctly.
 
 ### `popupStyles`
 
-The `popupStyles` option allows for custom styling of the popup box - colors, borders, fonts, etc.  
-If present, it must be a dictionary of JavaScript style attributes and their values.  
+The `popupStyles` option allows for custom styling of the popup box - colors, borders, fonts, etc.\
+If present, it must be a dictionary of JavaScript style attributes and their values.\
 See examples below. 
 
 ### `hidePopupsOnMobile`
@@ -148,5 +148,5 @@ Use only Hebrew for the interface and content:
 
 For information on how to format citations so the linker will pick up on them, see:
 
-- [How to Format Citations for the Linker](doc:how-to-format-citations-for-the-linker) (English)
--  (Hebrew) [איך ליצור מראי מקורות להפניה](https://developers.sefaria.org/docs/%D7%90%D7%99%D7%9A-%D7%9C%D7%99%D7%A6%D7%95%D7%A8-%D7%9E%D7%A8%D7%90%D7%99-%D7%9E%D7%A7%D7%95%D7%A8%D7%95%D7%AA-%D7%9C%D7%94%D7%A4%D7%A0%D7%99%D7%94)
+* [How to Format Citations for the Linker](doc:how-to-format-citations-for-the-linker) (English)
+* (Hebrew) [איך ליצור מראי מקורות להפניה](https://developers.sefaria.org/docs/%D7%90%D7%99%D7%9A-%D7%9C%D7%99%D7%A6%D7%95%D7%A8-%D7%9E%D7%A8%D7%90%D7%99-%D7%9E%D7%A7%D7%95%D7%A8%D7%95%D7%AA-%D7%9C%D7%94%D7%A4%D7%A0%D7%99%D7%94)
