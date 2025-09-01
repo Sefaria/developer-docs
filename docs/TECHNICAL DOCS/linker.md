@@ -16,5 +16,5 @@ It can be run either as a bookmarklet from a browser or embedded into page code.
 
 If run as a bookmarklet, a user can find references on any webpage he or she visits by clicking the bookmarklet.  If embedded into page code, it will find references every time any user loads the page.  (You can get browser bookmarklets [here](http://www.sefaria.org/linker))
 
-- [Documentation for Linker v2](doc:linker-v2)
-- [Documentation for Linker v3](doc:linker-v3)
+* [Documentation for Linker v2](doc:linker-v2)
+* [Documentation for Linker v3](doc:linker-v3)
