@@ -23,7 +23,7 @@ The Sefaria API allows live access to Sefaria's structured database of Jewish te
 Here you will find documentation and interactive playgrounds for many of our most important API endpoints. Our reference is powered by our OpenAPI spec, which you can see [here](https://github.com/Sefaria/Sefaria-Project/blob/master/docs/openAPI.json). 
 
 > 🚧 Work-In-Progress
-> 
+>
 > Please note, this reference is a work-in-progress. We are always striving to refine and improve our API itself, as well as our documentation. We are looking forward to documenting additional endpoints here in the future. Looking for something you can't find? [Contact us](page:contact-us), we'd love to hear from you.
 
 For additional documentation, check out our technical docs [here](https://developers.sefaria.org/docs/welcome).
