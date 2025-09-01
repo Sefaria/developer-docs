@@ -66,14 +66,14 @@ For example, Genesis is represented by a single `Index`. Associated with that `I
 
 For example, here is the text for `Genesis 1:1` across several of our versions:
 
-| Index Title | Version Title                                                                                           | Ref           | Text                                                      |
-| :---------- | :------------------------------------------------------------------------------------------------------ | :------------ | :-------------------------------------------------------- |
-| Genesis     | Tanach with Text Only                                                                                   | `Genesis 1:1` | בראשית ברא אלהים את השמים ואת הארץ                        |
-| Genesis     | Tanach with Nikkud                                                                                      | `Genesis 1:1` | בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ |
-| Genesis     | Bible du Rabbinat 1899 [fr]                                                                             | `Genesis 1:1` | Au commencement, Dieu créa le ciel et la terre.           |
-| Genesis     | Russian Torah translation, by Dmitri Slivniak, Ph.D., edited by Dr. Itzhak Streshinsky. Da Project [ru] | `Genesis 1:1` | Вначале, когда творил Бог небеса и землю,                 |
-| Genesis     | Jewish English Torah                                                                                    | `Genesis 1:1` | In the beginning God created the heavens and the earth    |
-| Genesis     | The Holy Scriptures: A New Translation (JPS 1917)                                                       | `Genesis 1:1` | In the beginning God created the heaven and the earth.    |
+| Index Title | Version Title                                                                                            | Ref           | Text                                                      |
+| :---------- | :------------------------------------------------------------------------------------------------------- | :------------ | :-------------------------------------------------------- |
+| Genesis     | Tanach with Text Only                                                                                    | `Genesis 1:1` | בראשית ברא אלהים את השמים ואת הארץ                        |
+| Genesis     | Tanach with Nikkud                                                                                       | `Genesis 1:1` | בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ |
+| Genesis     | Bible du Rabbinat 1899 \[fr]                                                                             | `Genesis 1:1` | Au commencement, Dieu créa le ciel et la terre.           |
+| Genesis     | Russian Torah translation, by Dmitri Slivniak, Ph.D., edited by Dr. Itzhak Streshinsky. Da Project \[ru] | `Genesis 1:1` | Вначале, когда творил Бог небеса и землю,                 |
+| Genesis     | Jewish English Torah                                                                                     | `Genesis 1:1` | In the beginning God created the heavens and the earth    |
+| Genesis     | The Holy Scriptures: A New Translation (JPS 1917)                                                        | `Genesis 1:1` | In the beginning God created the heaven and the earth.    |
 
 You will notice that the only real differences appear in the `versionTitle` for a given text, and in the translation/edition itself. All versions of the same text will definitionally share the same `Index`, and since they share that structure, the segments will be referred to by the same `Ref`. 
 
