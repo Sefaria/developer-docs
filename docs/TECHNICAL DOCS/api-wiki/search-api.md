@@ -30,9 +30,9 @@ We expose one endpoint of the ElasticSearch API:
 
 The `index` path parameter can be either `text` or `sheet`. (**Note:** The `index` query parameter is specific to ES, and completely unrelated to the Sefaria-specific concept of an `Index`).
 
-- `text` - Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library. 
+* `text` - Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library. 
 
-- `sheet` - Use this query parameter to query the source sheets hosted by Sefaria. For each match, the `title` and the `content` is returned. The `title` is the title of the source sheet, and the `content` is a string concatenation of all of the sources and text present on the sheet. 
+* `sheet` - Use this query parameter to query the source sheets hosted by Sefaria. For each match, the `title` and the `content` is returned. The `title` is the title of the source sheet, and the `content` is a string concatenation of all of the sources and text present on the sheet. 
 
 ## Making a POST Request
 
@@ -345,10 +345,10 @@ Below is a zoomed-in view of some of the **most critical** fields  within the re
 
 An explanation of the most critical fields:
 
-- `exact`: Holds content from Sefaria segment. Field is indexed by the `standard` analyzer. Read more about analyzers [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html)
-- `naive_lemmatizer`: Holds content from Sefaria segment. Field is indexed by the `sefaria-naive-lemmatizer` analyzer. This analyzer does basic lemmatization for Hebrew inputs
-- `ref`: The Sefaria reference
-- `lang`: Language of content.
+* `exact`: Holds content from Sefaria segment. Field is indexed by the `standard` analyzer. Read more about analyzers [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html)
+* `naive_lemmatizer`: Holds content from Sefaria segment. Field is indexed by the `sefaria-naive-lemmatizer` analyzer. This analyzer does basic lemmatization for Hebrew inputs
+* `ref`: The Sefaria reference
+* `lang`: Language of content.
 
 ### Returned JSON for `sheet` Queries
 
