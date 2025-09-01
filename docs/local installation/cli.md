@@ -15,7 +15,7 @@ Sefaria's Command Line Interface (CLI) enables users to interact directly with S
 One of the key advantages of using Sefaria's CLI is the ability to access and manipulate data offline. This feature is particularly useful for researchers, scholars, and developers who require quick and reliable access to Sefaria's vast library of Jewish texts and resources, even in situations where internet connectivity is limited or unavailable. 
 
 > 🚧 Local Install Required
-> 
+>
 > Please note, use of the Sefaria CLI requires a full [local installation](https://dash.readme.com/project/sefaria/v1.0/docs/local-installation-instructions) of the project.
 
 ## Understanding the Shell Script
@@ -39,21 +39,7 @@ For users of iPython, you can load open a session in iPython with `./cli -i`.  Y
 
  For example, here are the properties and functions available on an instance of the `Ref` object. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f8f0537f20f64330106a77101182da0b9862f0d662a3bc3299f2e6038520c664-Screenshot_2025-01-23_at_14.15.22.png",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/f8f0537f20f64330106a77101182da0b9862f0d662a3bc3299f2e6038520c664-Screenshot_2025-01-23_at_14.15.22.png" />
 
 Using 'tab' can be very helpful for getting a birds-eye view of the many existing properties and functions available on Sefaria objects. 
 
@@ -63,7 +49,7 @@ Before running any of the following examples, make sure you've entered the Sefar
 
 ### Link Counts
 
-The example below counts the links to Genesis 13. (_Note: Your results may vary, as more links have likely been added since we generated this code_). 
+The example below counts the links to Genesis 13. (*Note: Your results may vary, as more links have likely been added since we generated this code*). 
 
 ```python
 $ ./cli
