@@ -94,13 +94,13 @@ A node can have explicit titles defined on it.  That is what we see in the examp
 
 | Attribute | Status     | Examples       | Description                                                                                                                                                    |
 | :-------- | :--------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `text`    | _Required_ | `Example Book` | The title string                                                                                                                                               |
-| `lang`    | _Required_ | `en`           | The language code, either `"en"` or `"he"`.\`                                                                                                                  |
-| `primary` | _Optional_ | `True`         | This field needs to be present and True for exactly one Hebrew and one English title.  It specifies the default title used for presentation and normalization. |
+| `text`    | *Required* | `Example Book` | The title string                                                                                                                                               |
+| `lang`    | *Required* | `en`           | The language code, either `"en"` or `"he"`.\`                                                                                                                  |
+| `primary` | *Optional* | `True`         | This field needs to be present and True for exactly one Hebrew and one English title.  It specifies the default title used for presentation and normalization. |
 
 ## Shared Titles (Terms)
 
-Instead of listing its titles in the `titles` field, a node can specify the key of a shared title in the `sharedTitles` field.  This is useful for titles that are used repeatedly, like _Parasha_ names or _Masechet_ names.  Each shared title has a collection of title dictionaries that are used on the node as if they were defined on that node. Valid keys for shared titles are defined by the `Term` class. A node that defines `sharedTitle` does not have a `titles` field.  
+Instead of listing its titles in the `titles` field, a node can specify the key of a shared title in the `sharedTitles` field.  This is useful for titles that are used repeatedly, like *Parasha* names or *Masechet* names.  Each shared title has a collection of title dictionaries that are used on the node as if they were defined on that node. Valid keys for shared titles are defined by the `Term` class. A node that defines `sharedTitle` does not have a `titles` field.  
 
 An example node with shared titles can be seen in our Example Book above, on the `Introduction` and `Conclusion` nodes. Let's zoom in on the `Introduction` node below:
 
@@ -125,12 +125,12 @@ Since this node represents the main body of the book, we don't want further titl
 
 Some rules about default nodes:
 
-- Default nodes must have `key: "default"` 
-- Default nodes must have `default: True` specified  
-- Default nodes do **not** have `titles` or `sharedTitle` attributes  
-- Default nodes must **not** have any other sibling that is a default node (There can be only one default node among siblings)
-- Default nodes must be a content node (e.g. `JaggedArrayNode`) 
-- Default nodes cannot have any children nodes
+* Default nodes must have `key: "default"` 
+* Default nodes must have `default: True` specified  
+* Default nodes do **not** have `titles` or `sharedTitle` attributes  
+* Default nodes must **not** have any other sibling that is a default node (There can be only one default node among siblings)
+* Default nodes must be a content node (e.g. `JaggedArrayNode`) 
+* Default nodes cannot have any children nodes
 
 Once a default node is specified, references to the parent that do not match other nodes will default to matching from the default node and below. 
 
