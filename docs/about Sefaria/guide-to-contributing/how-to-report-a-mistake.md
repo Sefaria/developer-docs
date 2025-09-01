@@ -25,21 +25,6 @@ Include the four pieces of information above and email it to [corrections@sefari
 
 You can also give feedback via the connections panel on the website. Click on the text you'd like to submit a correction for, scroll down, and hit "feedback". 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cdc29e5-Screen_Shot_2024-03-13_at_13.29.18.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "70% "
-    }
-  ]
-}
-[/block]
+<Image align="center" width="70% " src="https://files.readme.io/cdc29e5-Screen_Shot_2024-03-13_at_13.29.18.png" />
 
-
-**A note on the Sefaria Community Translation:**The Sefaria Community Translation is a crowd sourced edition edited by people like yourself. If you see a mistake in that edition, do not report it to Sefaria. It can only improve if you take the initiative to fix.
+**A note on the Sefaria Community Translation:**&#x54;he Sefaria Community Translation is a crowd sourced edition edited by people like yourself. If you see a mistake in that edition, do not report it to Sefaria. It can only improve if you take the initiative to fix.
