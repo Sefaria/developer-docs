@@ -25,7 +25,7 @@ For our API Documentation, see [Getting Started With The Sefaria API](ref:gettin
 In this section, you will find our continuously evolving documentation, offering insights into the intricate structure of texts at Sefaria, as well as related technical bits such as formatting and accessibility. We also document API endpoints that go beyond the [API reference](ref:getting-started-with-your-api), providing you with a richer understanding of our powerful platform. 
 
 > 🚧 Work-In-Progress
-> 
+>
 > Our documentation is in the process of being updated and improved. We will continue to migrate documentation to this site over the next few weeks. Looking for something you can't find here? [Contact us](page:contact-us), we'd love to hear from you.
 
 ***
