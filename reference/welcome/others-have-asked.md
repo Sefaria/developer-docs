@@ -132,10 +132,10 @@ This is also elaborated on in [our documentation](ref:get_api-v3-texts-tref). He
 >
 > Notes:
 >
-> - `language` is the full English name of the language. In cases of dialectics with varying sub-specifities, please pass the ‘mother’ language (so for example, `arabic` rather than `judeo-arabic`). This field is NOT case sensitive.
-> - `versionTitle` is the exact English `versionTitle `of the given version in the Sefaria database.
-> - When only `language` is passed, the response will return a single version of the text in that language, the one that is highest priority in the Sefaria database.
-> - Requests can have more than one version param. If no version was passed, the API defaults to `version=primary`.
+> * `language` is the full English name of the language. In cases of dialectics with varying sub-specifities, please pass the ‘mother’ language (so for example, `arabic` rather than `judeo-arabic`). This field is NOT case sensitive.
+> * `versionTitle` is the exact English `versionTitle `of the given version in the Sefaria database.
+> * When only `language` is passed, the response will return a single version of the text in that language, the one that is highest priority in the Sefaria database.
+> * Requests can have more than one version param. If no version was passed, the API defaults to `version=primary`.
 
 <br />
 
@@ -157,7 +157,7 @@ response = requests.get(url, headers=headers)
 
 With regards to Rabbi Sacks, figuring out the ref to pass is less intuitive. We recommend you navigate to the specific passage of interest in the library, and then copy the ref from the url. 
 
-For example, if you wanted <https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi> via the API, you would pass the request as follows: 
+For example, if you wanted [https://www.sefaria.org/Covenant\_and\_Conversation%3B\_Genesis%3B\_The\_Book\_of\_the\_Beginnings%2C\_Bereshit%2C\_The\_Book\_of\_Teaching?lang=bi](https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi) via the API, you would pass the request as follows: 
 
 ```python
 url = "<https://www.sefaria.org/api/v3/texts/Covenant_and_Conversation%253B_Genesis%253B_The_Book_of_the_Beginnings%252C_Bereshit%252C_The_Book_of_Teaching">
