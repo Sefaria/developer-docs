@@ -22,8 +22,8 @@ We’re not the only people who have struggled with estimates, though. Famously,
 
 Estimates are just that — estimates. Far from an exact science, they are heavily dependent on many different factors, some within our control and some not. Of course, we always try our best to provide an accurate estimate. Still, it's important to remember (and remind others) that even the clearest and most direct path can be riddled with pitfalls or lead to unexpected results, which will quickly cause your estimate to slide. Don’t despair. Instead, focus on the end goal and eventually you will reach the promised land.
 
-Happy coding!  
-Yitzhak Clark  
+Happy coding!\
+Yitzhak Clark\
 Engineering Team Lead
 
 ## HOT OFF THE PRESSES:
