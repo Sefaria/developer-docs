@@ -26,8 +26,8 @@ Likewise, Esther and Mordechai didn’t get to choose the rules of the Persian E
 
 In the spirit of Purim, let’s take a moment to appreciate the unseen work — the hidden intricacies of engineering that make everything run smoothly. Like Esther and Mordechai, we may not always be in the spotlight, but our careful planning and execution shape the world in ways that matter.
 
-Happy coding!  
-Ephraim Damboritz  
+Happy coding!\
+Ephraim Damboritz\
 Principal Engineer
 
 ## HOT OFF THE PRESSES: Powered & Linked by Sefaria
