@@ -18,7 +18,7 @@ next:
 ---
 # Dvar Torah Outliner
 
-Let's say you are frequently asked to prepare _Divrei Torah_ on the _Parasha_ (a short discourse on the weekly Torah portion), and have decided you want to use the Sefaria API to write code to help you automate an outline each week, containing the first verse of that week's _Parasha_ along with a sampling of commentaries. 
+Let's say you are frequently asked to prepare *Divrei Torah* on the *Parasha* (a short discourse on the weekly Torah portion), and have decided you want to use the Sefaria API to write code to help you automate an outline each week, containing the first verse of that week's *Parasha* along with a sampling of commentaries. 
 
 ## Tutorial Set Up
 
@@ -32,9 +32,9 @@ import requests
 
 The work we're doing in this tutorial is language agnostic, so feel free to adapt the code to follow along in any language of your choosing.
 
-## Retrieve the _Parasha_
+## Retrieve the *Parasha*
 
-Our first step is to use the [Calendars API](ref:get_api-calendars) to retrieve the weekly _Parasha_. We'll hit the endpoint here without any customizations. If you look at the documentation for this endpoint, you'll see that it is highly customizable based on tradition, location, and cycles of readings. For the sake of this example, we'll stick with the basics. 
+Our first step is to use the [Calendars API](ref:get_api-calendars) to retrieve the weekly *Parasha*. We'll hit the endpoint here without any customizations. If you look at the documentation for this endpoint, you'll see that it is highly customizable based on tradition, location, and cycles of readings. For the sake of this example, we'll stick with the basics. 
 
 ```python
 url = "https://www.sefaria.org/api/calendars"
@@ -46,7 +46,7 @@ response = requests.get(url)
 data = response.json()  
 ```
 
-If you `print` the value of `data`, you'll see a dictionary with lots of information about that day's learning schedules (i.e. Daf Yomi, Daily Rambam... and weekly _Parasha_). 
+If you `print` the value of `data`, you'll see a dictionary with lots of information about that day's learning schedules (i.e. Daf Yomi, Daily Rambam... and weekly *Parasha*). 
 
 ```json
 {
@@ -134,7 +134,7 @@ for item in calendar_items:
         parasha_name = item['displayValue']['en']
 ```
 
-Great! Now we have our citation for the specific week's _Parasha_. This ref will appear as a range, so for example, for the week of _[Parashat Mishpatim](https://www.sefaria.org/topics/parashat-mishpatim?sort=Relevance&tab=sources)_ , printing `parasha_ref` returns `Exodus 21:1-24:18`, and printing `parasha_name` returns `Mishpatim`. 
+Great! Now we have our citation for the specific week's *Parasha*. This ref will appear as a range, so for example, for the week of *[Parashat Mishpatim](https://www.sefaria.org/topics/parashat-mishpatim?sort=Relevance\&tab=sources)* , printing `parasha_ref` returns `Exodus 21:1-24:18`, and printing `parasha_name` returns `Mishpatim`. 
 
 ```python
 print(parasha_ref) # The ranged citation for the week's Parasha
@@ -143,7 +143,7 @@ print(parasha_name) # The name of the Parasha
 
 ## Selecting the First Verse
 
-For this specific tutorial, we want to limit our _Dvar Torah_ to only the first verse from this week's _Parasha_. To do this, we will collect the first citation in the range; in the case of `Exodus 21:1-24:18`, we want only `Exodus 21:1`. 
+For this specific tutorial, we want to limit our *Dvar Torah* to only the first verse from this week's *Parasha*. To do this, we will collect the first citation in the range; in the case of `Exodus 21:1-24:18`, we want only `Exodus 21:1`. 
 
 ```python
 parasha_ref = parasha_ref.split("-")[0]
@@ -154,7 +154,7 @@ print(parasha_ref) # The first verse of this week's parasha
 
 ## Retrieving the Parasha Text
 
-Now that we have our `parasha_ref` all set to contain a string citing the first verse in this week's _Parasha_, let's make another API call to the [Texts (v3)](ref:get_api-v3-texts-tref-1) API to retrieve the text of that verse. 
+Now that we have our `parasha_ref` all set to contain a string citing the first verse in this week's *Parasha*, let's make another API call to the [Texts (v3)](ref:get_api-v3-texts-tref-1) API to retrieve the text of that verse. 
 
 ```python
 url = f"https://www.sefaria.org/api/v3/texts/{parasha_ref}"
@@ -199,7 +199,7 @@ he_vtitle = data['versions'][0]['versionTitle']
 he_pasuk = data['versions'][0]['text']
 ```
 
-Big progress! We have our verse for the _Dvar Torah_ outline; let's move on to the next step. 
+Big progress! We have our verse for the *Dvar Torah* outline; let's move on to the next step. 
 
 ## Retrieving a Different Edition of the Text
 
@@ -277,7 +277,7 @@ For example, a sample JSON object from the `links` array (containing all links b
 }
 ```
 
-This is a link between our `parasha_ref` to the [Midrash](https://www.sefaria.org/texts/Midrash) of _Shemot Rabbah_. You'll notice we're getting a lot of metadata here, but most critical for our purposes is the `type` of link, as well as the `ref` for the linking text. 
+This is a link between our `parasha_ref` to the [Midrash](https://www.sefaria.org/texts/Midrash) of *Shemot Rabbah*. You'll notice we're getting a lot of metadata here, but most critical for our purposes is the `type` of link, as well as the `ref` for the linking text. 
 
 The `type` field tells us the general type of connection between our `parasha_ref` and the text returned in the `ref` field. Some possible link types may include `targum`, `reference`, `quotation`, `commentary`, `essay`, `midrash` or `parshanut` among others. 
 
@@ -296,7 +296,7 @@ for linked_text in data["links"]:
         commentaries.append(linked_text['ref'])
 ```
 
-Great! Now you have a list of all commentary links to the first verse in this week's _Parasha_. We are almost there!
+Great! Now you have a list of all commentary links to the first verse in this week's *Parasha*. We are almost there!
 
 ## Retrieving the Commentary Text
 
@@ -342,13 +342,13 @@ Congratulations! We are ready for the final step, printing our outline!
 
 At this point, we should have the following variables defined in our code:
 
-- `parasha` - The name of the _Parasha_ (i.e. _Mishpatim, \_Eikev_ etc)
-- `parasha_ref` - The specific text reference for the first verse of that _Parasha_ (i.e. `Exodus 21.1`)
-- `he_vtitle`- The version title for the specific Hebrew edition of the text of the verse
-- `he_text` - The Hebrew text for the verse
-- `en_vtitle` - The version title for the specific English edition of the text of the verse
-- `en_text` - The English text for the verse
-- And lastly, as seen in the code above, the commentary title and commentary text for the first three commentaries in our `commentaries` list. 
+* `parasha` - The name of the *Parasha* (i.e. *Mishpatim,\_Eikev* etc)
+* `parasha_ref` - The specific text reference for the first verse of that *Parasha* (i.e. `Exodus 21.1`)
+* `he_vtitle`- The version title for the specific Hebrew edition of the text of the verse
+* `he_text` - The Hebrew text for the verse
+* `en_vtitle` - The version title for the specific English edition of the text of the verse
+* `en_text` - The English text for the verse
+* And lastly, as seen in the code above, the commentary title and commentary text for the first three commentaries in our `commentaries` list. 
 
 Now that we have everything in place, let's print it out:
 
@@ -362,7 +362,7 @@ print(f"B) {com2_title}: {com2_text}\n")
 print(f"C) {com3_title}: {com3_text}")
 ```
 
-When we ran this code the week of _Parashat Mishpatim_, this is what printed:
+When we ran this code the week of *Parashat Mishpatim*, this is what printed:
 
 ```
 My Outline for Parashat Mishpatim
@@ -378,7 +378,9 @@ C) Mizrachi, Exodus 21:1: <b>לפניהם ולא לפני כותים כו'. </b>
 
 ```
 
-> 🎉 Congratulations! You have officially written a script to generate a _D'var Torah_ outline for the weekly _Parasha_!
+<Callout icon="🎉" theme="default">
+  ### Congratulations! You have officially written a script to generate a *D'var Torah* outline for the weekly *Parasha*!
+</Callout>
 
  We invite you to dive deeper into our API, and all of the infinite possibilities with our data in the documentation. Looking forward to seeing what you can build!
 
