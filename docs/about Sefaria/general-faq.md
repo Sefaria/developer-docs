@@ -28,7 +28,7 @@ No. Because of our people’s quirky weekend and holiday reading habits, there w
 
 ## What is the source of Sefaria’s translations? How accurate are they? And does the library include human (non-machine) translations only?
 
-Translations on Sefaria are of two different types - community translations and printed editions. There are a few important differences between these two kinds of translations. Whereas community translations can be freely edited, printed editions are not open to community editing; Sefaria is careful to preserve them as they were originally published. Also, whereas the community translations are in the commons (with a CC0 license), the printed editions may carry a more restrictive license. The information about each text is located in the table of contents along with the version history. [Here](https://www.sefaria.org/Berakhot.2a?ven=William_Davidson_Edition_-_English&lang=en) is an example of a printed edition. [Here](https://www.sefaria.org/Zohar%2C_Introduction.1-2?ven=Sefaria_Community_Translation&lang=en) is an example of a community translation.
+Translations on Sefaria are of two different types - community translations and printed editions. There are a few important differences between these two kinds of translations. Whereas community translations can be freely edited, printed editions are not open to community editing; Sefaria is careful to preserve them as they were originally published. Also, whereas the community translations are in the commons (with a CC0 license), the printed editions may carry a more restrictive license. The information about each text is located in the table of contents along with the version history. [Here](https://www.sefaria.org/Berakhot.2a?ven=William_Davidson_Edition_-_English\&lang=en) is an example of a printed edition. [Here](https://www.sefaria.org/Zohar%2C_Introduction.1-2?ven=Sefaria_Community_Translation\&lang=en) is an example of a community translation.
 
 Most translations on Sefaria are scholarly, high-quality works like the JPS,1985 Tanakh translation or the Rabbi Adin Steinsaltz Even-Israel translation of the Talmud. Sefaria also commissions translations from scholarly translators. As of August 2017, translations by registered users accounted for 1.75% of the total words in the library, and 9% of the total words of translation in the library. Community translations are constantly being updated by registered users. If you find an error, you can correct it! Read more on making corrections below.
 
@@ -50,22 +50,7 @@ If it is a community translation, you can make the correction yourself by loggin
 
 You can also give feedback via the connections panel on the website. Click on the text you'd like to submit a correction for, scroll down, and hit "feedback". 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cdc29e5-Screen_Shot_2024-03-13_at_13.29.18.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "70% "
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="70% " src="https://files.readme.io/cdc29e5-Screen_Shot_2024-03-13_at_13.29.18.png" />
 
 If you find a mistake in a printed edition translation, like a typo, please alert [corrections@sefaria.org](mailto:corrections@sefaria.org).
 
@@ -81,8 +66,8 @@ We've begun to add translations in languages other than English, but we're just 
 
 ## Do you have a mobile app?
 
-Yes! We have an iOS app and an Android app. Both apps are free to download.  
-Our iOS app is available on Apple's App Store for iPhone and iPad.  
+Yes! We have an iOS app and an Android app. Both apps are free to download.\
+Our iOS app is available on Apple's App Store for iPhone and iPad.\
 The Android app is available on GooglePlay.
 
 See [here](https://www.sefaria.org/mobile) for more on the mobile apps. 
@@ -101,11 +86,11 @@ You can update manually through the settings page. You will receive a prompt wit
 
 ## Can I get Sefaria offline on my computer?
 
-Although not officially supported, we recommend you use an Android emulator such as <https://www.bluestacks.com> . This will allow you to use your computer as an Android tablet and then you can download the offline library. (And you can create a new Gmail account if you would like to keep it separate from your other devices).
+Although not officially supported, we recommend you use an Android emulator such as [https://www.bluestacks.com](https://www.bluestacks.com) . This will allow you to use your computer as an Android tablet and then you can download the offline library. (And you can create a new Gmail account if you would like to keep it separate from your other devices).
 
 ## How can I get Android on my Amazon Fire device?
 
-You can download the app-release.apk from <https://github.com/Sefaria/Sefaria-Android/releases>. After downloading, you can install by clicking on the download and allowing the app to install. Please note that because you're not getting it through a store, the app won't update automatically- please check back every once in a while to get the latest version.
+You can download the app-release.apk from [https://github.com/Sefaria/Sefaria-Android/releases](https://github.com/Sefaria/Sefaria-Android/releases). After downloading, you can install by clicking on the download and allowing the app to install. Please note that because you're not getting it through a store, the app won't update automatically- please check back every once in a while to get the latest version.
 
 ## Can I print your texts or reuse them on my website?
 
