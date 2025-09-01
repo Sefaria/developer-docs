@@ -48,9 +48,9 @@ Before you begin, make sure you have the following installed:
 
 [Node.js](https://nodejs.org/en) (v18+ recommended)
 
-[Python](https://www.python.org/) (3.10+)- _only if you want to run the full Sefaria app locally_
+[Python](https://www.python.org/) (3.10+)- *only if you want to run the full Sefaria app locally*
 
-[Docker](https://www.docker.com/) _-for running local services like Elasticsearch, Redis, MongoDB_
+[Docker](https://www.docker.com/) *-for running local services like Elasticsearch, Redis, MongoDB*
 
 [GitHub ](https://github.com/) account
 
@@ -63,19 +63,19 @@ Sefaria uses Github Issues to track which features or areas still need Playwrigh
 ### How to Claim an Issue
 
 1. **Find an open issue** you'd like to contribute to. Make sure it does not yet have an assignee or "In Progress" status. Features are labeled with different complexity levels - select one that matches your comfort level.
-2. **Comment on the issue** saying something like:  
-   _"I would like to volunteer to create these tests"_
+2. **Comment on the issue** saying something like:\
+   *"I would like to volunteer to create these tests"*
 3. A **maintainer will assign** the issue to you shortly.
 
 > ⚠️ **Note:** GitHub only allows maintainers or collaborators with write access to assign issues.
-> 
+>
 > If you're not yet a collaborator, you won’t be able to assign yourself. Instead, add a comment on the issue that you would like to write a test for.
 
 Once you're assigned, you can:
 
-- Create a new branch in your local repo.
-- Write your test(s).
-- Open a pull request referencing the issue (e.g., `Fixes #23` in your PR description).
+* Create a new branch in your local repo.
+* Write your test(s).
+* Open a pull request referencing the issue (e.g., `Fixes #23` in your PR description).
 
 ## Set Up the Environment
 
@@ -170,9 +170,9 @@ Sefaria's Playwright tests live under the `e2e-tests/tests` directory.
 
 Each test file should:
 
-- Be scoped to a single feature or user interaction
-- Use a consistent naming pattern (e.g., `newTestFeature.spec.ts`)
-- Leverage the Page Object Model already implemented in `e2e-tests/pages`
+* Be scoped to a single feature or user interaction
+* Use a consistent naming pattern (e.g., `newTestFeature.spec.ts`)
+* Leverage the Page Object Model already implemented in `e2e-tests/pages`
 
 ### Basic Test Structure
 
@@ -190,13 +190,13 @@ test('Description of what is being tested', async ({ context }) => {
 
 **Key Features:**
 
-- **Name**: Give each test a clear name describing the user action and expected behavior
+* **Name**: Give each test a clear name describing the user action and expected behavior
 
-- **`async ({ context })`**: All Playwright tests are asynchronous because they interact with a browser. `context` simulates a private browsing session
+* **`async ({ context })`**: All Playwright tests are asynchronous because they interact with a browser. `context` simulates a private browsing session
 
-- **Actions**: Simulate real user actions (typing, clicking, etc.), encapsulated in Page Object methods
+* **Actions**: Simulate real user actions (typing, clicking, etc.), encapsulated in Page Object methods
 
-- **Assertions**: Use `expect()` to verify the app responded correctly
+* **Assertions**: Use `expect()` to verify the app responded correctly
 
 ### Finding the Right Locators
 
@@ -234,11 +234,11 @@ When writing tests, use Playwright's best practices for locators:
 
 **Finding Locators:**
 
-- **Inspect the HTML**: Use browser developer tools to examine the page structure
+* **Inspect the HTML**: Use browser developer tools to examine the page structure
 
-- **Use Playwright Codegen**: Run `npx playwright codegen` to generate locators automatically
+* **Use Playwright Codegen**: Run `npx playwright codegen` to generate locators automatically
 
-- **Check accessibility**: Ensure your locators work with screen readers
+* **Check accessibility**: Ensure your locators work with screen readers
 
 ### Common Imports
 
@@ -268,19 +268,19 @@ Let's walk through creating a test for "Table of Contents (ToC) Language Control
 
 After browsing the list of available features to test on Sefaria's [Github Issues](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues), we select "Table of Contents (ToC) Language Control", Issue #16.
 
-We click on the issue, and add a comment: _I would like to volunteer to create these tests._
+We click on the issue, and add a comment: *I would like to volunteer to create these tests.*
 
 The issue provides:
 
-_**Title**: Verify language display in ToC based on content language._  
-_**Test**:_
+***Title**: Verify language display in ToC based on content language.*\
+***Test**:*
 
-- _Set contentLanguage to translation._
-- _Open the Table of Contents for a Hebrew translation text._
-- _Verify that ToC items are displayed in English._
-- _Set contentLanguage to source._
-- _Open the Table of Contents for an English source text._
-- _Verify that ToC items are displayed in Hebrew._
+* *Set contentLanguage to translation.*
+* *Open the Table of Contents for a Hebrew translation text.*
+* *Verify that ToC items are displayed in English.*
+* *Set contentLanguage to source.*
+* *Open the Table of Contents for an English source text.*
+* *Verify that ToC items are displayed in Hebrew.*
 
 After a Sefaria team member grants us assignee status, we are ready to begin!
 
@@ -298,7 +298,7 @@ touch e2e-tests/tests/toc-language-control.spec.ts
 
 ```
 
-**Alternatively, to create the file manually in VS Code: **
+**Alternatively, to create the file manually in VS Code:**
 
 1. Open the Explorer sidebar (Ctrl+Shift+E or Cmd+Shift+E).
 2. Right-click the `tests` folder.
@@ -367,11 +367,11 @@ test.describe('Content Language affects Table of Contents display correctly', ()
 
 The first test: 
 
-- Goes to the first chapter of Genesis (/Genesis.1) with the interface language set to English.
-- Tells the page to display the translation (i.e., the English version of the Hebrew text).
-- Clicks on a piece of the translated text to open the sidebar.
-- Opens the Table of Contents (ToC) for the text.
-- Checks that the ToC contains the word “Chapters” (in English), and the section number is shown as 1 (not in Hebrew letters).
+* Goes to the first chapter of Genesis (/Genesis.1) with the interface language set to English.
+* Tells the page to display the translation (i.e., the English version of the Hebrew text).
+* Clicks on a piece of the translated text to open the sidebar.
+* Opens the Table of Contents (ToC) for the text.
+* Checks that the ToC contains the word “Chapters” (in English), and the section number is shown as 1 (not in Hebrew letters).
 
 The second test checks the opposite case, i.e. the ToC contains the word "פרקים" and uses Hebrew letters to display the chapters rather than numbers.
 
@@ -379,13 +379,13 @@ The second test checks the opposite case, i.e. the ToC contains the word "פרק
 
 **`test.describe`** groups related tests under a common label. It helps with:
 
-- Organization and readability
+* Organization and readability
 
-- Shared setup with `test.beforeEach`/`test.afterEach`
+* Shared setup with `test.beforeEach`/`test.afterEach`
 
-- Better test reporting
+* Better test reporting
 
-**`test.beforeEach` and `test.afterEach`** can be used for shared setup:
+**`test.beforeEach`and`test.afterEach`** can be used for shared setup:
 
 ```typescript
 
@@ -399,11 +399,11 @@ test.beforeEach(async ({ context }) => {
 
 Use these when:
 
-- Multiple tests share common setup
+* Multiple tests share common setup
 
-- You want to ensure consistency across tests
+* You want to ensure consistency across tests
 
-- You're repeating setup code
+* You're repeating setup code
 
 ## Run and Debug Locally
 
@@ -437,15 +437,15 @@ npx playwright test toc-language-control.spec.ts --debug
 
 The UI provides excellent debugging capabilities:
 
-- Run individual tests or groups
+* Run individual tests or groups
 
-- See page state before, during, and after actions
+* See page state before, during, and after actions
 
-- Hover over the timeline to see page changes
+* Hover over the timeline to see page changes
 
-- View errors in the dedicated panel
+* View errors in the dedicated panel
 
-- Step through test execution
+* Step through test execution
 
 ![Playwright UI Example](https://files.readme.io/5f3331e52516e82d711b201a8aa32ee5b9d22769e5aefcb0fd17331f5eac68a5-image.png)
 
@@ -463,9 +463,9 @@ The UI provides excellent debugging capabilities:
 
 **Locator issues:**
 
-- Use `npx playwright codegen` to generate locators
+* Use `npx playwright codegen` to generate locators
 
-- Prefer stable locators over brittle CSS selectors
+* Prefer stable locators over brittle CSS selectors
 
 ## Submit Your Contribution
 
@@ -495,7 +495,7 @@ git commit -m "test(ToC): add language control tests [Issue #16]"
 
 ```
 
-_**Note**: Sefaria strives to use the "Conventional Commits" method when it comes to writing commit messages. Check out this [Conventional Commits Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  to learn more about it! _
+***Note**: Sefaria strives to use the "Conventional Commits" method when it comes to writing commit messages. Check out this [Conventional Commits Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  to learn more about it!*
 
 Push your branch:
 
@@ -597,13 +597,13 @@ await page.click('.toc-option');
 
 ### Common Pitfalls to Avoid
 
-- **Flaky waits**: Don't use `waitForTimeout()` unless absolutely necessary
+* **Flaky waits**: Don't use `waitForTimeout()` unless absolutely necessary
 
-- **Overly specific locators**: Avoid CSS selectors that break easily
+* **Overly specific locators**: Avoid CSS selectors that break easily
 
-- **Missing assertions**: Always verify the expected outcome
+* **Missing assertions**: Always verify the expected outcome
 
-- **Too much in one test**: Keep tests focused and atomic
+* **Too much in one test**: Keep tests focused and atomic
 
 ## Troubleshooting Common Issues
 
@@ -649,15 +649,15 @@ const page = await goToPageWithLang(context, '/Genesis.1', LANGUAGES.EN);
 
 ## Additional Resources
 
-- [Introduction to Writing Tests](https://playwright.dev/docs/writing-tests)
+* [Introduction to Writing Tests](https://playwright.dev/docs/writing-tests)
 
-- [Using Playwright Locators](https://playwright.dev/docs/locators)
+* [Using Playwright Locators](https://playwright.dev/docs/locators)
 
-- [Common Playwright Assertions](https://playwright.dev/docs/test-assertions)
+* [Common Playwright Assertions](https://playwright.dev/docs/test-assertions)
 
-- [The Page Object Model (POM)](https://playwright.dev/docs/pom) 
+* [The Page Object Model (POM)](https://playwright.dev/docs/pom) 
 
-- [Playwright Best Practices](https://playwright.dev/docs/best-practices)
+* [Playwright Best Practices](https://playwright.dev/docs/best-practices)
 
 ## Getting Help
 
