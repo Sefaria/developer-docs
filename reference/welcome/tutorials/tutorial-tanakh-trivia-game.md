@@ -24,32 +24,69 @@ Let's work together to build a mini Tanakh Trivia Game in fewer than 100 lines o
 
 Before we start coding, let's go over the game structure, and which endpoint(s) each trivia question requires. 
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "# ",
-    "h-1": "Question",
-    "h-2": "Endpoint(s)",
-    "0-0": "1",
-    "0-1": "How many chapters does `<Book of Tanakh>` have?",
-    "0-2": "[Shape](ref:get_api-shape-title) API",
-    "1-0": "2",
-    "1-1": "Which chapter of that `<Book of Tanakh>` has the fewest verses?",
-    "1-2": "[Shape](ref:get_api-shape-title)  API",
-    "2-0": "3",
-    "2-1": "Select a verse from `<Book of Tanakh>`. Which topics might be connected to this text?",
-    "2-2": "[Texts (v3)](ref:get_api-v3-texts-tref) API  \n_and_  \n[Ref-Topic-Links](ref:get_api-ref-topic-links-tref) API"
-  },
-  "cols": 3,
-  "rows": 3,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        \# 
+      </th>
 
+      <th>
+        Question
+      </th>
+
+      <th>
+        Endpoint(s)
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        1
+      </td>
+
+      <td>
+        How many chapters does `<Book of Tanakh>` have?
+      </td>
+
+      <td>
+        [Shape](ref:get_api-shape-title) API
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        2
+      </td>
+
+      <td>
+        Which chapter of that `<Book of Tanakh>` has the fewest verses?
+      </td>
+
+      <td>
+        [Shape](ref:get_api-shape-title)  API
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        3
+      </td>
+
+      <td>
+        Select a verse from `<Book of Tanakh>`. Which topics might be connected to this text?
+      </td>
+
+      <td>
+        [Texts (v3)](ref:get_api-v3-texts-tref) API\
+        *and*\
+        [Ref-Topic-Links](ref:get_api-ref-topic-links-tref) API
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 We have chosen to limit the user's selection of Books of Tanakh to three specific books to provide a working sample. In a full scale edition of this project, the user would be able to select any book of their choosing. 
 
@@ -294,7 +331,9 @@ Can you guess a topic related to this text?
 Yes! You got it right! That topic is connected to this verse! FINAL SCORE: 3/3
 ```
 
-> 🎉 Congratulations! You've officially written a basic Tanakh trivia game using the data from the Sefaria API.
+<Callout icon="🎉" theme="default">
+  ### Congratulations! You've officially written a basic Tanakh trivia game using the data from the Sefaria API.
+</Callout>
 
  We invite you to dive deeper into our API, and all of the infinite possibilities with our data in the documentation. Looking forward to seeing what you can build!
 
@@ -435,6 +474,6 @@ if __name__ == '__main__':
 
 # Notes:
 
-- As stated above, this tutorial is just that - a tutorial to whet your appetite and show you different ways of using our data
-- Any attempt to flesh this out to something ready for "real" users would need more data validation, checks, `try` / `except` blocks and more. 
-- Up for the challenge? Feel free to give it a try and build off this, and [let us know](https://developers.sefaria.org/page/contact-us)
+* As stated above, this tutorial is just that - a tutorial to whet your appetite and show you different ways of using our data
+* Any attempt to flesh this out to something ready for "real" users would need more data validation, checks, `try` / `except` blocks and more. 
+* Up for the challenge? Feel free to give it a try and build off this, and [let us know](https://developers.sefaria.org/page/contact-us)
