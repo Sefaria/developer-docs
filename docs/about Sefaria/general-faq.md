@@ -20,7 +20,7 @@ Something old, something new—just like what we’re developing. Sefaria comes 
 
 ## How does Sefaria make money?
 
-Sefaria is a 501(c)(3) nonprofit organization, supported by [donations](https://donate.sefaria.org/en) from individuals and foundations. We’re not trying to make money, we’re trying to increase access to the Jewish textual tradition. 
+Sefaria is a 501(c)(3) nonprofit organization, supported by [donations](https://donate.sefaria.org/) from individuals and foundations. We’re not trying to make money, we’re trying to increase access to the Jewish textual tradition.
 
 ## Are you trying to put book publishers out of business?
 
@@ -46,9 +46,9 @@ Members of our community watch changes, and may undo any edits that aren’t pro
 
 ## What do I do if I spot a mistranslation or a discrepancy in a translation?
 
-If it is a community translation, you can make the correction yourself by logging in as a registered user. You also have the option of sending in your correction to [corrections@sefaria.org.](mailto:corrections@sefaria.org.) Sefaria’s content team will review and fix the error. 
+If it is a community translation, you can make the correction yourself by logging in as a registered user. You also have the option of sending in your correction to [corrections@sefaria.org.](mailto:corrections@sefaria.org.) Sefaria’s content team will review and fix the error.
 
-You can also give feedback via the connections panel on the website. Click on the text you'd like to submit a correction for, scroll down, and hit "feedback". 
+You can also give feedback via the connections panel on the website. Click on the text you'd like to submit a correction for, scroll down, and hit "feedback".
 
 <Image align="center" width="70% " src="https://files.readme.io/cdc29e5-Screen_Shot_2024-03-13_at_13.29.18.png" />
 
@@ -66,11 +66,11 @@ We've begun to add translations in languages other than English, but we're just 
 
 ## Do you have a mobile app?
 
-Yes! We have an iOS app and an Android app. Both apps are free to download.\
-Our iOS app is available on Apple's App Store for iPhone and iPad.\
+Yes! We have an iOS app and an Android app. Both apps are free to download.
+Our iOS app is available on Apple's App Store for iPhone and iPad.
 The Android app is available on GooglePlay.
 
-See [here](https://www.sefaria.org/mobile) for more on the mobile apps. 
+See [here](https://www.sefaria.org/mobile) for more on the mobile apps.
 
 ## I love the apps. How can I change the font size on the display?
 
