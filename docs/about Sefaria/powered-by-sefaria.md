@@ -26,15 +26,15 @@ next:
   A novel visualization of data provided by Sefaria, including 5 visualizations to show interesting information about Jewish scholars commentaries on the Babylonian Talmud
 </Callout>
 
-To see a list of websites which run our Linker, click [here](https://developers.sefaria.org/docs/sites-using-the-linker). 
+To see a list of websites which run our Linker, click [here](https://developers.sefaria.org/docs/sites-using-the-linker).
 
 ***
 
 ### **Learning & Study Tools**
 
-* [AlHaTorah](https://alhatorah.org/) - Tools for studying Tanakh. Includes biblical commentaries reused from Sefaria. 
+* [AlHaTorah](https://alhatorah.org/) - Tools for studying Tanakh. Includes biblical commentaries reused from Sefaria.
 * [AllDaf](https://alldaf.org/) - Daf Yomi App from the OU - English text from Sefaria.
-* [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - The halakhos (practices) of daily life. 
+* [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - The halakhos (practices) of daily life.
 * [Hadran](https://hadran.org.il) - Inspiring Women to Learn Talmud. Daf Yomi classes using Sefaria text.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries reused from Sefaria.
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Making Sefaria texts readable on Kindle.
@@ -45,41 +45,42 @@ To see a list of websites which run our Linker, click [here](https://developers.
 * [Siddurim.com](https://play.google.com/store/apps/dev?id=6639480761921000346) - Real Siddur with original pages of 'Kavanat Halev' Nusach Edot HaMizrach.
 * [talmud.page](https://talmud.page) - A simpler way to read the Talmud (and other texts). Optimized for Mobile and Web.
 * [Tanach Study](https://tanachstudy.com/) - An online education platform that revolutionizes the way we study our foundational texts.
-* [The Daf Yomi Portal](http://daf-yomi.com/dafYomi.aspx) - Daf Yomi App - English text from Sefaria. 
-* [The People's Talmud](https://www.thepeoplestalmud.com/) - The People’s Talmud is a free, searchable online platform offering over 7,500 core Talmudic entries, 3,500 thematic links, and 3,000 one-line “brain teasers” that guide users through the Talmud’s wisdom in a personalized, curiosity-driven way. 
+* [The Daf Yomi Portal](http://daf-yomi.com/dafYomi.aspx) - Daf Yomi App - English text from Sefaria.
+* [The People's Talmud](https://www.thepeoplestalmud.com/) - The People’s Talmud is a free, searchable online platform offering over 7,500 core Talmudic entries, 3,500 thematic links, and 3,000 one-line “brain teasers” that guide users through the Talmud’s wisdom in a personalized, curiosity-driven way.
 * [Torah Library Add On for Google Docs](https://workspace.google.com/marketplace/app/torah_library/947071438143) - Create beautiful and collaborative-ready source sheets with ease!
 * [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates Sefaria's library with YUTorah & OUTorah shiurim.
 * [TorahSummary](http://www.torahsummary.com/) - Short summaries of all of Torah with links to the sources.
-* [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - An app for learning to lead prayers for Rosh Hshanah and YoM Kippur. 
+* [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - An app for learning to lead prayers for Rosh Hshanah and YoM Kippur.
 
 ***
 
 ### **AI Projects, Apps, & Other Tools**
 
 * [Sefaria-MCP-server](https://github.com/Sivan22/mcp-sefaria-server) - An MCP (Model Context Protocol) server that provides access to Jewish texts from the Sefaria library. This server enables Large Language Models to retrieve and reference Jewish texts through a standardized interface.
-* [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash). 
+* [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
 * [Abba Saul](https://github.com/scopreon/abba-saul/) - A mishnah bot for Discord
 * [Artscroll Smart Siddur](https://apps.apple.com/us/app/artscroll-smart-siddur-%D7%A1%D7%93%D7%95%D7%A8/id988119206) - Artscroll's siddur app.
 * [Dafyomi AI Summary  ](https://dormantone.github.io/dafyomi/) - Explore, Summarize, and Translate Key Insights
 * [Goof ](https://goof.surge.sh/) - Body parts in Tefillah
-* [Ituria](https://github.com/Sivan22/ituria)  -  AI-agent based search (GitHub repo) based on [Otzaria](https://github.com/Sivan22/otzaria)  
-* [Mishnah.org](https://www.mishnah.org/) - The easy way to Study Mishnah.   
+* [Ituria](https://github.com/Sivan22/ituria)  -  AI-agent based search (GitHub repo) based on [Otzaria](https://github.com/Sivan22/otzaria)
+* [Mishnah.org](https://www.mishnah.org/) - The easy way to Study Mishnah.
 * [Parasha Bytes](https://github.com/azemon/parashabytes) - Explore the foods of the Torah.
-* [Pninim](https://pninim.yiddishe-kop.com/)  - Write your personal Chidusim on Talmud.  
-* [RavGPT.ai](https://ravgpt.ai/) - Make Torah learning more accessible. 
+* [Pninim](https://pninim.yiddishe-kop.com/)  - Write your personal Chidusim on Talmud.
+* [RavGPT.ai](https://ravgpt.ai/) - Make Torah learning more accessible.
 * [Seferai.org](https://seferai.org/) - Sefaria Scholar: Explore Jewish texts with AI-powered insights
-* [Shitufta](https://shitufta.org.il/) - A unique Torah database designed in the original Tzurat Hadaf (Hebrew) 
+* [Shitufta](https://shitufta.org.il/) - A unique Torah database designed in the original Tzurat Hadaf (Hebrew)
 * [Shulkhan](http://josephtepperman.com/shulkhan.htm) - A touch interface for the printed Talmud
 * [The Jewish Story Through Books](https://joshcooper417.github.io/) - A time-lapse of where and when Jewish books were published.
 * [Yanki](www.yankiai.com) - Yanki is an all-in-one app built on Halachic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features—all in a filtered, AI-powered ecosystem designed for the frum Jewish world.
 * [Zohar-stories.com](https://www.zohar-stories.com/) - A database of the stories of the sages that appear in the Zohar literature, in a digital format
+* [בינה ודעת ](https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t) – צ׳אט לימוד תורה אינטראקטיבי על מקורות מוסמכים
 
 ***
 
 ### **Visualization & Data Analysis**
 
 * [Besasefer ](http://www.basehasefer.com/) - A powerful analytical search engine for the Tanach
-* [Gematriaphone](http://alexboxer.com/gematriaphone/) - Hear the Torah's Hidden Mathematical Music 
+* [Gematriaphone](http://alexboxer.com/gematriaphone/) - Hear the Torah's Hidden Mathematical Music
 * [Liz Shayne's Visualizations of our Links](https://lizshayne.wordpress.com/tag/sefaria/) ([code on GitHub](https://github.com/LizShayne/Sefaria-Data-Viz))
 * [Quantified Cantillation](https://quantifiedcantillation.nl/) - From any trop, click to find out what trop can come next, and what the transition probability is.
 * [Russel Neiss' Micrography](https://github.com/rneiss/micrography) - Convert an image and Judaic text source into a computer-generated micrograph.
