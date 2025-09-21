@@ -97,6 +97,7 @@ To see a list of websites which run our Linker, click [here](https://developers.
 * [AI Supported Chevrusa](https://dormantone.github.io/chat-app/)
 * [Daily Daf Tracker](https://mattpolanieckidev.github.io/dailydaf/)
 * [Jew And A](https://seph-efd35.web.app/) - Questions with Answers from the Jewish Library
+* [Shulert](https://www.shulert.org/) - The ultimate app for organizing and enhancing your davening experience.
 * [T'Feeling](https://tfeeling.netlify.app/) - Explore the connections between t'fillah (prayer) and emotions.
 * [TorahBot for Mi Yodea](https://www.reddit.com/r/Judaism/comments/53wa47/introducing_torahbot/) - Cite sources and bring texts automatically into Mi Yodea.
 * [Tweet Yomi](https://tweetyomi.org/) - Daily Torah Tweets
