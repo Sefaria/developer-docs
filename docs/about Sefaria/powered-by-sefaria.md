@@ -35,6 +35,7 @@ To see a list of websites which run our Linker, click [here](https://developers.
 * [AlHaTorah](https://alhatorah.org/) - Tools for studying Tanakh. Includes biblical commentaries reused from Sefaria.
 * [AllDaf](https://alldaf.org/) - Daf Yomi App from the OU - English text from Sefaria.
 * [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - The halakhos (practices) of daily life.
+* [ChavrutAI ](https://chavrutai.com/contents) - a free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
 * [Hadran](https://hadran.org.il) - Inspiring Women to Learn Talmud. Daf Yomi classes using Sefaria text.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries reused from Sefaria.
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Making Sefaria texts readable on Kindle.
