@@ -17,9 +17,9 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Staff Pick of the Month
 
-  # **[Orayta: Torah in Your Time](https://preview--orayta-learning-path.lovable.app/)**
+  # **[chavrutAI](https://chavrutai.com/contents)**
 
-  Orayta is an AI-powered learning app that helps busy people integrate Torah study into daily life
+  A free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design
 
   # **[The Talmud Commentary Atlas](https://github.com/AChompSitsIn/The-Talmud-Commentary-Atlas?tab=readme-ov-file#visualizations)**
 
