@@ -21,9 +21,9 @@ next:
 
   A free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design
 
-  # **[The Talmud Commentary Atlas](https://github.com/AChompSitsIn/The-Talmud-Commentary-Atlas?tab=readme-ov-file#visualizations)**
+  # **[Daf Quiz](https://dafquiz.com/daf-yomi)**
 
-  A novel visualization of data provided by Sefaria, including 5 visualizations to show interesting information about Jewish scholars commentaries on the Babylonian Talmud
+  Daf Quiz is a web application that generates a daily multiple-choice quiz based on the current day's study of Daf Yomi
 </Callout>
 
 To see a list of websites which run our Linker, click [here](https://developers.sefaria.org/docs/sites-using-the-linker).
@@ -36,6 +36,7 @@ To see a list of websites which run our Linker, click [here](https://developers.
 * [AllDaf](https://alldaf.org/) - Daf Yomi App from the OU - English text from Sefaria.
 * [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - The halakhos (practices) of daily life.
 * [ChavrutAI ](https://chavrutai.com/contents) - a free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
+* [Daf Quiz](https://dafquiz.com/daf-yomi) - Daf Quiz is a web application that generates a daily multiple-choice quiz based on the current day's study of Daf Yomi. Link to source code https://github.com/bentekkie/daf_quiz
 * [Hadran](https://hadran.org.il) - Inspiring Women to Learn Talmud. Daf Yomi classes using Sefaria text.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries reused from Sefaria.
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Making Sefaria texts readable on Kindle.
