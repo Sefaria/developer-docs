@@ -17,10 +17,9 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Staff Pick of the Month
 
-  # **[Jewish Philosophy](https://jewish-philosophy.vercel.app/)**
+  # **[chavrutAI](https://developers.sefaria.org/docs/powered-by-sefaria#/)**
 
-  The goal of the project is to spread the stream of Jewish-religious philosophy, which believes that the tool for understanding the truths of Judaism is philosophy.
-  This stream was widespread until the 16th century, and under the leadership of Prof. Shalom Tzadik, the site is trying to revive this stream.
+  a free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
 
   # **[Daf Quiz](https://dafquiz.com/daf-yomi)**
 
@@ -100,7 +99,6 @@ To see a list of websites which run our Linker, click [here](https://developers.
 * [AI Supported Chevrusa](https://dormantone.github.io/chat-app/)
 * [Daily Daf Tracker](https://mattpolanieckidev.github.io/dailydaf/)
 * [Jew And A](https://seph-efd35.web.app/) - Questions with Answers from the Jewish Library
-* [Jewish Philosophy](https://jewish-philosophy.vercel.app/) - Reviving the stream of Jewish-religious philosophy under the leadership of Prof. Shalom Tzadik. 
 * [Shulert](https://www.shulert.org/) - The ultimate app for organizing and enhancing your davening experience.
 * [T'Feeling](https://tfeeling.netlify.app/) - Explore the connections between t'fillah (prayer) and emotions.
 * [TorahBot for Mi Yodea](https://www.reddit.com/r/Judaism/comments/53wa47/introducing_torahbot/) - Cite sources and bring texts automatically into Mi Yodea.
