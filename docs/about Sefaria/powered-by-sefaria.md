@@ -17,9 +17,10 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Staff Pick of the Month
 
-  # **[chavrutAI](https://chavrutai.com/contents)**
+  # **[Jewish Philosophy](https://jewish-philosophy.vercel.app/)**
 
-  A free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design
+  The goal of the project is to spread the stream of Jewish-religious philosophy, which believes that the tool for understanding the truths of Judaism is philosophy.
+  This stream was widespread until the 16th century, and under the leadership of Prof. Shalom Tzadik, the site is trying to revive this stream.
 
   # **[Daf Quiz](https://dafquiz.com/daf-yomi)**
 
