@@ -113,4 +113,5 @@ next:
 * [929](https://929.org.il/p/home)
 * [רמב״י - הספריה הלאומית](https://www.nli.org.il/he/research-and-teach/catalogs/bibliographic-databases/rambi)
 * [מים לים](https://maimlayam.co.il/)
+* [פילוסופיה יהודית ](https://jewish-philosophy.vercel.app/)
 * [צריך עיון](https://iyun.org.il/)
