@@ -17,7 +17,7 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Staff Pick of the Month
 
-  # **[chavrutAI](https://chavrutai.com/contents)**
+  # **[ChavrutAI](https://chavrutai.com/contents)**
 
   a free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
 
