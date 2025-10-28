@@ -12,27 +12,13 @@ metadata:
 ---
 The Sefaria MCP (Model Context Protocol) server connects your favorite AI tools directly to Sefaria's vast library of Jewish texts.
 
+## What is MCP?
 
-  <Card title="MCP Server" icon="">
-    https://mcp.sefaria.org/sse
-  </Card>
+MCP is a standardized way for LLMs to connect to external data sources and APIs. It's a bridge that lets your AI chat with databases, search engines, and specialized libraries. 
 
+## Sefaria MCP
 
-## What is MCP? 🤔
-
-MCP is a standardized way for AI assistants to connect to external data sources and APIs. Think of it as a bridge that lets your AI chat with databases, search engines, and specialized libraries - like having a research assistant that never sleeps!
-
-## Why Sefaria's MCP is Amazing ✨
-
-🔍 **Instant Access** - Search and retrieve any text from Torah, Talmud, Mishnah, and thousands of other Jewish sources
-
-📚 **Precise Citations** - Every quote comes with exact references - no more "ChatGPT thinks the Talmud says..." but actual verified passages
-
-🔗 **Smart Connections** - Discover commentaries and related texts automatically
-
-🌍 **Multilingual** - Works with Hebrew, Aramaic, and English texts seamlessly
-
-**The difference?** Instead of AI hallucinations about Jewish texts, you get real, traceable, scholarly-grade sources. Every claim can be verified, every quote is authentic.
+Sefaria has just launched an MCP which allows your AI assistant of choice to converse directly with the Sefaria library. This means your LLM can search and retrieve any text from our database, and return a response with precise citations. Instead of AI hallucinations about Jewish texts, you can start getting responses grounded in traceable Jewish sources. 
 
 ## Quick Setup Guide 🚀
 
@@ -45,7 +31,7 @@ MCP is a standardized way for AI assistants to connect to external data sources 
    * **Cursor**: Configure in MCP settings
    * **Other Tools**: Use the MCP URL in your client's server configuration
 
-3. **Start Exploring**: Ask your AI about Jewish texts - "What does Genesis 1:1 say?" or "Find me Talmudic discussions about kindness"
+3. **Start Exploring**: Ask your  about Jewish texts - "What does Genesis 1:1 say?" or "Find me Talmudic discussions about kindness"
 
 ### Example Queries to Try:
 
@@ -53,8 +39,4 @@ MCP is a standardized way for AI assistants to connect to external data sources 
 * "Search for texts about tikkun olam"
 * "What does Pirkei Avot say about learning?"
 
-## Ready to Begin? 🎯
-
-Your AI is now connected to 3,000 years of Jewish wisdom. Every conversation can be grounded in authentic sources, every study session enriched with traditional commentaries.
-
-**Happy learning!** 📖✡️
+<br />
