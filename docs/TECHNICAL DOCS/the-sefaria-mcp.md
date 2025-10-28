@@ -1,8 +1,8 @@
 ---
 title: The Sefaria MCP
 excerpt: >-
-  Connect your AI assistant to thousands of years of Jewish wisdom through
-  Sefaria's MCP server - making Torah, Talmud, and more instantly accessible.
+  Plug your LLM of choice into Sefaria's rich library of Jewish texts via our
+  MCP Server. 
 deprecated: false
 hidden: false
 link:
@@ -10,9 +10,13 @@ link:
 metadata:
   robots: index
 ---
-# 🕎 Access Millennia of Jewish Wisdom with AI
+The Sefaria MCP (Model Context Protocol) server connects your favorite AI tools directly to Sefaria's vast library of Jewish texts.
 
-**Transform your AI assistant into a scholarly companion!** The Sefaria MCP (Model Context Protocol) server connects your favorite AI tools directly to Sefaria's vast library of Jewish texts.
+
+  <Card title="MCP Server" icon="">
+    https://mcp.sefaria.org/sse
+  </Card>
+
 
 ## What is MCP? 🤔
 
@@ -37,16 +41,17 @@ MCP is a standardized way for AI assistants to connect to external data sources 
 1. **Get the MCP URL**: `https://mcp.sefaria.org/sse`
 
 2. **Add to Your AI Tool**:
-   - **Claude Desktop**: Add to your config file
-   - **Cursor**: Configure in MCP settings  
-   - **Other Tools**: Use the MCP URL in your client's server configuration
+   * **Claude Desktop**: Add to your config file
+   * **Cursor**: Configure in MCP settings
+   * **Other Tools**: Use the MCP URL in your client's server configuration
 
 3. **Start Exploring**: Ask your AI about Jewish texts - "What does Genesis 1:1 say?" or "Find me Talmudic discussions about kindness"
 
 ### Example Queries to Try:
-- "Show me Rashi's commentary on Exodus 3:14"
-- "Search for texts about tikkun olam"
-- "What does Pirkei Avot say about learning?"
+
+* "Show me Rashi's commentary on Exodus 3:14"
+* "Search for texts about tikkun olam"
+* "What does Pirkei Avot say about learning?"
 
 ## Ready to Begin? 🎯
 
