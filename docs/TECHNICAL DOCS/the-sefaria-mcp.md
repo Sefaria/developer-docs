@@ -31,6 +31,6 @@ Sefaria has just launched an MCP which allows your AI assistant of choice to con
    * **Cursor**: Configure in MCP settings
    * **Other Tools**: Use the MCP URL in your client's server configuration
 
-3. **Start Exploring**: Ask your questions about Jewish texts - "What does Genesis 1:1 say?" or "Find me Talmudic discussions about kindness"
+3. **Start Exploring**: Ask your questions about Jewish texts — "What does Genesis 1:1 say?" or "Find me talmudic discussions about kindness"
 
 <br />
