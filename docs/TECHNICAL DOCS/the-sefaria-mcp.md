@@ -8,3 +8,4 @@ hidden: false
 metadata:
   robots: index
 ---
+https://mcp.sefaria.org/sse
