@@ -20,7 +20,7 @@ MCP is a standardized way for LLMs to connect to external data sources and APIs.
 
 Sefaria has just launched an MCP which allows your AI assistant of choice to converse directly with the Sefaria library. This means your LLM can search and retrieve any text from our database, and return a response with precise citations to specific sources.
 
-## Quick Setup Guide 
+## Quick Setup Guide
 
 ### For Any MCP-Compatible Tool:
 
@@ -31,6 +31,6 @@ Sefaria has just launched an MCP which allows your AI assistant of choice to con
    * **Cursor**: Configure in MCP settings
    * **Other Tools**: Use the MCP URL in your client's server configuration
 
-3. **Start Exploring**: Ask your  about Jewish texts - "What does Genesis 1:1 say?" or "Find me Talmudic discussions about kindness"
+3. **Start Exploring**: Ask your questions about Jewish texts - "What does Genesis 1:1 say?" or "Find me Talmudic discussions about kindness"
 
 <br />
