@@ -15,7 +15,12 @@ metadata:
   margin: 0;
   width: 100%;
   max-width: 100%;
+  }
+  [class*="SuperHubCustomPage-content" {
+	
 }
+
+
 #content-head {
   display: none;
 }
