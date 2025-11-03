@@ -19,8 +19,8 @@ metadata:
 [class*="SuperHubCustomPage-content"] {
     margin: 0;
     width: 100%;
-  max-width: 100%;
-	padding:0 
+    max-width: 100%;
+    padding:0;
 
 }
 
