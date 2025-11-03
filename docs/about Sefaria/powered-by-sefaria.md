@@ -19,11 +19,11 @@ next:
 
   # **<Anchor label="ChavrutAI" target="_blank" href="https://chavrutai.com/contents">ChavrutAI</Anchor>**
 
-  a free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
+  A free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
 
   # **<Anchor label="GoTorah! " target="_blank" href="https://gotorah.web.app/">GoTorah! </Anchor>**
 
-  GoTorah’s intelligent chat adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The acclaimed Dvar Torah feature instantly generates source-based talks tailored by difficulty, length, and occasion—ready for synagogue or home use.
+  GoTorah’s intelligent chat adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The Dvar Torah feature instantly generates source-based talks tailored by difficulty, length, and occasion—ready for synagogue or home use.
 </Callout>
 
 To see a list of websites which run our Linker, click [here](https://developers.sefaria.org/docs/sites-using-the-linker).
