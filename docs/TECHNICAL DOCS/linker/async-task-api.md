@@ -7,7 +7,7 @@ metadata:
 ---
 The Async Task API can respond with the status of any async task. If the task is complete, it also responds with the result payload of the task. Currently the only async task is the [Linker API](doc:linker-api)
 
-# GET /api/async/task_id
+# GET /api/async/:task_id
 
 Takes a task_id as returned by the original API that generated the task. E.g. a task ID is returned when the linker API is called.
 
