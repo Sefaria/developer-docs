@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-The Sefaria Linker recognizes references on a web page, links them to the corresponding texts on Sefaria, and optionally provides a popup containing the text of the references. 
+The Sefaria Linker recognizes references on a web page, links them to the corresponding texts on Sefaria, and optionally provides a popup containing the text of the references.
 
 It can be run either as a bookmarklet from a browser or embedded into page code.  The embedded code is meant for website admins to offer the Sefaria Linker to their users while the bookmarklet is meant for individuals who want to see the Sefaria Linker on any site they visit.
 
