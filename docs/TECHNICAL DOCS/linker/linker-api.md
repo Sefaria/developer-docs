@@ -10,16 +10,20 @@ metadata:
 next:
   description: ''
 ---
-The [Sefaria Linker](https://www.sefaria.org/linker) relies on a POST API, documented below. 
+The [Sefaria Linker](https://www.sefaria.org/linker) relies on a POST API, documented below.
 
 # Introduction
 
-Takes in text input and returns the location, as well as a Sefaria link for each citation in the text. Below is a table detailing current support by language.
+Takes in text input and returns the location, as well as a Sefaria link for each citation in the text. 
 
-| Language | Support                                                                                                                                                                                                                                                       |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| English  | Basic support. Relies on a regular expression algorithm that can cause a high level of false positives and false negatives. Works better on simple sources like Tanakh, Mishnah, Talmud etc. Works more poorly on books with complicated titles or citations. |
-| Hebrew   | Relies on machine learning models. Aim is to limit false positives. Supports ibid citations. Will return multiple options if a citation is ambiguous.                                                                                                         |
+:warning: NOTE: The response format has changed recently. See [Response Format](#response-format) below.
+
+Below is a table detailing current support by language.
+
+| Language | Support                                                                                                                                                                                                           |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| English  | Relies on convolutional neural network (CNN) models. Aim is to limit false positives. Supports ibid citations. Will return multiple options if a citation is ambiguous.                                           |
+| Hebrew   | Relies on a BERT-based transformer model. Aim is to limit false positives. Supports ibid citations. Will return multiple options if a citation is ambiguous. Performance should be better than the English model. |
 
 # API
 
@@ -29,11 +33,11 @@ This endpoint takes text as input and returns the location as well as a Sefaria 
 
 ### URL parameters
 
-| URL param     | Description                                                                                                                                            | Type                   | Default |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ------- |
-| with\_text    | Return the text for each citation. See [with\_text format section](#with_text-format) for details.                                                     | 0 or 1                 | 0       |
-| debug         | Return debug information for each citation. See [debug format section](#debug-format) for details.                                                     | 0 or 1                 | 0       |
-| max\_segments | When `with_text` is `1`, what is the max number of segments to return for a citation. Limits size of response for general citations like `פרשת בראשית` | int. 0 means no limit. | 0       |
+| URL param    | Description                                                                                                                                            | Type                   | Default |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ------- |
+| with_text    | Return the text for each citation. See [with_text format section](#with_text-format) for details.                                                      | 0 or 1                 | 0       |
+| debug        | Return debug information for each citation. See [debug format section](#debug-format) for details.                                                     | 0 or 1                 | 0       |
+| max_segments | When `with_text` is `1`, what is the max number of segments to return for a citation. Limits size of response for general citations like `פרשת בראשית` | int. 0 means no limit. | 0       |
 
 ### POST body
 
@@ -45,7 +49,15 @@ POST body should be a serialized JSON with the following fields
 
 ### Response format
 
-Response is in JSON in the following format. See [example](#example).
+Responds with HTTP code 202 (indicating the request was accepted but not yet completed) and a task ID in the following format
+
+```javascript
+{
+  "task_id": <str>
+}
+```
+
+This task ID can then be used to poll the async API until a 200 response code is received. When the async API returns a 200, the response will contain a `"result"` key with the following object. See [example](#example).
 
 ```javascript
 {
@@ -78,15 +90,15 @@ Response is in JSON in the following format. See [example](#example).
 }
 ```
 
-### with\_text format
+### with_text format
 
 When `with_text` URL param is `1`, the following keys are added to the response object at `response.title.refData` and `response.body.refData`.
 
-| Field       | Description                                                              |
-| ----------- | ------------------------------------------------------------------------ |
+| Field       | Description                                                                |
+| ----------- | -------------------------------------------------------------------------- |
 | he          | Hebrew text of `<ref>` where `<ref>` is the key of the `refData` element.  |
 | en          | English text of `<ref>` where `<ref>` is the key of the `refData` element. |
-| isTruncated | Was text truncated according to `max_segments` URL param.                |
+| isTruncated | Was text truncated according to `max_segments` URL param.                  |
 
 ### debug format
 
@@ -144,147 +156,166 @@ Below is an example in cURL which uses all the URL parameters. Note, none of the
 
 ## Input
 
-```bash
+```curl
 curl -X POST 'https://www.sefaria.org/api/find-refs?debug=1&with_text=1&max_segments=5' --data-raw '{"text":{"body": "ראה מה שכתוב בפסוק א.", "title": "עיון על איוב פרק יז"}}'
 ```
 
 ## Output
 
+The API call above will return a task ID such as the following:
+
+```javascript
+{ "task_id": "my-task-id" }
+```
+
+Poll the async API until you get a 200 response code.
+
+```curl
+curl -X GET 'https://www.sefaria.org/api/async/my-task-id
+```
+
+ When the async API does return a 200 response code, you will see the following response. Note, the linker API response data is in the `"result"`field.
+
 ```javascript
 {
-   "title":{
-      "results":[
-         {
-            "startChar":8,
-            "endChar":19,
-            "text":"איוב פרק יז",
-            "linkFailed":false,
-            "refs":[
-               "Job 17"
-            ]
-         }
+  "task_id": "my-task-id",
+  "state": "SUCCESS",
+  "ready": true,
+  "result": {
+    "title": {
+      "results": [
+        {
+          "startChar": 8,
+          "endChar": 19,
+          "text": "איוב פרק יז",
+          "linkFailed": false,
+          "refs": [
+            "Job 17"
+          ]
+        }
       ],
-      "refData":{
-         "Job 17":{
-            "heRef":"איוב י״ז",
-            "url":"Job.17",
-            "primaryCategory":"Tanakh",
-            "he":[
-               "רוּחִ֣י חֻ֭בָּלָה יָמַ֥י נִזְעָ֗כוּ קְבָרִ֥ים לִֽי׃",
-               "אִם־לֹ֣א הֲ֭תֻלִים עִמָּדִ֑י וּ֝בְהַמְּרוֹתָ֗ם תָּלַ֥ן עֵינִֽי׃",
-               "שִֽׂימָה־נָּ֭א עׇרְבֵ֣נִי עִמָּ֑ךְ מִ֥י ה֝֗וּא לְיָדִ֥י יִתָּקֵֽעַ׃",
-               "כִּֽי־לִ֭בָּם צָפַ֣נְתָּ מִּשָּׂ֑כֶל עַל־כֵּ֝֗ן לֹ֣א תְרֹמֵֽם׃",
-               "לְ֭חֵלֶק יַגִּ֣יד רֵעִ֑ים וְעֵינֵ֖י בָנָ֣יו תִּכְלֶֽנָה׃"
-            ],
-            "en":[
-               "My spirit is crushed, my days run out;<br/>The graveyard waits for me.<br/>",
-               "Surely mocking men keep me company,<br/>And with their provocations I close my eyes.",
-               "Come now, stand surety for me!<br/>Who will give his hand on my behalf?",
-               "You have hidden understanding from their minds;<br/>Therefore You must not exalt [them].",
-               "He informs on his friends for a share [of their property],<br/>And his children’s eyes pine away.<br/>"
-            ],
-            "isTruncated":true
-         }
+      "refData": {
+        "Job 17": {
+          "heRef": "איוב י״ז",
+          "url": "Job.17",
+          "primaryCategory": "Tanakh",
+          "he": [
+            "רוּחִ֣י חֻ֭בָּלָה יָמַ֥י נִזְעָ֗כוּ קְבָרִ֥ים לִֽי׃",
+            "אִם־לֹ֣א הֲ֭תֻלִים עִמָּדִ֑י וּ֝בְהַמְּרוֹתָ֗ם תָּלַ֥ן עֵינִֽי׃",
+            "שִֽׂימָה־נָּ֭א עׇרְבֵ֣נִי עִמָּ֑ךְ מִ֥י ה֝֗וּא לְיָדִ֥י יִתָּקֵֽעַ׃",
+            "כִּֽי־לִ֭בָּם צָפַ֣נְתָּ מִּשָּׂ֑כֶל עַל־כֵּ֝֗ן לֹ֣א תְרֹמֵֽם׃",
+            "לְ֭חֵלֶק יַגִּ֣יד רֵעִ֑ים וְעֵינֵ֖י בָנָ֣יו תִּכְלֶֽנָה׃"
+          ],
+          "en": [
+            "My spirit is crushed, my days run out;<br/>The graveyard waits for me.<br/>",
+            "Surely mocking men keep me company,<br/>And with their provocations I close my eyes.",
+            "Come now, stand surety for me!<br/>Who will give his hand on my behalf?",
+            "You have hidden understanding from their minds;<br/>Therefore You must not exalt [them].",
+            "He informs on his friends for a share [of their property],<br/>And his children’s eyes pine away.<br/>"
+          ],
+          "isTruncated": true
+        }
       },
-      "debugData":[
-         [
-            {
-               "orig_part_strs":[
-                  "איוב",
-                  "פרק יז"
-               ],
-               "orig_part_types":[
-                  "NAMED",
-                  "NUMBERED"
-               ],
-               "final_part_strs":[
-                  "איוב",
-                  "פרק יז"
-               ],
-               "final_part_types":[
-                  "NAMED",
-                  "NUMBERED"
-               ],
-               "resolved_part_strs":[
-                  "איוב",
-                  "פרק יז"
-               ],
-               "resolved_part_types":[
-                  "NAMED",
-                  "NUMBERED"
-               ],
-               "resolved_part_classes":[
-                  "RawRefPart",
-                  "RawRefPart"
-               ],
-               "context_ref":null,
-               "context_type":null
-            }
-         ]
+      "debugData": [
+        [
+          {
+            "orig_part_strs": [
+              "איוב",
+              "פרק יז"
+            ],
+            "orig_part_types": [
+              "NAMED",
+              "NUMBERED"
+            ],
+            "final_part_strs": [
+              "איוב",
+              "פרק יז"
+            ],
+            "final_part_types": [
+              "NAMED",
+              "NUMBERED"
+            ],
+            "resolved_part_strs": [
+              "איוב",
+              "פרק יז"
+            ],
+            "resolved_part_types": [
+              "NAMED",
+              "NUMBERED"
+            ],
+            "resolved_part_classes": [
+              "RawRefPart",
+              "RawRefPart"
+            ],
+            "context_ref": null,
+            "context_type": null
+          }
+        ]
       ]
-   },
-   "body":{
-      "results":[
-         {
-            "startChar":13,
-            "endChar":20,
-            "text":"בפסוק א",
-            "linkFailed":false,
-            "refs":[
-               "Job 17:1"
-            ]
-         }
+    },
+    "body": {
+      "results": [
+        {
+          "startChar": 13,
+          "endChar": 20,
+          "text": "בפסוק א",
+          "linkFailed": false,
+          "refs": [
+            "Job 17:1"
+          ]
+        }
       ],
-      "refData":{
-         "Job 17:1":{
-            "heRef":"איוב י״ז:א׳",
-            "url":"Job.17.1",
-            "primaryCategory":"Tanakh",
-            "he":[
-               "רוּחִ֣י חֻ֭בָּלָה יָמַ֥י נִזְעָ֗כוּ קְבָרִ֥ים לִֽי׃"
-            ],
-            "en":[
-               "My spirit is crushed, my days run out;<br/>The graveyard waits for me.<br/>"
-            ],
-            "isTruncated":false
-         }
+      "refData": {
+        "Job 17:1": {
+          "heRef": "איוב י״ז:א׳",
+          "url": "Job.17.1",
+          "primaryCategory": "Tanakh",
+          "he": [
+            "רוּחִ֣י חֻ֭בָּלָה יָמַ֥י נִזְעָ֗כוּ קְבָרִ֥ים לִֽי׃"
+          ],
+          "en": [
+            "My spirit is crushed, my days run out;<br/>The graveyard waits for me.<br/>"
+          ],
+          "isTruncated": false
+        }
       },
-      "debugData":[
-         [
-            {
-               "orig_part_strs":[
-                  "בפסוק א"
-               ],
-               "orig_part_types":[
-                  "NUMBERED"
-               ],
-               "final_part_strs":[
-                  "בפסוק א"
-               ],
-               "final_part_types":[
-                  "NUMBERED"
-               ],
-               "resolved_part_strs":[
-                  "job",
-                  "SectionContext(AddressPerek(0), 'Chapter', 17)",
-                  "בפסוק א"
-               ],
-               "resolved_part_types":[
-                  "NAMED",
-                  "NUMBERED",
-                  "NUMBERED"
-               ],
-               "resolved_part_classes":[
-                  "TermContext",
-                  "SectionContext",
-                  "RawRefPart"
-               ],
-               "context_ref":"Job 17",
-               "context_type":"CURRENT_BOOK"
-            }
-         ]
+      "debugData": [
+        [
+          {
+            "orig_part_strs": [
+              "בפסוק א"
+            ],
+            "orig_part_types": [
+              "NUMBERED"
+            ],
+            "final_part_strs": [
+              "בפסוק א"
+            ],
+            "final_part_types": [
+              "NUMBERED"
+            ],
+            "resolved_part_strs": [
+              "job",
+              "SectionContext(AddressPerek(0), 'Chapter', 17)",
+              "בפסוק א"
+            ],
+            "resolved_part_types": [
+              "NAMED",
+              "NUMBERED",
+              "NUMBERED"
+            ],
+            "resolved_part_classes": [
+              "TermContext",
+              "SectionContext",
+              "RawRefPart"
+            ],
+            "context_ref": "Job 17",
+            "context_type": "CURRENT_BOOK"
+          }
+        ]
       ]
-   }
+    }
+  }
 }
 ```
 
