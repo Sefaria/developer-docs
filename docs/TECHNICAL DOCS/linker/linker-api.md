@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-The [Sefaria Linker](https://www.sefaria.org/linker) relies on a POST API, documented below. 
+The [Sefaria Linker](https://www.sefaria.org/linker) relies on a POST API, documented below.
 
 # Introduction
 
@@ -29,11 +29,11 @@ This endpoint takes text as input and returns the location as well as a Sefaria 
 
 ### URL parameters
 
-| URL param     | Description                                                                                                                                            | Type                   | Default |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ------- |
-| with\_text    | Return the text for each citation. See [with\_text format section](#with_text-format) for details.                                                     | 0 or 1                 | 0       |
-| debug         | Return debug information for each citation. See [debug format section](#debug-format) for details.                                                     | 0 or 1                 | 0       |
-| max\_segments | When `with_text` is `1`, what is the max number of segments to return for a citation. Limits size of response for general citations like `פרשת בראשית` | int. 0 means no limit. | 0       |
+| URL param    | Description                                                                                                                                            | Type                   | Default |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ------- |
+| with_text    | Return the text for each citation. See [with_text format section](#with_text-format) for details.                                                      | 0 or 1                 | 0       |
+| debug        | Return debug information for each citation. See [debug format section](#debug-format) for details.                                                     | 0 or 1                 | 0       |
+| max_segments | When `with_text` is `1`, what is the max number of segments to return for a citation. Limits size of response for general citations like `פרשת בראשית` | int. 0 means no limit. | 0       |
 
 ### POST body
 
@@ -78,15 +78,15 @@ Response is in JSON in the following format. See [example](#example).
 }
 ```
 
-### with\_text format
+### with_text format
 
 When `with_text` URL param is `1`, the following keys are added to the response object at `response.title.refData` and `response.body.refData`.
 
-| Field       | Description                                                              |
-| ----------- | ------------------------------------------------------------------------ |
+| Field       | Description                                                                |
+| ----------- | -------------------------------------------------------------------------- |
 | he          | Hebrew text of `<ref>` where `<ref>` is the key of the `refData` element.  |
 | en          | English text of `<ref>` where `<ref>` is the key of the `refData` element. |
-| isTruncated | Was text truncated according to `max_segments` URL param.                |
+| isTruncated | Was text truncated according to `max_segments` URL param.                  |
 
 ### debug format
 
