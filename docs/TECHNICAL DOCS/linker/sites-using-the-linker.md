@@ -1,5 +1,5 @@
 ---
-title: Websites Using the Sefaria Auto Linker
+title: Websites Using the Linker
 excerpt: >-
   The Sefaria Linker is a free JavaScript plugin for websites that cite Jewish
   texts. With just a few lines of code, textual citations on your website
