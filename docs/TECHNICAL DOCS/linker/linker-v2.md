@@ -1,8 +1,8 @@
 ---
-title: Linker v2
+title: Embed Linker v2
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
