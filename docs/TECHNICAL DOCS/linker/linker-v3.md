@@ -18,7 +18,7 @@ This documentation covers version 3 of the Sefaria Auto Linker. At the moment, t
 
 The Sefaria Linker automatically connects Torah content across the internet to primary sources in our library,                and vice versa. Websites that use the Sefaria Linker give their users direct access on site to any primary sources they cite, allowing curious learners to explore more. The Linker also makes it possible for websites to be automatically linked to from the Sefaria sidebar when our users are exploring texts your site mentions, exposing your site to new learners on Sefaria.
 
-Linker v3 offers advantages for both Hebrew and English content. It decreases incorrect links and catches many more types of citations. For documentation for the previous default version, see [Linker v2](doc:linker-v2).
+Linker v3 offers advantages for both Hebrew and English content. It decreases incorrect links and catches many more types of citations. For documentation for the previous version, see [Linker v2](doc:linker-v2).
 
 ## Bookmarklet
 
