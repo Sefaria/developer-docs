@@ -2,7 +2,7 @@
 title: Linker v2
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
