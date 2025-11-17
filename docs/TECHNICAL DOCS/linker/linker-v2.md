@@ -1,5 +1,5 @@
 ---
-title: Embed Linker v2
+title: Embed Linker v2 on Your Site
 excerpt: ''
 deprecated: false
 hidden: false
