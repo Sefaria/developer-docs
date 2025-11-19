@@ -1,5 +1,5 @@
 ---
-title: Test homepage
+title: Test Homepage
 fullscreen: false
 hidden: true
 metadata:
