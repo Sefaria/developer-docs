@@ -16,13 +16,13 @@ metadata:
   width: 100%;
   max-width: 100%;
   }
-/**[class*="SuperHubCustomPage-content"] {
+[class*="SuperHubCustomPage-content"] {
     margin: 0;
     width: 100%;
     max-width: 100%;
     padding:0;
 
-}**/
+}
 
 
 /**#content-head {
