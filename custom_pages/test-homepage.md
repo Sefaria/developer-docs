@@ -8,9 +8,9 @@ metadata:
 ---
 <HTMLBlock>{`
 <style>
-/**[class*="Header"] {
+[class*="Header"] {
   display: none !important;
-}**/
+}
 #content-container {
   margin: 0;
   width: 100%;
