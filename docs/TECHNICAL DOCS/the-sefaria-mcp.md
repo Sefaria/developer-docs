@@ -1,8 +1,8 @@
 ---
 title: The Sefaria MCPs
 excerpt: >-
-  Plug your LLM of choice into Sefaria's rich library of Jewish texts via our
-  MCP server: https://mcp.sefaria.org/sse
+  Use our MCPs to integrate your LLM of choice with Sefaria's rich library of
+  Jewish texts and huge cache of open-source data.
 deprecated: false
 hidden: false
 link:
