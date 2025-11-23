@@ -17,9 +17,9 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Staff Pick of the Month
 
-  # **<Anchor label="ChavrutAI" target="_blank" href="https://chavrutai.com/contents">ChavrutAI</Anchor>**
+  # **<Anchor label="Darshan AI" target="_blank" href="https://darshan.siddur.xyz/">Darshan AI</Anchor>**
 
-  A free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
+  A platform that can build out an entire source sheet with just a few clicks, and will cite sources back to Sefaria so that educators can confirm accuracy.
 
   # **<Anchor label="GoTorah! " target="_blank" href="https://gotorah.web.app/">GoTorah! </Anchor>**
 
@@ -62,9 +62,9 @@ To see a list of websites which run our Linker, click [here](https://developers.
 * <Anchor label="Sefaria-MCP-server" target="_blank" href="https://github.com/Sivan22/mcp-sefaria-server">Sefaria-MCP-server</Anchor> - An MCP (Model Context Protocol) server that provides access to Jewish texts from the Sefaria library. This server enables Large Language Models to retrieve and reference Jewish texts through a standardized interface.
 * <Anchor label="Build a Torah-Powered AI Chatbot" target="_blank" href="https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757">Build a Torah-Powered AI Chatbot</Anchor> - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
 * <Anchor label="Abba Saul" target="_blank" href="https://github.com/scopreon/abba-saul/">Abba Saul</Anchor> - A mishnah bot for Discord
-* <Anchor label="darshan.siddur.xyz" target="_blank" href="https://darshan.siddur.xyz/">darshan.siddur.xyz</Anchor> - a platform that can build out an entire source sheet with just a few clicks, and will cite sources back to Sefaria so that educators can confirm accuracy.
 * <Anchor label="Artscroll Smart Siddur" target="_blank" href="https://apps.apple.com/us/app/artscroll-smart-siddur-%D7%A1%D7%93%D7%95%D7%A8/id988119206">Artscroll Smart Siddur</Anchor> - Artscroll's siddur app.
 * <Anchor label="Dafyomi AI Summary  " target="_blank" href="https://dormantone.github.io/dafyomi/">Dafyomi AI Summary  </Anchor> - Explore, Summarize, and Translate Key Insights
+* <Anchor label="Darshan AI" target="_blank" href="https://darshan.siddur.xyz/">Darshan AI</Anchor> - a platform that can build out an entire source sheet with just a few clicks, and will cite sources back to Sefaria so that educators can confirm accuracy.
 * <Anchor label="Goof " target="_blank" href="https://goof.surge.sh/">Goof </Anchor> - Body parts in Tefillah
 * <Anchor label="Ituria" target="_blank" href="https://github.com/Sivan22/ituria">Ituria</Anchor>  -  AI-agent based search (GitHub repo) based on [Otzaria](https://github.com/Sivan22/otzaria)
 * <Anchor label="Mishnah.org" target="_blank" href="https://www.mishnah.org/">Mishnah.org</Anchor> - The easy way to Study Mishnah.
