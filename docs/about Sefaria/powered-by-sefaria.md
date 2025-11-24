@@ -21,9 +21,9 @@ next:
 
   A platform that can build out an entire source sheet with just a few clicks, and will cite sources back to Sefaria so that educators can confirm accuracy.
 
-  # **<Anchor label="GoTorah! " target="_blank" href="https://gotorah.web.app/">GoTorah! </Anchor>**
+  # **<Anchor label="Weekay Torah Readings with AI Insights" target="_blank" href="http://jiveyeti.com/wtr">Weekay Torah Readings with AI Insights</Anchor>**
 
-  GoTorah’s intelligent chat adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The Dvar Torah feature instantly generates source-based talks tailored by difficulty, length, and occasion—ready for synagogue or home use.
+  Experimental AI insights accompany each Aliyah of the weekday Torah readings, along with the texts in Hebrew and English
 </Callout>
 
 To see a list of websites which run our Linker, click [here](https://developers.sefaria.org/docs/sites-using-the-linker).
@@ -75,6 +75,7 @@ To see a list of websites which run our Linker, click [here](https://developers.
 * <Anchor label="Shitufta" target="_blank" href="https://shitufta.org.il/">Shitufta</Anchor> - A unique Torah database designed in the original Tzurat Hadaf (Hebrew)
 * <Anchor label="Shulkhan" target="_blank" href="http://josephtepperman.com/shulkhan.htm">Shulkhan</Anchor> - A touch interface for the printed Talmud
 * <Anchor label="The Jewish Story Through Books" target="_blank" href="https://joshcooper417.github.io/">The Jewish Story Through Books</Anchor> - A time-lapse of where and when Jewish books were published.
+* <Anchor label="Weekay Torah Readings with AI Insights" target="_blank" href="http://jiveyeti.com/wtr">Weekay Torah Readings with AI Insights</Anchor> - Experimental AI insights accompany each Aliyah of the weekday Torah readings, along with the texts in Hebrew and English.
 * <Anchor label="Yanki" target="_blank" href="www.yankiai.com">Yanki</Anchor> - Yanki is an all-in-one app built on Halachic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features—all in a filtered, AI-powered ecosystem designed for the frum Jewish world.
 * <Anchor label="Zohar-stories.com" target="_blank" href="https://www.zohar-stories.com/">Zohar-stories.com</Anchor> - A database of the stories of the sages that appear in the Zohar literature, in a digital format
 * <Anchor label="בינה ודעת " target="_blank" href="https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t">בינה ודעת </Anchor> – צ׳אט לימוד תורה אינטראקטיבי על מקורות מוסמכים
