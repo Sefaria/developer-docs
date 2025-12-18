@@ -38,7 +38,7 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
 2. Add to Your AI Tool:
    1. **Claude**: Go to settings, add as a Custom Connector, enable.
    2. **Cursor**: Configure in MCP settings
-   3. **ChatGPT**: Go to settings, navigate to Apps and Connectors, click Create, configure accordingly
+   3. **ChatGPT**: Go to settings, enable Developer Mode, navigate to Apps and Connectors, click Create, configure accordingly
    4. **Other Tools:** Use the MCP URL in your client's server configuration
 3. Start Exploring:
    1. Using the Sefaria Texts MCP, ask your questions about Jewish texts.
