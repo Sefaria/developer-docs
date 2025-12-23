@@ -25,7 +25,7 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
 This tool allows your AI assistant of choice to converse directly with the Sefaria library. This means your LLM can search and retrieve any text from our database and return a response with precise citations to specific sources. Now, when you ask Claude or ChatGPT what Rashi says about Genesis 1:6, you can be sure you’re getting a precise answer.
 
 <Callout icon="❗️" theme="error">
-  **Please note:** You must have a paid account to connect an MCP
+  **Please note:** You must have a paid Claude or ChatGPT account to connect an MCP
 </Callout>
 
 ## Quick Setup Guide
