@@ -1,7 +1,7 @@
 ---
 title: Test Landing Page for Mobile
 fullscreen: false
-hidden: false
+hidden: true
 ---
 <HTMLBlock>{`
 <style>
