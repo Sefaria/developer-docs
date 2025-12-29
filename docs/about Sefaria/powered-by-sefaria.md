@@ -21,7 +21,7 @@ next:
 
   A platform that can build out an entire source sheet with just a few clicks, and will cite sources back to Sefaria so that educators can confirm accuracy.
 
-  # **<Anchor label="Weekay Torah Readings with AI Insights" target="_blank" href="http://jiveyeti.com/wtr">Weekay Torah Readings with AI Insights</Anchor>**
+  # **<Anchor label="Weekday Torah Readings with AI Insights" target="_blank" href="http://jiveyeti.com/wtr">Weekday Torah Readings with AI Insights</Anchor>**
 
   Experimental AI insights accompany each Aliyah of the weekday Torah readings, along with the texts in Hebrew and English
 </Callout>
