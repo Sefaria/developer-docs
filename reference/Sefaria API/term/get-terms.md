@@ -1,6 +1,6 @@
 ---
 title: Terms
-excerpt: >-
+excerpt: >
   A Term is a shared title node.  It can be referenced and used by many
   different `Index` nodes. Terms that use the same `TermScheme` can be ordered
   within that scheme. So for example, _Parsha_ terms who all share the
