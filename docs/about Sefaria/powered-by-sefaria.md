@@ -1,10 +1,11 @@
 ---
 title: Projects Powered By Sefaria
 excerpt: >-
-  This is a partial list of third party projects that make use of Sefaria's API
-  and its open data. We love to see what other people can do with our work. If
-  you'd like to be featured here please [reach
-  out.](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form)
+  Below is a partial list of third-party projects created by using Sefaria's API
+  and open-source data. We love to see what other people are building with our
+  materials. If you'd like to be featured on this page, [please tell us about
+  your
+  project!](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form) 
 deprecated: false
 hidden: false
 metadata:
