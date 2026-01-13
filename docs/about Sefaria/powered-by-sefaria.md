@@ -20,14 +20,14 @@ next:
 
   # **<Anchor label="Darshan AI" target="_blank" href="https://darshan.siddur.xyz/">Darshan AI</Anchor>**
 
-  A platform that can build out an entire source sheet with just a few clicks, and will cite sources back to Sefaria so that educators can confirm accuracy.
+  Educators, take notice! This platform can create an entire source sheet or lesson plan with just a few clicks. Plus, it will cite sources and link them to the Sefaria Library so you can confirm sources and learn with context.
 
   # **<Anchor label="Weekday Torah Readings with AI Insights" target="_blank" href="http://jiveyeti.com/wtr">Weekday Torah Readings with AI Insights</Anchor>**
 
-  Experimental AI insights accompany each Aliyah of the weekday Torah readings, along with the texts in Hebrew and English
+  This project provides experimental AI-generated insights to accompany each weekday Torah reading, alongside the biblical text in both Hebrew and English.
 </Callout>
 
-To see a list of websites which run our Linker, click [here](https://developers.sefaria.org/docs/sites-using-the-linker).
+TIn addition to the projects below, there are also 150+ websites using the Sefaria Linker to automatically link textual citations to the Sefaria Library. [Learn more and view a list of websites using the Linker >> ](https://developers.sefaria.org/docs/sites-using-the-linker).
 
 ***
 
