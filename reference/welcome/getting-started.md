@@ -1,5 +1,5 @@
 ---
-title: Getting Started With The Sefaria API
+title: Getting Started With the Sefaria API
 excerpt: >-
   Explore the Sefaria API for accessing Jewish texts and their interconnections.
   Learn how to get started without needing API keys or authorization.
@@ -19,27 +19,27 @@ next:
 ---
 ## The Sefaria API
 
-The Sefaria API provides live access to Sefaria's structured database of Jewish texts and their interconnections. It aims to simplify the process of getting a new web or mobile app up-and-running.
+The Sefaria API allows live access to Sefaria's structured database of Jewish texts and their interconnections. It is designed to make it as simple as possible to get a new web or mobile app up and running.
 
 ## Welcome to the Sefaria API Reference.
 
-Here you will find documentation and interactive playgrounds for many of our most important API endpoints. Our reference is powered by our OpenAPI spec, which you can see [here](https://github.com/Sefaria/Sefaria-Project/blob/master/docs/openAPI.json).
+Here you will find documentation and interactive playgrounds for many of our most important API endpoints. Our reference is powered by our [OpenAPI spec](https://github.com/Sefaria/Sefaria-Project/blob/master/docs/openAPI.json).
 
 > 🚧 Work-In-Progress
 >
-> Please note, this reference is a work-in-progress. We are always striving to refine and improve our API itself, as well as our documentation. We are looking forward to documenting additional endpoints here in the future. Looking for something you can't find? [Contact us](page:contact-us), we'd love to hear from you.
+> Please note, this reference is a work-in-progress. We are always striving to refine and improve our API itself, as well as our documentation. We are looking forward to documenting additional endpoints here in the future. Looking for something you can't find? [Contact us](page:contact-us)- we'd love to hear from you.
 
-For additional documentation, check out our technical docs [here](https://developers.sefaria.org/docs/welcome).
+For additional documentation, [check out our technical docs](https://developers.sefaria.org/docs/welcome).
 
 ## Getting Started
 
-There isn't much needed to get started with our API; all of our currently documented endpoints can be reached without needing any API keys, tokens or authorization.
+There isn't much needed to get started with our API; all of our currently documented endpoints can be reached without needing any API keys, tokens, or authorization.
 
 **Need a Simple Example?** In this [tutorial](ref:tutorial-dvar-torah-outliner), we guide you step-by-step through a very simple script that uses a handful of our endpoints.
 
-**Looking to Dive Deep?** You can jump right into our API Reference [here](ref:get-v3-texts)
+**Looking to Dive Deep?** You can [jump right into our API Reference](ref:get-v3-texts)
 
-**Still Puzzled?** - You can see what [others have asked](ref:others-have-asked) or [contact us](page:contact-us) for help!
+**Still Puzzled?** You can see what [others have asked](ref:others-have-asked) or [contact us](page:contact-us) for help!
 
 ## API Pathways
 
@@ -47,7 +47,7 @@ Below are a few different pathways through the Sefaria API for individuals seeki
 
 ### Where are the books?
 
-At its core, Sefaria is an open-source digital library of Jewish books. To see all of the books available right now on Sefaria, see the [Table of Contents](ref:get-index). To retrieve all of the metadata related to a specific book, try out the [Index (v2)](ref:get-v2-index) endpoint.
+Sefaria offers an open-source digital library of Jewish books. To see all of the books available right now in the Sefaria Library, see the [Table of Contents](ref:get-index). To retrieve all of the metadata related to a specific book, try out the [Index (v2)](ref:get-v2-index) endpoint.
 
 ### Ready to dive into some text data?
 
@@ -59,13 +59,13 @@ One of the most powerful aspects of Sefaria's data is the links, and other relat
 
 ### Trying to build something based on a learning schedule?
 
-Explore our [Calendars](ref:calendars) API to find data about all of the different study schedules tracked on Sefaria.
+Explore our [Calendars](ref:calendars)API to find data about all of the different study schedules tracked in the Sefaria Library.
 
 ### Topics
 
-Interested in our Sefaria curation of Topics, and the associated texts? Check out the [Topic Graph](ref:get-topics-graph) endpoint to retrieve interrelated topics, and the [Ref-Topic-Links](ref:get-ref-topic-links) endpoint to retrieve all of the topics associated with a given text.
+Interested in Topics on Sefaria, our collection of pages that organize sources by theme? Check out the [Topic Graph](ref:get-topics-graph) endpoint to retrieve interrelated topics, and the [Ref-Topic-Links](ref:get-ref-topic-links) endpoint to retrieve all of the Topics associated with a given text.
 
-### Interested in Images?
+### Interested in images?
 
 Use our [Social Media Image](ref:get-img-gen) endpoint to generate nice graphics based on a segment of text of your choosing.
 
