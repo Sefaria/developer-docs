@@ -29,13 +29,13 @@ In this section, you will find our continuously evolving documentation, offering
 
 > 🚧 Work-In-Progress
 >
-> Our documentation is in the process of being updated and improved. We will continue to migrate documentation to this site over the next few weeks. Looking for something you can't find here? [Contact us](page:contact-us), we'd love to hear from you.
+> Our documentation is in the process of being updated and improved. Looking for something you can't find here? [Contact us](page:contact-us), we'd love to hear from you.
 
----
+***
 
 ### Need more information before exploring our API?
 
-Read through [Text References](doc:text-references) for background information, and then head over to [Getting Started With The Sefaria API](ref:getting-started-with-your-api) to try retrieving some text.
+Read through [Text References](doc:text-references) for background information, and then head over to [Getting Started With the Sefaria API](ref:getting-started-with-your-api) to try retrieving some text.
 
 ### Interested in the structure of the Sefaria Library?
 
@@ -45,8 +45,10 @@ Explore [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefa
 
 Check out our documentation on the [Shape API](doc:shape-api), [Categories API](doc:categories), and [Search API: Elastic Search Proxy](doc:search-api).
 
----
+***
 
-If you need something you can't find here, feel free to reach out to our [engineering team](page:contact-us) for additional assistance.
+If you need something you can't find here, [feel free to reach out to our engineering team](page:contact-us) for additional assistance.
 
 We look forward to building the future of Torah technology together!
+
+<br />
