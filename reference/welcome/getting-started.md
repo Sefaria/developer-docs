@@ -27,7 +27,7 @@ This is where you will find documentation and interactive playgrounds for many o
 
 > 🚧 Work-In-Progress
 >
-> Please note: this reference is a work in progress. We are continually refining and improving both the API and its documentation, and we plan to document additional endpoints here in the future. Looking for something you can’t find? [Contact us](page:contact-us)— we'd love to hear from you.
+> Please note: this reference is a work in progress. We are continually refining and improving both the API and its documentation, and we plan to document additional endpoints here in the future. Looking for something you can’t find? [Contact us](page:contact-us) — we'd love to hear from you.
 
 For additional documentation, [check out our technical docs](https://developers.sefaria.org/docs/welcome).
 
@@ -67,9 +67,9 @@ Interested in Topics on Sefaria, our curated pages that organize sources by them
 
 ### Images
 
-Use our [Social Media Image](ref:get-img-gen) endpoint to generate shareable graphics based on a selected segment of text. 
+Use our [Social Media Image](ref:get-img-gen) endpoint to generate shareable graphics based on a selected segment of text.
 
-If you are looking for manuscript images, use the [Manuscripts](ref:get-manuscripts) endpoint to retrieve corresponding manuscript pages for a given text. 
+If you are looking for manuscript images, use the [Manuscripts](ref:get-manuscripts) endpoint to retrieve corresponding manuscript pages for a given text.
 
 ### Dictionaries and language tools
 
