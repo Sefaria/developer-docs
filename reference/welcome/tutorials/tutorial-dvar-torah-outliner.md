@@ -1,8 +1,8 @@
 ---
-title: The Dvar Torah Outliner
+title: 'Tutorial: The Dvar Torah Outliner'
 excerpt: >-
-  A basic tutorial for beginners looking to get started working with the Sefaria
-  API Reference.
+  This beginner tutorial is great for beginners looking to get started working
+  with the Sefaria API Reference.
 deprecated: false
 hidden: false
 metadata:
