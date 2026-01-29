@@ -1,8 +1,8 @@
 ---
-title: Dvar Torah Outliner
+title: The Dvar Torah Outliner
 excerpt: >-
-  A basic tutorial for beginners looking to get their feet wet with the Sefaria
-  API.
+  A basic tutorial for beginners looking to get started working with the Sefaria
+  API Reference.
 deprecated: false
 hidden: false
 metadata:
@@ -16,25 +16,25 @@ next:
       slug: tutorial-tanakh-trivia-game
       title: Tanakh Trivia Game
 ---
-# Dvar Torah Outliner
+# The Dvar Torah Outliner
 
-Let's say you are frequently asked to prepare *Divrei Torah* on the *Parasha* (a short discourse on the weekly Torah portion), and have decided you want to use the Sefaria API to write code to help you automate an outline each week, containing the first verse of that week's *Parasha* along with a sampling of commentaries. 
+If you are preparing divrei Torah (teachings) on the weekly Torah portion, you can use the Sefaria API to support that work programmatically. In this scenario, code is written to generate a weekly outline that includes the opening verse of the week’s parashah, along with a curated sampling of classical and modern commentaries from the Sefaria Library.
 
-## Tutorial Set Up
+## Tutorial Setup
 
-For this tutorial, we'll be using Python 3.8. 
+This tutorial uses Python 3.8.
 
-Make sure you have [Python requests](https://pypi.org/project/requests/) installed and imported at the top of your file:
+First, ensure you have [Python requests](https://pypi.org/project/requests/) installed and imported at the top of your file in the following way:
 
 ```python
 import requests
 ```
 
-The work we're doing in this tutorial is language agnostic, so feel free to adapt the code to follow along in any language of your choosing.
+_Please note: Although the examples below use Python, the underlying workflow is language-agnostic and can be adapted to any language that can make HTTP requests._
 
-## Retrieve the *Parasha*
+## 1. Retrieve the Citation
 
-Our first step is to use the [Calendars API](ref:get_api-calendars) to retrieve the weekly *Parasha*. We'll hit the endpoint here without any customizations. If you look at the documentation for this endpoint, you'll see that it is highly customizable based on tradition, location, and cycles of readings. For the sake of this example, we'll stick with the basics. 
+First, use the [Calendars API](ref:get_api-calendars) to retrieve the weekly parashah. The endpoint supports a range of parameters (for example, by community tradition, location, and reading cycle). For this example, the default request is sufficient.
 
 ```python
 url = "https://www.sefaria.org/api/calendars"
@@ -46,7 +46,7 @@ response = requests.get(url)
 data = response.json()  
 ```
 
-If you `print` the value of `data`, you'll see a dictionary with lots of information about that day's learning schedules (i.e. Daf Yomi, Daily Rambam... and weekly *Parasha*). 
+If you `print` the value of `data`, you'll see a dictionary with lots of information about that day's learning schedules (e.g. Daf Yomi, Daily Rambam and weekly parashah), organized under `calendar_items`
 
 ```json
 {
@@ -118,9 +118,7 @@ If you `print` the value of `data`, you'll see a dictionary with lots of informa
 }
 ```
 
-We're specifically interested in the list of items stored in the array under the field `calendar_items`, and we want the data in the dictionary with the `title` of `Parashat Hashavua`, so let's retrieve that. 
-
-What's most interesting to us within the `Parashat Hashavua` data is the `ref`, the specific Sefaria citation for this text. (To read more about our citation system, see [Text References](doc:text-references). It is a core aspect of working with our API). 
+Next, retrieve the items stored in the array under the field `calendar_items`. Specifically, the data in the dictionary with the `title` of `Parashat Hashavua`. When retrieving `Parashat Hashavua` data, make sure you're looking at the `ref` — the specific Sefaria citation for this text. (To read more about our citation system, see [Text References](doc:text-references), a core aspect of working with our API Reference).
 
 ```python
 # Retrieve the list of calendar_items
@@ -134,27 +132,29 @@ for item in calendar_items:
         parasha_name = item['displayValue']['en']
 ```
 
-Great! Now we have our citation for the specific week's *Parasha*. This ref will appear as a range, so for example, for the week of *[Parashat Mishpatim](https://www.sefaria.org/topics/parashat-mishpatim?sort=Relevance\&tab=sources)* , printing `parasha_ref` returns `Exodus 21:1-24:18`, and printing `parasha_name` returns `Mishpatim`. 
+The citation for a specific week's parashah will appear as a range. 
+
+For example: When retrieving the citation for [Parashat Mishpatim](https://www.sefaria.org/topics/parashat-mishpatim?sort=Relevance\&tab=sources) , printing `parasha_ref` returns `Exodus 21:1-24:18`, and printing `parasha_name` returns `Mishpatim`.
 
 ```python
 print(parasha_ref) # The ranged citation for the week's Parasha
 print(parasha_name) # The name of the Parasha
 ```
 
-## Selecting the First Verse
+## 2. Selecting Verses
 
-For this specific tutorial, we want to limit our *Dvar Torah* to only the first verse from this week's *Parasha*. To do this, we will collect the first citation in the range; in the case of `Exodus 21:1-24:18`, we want only `Exodus 21:1`. 
+For this specific tutorial, we will limit our hypothetical dvar Torah to the first verse from the weekly Torah portion (parashah). In order to do this, we will collect the first citation in the range. To continue with Parashat Mishpatim (the example above) this means we aren't collecting `Exodus 21:1-24:18`, only `Exodus 21:1`.
 
 ```python
 parasha_ref = parasha_ref.split("-")[0]
 print(parasha_ref) # The first verse of this week's parasha
 ```
 
-**Please Note:** This is not a requirement for the subsequent API calls. We are intentionally limiting the breadth of our text to a specific verse for the sake of the example. Please feel free to play with these calls using text citations (`refs`) that span multiple chapters.
+_**Please note: This is not a requirement for the subsequent API calls.** For the sake of this example, we are intentionally limiting the text to a single verse. These calls can be made using text citations (`refs`) that span multiple chapters._
 
-## Retrieving the Parasha Text
+## 3. Retrieving the Text of the Parashah
 
-Now that we have our `parasha_ref` all set to contain a string citing the first verse in this week's *Parasha*, let's make another API call to the [Texts (v3)](ref:get_api-v3-texts-tref-1) API to retrieve the text of that verse. 
+With our `parasha_ref` in hand, we can now proceed to the next step: creating a string that cites the first verse in the weekly parashah. In order to do so, we'll make another call — this time, to the [Texts (v3)](ref:get_api-v3-texts-tref-1) API. This will allow us to retrieve the text of that verse.
 
 ```python
 url = f"https://www.sefaria.org/api/v3/texts/{parasha_ref}"
@@ -166,7 +166,7 @@ response = requests.get(url)
 data = response.json() 
 ```
 
-When we print `data`, we get a massive dictionary containing lots of data regarding the various editions of this text on Sefaria. Below is a truncated version of what's returned (notice the `...` replacing data irrelevant for this tutorial). 
+When we print `data`, we get a massive dictionary containing lots of data regarding the various editions of this text found in the Sefaria Library. Below is a truncated version of what's returned. Please note: The ellipses (`...` ) indicates data irrelevant to this tutorial.
 
 ```json
 {
@@ -192,18 +192,20 @@ When we print `data`, we get a massive dictionary containing lots of data regard
 }
 ```
 
-Inside the object inside the `versions` array, we can see a field called `text` storing the text of this verse. Let's save that to a variable, and also grab the `versionTitle` of this edition of the text. Since this edition of the text is in Hebrew, we'll name the variables `he_vtitle` and `he_pasuk`.
+Inside the object nestled within the `versions` array, there is a field called `text`: That's where the text of this verse is stored. To proceed, save that to a variable and  grab the `versionTitle` of this edition of the text. Seeing as this edition of the text is in Hebrew, let's name the variables `he_vtitle` and `he_pasuk`.
 
 ```python
 he_vtitle = data['versions'][0]['versionTitle'] 
 he_pasuk = data['versions'][0]['text']
 ```
 
-Big progress! We have our verse for the *Dvar Torah* outline; let's move on to the next step. 
+Once this is complete, we'll have the verse we need for the dvar Torah outline and can move on to the next step.
 
-## Retrieving a Different Edition of the Text
+## 4. Retrieving a Different Edition of the Text
 
-While the Hebrew verse is useful, let's also retrieve an English translation of the verse. You can query the `api/v3/texts` endpoint for many different editions of the text in different languages, or different versions within a language. For now, we'll just repeat what we did above, making the same GET request, but adding the query parameter `version=english`. (To learn more about all of our available translations, how to request specific versions, and all of the customizations, see [Texts (v3)](ref:get_api-v3-texts-tref-1)). 
+Along with the verse in its original Hebrew, we can also retrieve an English translation found in the Sefaria Library. You can query the `api/v3/texts` endpoint to receive various editions of the text in different languages, or different versions within a language. For this example, we can repeat the previous step, making the same GET request but adding the query parameter `version=english`. 
+
+_To learn more about all available translations, requesting specific versions, and other customization options, see [Texts (v3)](ref:get_api-v3-texts-tref-1)_
 
 ```python
 # Change version to English
@@ -220,11 +222,9 @@ en_vtitle = data['versions'][0]['versionTitle']
 en_pasuk = data['versions'][0]['text']
 ```
 
-## Retrieving Parasha Commentaries
+## 5. Retrieving Parashah Commentaries
 
-Fantastic progress! We have our Hebrew text of the verse, and our English text of the verse. Now we just need some commentaries to build out the rest of this outline. 
-
-To retrieve our commentaries, we're going to use the [Related](ref:get_api-related-tref) API endpoint, and pass in our `parasha_ref` as the `tref` (i.e. **t**ext **ref**erence). 
+We have the text of the verse in both Hebrew and English text. Now, we can add some commentaries to expand the rest of the outline. In order to retrieve our commentaries, we're going to use the [Related](ref:get_api-related-tref) API endpoint, and pass in our `parasha_ref` as the `tref` (i.e. **t**ext **ref**erence).
 
 ```python
 url = f"https://www.sefaria.org/api/related/{parasha_ref}"
@@ -236,7 +236,7 @@ response = requests.get(url)
 data = response.json()
 ```
 
-When we print `data`, we get a dictionary that has the following keys:
+When we print `data`, we get a dictionary containing following keys:
 
 ```json
 {
@@ -250,9 +250,9 @@ When we print `data`, we get a dictionary that has the following keys:
 }
 ```
 
-Each key points to an array containing a list of JSON objects, each representing a connection between our query text (`parasha_ref`) and connections of that type to other items in the library. 
+Each key points to an array containing a list of JSON objects. Each object represents a connection between our query text (`parasha_ref`) and connections of that type to other items in the library.
 
-For example, a sample JSON object from the `links` array (containing all links between our query text and other linked texts) will look like this:
+_For example: A sample JSON object from the `links` array (containing all links between our query text and other linked texts) will look like this:_
 
 ```json
 {
@@ -277,13 +277,11 @@ For example, a sample JSON object from the `links` array (containing all links b
 }
 ```
 
-This is a link between our `parasha_ref` to the [Midrash](https://www.sefaria.org/texts/Midrash) of *Shemot Rabbah*. You'll notice we're getting a lot of metadata here, but most critical for our purposes is the `type` of link, as well as the `ref` for the linking text. 
+The above code represents a link between our `parasha_ref` to the [Midrash](https://www.sefaria.org/texts/Midrash) known as Shemot Rabbah. There's a lot of metadata here. For the purpose of our dvar Torah, let's take a look at the `type` of link, as well as the `ref` for the linking text.
 
-The `type` field tells us the general type of connection between our `parasha_ref` and the text returned in the `ref` field. Some possible link types may include `targum`, `reference`, `quotation`, `commentary`, `essay`, `midrash` or `parshanut` among others. 
+The `type` field indicates the general type of connection between our `parasha_ref` and the text returned in the `ref` field. These may include `targum`, `reference`, `quotation`, `commentary`, `essay`, `midrash` or `parshanut`, among others. In this tutorial, we'll only look at linked texts with a `type` of `commentary`.
 
-For sake of simplicity, in this tutorial, let's only look at linked texts with a `type` of `commentary`. 
-
-We'll iterate through the `links` array in the response `data`, and append the `ref` (the citation) of all linked texts of type `commentary` to a list we'll call `commentaries`. 
+To do so, we'll iterate through the `links` array in the response `data` and append the `ref` (the citation) of all linked texts of type `commentary` to a list we'll call `commentaries`. Once complete, you will have a list of all commentary links to the first verse in this week's parashah. 
 
 ```python
 # Set up our commentaries list
@@ -296,13 +294,11 @@ for linked_text in data["links"]:
         commentaries.append(linked_text['ref'])
 ```
 
-Great! Now you have a list of all commentary links to the first verse in this week's *Parasha*. We are almost there!
+## 6. Retrieving the Commentary Text
 
-## Retrieving the Commentary Text
+Our next step is to make additional calls to the [Texts (v3)](ref:get_api-v3-texts-tref-1) endpoint to retrieve the text of our commentaries. It's also possible to do some filtering in this step, which would determine exactly which commentaries you'd like in your outline.
 
-Our next step is to make additional calls to the [Texts (v3)](ref:get_api-v3-texts-tref-1) endpoint to retrieve the text of our commentaries. In theory, you also do some filtering here to determine exactly which commentaries you'd like in your outline. 
-
-For the sake of the brevity of this tutorial, we will just include the first three commentaries that appear in our list in the outline. Feel free to play with this! There's a lot that can be done at this stage. 
+For the sake of brevity this tutorial will only include the first three commentaries that appear in our list in dvar Torah the outline, but feel free to play with this process and make it your own! There's a lot that can be done at this stage.
 
 Since we'll be repeating the same process three times, let's define a function `get_commentary_text(ref)` to help us with our text retrieval:
 
@@ -336,19 +332,19 @@ com2_title, com2_text = get_commentary_text(commentaries[1])
 com3_title, com3_text = get_commentary_text(commentaries[2])
 ```
 
-Congratulations! We are ready for the final step, printing our outline!
+Congratulations! It's time for the final step: printing our outline.
 
-## Printing your Outline
+## 7. Printing your Outline
 
 At this point, we should have the following variables defined in our code:
 
-* `parasha` - The name of the *Parasha* (i.e. *Mishpatim,\_Eikev* etc)
-* `parasha_ref` - The specific text reference for the first verse of that *Parasha* (i.e. `Exodus 21.1`)
+* `parasha` - The name of the _Parasha_ (i.e. _Mishpatim,_Eikev_ etc)
+* `parasha_ref` - The specific text reference for the first verse of that _Parasha_ (i.e. `Exodus 21.1`)
 * `he_vtitle`- The version title for the specific Hebrew edition of the text of the verse
 * `he_text` - The Hebrew text for the verse
 * `en_vtitle` - The version title for the specific English edition of the text of the verse
 * `en_text` - The English text for the verse
-* And lastly, as seen in the code above, the commentary title and commentary text for the first three commentaries in our `commentaries` list. 
+* And lastly, as seen in the code above, the commentary title and commentary text for the first three commentaries in our `commentaries` list.
 
 Now that we have everything in place, let's print it out:
 
@@ -362,7 +358,7 @@ print(f"B) {com2_title}: {com2_text}\n")
 print(f"C) {com3_title}: {com3_text}")
 ```
 
-When we ran this code the week of *Parashat Mishpatim*, this is what printed:
+When we ran this code during the the week in which Parashat Mishpatim is read, this is what was printed:
 
 ```
 My Outline for Parashat Mishpatim
@@ -379,14 +375,14 @@ C) Mizrachi, Exodus 21:1: <b>לפניהם ולא לפני כותים כו'. </b>
 ```
 
 <Callout icon="🎉" theme="default">
-  ### Congratulations! You have officially written a script to generate a *D'var Torah* outline for the weekly *Parasha*!
+  ### Congratulations! You have officially written a script to generate a dvar Torah outline for the weekly Torah portion!
 </Callout>
 
- We invite you to dive deeper into our API, and all of the infinite possibilities with our data in the documentation. Looking forward to seeing what you can build!
+We invite you to dive deeper into our API, and all of the infinite possibilities with our data in the documentation. Let us know what you build at developers@sefaria.org
 
-## The Full Code
+## Addendum: The Full Code
 
-The full code for the script can be seen below. The code has been slightly refactored and reorganized for better readability and code reuse within this script. The stages are marked in the comments. 
+The full code for the script can be seen below. The code has been slightly refactored and reorganized for better readability and code reuse within this script. The stages are marked in the comments.
 
 ```python
 import requests
@@ -488,4 +484,4 @@ if __name__ == '__main__':
 
 ```
 
-**Note**: The functions in this script were not written to par with adequate testing and `try/except` blocks that you would expect for more robust API calls. We intentionally wrote code that was as simple and bare-bones as possible to allow beginners to focus on a first attempt at using the API to retrieve data. We hope this is a helpful first step!
+_Please note: The functions in this script were not written to par with adequate testing and `try/except` blocks of the type you would expect for more robust API calls. This was intentional in order to ensure clarity of the tutorial. By writing simple code, we aim for beginners to focus on a first attempt at using the API to retrieve data._
