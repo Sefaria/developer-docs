@@ -58,7 +58,6 @@ TIn addition to the projects below, there are also 150+ websites using the Sefar
 * [Torah Library Add On for Google Docs](https://workspace.google.com/marketplace/app/torah_library/947071438143) - Helps users create beautiful and collaborative source sheets with ease.
 * [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates the Sefaria Library with shiurim (lessons) from YUTorah & OUTorah.
 * [TorahSummary](http://www.torahsummary.com/) - Short summaries of the entire text of the Torah with links to the sources.
-* [TzadekAI](https://tzadek.ai/) - A halakhic Q&A application using data from Sefaria to explore how rabbinic voices from different historical periods approached similar questions.
 * [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - App designed to help users learn to lead prayers for Rosh Hashanah and Yom Kippur.
 
 ***
@@ -81,6 +80,7 @@ TIn addition to the projects below, there are also 150+ websites using the Sefar
 * [Shitufta](https://shitufta.org.il/) - Unique Torah database, in Hebrew, designed according to a traditional page layout.
 * [Shulkhan](http://josephtepperman.com/shulkhan.htm) - A touch interface for the printed Talmud.
 * [The Jewish Story Through Books](https://joshcooper417.github.io/) - Shows where and when Jewish books were published throughout the ages.
+* [TzadekAI](https://tzadek.ai/) - A halakhic Q&A application using data from Sefaria to explore how rabbinic voices from different historical periods approached similar questions.
 * [Weekday Torah Readings with AI Insights](http://jiveyeti.com/wtr) - Provides experimental AI insights for each reading of the weekday Torah readings, alongside the biblical texts in both Hebrew and English.
 * [Yanki](https://developers.sefaria.org/docs/www.yankiai.com) - All-in-one app built according to traditional halakhic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features — all in a filtered, AI-powered ecosystem for the frum Jewish world to enjoy.
 * [Zohar-stories.com](https://www.zohar-stories.com/) - Digital database of the stories of the sages that appear in the Zohar literature.
