@@ -27,7 +27,7 @@ next:
   This project provides experimental AI-generated insights to accompany each weekday Torah reading, alongside the biblical text in both Hebrew and English.
 </Callout>
 
-TIn addition to the projects below, there are also 150+ websites using the Sefaria Linker to automatically link textual citations to the Sefaria Library. [Learn more and view a list of websites using the Linker >> ](https://developers.sefaria.org/docs/sites-using-the-linker).
+In addition to the projects below, there are also 150+ websites using the Sefaria Linker to automatically link textual citations to the Sefaria Library. [Learn more and view a list of websites using the Linker >> ](https://developers.sefaria.org/docs/sites-using-the-linker).
 
 ***
 
