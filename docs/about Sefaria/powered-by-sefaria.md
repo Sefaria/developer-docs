@@ -40,7 +40,6 @@ TIn addition to the projects below, there are also 150+ websites using the Sefar
 * [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - Daily learning about the halakhah (Jewish law) that governs daily life.
 * [ChavrutAI](https://chavrutai.com/contents) - Free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
 * [Daf Quiz](https://dafquiz.com/daf-yomi) - Web application that generates a daily multiple-choice quiz based on the relevant page of Talmud, according to the Daf Yomi cycle. (Link to source code: [https://github.com/bentekkie/daf_quiz](https://github.com/bentekkie/daf_quiz))
-* [DafBuddy](https://dafbuddy.com/) - A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
 * [Daily Torah Study Trmnl Plugin](https://usetrmnl.com/recipes/151619) - Plugin for the Trmnl, which uses Sefaria’s Calendars API to present a daily Torah study schedule.
 * [GoTorah!](https://gotorah.web.app/) - Intelligent chat that adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The acclaimed Dvar Torah feature instantly generates ready-to-use, source-based sermons that can be customized according to difficulty, length, and occasion.
 * [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
@@ -68,6 +67,7 @@ TIn addition to the projects below, there are also 150+ websites using the Sefar
 * [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
 * [Abba Saul](https://github.com/scopreon/abba-saul/) - A mishnah bot for Discord users.
 * [Artscroll Smart Siddur](https://apps.apple.com/us/app/artscroll-smart-siddur-%D7%A1%D7%93%D7%95%D7%A8/id988119206) - A siddur app by Artscroll.
+* [DafBuddy](https://dafbuddy.com/) - A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
 * [Dafyomi AI Summary](https://dormantone.github.io/dafyomi/) - Explores, summarizes, and translates key insights from the Talmud.
 * [Darshan AI](https://darshan.siddur.xyz/) - A platform that can create an entire lesson with just a few clicks, as well as citing sources and linking to the Sefaria Library.
 * [Goof](https://goof.surge.sh/) - App that shows where parts of the human body show up in liturgical text.
