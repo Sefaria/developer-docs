@@ -134,7 +134,7 @@ Option C: Esther
 Select a text from the list by pressing the corresponding letter key ['A', 'B', 'C']:
 ```
 
-Our next step is to process the user input:
+Next, process the user input like this:
 
 ```python
 # If they selected a valid key, set the book for the game
@@ -146,9 +146,9 @@ else:
   print("Sorry! That's not a valid option. Restart the game and try again.")
 ```
 
-## Shape API
+## 3. Bringing in the Shape API
 
-Our first two questions rely heavily on the [Shape](ref:get_api-shape-title) API. The [Shape](ref:get_api-shape-title) API returns data about the structure of a book on Sefaria. For example, if someone were to query the [Shape](ref:get_api-shape-title) API for the book of `Esther`, they'd get the following JSON in return:
+Our first two questions rely heavily on the [Shape](ref:get_api-shape-title) API, which returns data about the structure of a book in the Sefaria Library. For example, if someone were to query the [Shape](ref:get_api-shape-title) API for the book of `Esther`, they'd get the following JSON in return:
 
 ```json
 {
@@ -173,7 +173,9 @@ Our first two questions rely heavily on the [Shape](ref:get_api-shape-title) API
 }
 ```
 
-The most interesting data here appears in the `length` and the `chapters` fields. The `length` field tells you the 'length' of the text in chapters (in this case, Esther has 10 chapters). The `chapters` field that contains integers. There are `length` number of integers in a given book of Tanakh, so in the case of Esther, we have 10 integers in this `chapters` array. Each position in the array corresponds with a chapter, and each value corresponds to the number of verses. We see here that Chapter One has 22 verses, Chapter Five has 14 verses, and Chapter Nine has 32 verses.
+The most interesting data here appears in the `length` and the `chapters` fields. The `length` field tells you the how many chapters are in the text at hand. In this case, the book of Esther has 10 chapters). The `chapters` field contains integers that indicate the number of verses in a specific chapter. 
+
+All books of Tanakh have `length` number of integers. Taking the book of Esther as an example, we can see a `chapters` array with 10 integers. Each position in the array corresponds with a chapter, with each value corresponding to the number of verses in that chapter. The first integer in the array indicates that there are 22 verses in the first chapter of the book of Esther, Chapter Five has 14 verses, and Chapter Nine has 32 verses.
 
 We're going to use the [Shape](ref:get_api-shape-title) API to ask some questions about the structure of a book.
 
