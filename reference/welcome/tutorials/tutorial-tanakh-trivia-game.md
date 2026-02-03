@@ -148,7 +148,7 @@ else:
 
 ## 3. Bringing in the Shape API
 
-Our first two questions rely heavily on the [Shape](ref:get_api-shape-title) API, which returns data about the structure of a book in the Sefaria Library. For example, if someone were to query the [Shape](ref:get_api-shape-title) API for the book of `Esther`, they'd get the following JSON in return:
+The first two questions we'll ask rely heavily on the [Shape](ref:get_api-shape-title) API, which returns data about the structure of a book in the Sefaria Library. For example, if someone were to query the [Shape](ref:get_api-shape-title) API for the book of `Esther`, they'd get the following JSON in return:
 
 ```json
 {
@@ -175,13 +175,13 @@ Our first two questions rely heavily on the [Shape](ref:get_api-shape-title) API
 
 The most interesting data here appears in the `length` and the `chapters` fields. The `length` field tells you the how many chapters are in the text at hand. In this case, the book of Esther has 10 chapters). The `chapters` field contains integers that indicate the number of verses in a specific chapter. 
 
-All books of Tanakh have `length` number of integers. Taking the book of Esther as an example, we can see a `chapters` array with 10 integers. Each position in the array corresponds with a chapter, with each value corresponding to the number of verses in that chapter. The first integer in the array indicates that there are 22 verses in the first chapter of the book of Esther, Chapter Five has 14 verses, and Chapter Nine has 32 verses.
+All books of Tanakh have `length` number of integers. Taking the book of Esther as an example, we can see a `chapters` array with 10 integers. Each position in the array corresponds with a chapter, with each value corresponding to the number of verses in that chapter. The first integer in the array indicates that there are 22 verses in the first chapter of the book of Esther, the fifth indicates that there are 14 verses in chapter five, and so forth.
 
-We're going to use the [Shape](ref:get_api-shape-title) API to ask some questions about the structure of a book.
+Next, we will use the [Shape](ref:get_api-shape-title) API to ask some questions about the structure of a book.
 
-## Let's start Trivia-ing
+## 4. Let the Trivia Begin!
 
-First, let's query the [Shape](ref:get_api-shape-title) API:
+First, we query the [Shape](ref:get_api-shape-title) API:
 
 ```python
 url = f"https://www.sefaria.org/api/shape/{index_title}"
@@ -189,15 +189,13 @@ response = requests.get(url)
 shape = response.json()
 ```
 
-Now, let's see if the player can guess the number of chapters in the book.
-
-We'll grab that data, and save it as our `answer`.
+Next, we want to see if the trivia player can guess the number of chapters in the chosen book. In order to build that part of the trivia game, we'll grab that data and save it as our `answer`.
 
 ```python
 answer = shape[0]["length"]
 ```
 
-And now we'll prompt the user with the question. Since we want all responses to this question to be integers, we'll cast their input as an `int()`. We do this inside a `try`/`except` block.
+Now we can ask the user with a question about the number of chapters in the book. Since we want all responses to this question to be integers, we'll cast their input as an `int()`. We do this inside a `try`/`except` block.
 
 ```python
 q1 = input(f"How many chapters are in {index_title}? ")
@@ -228,11 +226,11 @@ How many chapters are in Esther?
 Yes! You got it right!
 ```
 
-## Time For Another Question
+## 5. Adding Another Question
 
-Let's ask the user another question using data from the [Shape](ref:get_api-shape-title) API again. Recall, our API response is stored inside a variable called `shape`.
+Let's ask the user another question using more data from the [Shape](ref:get_api-shape-title) API. Again, our API response is stored inside a variable called `shape`.
 
-First, let's calculate the shortest chapter of the book. We'll use the Python `min()` function on the chapters array to find the position with the fewest verses. Then (since our array is 0-based) we'll add `1` to calculate a human-readable chapter.
+Start by calculating the shortest chapter of the book. In order to do this, we will use the Python `min()` function on the chapters array to find the position with the fewest verses. Then (since our array is 0-based) we'll add `1` to calculate a human-readable chapter.
 
 ```python
 q2 = input(f"Which chapter of {index_title} is the shortest? ")
@@ -256,7 +254,7 @@ else:
 
 ```
 
-Once again, on the user's side, they might see something like this:
+The user might see something like this:
 
 ```
 Which chapter of Joshua is the shortest? 
@@ -264,11 +262,13 @@ Which chapter of Joshua is the shortest?
 Sorry! That's incorrect. The correct answer was: 24. You answered 1/3 question(s)
 ```
 
-## Last Round
+## 6. One Last Round
 
-Alrighty, let's move on to one final question. For this question, we'll use the [Ref-Topic-Links](ref:get_api-ref-topic-links-tref) API to prompt the user to guess which topics might be related to a given verse.
+For the final question, we will use the [Ref-Topic-Links](ref:get_api-ref-topic-links-tref) API in order to ask the user which topics might be related to a given verse.
 
-Our first step is to prompt the user to provide us with a specific reference to a verse. (Note: if this were a "real" game, and not just a tutorial we'd need to add some data validation here - but for the purposes of a tutorial we decided to keep it simple).
+First, we need to prompt the user to provide us with a specific reference to a verse. 
+
+_Note: if this were a real game, and not just a tutorial, we would add some data validation at this point. For the purposes of this tutorial, we are keeping it simple._
 
 ```python
 chapVerse = input(
@@ -277,7 +277,7 @@ chapVerse = input(
 ref = f"{index_title} {chapVerse}"
 ```
 
-Next, we'll query the [Texts (v3)](ref:get_api-v3-texts-tref) API to retrieve the text of the given verse in English to display for the user. Hopefully this will make it easier for them to guess!
+Next, we'll query the [Texts (v3)](ref:get_api-v3-texts-tref) API to retrieve the text of the given verse in English (or another language) to display for the user in order to make it easier for them to guess the answer.
 
 ```python
 url = f"https://www.sefaria.org/api/v3/texts/{ref}?version=english"
@@ -287,9 +287,9 @@ texts = response.json()
 print(f"Here's the text of the verse you selected:{texts['versions'][0]['text']}")
 ```
 
-Now that the user sees the verse in front of them, let's ask them to guess some topics possibly related to this verse.
+With the verse in view, and we can ask the user to guess some topics that may be related to the text.
 
-First, we'll query for the related topics:
+First, we query for the related topics:
 
 ```python
 url = f"https://www.sefaria.org/api/ref-topic-links/{ref}"
@@ -297,14 +297,14 @@ response = requests.get(url)
 topics = response.json()
 ```
 
-Let's generate a set (so every entry is unique) of the topics we get back, since we don't need all of the other metadata. We'll also strip out the hyphens between words of multi-word topics so it's easier to guess (i.e. `mount-sinai` will become `mount sinai`).
+Then, we generate a set of the topics we get back, since we don't need all of the other metadata. This ensures every entry is unique. We'll also strip out the hyphens between words of multi-word topics so it's easier to guess (i.e. `mount-sinai` will become `mount sinai`).
 
 ```python
 topicList = [topic["topic"].replace("-", " ") for topic in topics]
 topic_set = set(topicList)
 ```
 
-Great! Now that we have all of the data, let's prompt our user to guess:
+We have all of the data. Now we will ask our user to guess:
 
 ```python
 q3 = input("Can you guess a topic related to this text?").lower()
@@ -318,7 +318,7 @@ else:
   return
 ```
 
-From the user's end, this might look like this:
+The user might see something like this:
 
 ```
 OK let's get a little more specific now!
@@ -334,14 +334,16 @@ Yes! You got it right! That topic is connected to this verse! FINAL SCORE: 3/3
 ```
 
 <Callout icon="🎉" theme="default">
-  ### Congratulations! You've officially written a basic Tanakh trivia game using the data from the Sefaria API.
+  ## Congratulations! You've written a basic Tanakh trivia game using the data from the Sefaria API.
 </Callout>
 
-We invite you to dive deeper into our API, and all of the infinite possibilities with our data in the documentation. Looking forward to seeing what you can build!
+We invite you to dive deeper into our API and to explore the infinite possibilities available to developers using our data and documentation. We can't wait to Lookingsee what you build!
 
-# Full Code
+# Summary: The Full Code
 
-Below we'll provide the full working code for this game. We've generalized some repeating code into rudimentary functions, and added some first steps of data validation/checking to avoid unnecessary erroring.
+Below is the full working code for this game. 
+
+_Please note: We've generalized some repeating code into rudimentary functions and added some first steps of data validation or checking in order to avoid unnecessary erroring._
 
 ```python
 import requests
