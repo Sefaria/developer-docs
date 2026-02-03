@@ -476,8 +476,8 @@ if __name__ == '__main__':
     
 ```
 
-# Notes:
+## Please Note:
 
-* As stated above, this tutorial is just that - a tutorial to whet your appetite and show you different ways of using our data
-* Any attempt to flesh this out to something ready for "real" users would need more data validation, checks, `try` / `except` blocks and more.
-* Up for the challenge? Feel free to give it a try and build off this, and [let us know](https://developers.sefaria.org/page/contact-us)
+* As stated above, this tutorial is just that: a tutorial, with the intention of showcasing a few different ways of using Sefaria's data and API. 
+* Any attempt to flesh this out and get it ready for use in a real-world settings would require more data validation, checks, `try` / `except` blocks and more.
+* Up for the challenge? Feel free to give it a try and build off of this — and drop us a note to [let us know](https://developers.sefaria.org/page/contact-us)!
