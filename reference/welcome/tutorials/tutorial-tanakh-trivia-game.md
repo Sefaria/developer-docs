@@ -20,9 +20,9 @@ next:
 
 This tutorial will explain how to build a mini Tanakh Trivia Game in fewer than 100 lines of code. As you build, you'll hit multiple endpoints in the Sefaria API, weaving them all together to create an educational activity in the console.
 
-## 1. Project Outline
+## The Basics: Project Outline
 
-Before we start coding, let's go over the game structure, and which endpoint(s) each trivia question requires.
+Before we start coding, let's go over the game structure and which endpoints each trivia question requires.
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -88,25 +88,25 @@ Before we start coding, let's go over the game structure, and which endpoint(s) 
   </tbody>
 </Table>
 
-We have chosen to limit the user's selection of Books of Tanakh to three specific books to provide a working sample. In a full scale edition of this project, the user would be able to select any book of their choosing.
+In order to provide a working sample, this tutorial will limit the user's selection of Books of Tanakh to three specific books. This is not a necessary limitation. When building this project, you can select any book or books they wish to focus on.
 
-:warning: It is important to note, this is a proof-of-concept. We take some shortcuts and stick to this limited question set on purpose, in order to showcase how someone can use our API for projects like these. We hope you are inspired, and take your work to the next level!
+:warning: _Please note: This tutorial is a proof-of-concept. Therefore, we will take some shortcuts and stick to this limited question set in order to showcase the ways in which you might use our API for a project like this. Please feel free to iterate on this basic outline!_
 
-## Set Up
+## 1. Getting Set Up
 
-For this tutorial, we'll be using Python 3.8.
+This tutorial will use Python 3.8.
 
-Make sure you have [Python requests](https://pypi.org/project/requests/) installed and imported at the top of your file:
+Before beginning, ensure you have [Python requests](https://pypi.org/project/requests/) installed and imported at the top of your file:
 
 ```python
 import requests
 ```
 
-The work we're doing in this tutorial is language agnostic, so feel free to adapt the code to follow along in any language of your choosing.
+The work we're doing in this tutorial is language agnostic, so feel free to adapt the code in order to to include the languages you want to include.
 
-## Select a Book
+## 2. Selecting a Book
 
-The first thing we are going to do is prompt the user to select a Book of Tanakh to be their focus for all of the trivia questions to follow.
+Prompt the user to select a Book of Tanakh. This book will be the focus for all of the trivia questions going forward.
 
 ```python
 print("Welcome to the Tanakh Trivia Game!")
