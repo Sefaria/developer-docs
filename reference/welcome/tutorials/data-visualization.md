@@ -149,7 +149,7 @@ Once we have all that set up, it's time to return our JSX! After setting up some
 
 ### The User Controls
 
-Inside our user controls is a range toggle that allows users to set the `limit` on the number of topics they'd like returned from the API. On change, we call our `setLimit` hook and change the limit to the value targeted by the user. Recall, any change to `limit` triggers `useEffect` to run, querying the API again and refreshing the data.
+Inside our user controls is a range toggle that allows users to set the `limit` on the number of topics they'd like returned from the API. On change, we call our `setLimit` hook and change the limit to the value targeted by the user. As mentioned above, any change to `limit` triggers `useEffect` to run, querying the API again and refreshing the data.
 
 ```javascript React
 <h1>Sefaria Topics Data-Viz</h1>
@@ -184,7 +184,7 @@ Afterwards, we also create a checkbox for users to toggle in order to indicate w
         </div>   
 ```
 
-On any check (or un-checking) the callback function calls our `setIncludePeopleTopics` hook to `true` or `false`.  (Recall, any change to `limit` triggers `useEffect` to run, refreshing the data by re-running it through the conditional filtering).
+When this checkbox is checked (or unchecked)  the callback function calls our `setIncludePeopleTopics` hook to `true` or `false`.  Recall, any change to `limit` triggers `useEffect` to run, refreshing the data by re-running it through the conditional filtering).
 
 ### The Visualization
 
