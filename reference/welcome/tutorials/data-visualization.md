@@ -184,11 +184,11 @@ Afterwards, we also create a checkbox for users to toggle in order to indicate w
         </div>   
 ```
 
-When this checkbox is checked (or unchecked)  the callback function calls our `setIncludePeopleTopics` hook to `true` or `false`.  Recall, any change to `limit` triggers `useEffect` to run, refreshing the data by re-running it through the conditional filtering).
+When this checkbox is checked (or unchecked)  the callback function calls our `setIncludePeopleTopics` hook to `true` or `false`.  As mentioned above, any change to `limit` triggers `useEffect` to run, refreshing the data by re-running it through the conditional filtering.
 
 ### The Visualization
 
-Beneath the controls, we render the visualization. The nice thing about D3Plus is that instead of diving into the nitty gritty of D3 configuration, we get an out-of-the-box React component. All we need to do is pass in our data, and set the config the way we'd like it. Let's take a look:
+Beneath the controls, we render the visualization. One nice thing about D3Plus is how it provides an out-of-the-box React component without requiring any detailed work on D3 configuration. All we need to do is pass in our data and set the config the way we'd like it to get the desired result. See below:
 
 ```Text React
 <Treemap config={{
