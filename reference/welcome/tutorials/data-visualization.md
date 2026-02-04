@@ -210,9 +210,9 @@ Beneath the controls, we render the visualization. One nice thing about D3Plus i
 }} />
 ```
 
-The `<Treemap/>` component takes one prop, `config`, where we can pass the data and set the configurations. You'll see we pass in the data, ask to group the topics by their `title`, and create the area value on the map based on the `sum` of the `numSources`.
+The `<Treemap/>` component takes one prop, `config`, in which we can pass the data and set the configurations. You'll see we pass in the data, ask to group the topics by their `title`, and create the area value on the map based on the `sum` of the `numSources`.
 
-The next few lines arrange the desired height and width of the visualization, as well as overriding some defaults to make things clean and presentable. (`shapeConfig` allows us to hide percentage values, which make less sense in this case... and `tooltipConfig` does the same, just in the context of the hover-able tooltip).
+The next few lines arrange the desired height and width of the visualization, as well as overriding some defaults to make things clean and presentable. For example,`shapeConfig` allows us to hide percentage values, which make less sense in this case, and `tooltipConfig` does the same but in the context of the hoverable tooltip.
 
 <Callout icon="🎉" theme="default">
   ### Congratulations!
@@ -220,9 +220,9 @@ The next few lines arrange the desired height and width of the visualization, as
   You've officially built your first data visualization using data from the Sefaria API!
 </Callout>
 
-# Further Expansion
+# Taking it Further
 
-Obviously, this example is extremely bare-bones and just meant as a proof of concept. Can you take this example and expand?
+This example is extremely bare-bones, meant only as a proof of concept. Can you take this example and expand? We'd love to see what you create!
 
 Some possibilities:
 
@@ -230,7 +230,7 @@ Some possibilities:
 * Experimenting with a different visualization library
 * Experimenting with different API endpoints, what's most the most useful visualization you can make based on the Jewish canon?
 
-If you build something, [let us know](https://developers.sefaria.org/page/contact-us)! We love seeing all of the projects [powered by our data](https://developers.sefaria.org/docs/powered-by-sefaria)!
+If you build something, [let us know](https://developers.sefaria.org/page/contact-us)! We love seeing all of the projects [powered by our data](https://developers.sefaria.org/docs/powered-by-sefaria).
 
 ***
 
