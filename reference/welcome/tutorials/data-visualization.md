@@ -109,19 +109,17 @@ At a high level,  the [Topics API](https://developers.sefaria.org/reference/get-
 ]
 ```
 
-For this use case, the most important data is the primary English title of the topic, or the `numSources` field. This indicates the number of Sefaria Library sources linked to the topic) and `subclass` - since we want to give users the option to view non-people topics only.
+For this use case, the most important data are the primary English title of the topic (or the `numSources` field) which indicates the number of Sefaria Library sources linked to the topic and the `subclass`, which will be crucial for allowing users the option to view non-people topics only.
 
-Now that we see what we're working with, let's get back to the code...
+With this information at hand, we can return to the code.
 
 ### UseEffect
 
-Heading back to the code, inside of our `useEffect` hook, we make a call to the [Topics API](https://developers.sefaria.org/reference/get-all-topics).
+This section of the tutorial includes three steps:
 
-If `includePeopleTopics` is `false`, we filter out any topic with a subclass of `person`, otherwise we keep the people topics in the returned data.
-
-Then, we use a `map` function to create an array of objects, with the field `title` and `numSources`.
-
-Finally, we use our `setData` hook to set this filtered, mapped data in our `data` state.
+1. Inside of our `useEffect` hook, we make a call to the [Topics API](https://developers.sefaria.org/reference/get-all-topics). If `includePeopleTopics` is `false`, we filter out any topic with a subclass of `person`. Otherwise, the people topics will remain present in the returned data.
+2. After making a call, we use a `map` function to create an array of objects with the field `title` and `numSources`. 
+3. Finally, we use our `setData` hook to set this filtered and mapped data in our `data` state.
 
 ```javascript
   useEffect(() => {
@@ -147,11 +145,11 @@ This `useEffect` is set to re-render any time there's a change in `limit` or `in
 
 ## Returning JSX
 
-Now, we return our JSX! First, we set up some controls for the user, and then we render the visualization. Again, in an ideal world these would be broken into sub-components, but for the sake of the tutorial we kept it all together.
+Once we have all that set up, it's time to return our JSX! After setting up some controls for the user we can render the visualization. As noted above, these would ideally be separated into sub-components but, for the sake of the tutorial, have been kept together.
 
 ### The User Controls
 
-Inside our user controls, we have a range toggle that allows users to set the `limit` on the number of topics they'd like returned from the API. On change, we call our `setLimit` hook and change the limit to the value targeted by the user. (Recall, any change to `limit` triggers `useEffect` to run, querying the API again and refreshing the data.
+Inside our user controls is a range toggle that allows users to set the `limit` on the number of topics they'd like returned from the API. On change, we call our `setLimit` hook and change the limit to the value targeted by the user. Recall, any change to `limit` triggers `useEffect` to run, querying the API again and refreshing the data.
 
 ```javascript React
 <h1>Sefaria Topics Data-Viz</h1>
@@ -171,7 +169,7 @@ Inside our user controls, we have a range toggle that allows users to set the `l
         </div>
 ```
 
-Then, we also create a checkbox to toggle whether or not the user would like the "people" topics to be included or not in the display:
+Afterwards, we also create a checkbox for users to toggle in order to indicate whether they would like the "people" topics to be included in the display or not:
 
 ```Text React
         <div>
