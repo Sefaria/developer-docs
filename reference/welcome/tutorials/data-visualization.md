@@ -1,6 +1,8 @@
 ---
-title: Data Visualization
-excerpt: A basic tutorial on using the Sefaria API to create data visualizations.
+title: 'Tutorial: Data Visualization'
+excerpt: >-
+  This basic tutorials explain how to use the Sefaria API to create a few
+  possible data visualizations.
 deprecated: false
 hidden: false
 metadata:
@@ -10,48 +12,46 @@ metadata:
 next:
   description: ''
 ---
-# Topics Treemap
+# A Topics Treemap
 
-In this tutorial, we're going to using the [Topics API](https://developers.sefaria.org/reference/get-all-topics) to build a basic data visualization using [D3Plus](https://d3plus.org/?path=/docs/introduction--d3plus). 
+In this tutorial, we're going to using the [Topics API](https://developers.sefaria.org/reference/get-all-topics) to build a basic data visualization using [D3Plus](https://d3plus.org/?path=/docs/introduction--d3plus).
 
-You can see the entire repository [here](https://github.com/Sefaria/dataviz-tutorial). 
+You can see the entire repository [here](https://github.com/Sefaria/dataviz-tutorial).
 
-<Image align="center" src="https://files.readme.io/9336436205922c01d519d8a7bdb15182a5721f407e1c19ed0c14192e6eade1a9-Screenshot_2025-03-06_at_11.30.03.png" />
+<Image align="center" border={false} src="https://files.readme.io/9336436205922c01d519d8a7bdb15182a5721f407e1c19ed0c14192e6eade1a9-Screenshot_2025-03-06_at_11.30.03.png" />
 
-## Tutorial Set Up
+## Tutorial Setup
 
 For this tutorial, we'll be using [React](https://react.dev/).
 
-### Creating the App
+### 1. Creating the App
 
-Make sure you have [Node](https://nodejs.org/en) installed. We'll be using [Vite](https://vite.dev/) to create the basic template for the React app. 
+First, ensure you have [Node](https://nodejs.org/en) installed. We'll be using [Vite](https://vite.dev/) to create the basic template for the React app. To do so, follow these steps:
 
 1. Run `npx create-vite@latest <name-of-app> --template react`
-2. Then, `cd <name-of-app>` 
+2. Then, `cd <name-of-app>`
 3. Install your dependencies via `npm install`
 4. Run the app via `npm run dev`
 
-You should see something running at http\://localhost:5173/. 
+You should see something running at http://localhost:5173/.
 
-### Install D3Plus for React
+### 2. Install D3Plus for React
 
-We used the [D3Plus](https://d3plus.org/?path=/docs/introduction--d3plus) library to generate this visualization. 
+This tutorial use the [D3Plus](https://d3plus.org/?path=/docs/introduction--d3plus) library to generate a data visualization. In order to get the required D3Plus packages,  run `npm install d3plus-text` and `npm install d3plus-react`.
 
-Run `npm install d3plus-text` and `npm install d3plus-react` to get the required D3Plus packages. 
+### 3. Writing code in App.jsx
 
-## App.jsx
+This tutorial will focus _only_ on the code we wrote in `App.jsx`, the main body of the application. We made some other tweaks for styling and streamlining purposes in addition to the code described here. In order to see those, visit the full GitHub repository containing this project [here](https://github.com/Sefaria/dataviz-tutorial). The [README](https://github.com/Sefaria/dataviz-tutorial/blob/main/README.md) also includes notes for running the project locally.
 
-This tutorial will focus only on the code we wrote in `App.jsx`, the main body of the application. We did make some other tweaks for styling and streamlining as well, so if you'd like to see those, see the full GitHub repository containing this project [here](https://github.com/Sefaria/dataviz-tutorial). The [README](https://github.com/Sefaria/dataviz-tutorial/blob/main/README.md) has notes for running it locally as well. 
-
-We're going to go through the file line-by-line, to see everything together - check out the [repo](https://github.com/Sefaria/dataviz-tutorial) or scroll to the bottom. 
+This tutorial will review the file line by line. In order to see everything together check out the [repo](https://github.com/Sefaria/dataviz-tutorial) or scroll to the bottom of this page.
 
 # Building the Visualization
 
-Since Vite gives you templated content for `App.jsx`, your first step is to delete the entire contents of the file. We'll be replacing it with the code below. 
+Seeing as Vite provides templated content for `App.jsx`, the first step is to delete the entire contents of the provided file. The default content will be replaced with the code below.
 
 ## Imports
 
-At the top of your file, add the necessary imports. We need the [useEffect](https://react.dev/reference/react/useEffect) and [useState](https://react.dev/reference/react/useState), two [React hooks](https://react.dev/reference/react/hooks), as well as the [Treemap](https://d3plus.org/?path=/docs/charts-treemap--d3plus) visualization from D3Plus. 
+At the top of your file, add the necessary imports. We need the [useEffect](https://react.dev/reference/react/useEffect) and [useState](https://react.dev/reference/react/useState), two [React hooks](https://react.dev/reference/react/hooks), and the [Treemap](https://d3plus.org/?path=/docs/charts-treemap--d3plus) visualization from D3Plus.
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -60,13 +60,13 @@ import {Treemap} from "d3plus-react";
 
 > 🚧 Component Structure
 >
-> For the sake of simplicity and for the flow of a tutorial (where text is interwoven with code) we chose to keep everything in one big component. However, ideally it would be better if each aspect of the page was its own component rendered inside of the `<App />` component.
+> For the sake of simplicity and for the flow of a tutorial (where text is interwoven with code) we chose to keep everything together, as one big component. It would be better, however, if each aspect of the page was created as its own component and rendered inside of the `<App />` component.
 
 ## useState() Hooks
 
-We're going to assume basic knowledge of React and React hooks (and if you're new, feel free to check out the documentation linked above to learn more). 
+The following description assumes basic knowledge of React and React hooks. If you're new to these, feel free to check out the linked documentation above to learn more before continuing with the tutorial.
 
-Let's set up the top of our component with our state hooks. 
+Start by setting up the top of your component with your state hooks.
 
 ```javascript
 const [data, setData] = useState([]);
@@ -74,17 +74,17 @@ const [limit, setLimit] = useState(100);
 const [includePeopleTopics, setIncludePeopleTopics] = useState(false);
 ```
 
-We need to track three things:
+As you continue, you will need to track three things:
 
 1. The `data` from the API
-2. The `limit` - a query parameter for the API, how many topics do we want returned from the query
-3. A boolean `includePeopleTopics` - since some topics with a subclass of `person` have an overwhelming amount of sources linked to them, we give users the ability to toggle between displaying those topics or not as part of the treemap. 
+2. The `limit`: This is a query parameter for the API describing how many topics we want returned from the query.
+3. A boolean `includePeopleTopics`: Seeing as some topics with a subclass of `person` have an overwhelming amount of sources linked to them, this offers users the ability to toggle between displaying those topics or not as part of the treemap.
 
 ## API Call and Data Processing
 
-### Topics API
+### The Topics API
 
-First, let's take a look at what the [Topics API](https://developers.sefaria.org/reference/get-all-topics) returns at a high level - a list of [topics from the Sefaria library](https://www.sefaria.org.il/topics). Below, we'll zoom in on a topic, to get a sense of what data we have to work with.  
+First, let's take a look at what the [Topics API](https://developers.sefaria.org/reference/get-all-topics) returns at a high level - a list of [topics from the Sefaria library](https://www.sefaria.org.il/topics). Below, we'll zoom in on a topic, to get a sense of what data we have to work with.
 
 ```json
 [
@@ -109,19 +109,19 @@ First, let's take a look at what the [Topics API](https://developers.sefaria.org
 ]
 ```
 
-For this use case, what's most important to us is the primary English title of the topic, the `numSources` field (i.e. the number of Sefaria sources linked to the topic) and `subclass` - since we want to give users the option to view non-people topics only. 
+For this use case, what's most important to us is the primary English title of the topic, the `numSources` field (i.e. the number of Sefaria sources linked to the topic) and `subclass` - since we want to give users the option to view non-people topics only.
 
 Now that we see what we're working with, let's get back to the code...
 
 ### UseEffect
 
-Heading back to the code, inside of our `useEffect` hook, we make a call to the [Topics API](https://developers.sefaria.org/reference/get-all-topics). 
+Heading back to the code, inside of our `useEffect` hook, we make a call to the [Topics API](https://developers.sefaria.org/reference/get-all-topics).
 
 If `includePeopleTopics` is `false`, we filter out any topic with a subclass of `person`, otherwise we keep the people topics in the returned data.
 
-Then, we use a `map` function to create an array of objects, with the field `title` and `numSources`. 
+Then, we use a `map` function to create an array of objects, with the field `title` and `numSources`.
 
-Finally, we use our `setData` hook to set this filtered, mapped data in our `data` state. 
+Finally, we use our `setData` hook to set this filtered, mapped data in our `data` state.
 
 ```javascript
   useEffect(() => {
@@ -143,15 +143,15 @@ Finally, we use our `setData` hook to set this filtered, mapped data in our `dat
   }, [limit, includePeopleTopics]);
 ```
 
-This `useEffect` is set to re-render any time there's a change in `limit` or `includePeopleTopics`, two values we allow the users to toggle in the controls. 
+This `useEffect` is set to re-render any time there's a change in `limit` or `includePeopleTopics`, two values we allow the users to toggle in the controls.
 
 ## Returning JSX
 
-Now, we return our JSX! First, we set up some controls for the user, and then we render the visualization. Again, in an ideal world these would be broken into sub-components, but for the sake of the tutorial we kept it all together. 
+Now, we return our JSX! First, we set up some controls for the user, and then we render the visualization. Again, in an ideal world these would be broken into sub-components, but for the sake of the tutorial we kept it all together.
 
 ### The User Controls
 
-Inside our user controls, we have a range toggle that allows users to set the `limit` on the number of topics they'd like returned from the API. On change, we call our `setLimit` hook and change the limit to the value targeted by the user. (Recall, any change to `limit` triggers `useEffect` to run, querying the API again and refreshing the data. 
+Inside our user controls, we have a range toggle that allows users to set the `limit` on the number of topics they'd like returned from the API. On change, we call our `setLimit` hook and change the limit to the value targeted by the user. (Recall, any change to `limit` triggers `useEffect` to run, querying the API again and refreshing the data.
 
 ```javascript React
 <h1>Sefaria Topics Data-Viz</h1>
@@ -212,7 +212,7 @@ Beneath the controls, we render the visualization. The nice thing about D3Plus i
 }} />
 ```
 
-The `<Treemap/>` component takes one prop, `config`, where we can pass the data and set the configurations. You'll see we pass in the data, ask to group the topics by their `title`, and create the area value on the map based on the `sum` of the `numSources`. 
+The `<Treemap/>` component takes one prop, `config`, where we can pass the data and set the configurations. You'll see we pass in the data, ask to group the topics by their `title`, and create the area value on the map based on the `sum` of the `numSources`.
 
 The next few lines arrange the desired height and width of the visualization, as well as overriding some defaults to make things clean and presentable. (`shapeConfig` allows us to hide percentage values, which make less sense in this case... and `tooltipConfig` does the same, just in the context of the hover-able tooltip).
 
@@ -224,7 +224,7 @@ The next few lines arrange the desired height and width of the visualization, as
 
 # Further Expansion
 
-Obviously, this example is extremely bare-bones and just meant as a proof of concept. Can you take this example and expand? 
+Obviously, this example is extremely bare-bones and just meant as a proof of concept. Can you take this example and expand?
 
 Some possibilities:
 
@@ -238,7 +238,7 @@ If you build something, [let us know](https://developers.sefaria.org/page/contac
 
 ## Full Code
 
-To see the full repository, including style changes and other clean up, see [here](https://github.com/Sefaria/dataviz-tutorial). 
+To see the full repository, including style changes and other clean up, see [here](https://github.com/Sefaria/dataviz-tutorial).
 
 To see the entirety of the `App.jsx` file we built, see below:
 
