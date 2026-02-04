@@ -84,7 +84,7 @@ As you continue, you will need to track three things:
 
 ### The Topics API
 
-First, let's take a look at what the [Topics API](https://developers.sefaria.org/reference/get-all-topics) returns at a high level - a list of [topics from the Sefaria library](https://www.sefaria.org.il/topics). Below, we'll zoom in on a topic, to get a sense of what data we have to work with.
+At a high level,  the [Topics API](https://developers.sefaria.org/reference/get-all-topics) returns a list of [topics from the Sefaria Library](https://www.sefaria.org.il/topics). Below is a JSON focusing on a single topic, serving as a way of understanding the data we have to work with.
 
 ```json
 [
@@ -109,7 +109,7 @@ First, let's take a look at what the [Topics API](https://developers.sefaria.org
 ]
 ```
 
-For this use case, what's most important to us is the primary English title of the topic, the `numSources` field (i.e. the number of Sefaria sources linked to the topic) and `subclass` - since we want to give users the option to view non-people topics only.
+For this use case, the most important data is the primary English title of the topic, or the `numSources` field. This indicates the number of Sefaria Library sources linked to the topic) and `subclass` - since we want to give users the option to view non-people topics only.
 
 Now that we see what we're working with, let's get back to the code...
 
