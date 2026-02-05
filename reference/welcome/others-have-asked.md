@@ -93,9 +93,9 @@ Please note:
 
 This process is the same as the process described above for retrieving the weekly parashah. 
 
-## How can I retrieve a specific parashah with Rashi's commentary?
+## How can I retrieve a specific parashah along with commentary by Rashi?
 
-See above (B), where we passed in `Rashi on Genesis 25:19-28:9` to retrieve the associated Rashi text on Parashat Toldot.
+This process is the same as the process described above, wherein we passed in `Rashi on Genesis 25:19-28:9` to retrieve Rashi's writings on Parashat Toldot.
 
 ## E) How do I use the Calendar API to get a different Parasha?
 
