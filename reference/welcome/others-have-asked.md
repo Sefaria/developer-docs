@@ -27,7 +27,7 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-You'll get a response that looks something like this (truncated):
+A call to the Calendar API will result in a response that looks something like this (truncated):
 
 ```json
 "calendar_items": \[  
@@ -44,7 +44,7 @@ You'll get a response that looks something like this (truncated):
       "ref": "Genesis 25:19-28:9",
 ```
 
-2. In the response, note the `ref` field. This converts the Parasha to a ranged text reference corresponding to the verses and chapters covered by this Parasha. Using that `ref` field, we can query the texts API:
+2. In the response, note the `ref` field. This field converts the parashah to a ranged text reference corresponding to the verses and chapters of the Five Books of Moses included the relevant Torah portion. Next, use that `ref` field, to query the texts API:
 
 ```json
 url = "https://www.sefaria.org/api/v3/texts/Genesis 25:19-28:9"
@@ -54,11 +54,11 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-And we would get the associated text in the response.
+This query will return the the associated text in the response.
 
-Please note, the text will default to Hebrew unless English is explicitly passed.
+Please note: The text returned by the query will be in Hebrew unless English is explicitly passed.
 
-Here's an example of the same query, but explicitly requesting an English response:
+The same query, with an explicit request for an English response, would look like this:
 
 ```python
 url = "https://www.sefaria.org/api/v3/texts/Genesis 25:19-28:9?version=english"
