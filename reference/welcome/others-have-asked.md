@@ -13,7 +13,7 @@ metadata:
 next:
   description: ''
 ---
-## How do I retrieve the text of a particular parashah (weekly Torah reading)?
+## 1. How do I retrieve the text of a particular parashah (weekly Torah reading)?
 
 There are two steps involved in retrieving the text of a parashah: 
 
@@ -70,7 +70,7 @@ response = requests.get(url, headers=headers)
 
 As seen above, the only difference is the addition of the parameter `version=english`. These processes (and more) are detailed in our documentation. To see more, take a look at the description of the parameters and the responses for our [texts API ](ref:get_api-v3-texts-tref).
 
-## How do I retrieve a commentary?
+## 2. How do I retrieve a commentary?
 
 In order to retrieve a commentary on a text in the Sefaria Library, pass the specific commentary to the [Texts API](ref:get_api-v3-texts-tref).
 
@@ -89,15 +89,15 @@ Please note:
 * The above query includes the parameter `version=english`, which will return the English-language version of Rashi's writing. This will only work if there is an English-language version of the queried text in the Sefaria Library. 
 * It is not currently possible to navigate to a commentary from the API calls to a text. Therefore, the best way to see the available commentaries for a given text is to use our [Related API](ref:get_api-related-tref). For more information on how commentaries are associated with texts, take a look at our documentation. 
 
-## How can I retrieve a range of verses?
+## 3. How can I retrieve a range of verses?
 
-This process is the same as the process described above for retrieving the weekly parashah. 
+This process is the same as the process for retrieving the weekly parashah, described in question one. 
 
-## How can I retrieve a specific parashah along with commentary by Rashi?
+## 4. How can I retrieve a specific parashah along with commentary by Rashi?
 
-This process is the same as the process described above, wherein we passed in `Rashi on Genesis 25:19-28:9` to retrieve Rashi's writings on Parashat Toldot.
+This process is the same as the process of passing in `Rashi on Genesis 25:19-28:9` to retrieve Rashi's writings on Parashat Toldot, described in question two.
 
-## How do I use the Calendar API to retrieve a different weekly Torah portion?
+## 5. How do I use the Calendar API to retrieve a different weekly Torah portion?
 
 As described in the documentation relating to the [Calendar API ](ref:get_api-calendars-1):
 
@@ -113,13 +113,13 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-That will return the ref for the parashah read on the week of January 1st, 2025. Once you have that ref, you can pass it into the Texts API in order to retrieve the text. You can find more information on this process in the above question regarding the retrieval of a specific parashah. 
+That will return the ref for the parashah read on the week of January 1st, 2025. Once you have that ref, you can pass it into the Texts API in order to retrieve the text. You can find more information on this process in the answer to question one. 
 
-## How do I retrieve English versions of commentaries that are in Hebrew?
+## 6. How do I retrieve English versions of commentaries that are in Hebrew?
 
-This process is similar to the process described above for retrieving the English-language version of Rashi's commentary on Parashat Toldot. Retrieving the English for a text is as simple as passing the parameter `version=english` on the query.
+The process for retrieving an English-language version of a commentary that is in Hebrew is similar to the one described above, regarding Rashi's commentary on Parashat Toldot. Retrieving the English for a text is as simple as passing the parameter `version=english` on the query.
 
-This is also elaborated on in [our documentation](ref:get_api-v3-texts-tref). Here an except from the relevant paragraph:
+You can read more about this process in [our documentation](ref:get_api-v3-texts-tref):
 
 > **version** (string)
 >
@@ -139,13 +139,13 @@ This is also elaborated on in [our documentation](ref:get_api-v3-texts-tref). He
 
 <br />
 
-An important note - not all of our texts have English translations. In the case where we do not yet have the English translation in our library, it will not appear in the API. To see a list of all English translated texts, [click here](https://www.sefaria.org/translations/en).
+Please note: Some texts in the Sefaria Library are not available with an English translation. If there is no English translation in the Library for the text in question, the English version will not appear in the API. To see a list of all English translated texts, [click here](https://www.sefaria.org/translations/en).
 
-## G) How do I get specific commentaries (like Ramban or Rabbi Sacks)?
+## 7. How do I retrieve commentary by a specific author?
 
-To retrieve a specific commentary, you follow the steps above in (B). All commentaries are treated as books, so you query the commentary the same way you'd query for the text of any other book.
+The steps for retrieving a specific commentary are outline in question two. Sefaria's infrastructure treats all commentaries as books. Therefore, the query for retrieving a commentary is the same as the query for retrieving the text of any other title in the Library.
 
-Here's an example with Ramban on Exodus:
+For example, a query for writings by 13th-century scholar Ramban on the book of Exodus would look like this:
 
 ```python
 url = "<https://www.sefaria.org/api/v3/texts/Ramban%20on%20Exodus%201.1">
@@ -155,7 +155,7 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-With regards to Rabbi Sacks, figuring out the ref to pass is less intuitive. We recommend you navigate to the specific passage of interest in the library, and then copy the ref from the url.
+When retrieving writings by authors with essay-length collections in the Library, such as Rabbi Lord Jonathan Sacks, finding the ref to pass is less intuitive. We recommend you navigate to the specific passage of interest in the library, and then copy the ref from the url.
 
 For example, if you wanted [https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi](https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi) via the API, you would pass the request as follows:
 
