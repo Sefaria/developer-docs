@@ -46,6 +46,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [TzadekAI](https://tzadek.ai/) - A halakhic Q&A application using data from Sefaria to explore how rabbinic voices from different historical periods approached similar questions.
 * [Weekday Torah Readings with AI Insights](http://jiveyeti.com/wtr) - Provides experimental AI insights for each reading of the weekday Torah readings, alongside the biblical texts in both Hebrew and English.
 * [Yanki](https://developers.sefaria.org/docs/www.yankiai.com) - All-in-one app built according to traditional halakhic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features — all in a filtered, AI-powered ecosystem for the frum Jewish world to enjoy.
+* [Eitz HaRabanim](https://eitz-harabanim.com/) - This project uses Sefaria data to create an interactive tree visualization of Talmudic sages, showing their teacher–student relationships and chronological connections, with dedicated pages for each rabbi. [Github documentation](https://github.com/ruebeckscube/talmud-family-tree)
 
 ### Study Tools
 
