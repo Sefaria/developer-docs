@@ -70,11 +70,11 @@ response = requests.get(url, headers=headers)
 
 As seen above, the only difference is the addition of the parameter `version=english`. These processes (and more) are detailed in our documentation. To see more, take a look at the description of the parameters and the responses for our [texts API ](ref:get_api-v3-texts-tref).
 
-## B) How do I retrieve a commentary?
+## How do I retrieve a commentary?
 
-To select a commentary on a book, you need to pass that specific commentary to the [Texts API](ref:get_api-v3-texts-tref).
+In order to retrieve a commentary on a text in the Sefaria Library, pass the specific commentary to the [Texts API](ref:get_api-v3-texts-tref).
 
-For example, to get Rashi on the Parasha above, you would run a query like this:
+For example, in order to retrieve writings by 11th-century scholar Rashi on the weekly Torah portion referenced above, the query would appear like this:
 
 ```python
 url = "https://www.sefaria.org/api/v3/texts/Rashi on Genesis 25:19-28:9?version=english"
@@ -84,15 +84,16 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-Note, we passed `version=english` again, which will return the English of Rashi's text (assuming we have an English version of the text, which in this case, we do).
+Please note: 
 
-It is not currently possible to navigate to a commentary from the API calls to a text. The best way to see the available commentaries for a given text is to use our [Related API](ref:get_api-related-tref). You can peruse the documentation there to better understand how commentaries are associated with texts.
+* The above query includes the parameter `version=english`, which will return the English-language version of Rashi's writing. This will only work if there is an English-language version of the queried text in the Sefaria Library. 
+* It is not currently possible to navigate to a commentary from the API calls to a text. Therefore, the best way to see the available commentaries for a given text is to use our [Related API](ref:get_api-related-tref). For more information on how commentaries are associated with texts, take a look at our documentation. 
 
-## C) How to retrieve a range of verses?
+## How can I retrieve a range of verses?
 
-See above (A), when we passed in a range of verses to retrieve the text of the Parasha.
+This process is the same as the process described above for retrieving the weekly parashah. 
 
-## D) How to retrieve a particular parasha with Rashi's commentary?
+## How can I retrieve a specific parashah with Rashi's commentary?
 
 See above (B), where we passed in `Rashi on Genesis 25:19-28:9` to retrieve the associated Rashi text on Parashat Toldot.
 
