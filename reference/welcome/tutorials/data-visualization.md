@@ -141,7 +141,7 @@ This section of the tutorial includes three steps:
 
 This `useEffect` is set to re-render any time there's a change in `limit` or `includePeopleTopics`, two values we allow the users to toggle in the controls.
 
-## Returning JSX
+### Returning JSX
 
 Once we have all that set up, it's time to return our JSX! After setting up some controls for the user we can render the visualization. As noted above, these would ideally be separated into sub-components but, for the sake of the tutorial, have been kept together.
 
