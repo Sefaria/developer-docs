@@ -26,7 +26,7 @@ This tutorial uses [React](https://react.dev/). Get started with the following s
 
 ### 1. Creating the App
 
-First, ensure you have [Node](https://nodejs.org/en) installed. We'll be using [Vite](https://vite.dev/) to create the basic template for the React app. To do so, follow these steps:
+First, ensure you have [Node](https://nodejs.org/en) installed. We'll be using [Vite](https://vite.dev/) to create the basic template for the React app:
 
 1. Run `npx create-vite@latest <name-of-app> --template react`
 2. Then, `cd <name-of-app>`
