@@ -13,11 +13,11 @@ metadata:
 next:
   description: ''
 ---
-## A) How do I retrieve the text of a particular parasha?
+## How do I retrieve the text of a particular parashah (weekly Torah reading)?
 
-To select the text of a Parasha, you have to proceed with two steps:
+There are two steps involved in retrieving the text of a parashah: 
 
-1. Call the Calendars API (if no date parameters are explicitly passed, it will default to this week's parasha). 
+1. Call the Calendars API. If no date parameters are explicitly passed, this will retrieve the weekly passage read on the week in which you're calling the API.
 
 ```python
 url = "https://www.sefaria.org/api/calendars"
@@ -44,7 +44,7 @@ You'll get a response that looks something like this (truncated):
       "ref": "Genesis 25:19-28:9",
 ```
 
-2. In the response, note the `ref` field. This converts the Parasha to a ranged text reference corresponding to the verses and chapters covered by this Parasha. Using that `ref` field, we can query the texts API: 
+2. In the response, note the `ref` field. This converts the Parasha to a ranged text reference corresponding to the verses and chapters covered by this Parasha. Using that `ref` field, we can query the texts API:
 
 ```json
 url = "https://www.sefaria.org/api/v3/texts/Genesis 25:19-28:9"
@@ -54,9 +54,9 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-And we would get the associated text in the response. 
+And we would get the associated text in the response.
 
-Please note, the text will default to Hebrew unless English is explicitly passed. 
+Please note, the text will default to Hebrew unless English is explicitly passed.
 
 Here's an example of the same query, but explicitly requesting an English response:
 
@@ -68,13 +68,13 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-You'll notice the addition of the parameter `version=english` 
+You'll notice the addition of the parameter `version=english`
 
-All of this is detailed in our documentation. To see more, read the description of the parameters and the responses for our [texts API ](ref:get_api-v3-texts-tref) here. 
+All of this is detailed in our documentation. To see more, read the description of the parameters and the responses for our [texts API ](ref:get_api-v3-texts-tref) here.
 
 ## B) How do I retrieve a commentary?
 
-To select a commentary on a book, you need to pass that specific commentary to the [Texts API](ref:get_api-v3-texts-tref). 
+To select a commentary on a book, you need to pass that specific commentary to the [Texts API](ref:get_api-v3-texts-tref).
 
 For example, to get Rashi on the Parasha above, you would run a query like this:
 
@@ -86,17 +86,17 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-Note, we passed `version=english` again, which will return the English of Rashi's text (assuming we have an English version of the text, which in this case, we do). 
+Note, we passed `version=english` again, which will return the English of Rashi's text (assuming we have an English version of the text, which in this case, we do).
 
-It is not currently possible to navigate to a commentary from the API calls to a text. The best way to see the available commentaries for a given text is to use our [Related API](ref:get_api-related-tref). You can peruse the documentation there to better understand how commentaries are associated with texts. 
+It is not currently possible to navigate to a commentary from the API calls to a text. The best way to see the available commentaries for a given text is to use our [Related API](ref:get_api-related-tref). You can peruse the documentation there to better understand how commentaries are associated with texts.
 
 ## C) How to retrieve a range of verses?
 
-See above (A), when we passed in a range of verses to retrieve the text of the Parasha. 
+See above (A), when we passed in a range of verses to retrieve the text of the Parasha.
 
 ## D) How to retrieve a particular parasha with Rashi's commentary?
 
-See above (B), where we passed in `Rashi on Genesis 25:19-28:9` to retrieve the associated Rashi text on Parashat Toldot. 
+See above (B), where we passed in `Rashi on Genesis 25:19-28:9` to retrieve the associated Rashi text on Parashat Toldot.
 
 ## E) How do I use the Calendar API to get a different Parasha?
 
@@ -104,7 +104,7 @@ If you read through our documentation of the [Calendar API ](ref:get_api-calenda
 
 > By default the API returns for the current time. You can override it by using a combination of the year, day, and month params - all three of which must be used, or else the API will fallback to the default.
 
-Here's an example specifying a different date, `January 1st, 2025` by passing the parameters year, month, and day: 
+Here's an example specifying a different date, `January 1st, 2025` by passing the parameters year, month, and day:
 
 ```python
 url = "https://www.sefaria.org/api/calendars?year=2025&month=1&day=1"
@@ -114,11 +114,11 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-That will return the ref for that week's Parasha, which you can then pass into the Texts API in order to retrieve the text. See the two steps outlined above in (A), and repeat them with this ref. 
+That will return the ref for that week's Parasha, which you can then pass into the Texts API in order to retrieve the text. See the two steps outlined above in (A), and repeat them with this ref.
 
 ## F) How do I retrieve English versions of Hebrew commentaries?
 
-See the example above in (B) for how we retrieved the English for Rashi. Retrieving the English for a text is as simple as passing the parameter `version=english` on the query. 
+See the example above in (B) for how we retrieved the English for Rashi. Retrieving the English for a text is as simple as passing the parameter `version=english` on the query.
 
 This is also elaborated on in [our documentation](ref:get_api-v3-texts-tref). Here an except from the relevant paragraph:
 
@@ -140,11 +140,11 @@ This is also elaborated on in [our documentation](ref:get_api-v3-texts-tref). He
 
 <br />
 
-An important note - not all of our texts have English translations. In the case where we do not yet have the English translation in our library, it will not appear in the API. To see a list of all English translated texts, [click here](https://www.sefaria.org/translations/en). 
+An important note - not all of our texts have English translations. In the case where we do not yet have the English translation in our library, it will not appear in the API. To see a list of all English translated texts, [click here](https://www.sefaria.org/translations/en).
 
 ## G) How do I get specific commentaries (like Ramban or Rabbi Sacks)?
 
-To retrieve a specific commentary, you follow the steps above in (B). All commentaries are treated as books, so you query the commentary the same way you'd query for the text of any other book. 
+To retrieve a specific commentary, you follow the steps above in (B). All commentaries are treated as books, so you query the commentary the same way you'd query for the text of any other book.
 
 Here's an example with Ramban on Exodus:
 
@@ -156,9 +156,9 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-With regards to Rabbi Sacks, figuring out the ref to pass is less intuitive. We recommend you navigate to the specific passage of interest in the library, and then copy the ref from the url. 
+With regards to Rabbi Sacks, figuring out the ref to pass is less intuitive. We recommend you navigate to the specific passage of interest in the library, and then copy the ref from the url.
 
-For example, if you wanted [https://www.sefaria.org/Covenant\_and\_Conversation%3B\_Genesis%3B\_The\_Book\_of\_the\_Beginnings%2C\_Bereshit%2C\_The\_Book\_of\_Teaching?lang=bi](https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi) via the API, you would pass the request as follows: 
+For example, if you wanted [https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi](https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi) via the API, you would pass the request as follows:
 
 ```python
 url = "<https://www.sefaria.org/api/v3/texts/Covenant_and_Conversation%253B_Genesis%253B_The_Book_of_the_Beginnings%252C_Bereshit%252C_The_Book_of_Teaching">
