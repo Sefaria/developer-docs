@@ -97,13 +97,13 @@ This process is the same as the process described above for retrieving the weekl
 
 This process is the same as the process described above, wherein we passed in `Rashi on Genesis 25:19-28:9` to retrieve Rashi's writings on Parashat Toldot.
 
-## E) How do I use the Calendar API to get a different Parasha?
+## How do I use the Calendar API to retrieve a different weekly Torah portion?
 
-If you read through our documentation of the [Calendar API ](ref:get_api-calendars-1), you'll see the following explanation:
+As described in the documentation relating to the [Calendar API ](ref:get_api-calendars-1):
 
-> By default the API returns for the current time. You can override it by using a combination of the year, day, and month params - all three of which must be used, or else the API will fallback to the default.
+> By default, the API returns for the current time. You can override this default by using a combination of the year, day, and month parameters. All three of these must be used or the API will fallback to the default.
 
-Here's an example specifying a different date, `January 1st, 2025` by passing the parameters year, month, and day:
+For example, when specifying a different date `January 1st, 2025` by passing the parameters year, month, and day the query would look like this:
 
 ```python
 url = "https://www.sefaria.org/api/calendars?year=2025&month=1&day=1"
@@ -113,11 +113,11 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-That will return the ref for that week's Parasha, which you can then pass into the Texts API in order to retrieve the text. See the two steps outlined above in (A), and repeat them with this ref.
+That will return the ref for the parashah read on the week of January 1st, 2025. Once you have that ref, you can pass it into the Texts API in order to retrieve the text. You can find more information on this process in the above question regarding the retrieval of a specific parashah. 
 
-## F) How do I retrieve English versions of Hebrew commentaries?
+## How do I retrieve English versions of commentaries that are in Hebrew?
 
-See the example above in (B) for how we retrieved the English for Rashi. Retrieving the English for a text is as simple as passing the parameter `version=english` on the query.
+This process is similar to the process described above for retrieving the English-language version of Rashi's commentary on Parashat Toldot. Retrieving the English for a text is as simple as passing the parameter `version=english` on the query.
 
 This is also elaborated on in [our documentation](ref:get_api-v3-texts-tref). Here an except from the relevant paragraph:
 
