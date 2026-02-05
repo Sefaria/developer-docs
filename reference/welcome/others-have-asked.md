@@ -145,7 +145,7 @@ Please note: Some texts in the Sefaria Library are not available with an English
 
 The steps for retrieving a specific commentary are outline in question two. Sefaria's infrastructure treats all commentaries as books. Therefore, the query for retrieving a commentary is the same as the query for retrieving the text of any other title in the Library.
 
-For example, a query for writings by 13th-century scholar Ramban on the book of Exodus would look like this:
+For example: A query for writings by 13th-century scholar Ramban on the book of Exodus would look like this:
 
 ```python
 url = "<https://www.sefaria.org/api/v3/texts/Ramban%20on%20Exodus%201.1">
@@ -155,9 +155,9 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-When retrieving writings by authors with essay-length collections in the Library, such as Rabbi Lord Jonathan Sacks, finding the ref to pass is less intuitive. We recommend you navigate to the specific passage of interest in the library, and then copy the ref from the url.
+When retrieving writings by authors with essay-length collections in the Library, such as Rabbi Lord Jonathan Sacks, finding the ref to pass is less intuitive. In this case, it is better to navigate to the specific passage of interest in the Sefaria Library interface and copy the ref from the url.
 
-For example, if you wanted [https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi](https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi) via the API, you would pass the request as follows:
+For example: A query for this passage from Covenant and Conversation, Genesis: The Book of Beginnings (URL:[https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi](https://www.sefaria.org/Covenant_and_Conversation%3B_Genesis%3B_The_Book_of_the_Beginnings%2C_Bereshit%2C_The_Book_of_Teaching?lang=bi)) via the API would be passed in the following way:
 
 ```python
 url = "<https://www.sefaria.org/api/v3/texts/Covenant_and_Conversation%253B_Genesis%253B_The_Book_of_the_Beginnings%252C_Bereshit%252C_The_Book_of_Teaching">
