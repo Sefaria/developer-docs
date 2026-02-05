@@ -169,4 +169,4 @@ response = requests.get(url, headers=headers)
 
 <br />
 
-For more insights and assistance navigating our API, feel free to [contact us](page:contact-us)!
+Have more questions about navigating Sefaria's API? Feel free to [contact us](page:contact-us)!
