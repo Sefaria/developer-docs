@@ -1,8 +1,9 @@
 ---
-title: Others Have Asked...
+title: Frequently Asked Questions
 excerpt: >-
-  Looking to get started, but want a rundown on the basics? Here are some common
-  questions we get in our inbox, and some quick answers to help you get started.
+  Looking to get started, but want a rundown of the basics? Here are some common
+  questions we get in our inbox — along with some quick answers to help you get
+  started.
 deprecated: false
 hidden: false
 metadata:
