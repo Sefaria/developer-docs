@@ -20,9 +20,9 @@ You can see the entire repository [here](https://github.com/Sefaria/dataviz-tuto
 
 <Image align="center" border={false} src="https://files.readme.io/9336436205922c01d519d8a7bdb15182a5721f407e1c19ed0c14192e6eade1a9-Screenshot_2025-03-06_at_11.30.03.png" />
 
-## Tutorial Setup
+## Tutorial Setup: React
 
-For this tutorial, we'll be using [React](https://react.dev/).
+This tutorial uses [React](https://react.dev/). Get started with the following steps:
 
 ### 1. Creating the App
 
@@ -33,7 +33,7 @@ First, ensure you have [Node](https://nodejs.org/en) installed. We'll be using [
 3. Install your dependencies via `npm install`
 4. Run the app via `npm run dev`
 
-You should see something running at http://localhost:5173/.
+You should see something running at [http://localhost:5173/](http://localhost:5173/).
 
 ### 2. Install D3Plus for React
 
@@ -118,7 +118,7 @@ With this information at hand, we can return to the code.
 This section of the tutorial includes three steps:
 
 1. Inside of our `useEffect` hook, we make a call to the [Topics API](https://developers.sefaria.org/reference/get-all-topics). If `includePeopleTopics` is `false`, we filter out any topic with a subclass of `person`. Otherwise, the people topics will remain present in the returned data.
-2. After making a call, we use a `map` function to create an array of objects with the field `title` and `numSources`. 
+2. After making a call, we use a `map` function to create an array of objects with the field `title` and `numSources`.
 3. Finally, we use our `setData` hook to set this filtered and mapped data in our `data` state.
 
 ```javascript
