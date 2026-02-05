@@ -82,7 +82,7 @@ As you continue, you will need to track three things:
 
 ### The Topics API
 
-At a high level,  the [Topics API](https://developers.sefaria.org/reference/get-all-topics) returns a list of [topics from the Sefaria Library](https://www.sefaria.org.il/topics). Below is a JSON focusing on a single topic, serving as a way of understanding the data we have to work with.
+At a high level,  the [Topics API](https://developers.sefaria.org/reference/get-all-topics) returns a list of [topics from the Sefaria Library](https://www.sefaria.org.il/topics). Below is a JSON focusing on a single topic, showcasing the data we have to work with.
 
 ```json
 [
