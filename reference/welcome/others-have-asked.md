@@ -68,9 +68,7 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-You'll notice the addition of the parameter `version=english`
-
-All of this is detailed in our documentation. To see more, read the description of the parameters and the responses for our [texts API ](ref:get_api-v3-texts-tref) here.
+As seen above, the only difference is the addition of the parameter `version=english`. These processes (and more) are detailed in our documentation. To see more, take a look at the description of the parameters and the responses for our [texts API ](ref:get_api-v3-texts-tref).
 
 ## B) How do I retrieve a commentary?
 
