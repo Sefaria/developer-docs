@@ -39,7 +39,7 @@ You should see something running at [http://localhost:5173/](http://localhost:51
 
 This tutorial use the [D3Plus](https://d3plus.org/?path=/docs/introduction--d3plus) library to generate a data visualization. In order to get the required D3Plus packages,  run `npm install d3plus-text` and `npm install d3plus-react`.
 
-Note: App.jsx
+### Note: App.jsx
 
 This tutorial will focus _only_ on the code we wrote in `App.jsx`, the main body of the application. We made some other tweaks for styling and streamlining purposes in addition to the code described here. In order to see those, visit the full GitHub repository containing this project [here](https://github.com/Sefaria/dataviz-tutorial). The [README](https://github.com/Sefaria/dataviz-tutorial/blob/main/README.md) also includes notes for running the project locally.
 
