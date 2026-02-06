@@ -95,7 +95,7 @@ If you run into issues, check the [README.md ](https://github.com/Sefaria/Sefari
 1. Go to [https://github.com/Sefaria/Sefaria-Project ](https://github.com/Sefaria/Sefaria-Project)
 2. Click "Fork".
 
-Forking creates your personal copy of the Sefaria repo on GitHub so you can make changes without affecting the main project directly.
+Forking creates your personal copy of the Sefaria repository on GitHub. This allows you to make changes without affecting the main project.
 
 ### Clone Your Fork Locally
 
@@ -147,9 +147,9 @@ git checkout -b test-feature-name upstream/master
 
 This creates your test branch based on the latest code in master.
 
-## Set Up Playwright
+## 5. Set Up Playwright
 
-Install Playwright and its test runner:
+Install Playwright and its test runner like this:
 
 ```bash
 
@@ -161,7 +161,7 @@ npx playwright install
 
 ```
 
-Verify your setup by running existing tests:
+Verify your setup by running existing tests like this:
 
 ```bash
 
@@ -169,7 +169,7 @@ npx playwright test
 
 ```
 
-## Write Your Tests
+## 6. Write Your Tests
 
 Sefaria's Playwright tests live under the `e2e-tests/tests` directory.
 
