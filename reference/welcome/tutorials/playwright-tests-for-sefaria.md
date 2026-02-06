@@ -502,7 +502,7 @@ git commit -m "test(ToC): add language control tests [Issue #16]"
 
 ```
 
-_**Note**: Sefaria strives to use the "Conventional Commits" method when it comes to writing commit messages. Check out this [Conventional Commits Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  to learn more about it!_
+_Please note: Sefaria strives to use the "Conventional Commits" method when it comes to writing commit messages. Check out this [Conventional Commits Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  to learn more about it!_
 
 Push your branch:
 
