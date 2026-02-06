@@ -267,15 +267,15 @@ You may find that you want to add helper methods or certain variables to make yo
 
 You're all set! Now that we've covered the basics, let us take a deep dive into the process of choosing, developing, and pushing your Playwright test.
 
-# Example: Choosing and Creating a New Test
+## 7. Example: Choosing and Creating a New Test
 
 Let's walk through creating a test for "Table of Contents (ToC) Language Control" (Issue #16).
 
-After browsing the list of available features to test on Sefaria's [Github Issues](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues), we select "Table of Contents (ToC) Language Control", Issue #16.
+After browsing the list of available features to test on Sefaria's [Github Issues](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues),  select "Table of Contents (ToC) Language Control" (Issue #16).
 
-We click on the issue, and add a comment: _I would like to volunteer to create these tests._
+Click on the issue and add a comment. In this case, the comment is _"I would like to volunteer to create these tests."_
 
-The issue provides:
+This issue shows the following information:
 
 _**Title**: Verify language display in ToC based on content language._  
 _**Test**:_
@@ -287,11 +287,11 @@ _**Test**:_
 * _Open the Table of Contents for an English source text._
 * _Verify that ToC items are displayed in Hebrew._
 
-After a Sefaria team member grants us assignee status, we are ready to begin!
+Once a Sefaria team member has assigned the issue, the testing can begin. 
 
-## Create the Test File
+### Create the Test File
 
-Now that we have selected and been assigned a feature to test, we can go ahead and get started on creating the test file. This can be done through the terminal, or manually.
+Once assigned to the issue, it's time to create the test file. This can be done either through the terminal or manually.
 
 The standard naming convention for a Playwright test file consists of the feature you are testing, followed by `.spec.ts`. Since we are testing language control for the Table of Contents, we will name our test file `toc-language-control.spec.ts`.
 
