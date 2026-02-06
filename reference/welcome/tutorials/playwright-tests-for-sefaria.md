@@ -1,6 +1,8 @@
 ---
 title: Writing Playwright Tests for Sefaria
-excerpt: ''
+excerpt: >-
+  Learn how to contribute to Sefaria's test coverage with this comprehensive
+  guide. 
 deprecated: false
 hidden: false
 metadata:
@@ -12,11 +14,15 @@ next:
 ---
 # Contributing Playwright Tests to Sefaria: A Volunteer Guide
 
-Welcome! We're grateful that you have decided to contribute to Sefaria's test coverage. We are so appreciative of our enthusiastic community of developers.
+Welcome! Thank you for your interest in contributing to Sefaria's test coverage. We are so grateful to have such an enthusiastic community of developers who help us develop and test our technology. 
 
-Playwright tests bulletproof Sefaria from bugs. They are easy to contribute to and make our digital library more resilient. To take a look at the list of tests we have in the works, check out the [Sefaria Playwright Tests](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues) repository on Github. 
+### What Are Playwright Tests?
 
-In this tutorial, you will learn how to set up your local environment to write Playwright-based end-to-end (E2E) tests for Sefaria, contribute new tests, and submit your changes through a pull request.
+Simply put, these tests keep Sefaria from bugs. It's easy to contribute to our playwright tests and every contribution makes our digital library more resilient. Interested in which tests we have in the works? You can see the whole repository at [Sefaria Playwright Tests](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues) on Github.
+
+### Getting Started
+
+This tutorial will explain how to set up your local environment to write Playwright-based end-to-end (E2E) tests for Sefaria. It will also explain how to contribute new tests and submit your changes through a pull request.
 
 ## Table of Contents
 
@@ -40,31 +46,31 @@ In this tutorial, you will learn how to set up your local environment to write P
 
 10. [Tips for Writing Great Playwright Tests](#tips-for-writing-great-playwright-tests)
 
-## Prerequisites
+## 1. Prerequisites
 
-Before you begin, make sure you have the following installed:
+Before beginning, ensure you have the following installed:
 
 [Git](https://git-scm.com/)
 
 [Node.js](https://nodejs.org/en) (v18+ recommended)
 
-[Python](https://www.python.org/) (3.10+)- *only if you want to run the full Sefaria app locally*
+[Python](https://www.python.org/) (3.10+) _This is only necessary if you want to run the full Sefaria Library app locally._
 
-[Docker](https://www.docker.com/) *-for running local services like Elasticsearch, Redis, MongoDB*
+[Docker](https://www.docker.com/) _This is necessary for running local services such as Elasticsearch, Redis, or MongoDB_
 
-[GitHub ](https://github.com/) account
+[GitHub ](https://github.com/) (make sure you have an account)
 
-**Note**: While Playwright tests are written in TypeScript, Sefaria’s backend is powered by Django (Python). If you want to run the app locally to simulate full app behavior in your tests, you will need Python. If you are testing frontend behavior against a live Cauldron or staging server, only Node.js is required.
+_Please note: While Playwright tests are written in TypeScript, Sefaria’s backend is powered by Django (Python). Therefore, in order to run the Sefaria Library app locally and simulate full app behavior in your tests, you will need Python. If you are testing frontend behavior against a live Cauldron or staging server, only Node.js is required._
 
-## Claim a Feature from the Github Issue Tracker
+## 2. Claim a Feature from the Github Issue Tracker
 
 Sefaria uses Github Issues to track which features or areas still need Playwright test coverage. Before writing a test, browse Sefaria's [Playwright GitHub Issues list](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues) to see what features still need testing.
 
 ### How to Claim an Issue
 
 1. **Find an open issue** you'd like to contribute to. Make sure it does not yet have an assignee or "In Progress" status. Features are labeled with different complexity levels - select one that matches your comfort level.
-2. **Comment on the issue** saying something like:\
-   *"I would like to volunteer to create these tests"*
+2. **Comment on the issue** saying something like:  
+   _"I would like to volunteer to create these tests"_
 3. A **maintainer will assign** the issue to you shortly.
 
 > ⚠️ **Note:** GitHub only allows maintainers or collaborators with write access to assign issues.
@@ -260,7 +266,7 @@ Add additional imports as needed based on your specific test requirements.
 
 You may find that you want to add helper methods or certain variables to make your tests more concise and efficient. You are welcome and encouraged to do so! If you need assistance choosing the correct format or location for these additions, please reach out to [Sefaria's engineering team](https://developers.sefaria.org/page/contact-us).
 
-You're all set! Now that we've covered the basics, let us take a deep dive into the process of choosing, developing, and pushing your Playwright test. 
+You're all set! Now that we've covered the basics, let us take a deep dive into the process of choosing, developing, and pushing your Playwright test.
 
 # Example: Choosing and Creating a New Test
 
@@ -268,25 +274,25 @@ Let's walk through creating a test for "Table of Contents (ToC) Language Control
 
 After browsing the list of available features to test on Sefaria's [Github Issues](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues), we select "Table of Contents (ToC) Language Control", Issue #16.
 
-We click on the issue, and add a comment: *I would like to volunteer to create these tests.*
+We click on the issue, and add a comment: _I would like to volunteer to create these tests._
 
 The issue provides:
 
-***Title**: Verify language display in ToC based on content language.*\
-***Test**:*
+_**Title**: Verify language display in ToC based on content language._  
+_**Test**:_
 
-* *Set contentLanguage to translation.*
-* *Open the Table of Contents for a Hebrew translation text.*
-* *Verify that ToC items are displayed in English.*
-* *Set contentLanguage to source.*
-* *Open the Table of Contents for an English source text.*
-* *Verify that ToC items are displayed in Hebrew.*
+* _Set contentLanguage to translation._
+* _Open the Table of Contents for a Hebrew translation text._
+* _Verify that ToC items are displayed in English._
+* _Set contentLanguage to source._
+* _Open the Table of Contents for an English source text._
+* _Verify that ToC items are displayed in Hebrew._
 
 After a Sefaria team member grants us assignee status, we are ready to begin!
 
 ## Create the Test File
 
-Now that we have selected and been assigned a feature to test, we can go ahead and get started on creating the test file. This can be done through the terminal, or manually. 
+Now that we have selected and been assigned a feature to test, we can go ahead and get started on creating the test file. This can be done through the terminal, or manually.
 
 The standard naming convention for a Playwright test file consists of the feature you are testing, followed by `.spec.ts`. Since we are testing language control for the Table of Contents, we will name our test file `toc-language-control.spec.ts`.
 
@@ -307,7 +313,7 @@ touch e2e-tests/tests/toc-language-control.spec.ts
 
 ## Add Imports
 
-Your list of imports will include common Playwright commands, the Sefaria Page Object Models relevant to the feature you are testing, and valuable functions or variables from helper files such as `utils.ts` or `constants.ts`. 
+Your list of imports will include common Playwright commands, the Sefaria Page Object Models relevant to the feature you are testing, and valuable functions or variables from helper files such as `utils.ts` or `constants.ts`.
 
 If the Page Object Model does not yet exist for the page you are testing, you will need to create one. For some tests, like this one, we will use the PageManager available in the `pages` folder, which holds all the different pages as variables. Here are our imports:
 
@@ -365,7 +371,7 @@ test.describe('Content Language affects Table of Contents display correctly', ()
 
 ```
 
-The first test: 
+The first test:
 
 * Goes to the first chapter of Genesis (/Genesis.1) with the interface language set to English.
 * Tells the page to display the translation (i.e., the English version of the Hebrew text).
@@ -447,7 +453,7 @@ The UI provides excellent debugging capabilities:
 
 * Step through test execution
 
-![Playwright UI Example](https://files.readme.io/5f3331e52516e82d711b201a8aa32ee5b9d22769e5aefcb0fd17331f5eac68a5-image.png)
+<Image alt="Playwright UI Example" border={false} src="https://files.readme.io/5f3331e52516e82d711b201a8aa32ee5b9d22769e5aefcb0fd17331f5eac68a5-image.png" />
 
 ### Common Debugging Tips
 
@@ -495,7 +501,7 @@ git commit -m "test(ToC): add language control tests [Issue #16]"
 
 ```
 
-***Note**: Sefaria strives to use the "Conventional Commits" method when it comes to writing commit messages. Check out this [Conventional Commits Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  to learn more about it!*
+_**Note**: Sefaria strives to use the "Conventional Commits" method when it comes to writing commit messages. Check out this [Conventional Commits Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  to learn more about it!_
 
 Push your branch:
 
@@ -655,7 +661,7 @@ const page = await goToPageWithLang(context, '/Genesis.1', LANGUAGES.EN);
 
 * [Common Playwright Assertions](https://playwright.dev/docs/test-assertions)
 
-* [The Page Object Model (POM)](https://playwright.dev/docs/pom) 
+* [The Page Object Model (POM)](https://playwright.dev/docs/pom)
 
 * [Playwright Best Practices](https://playwright.dev/docs/best-practices)
 
