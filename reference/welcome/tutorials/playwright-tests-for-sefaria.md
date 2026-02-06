@@ -646,13 +646,13 @@ const page = await goToPageWithLang(context, '/Genesis.1', LANGUAGES.EN);
 
 ```
 
-### Setup Issues
+### Common Setup Issues and Recommended Actions
 
-**Node.js version problems**: Ensure you're using Node.js 18.x - 20.x
+**Node.js version problems:** Ensure you're using Node.js 18.x - 20.x.
 
-**Missing dependencies**: Run `npm install` to ensure all packages are installed
+**Missing dependencies:** Run `npm install` to ensure all packages are installed.
 
-**Playwright browsers**: Run `npx playwright install` to install browser binaries
+**Playwright browsers:** Run `npx playwright install` to install browser binaries.
 
 ## Additional Resources
 
