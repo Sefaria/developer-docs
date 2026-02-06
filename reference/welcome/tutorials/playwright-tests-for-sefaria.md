@@ -604,13 +604,13 @@ await page.click('.toc-option');
 
 ### Common Pitfalls to Avoid
 
-* **Flaky waits**: Don't use `waitForTimeout()` unless absolutely necessary
+* **Flaky waits:** Don't use `waitForTimeout()` unless absolutely necessary.
 
-* **Overly specific locators**: Avoid CSS selectors that break easily
+* **Overly specific locators:** Avoid CSS selectors that break easily.
 
-* **Missing assertions**: Always verify the expected outcome
+* **Missing assertions:** Always verify the expected outcome.
 
-* **Too much in one test**: Keep tests focused and atomic
+* **Too much in one test:** Keep tests focused and atomic.
 
 ## Troubleshooting Common Issues
 
