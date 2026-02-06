@@ -592,15 +592,15 @@ await page.click('.toc-option');
 
 ### Locator Strategy
 
-1. **Start with role-based locators** - they're accessible and stable
+1. **Start with role-based locators.** These are accessible and stable.
 
-2. **Use test IDs** when roles aren't sufficient
+2. **Use test IDs.** This is especially important when roles aren't sufficient.
 
-3. **Examine the HTML** to understand the page structure
+3. **Examine the HTML.** This will ensure full understanding of the page structure.
 
-4. **Use codegen** to generate initial locators, then improve them
+4. **Use codegen.** This allows you to generate initial locators and improve them.
 
-5. **Test your locators** in browser dev tools
+5. **Test your locators.** Check in browser dev tools. 
 
 ### Common Pitfalls to Avoid
 
