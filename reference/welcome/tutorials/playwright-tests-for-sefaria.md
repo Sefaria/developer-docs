@@ -442,23 +442,23 @@ npx playwright test toc-language-control.spec.ts --debug
 
 ### Using the Playwright UI
 
-The UI provides excellent debugging capabilities:
+The UI provides excellent debugging capabilities, such as:
 
-* Run individual tests or groups
+* Running individual tests or groups
 
-* See page state before, during, and after actions
+* Seeing the page state before, during, and after actions
 
-* Hover over the timeline to see page changes
+* Hovering over the timeline to see page changes
 
-* View errors in the dedicated panel
+* Viewing errors in the dedicated panel
 
-* Step through test execution
+* Stepping through test execution
 
 <Image alt="Playwright UI Example" border={false} src="https://files.readme.io/5f3331e52516e82d711b201a8aa32ee5b9d22769e5aefcb0fd17331f5eac68a5-image.png" />
 
 ### Common Debugging Tips
 
-**When tests fail:**
+**When tests fail, try one of these options:**
 
 1. Check the error message in the UI
 
@@ -474,7 +474,7 @@ The UI provides excellent debugging capabilities:
 
 * Prefer stable locators over brittle CSS selectors
 
-## Submit Your Contribution
+## 9. Submit Your Contribution
 
 ### Create Branch and Commit
 
