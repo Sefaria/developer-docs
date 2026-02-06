@@ -293,9 +293,9 @@ Once a Sefaria team member has assigned the issue, the testing can begin.
 
 Once assigned to the issue, it's time to create the test file. This can be done either through the terminal or manually.
 
-The standard naming convention for a Playwright test file consists of the feature you are testing, followed by `.spec.ts`. Since we are testing language control for the Table of Contents, we will name our test file `toc-language-control.spec.ts`.
+The standard naming convention for a Playwright test file consists of the feature you are testing, followed by `.spec.ts`. This example is about testing language control for the Table of Contents. Therefore, the test file will be named`toc-language-control.spec.ts`.
 
-**Using the terminal**:
+**When using the terminal, you'll see something like this:**
 
 ```bash
 
@@ -303,14 +303,14 @@ touch e2e-tests/tests/toc-language-control.spec.ts
 
 ```
 
-**Alternatively, to create the file manually in VS Code:**
+**Alternatively, you can create the file manually in VS Code. To do so:**
 
 1. Open the Explorer sidebar (Ctrl+Shift+E or Cmd+Shift+E).
 2. Right-click the `tests` folder.
 3. Click "New File".
 4. Type `toc-language-control.spec.ts` and press Enter.
 
-## Add Imports
+### Add Imports
 
 Your list of imports will include common Playwright commands, the Sefaria Page Object Models relevant to the feature you are testing, and valuable functions or variables from helper files such as `utils.ts` or `constants.ts`.
 
@@ -330,7 +330,7 @@ import { PageManager } from '../pages/pageManager';
 
 If you see that you need to add more import statements as you continue to write your tests, please do so.
 
-## Write the Tests
+### Write the Tests
 
 Let's take a look at the two tests we developed to verify language display for the Table of Contents of a given text.
 
@@ -410,9 +410,11 @@ Use these when:
 
 * You're repeating setup code
 
-## Run and Debug Locally
+## 8. Run and Debug Locally
 
 ### Running Tests
+
+There are a number of ways to run and debug locally. These include the following options. 
 
 **Run your specific test file:**
 
