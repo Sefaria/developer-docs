@@ -614,9 +614,9 @@ await page.click('.toc-option');
 
 ## Troubleshooting Common Issues
 
-### Test Failures
+### Common Test Failures and Recommended Actions
 
-**Element not found**: Check if the locator is correct and the element exists
+**Element not found:** Check if the locator is correct and the element exists.
 
 ```typescript
 
@@ -626,7 +626,7 @@ console.log(await page.getByRole('button', { name: 'Submit' }).count());
 
 ```
 
-**Timing issues**: Ensure proper waiting for dynamic content
+**Timing issues:** Ensure proper waiting for dynamic content.
 
 ```typescript
 
@@ -636,7 +636,7 @@ await expect(page.getByRole('button', { name: 'Submit' })).toBeEnabled();
 
 ```
 
-**Language/locale issues**: Make sure you're testing in the correct language context
+**Language/locale issues:** Make sure you're testing in the correct language context.
 
 ```typescript
 
