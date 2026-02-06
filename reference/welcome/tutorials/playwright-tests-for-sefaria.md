@@ -64,18 +64,17 @@ _Please note: While Playwright tests are written in TypeScript, Sefaria’s back
 
 ## 2. Claim a Feature from the Github Issue Tracker
 
-Sefaria uses Github Issues to track which features or areas still need Playwright test coverage. Before writing a test, browse Sefaria's [Playwright GitHub Issues list](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues) to see what features still need testing.
+Sefaria uses Github Issues to track which features or areas still need Playwright test coverage. Before writing a test, please browse Sefaria's [Playwright GitHub Issues list](https://github.com/Sefaria/Sefaria-Playwright-Tests/issues) to see which features still need testing.
 
-### How to Claim an Issue
+### How to Claim an Issue in Three Easy Steps
 
-1. **Find an open issue** you'd like to contribute to. Make sure it does not yet have an assignee or "In Progress" status. Features are labeled with different complexity levels - select one that matches your comfort level.
-2. **Comment on the issue** saying something like:  
-   _"I would like to volunteer to create these tests"_
-3. A **maintainer will assign** the issue to you shortly.
+1. **Find an open issue you'd like to contribute to.** In order to be sure the issue is available for testing, ensure it does not yet have an assignee noted and it's status is not designated In Progress. In addition, make sure you're selecting a feature with a complexity levels that matches your comfort level.
+2. **Comment on the issue.** For example, you might post: "I would like to volunteer to create these tests"
+3. **Wait for a maintainer to assign you the issue.** This process usually takes 1-2 business says.
 
 > ⚠️ **Note:** GitHub only allows maintainers or collaborators with write access to assign issues.
 >
-> If you're not yet a collaborator, you won’t be able to assign yourself. Instead, add a comment on the issue that you would like to write a test for.
+> If you're not a collaborator yet, you won’t be able to assign yourself. Instead, add a comment on the issue that you would like to write a test for and wait for the assignment to be approved.
 
 Once you're assigned, you can:
 
@@ -83,13 +82,13 @@ Once you're assigned, you can:
 * Write your test(s).
 * Open a pull request referencing the issue (e.g., `Fixes #23` in your PR description).
 
-## Set Up the Environment
+## 3. Set Up the Environment
 
 Follow the [Sefaria setup instructions](https://developers.sefaria.org/docs/local-installation-instructions) to get the backend and frontend running locally.
 
 If you run into issues, check the [README.md ](https://github.com/Sefaria/Sefaria-Project#readme)or fill out this [form](https://developers.sefaria.org/page/contact-us) to contact Sefaria's engineering team.
 
-## Fork and Clone the Sefaria Repository
+## 4. Fork and Clone the Sefaria Repository
 
 ### Fork the Repository
 
