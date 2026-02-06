@@ -526,9 +526,9 @@ git push origin test/toc-language-control
 
 ### Review Process
 
-A Sefaria team member will review your PR. This may take a few days - we appreciate your patience! Be responsive to feedback and make requested changes. Once approved and merged, your test becomes part of the automated test suite.
+A Sefaria team member will review your PR. This may take a few days, and we appreciate your patience! Please be responsive to feedback and make requested changes when relevant. Once approved and merged, your test will become part of the automated test suite.
 
-## Tips for Writing Great Playwright Tests
+## 10. Tips for Writing Great Playwright Tests
 
 ### Best Practices
 
