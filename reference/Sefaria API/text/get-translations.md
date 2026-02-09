@@ -1,8 +1,8 @@
 ---
 title: Languages
 excerpt: >-
-  Returns a list of distinct languages for which translations exist in the
-  database.
+  The Languages API returns a list of available distinct languages in which
+  translations exist in the Sefaria database.
 api:
   file: sefaria-api.json
   operationId: get-translations
