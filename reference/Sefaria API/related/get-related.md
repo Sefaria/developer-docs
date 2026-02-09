@@ -1,8 +1,9 @@
 ---
 title: Related
 excerpt: >-
-  A single API endpoint to return all of the content (links, sheets, notes,
-  media, manuscripts, and topics) related to the given `Ref` in the query. 
+  Use this single API endpoint to return all of the content related to the
+  specific `Ref` in the query. Content includes links, Sheets, notes, media,
+  manuscripts, and Topics.
 api:
   file: sefaria-api.json
   operationId: get-related
