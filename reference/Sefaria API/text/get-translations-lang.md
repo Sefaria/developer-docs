@@ -1,8 +1,9 @@
 ---
 title: Translations
 excerpt: >-
-  Returns a dictionary of texts translated into `lang`, organized by the Sefaria
-  category & secondary category of each title.
+  The Translations API returns a dictionary of texts translated into `lang`,
+  organized by the primary and secondary Sefaria text category for each specific
+  title.
 api:
   file: sefaria-api.json
   operationId: get-translations-lang
