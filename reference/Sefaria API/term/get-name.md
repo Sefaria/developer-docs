@@ -1,9 +1,9 @@
 ---
 title: Name
 excerpt: >-
-  Serves primarily as an autocompleter, returning potential keyword matches for
-  `Ref`s, book titles, authors, Topics, and author collections available in the
-  Sefaria Library.
+  This endpoint serves primarily as an autocompleter, returning potential
+  keyword matches for `Ref`s, book titles, authors, Topics, and author
+  collections available in the Sefaria Library.
 api:
   file: sefaria-api.json
   operationId: get-name
