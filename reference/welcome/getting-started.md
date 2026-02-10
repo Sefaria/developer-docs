@@ -47,7 +47,7 @@ Below are several pathways through the Sefaria API for developers and researcher
 
 ### Where are the books?
 
-Sefaria offers an open-source digital library of Jewish books. To see all of the books available right now in the Sefaria Library, see the [Table of Contents](ref:get-index). To retrieve all of the metadata related to a specific book, try out the [Index (v2)](ref:get-v2-index) endpoint.
+The Sefaria Library offers an open-source digital collection of Jewish books. To see all of the books available right now in the Sefaria Library, see the [Table of Contents](ref:get-index). To retrieve all of the metadata related to a specific book, try out the [Index (v2)](ref:get-v2-index) endpoint.
 
 ### Ready to dive into some text data?
 
