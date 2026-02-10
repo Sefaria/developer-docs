@@ -2,8 +2,8 @@
 title: Recommended Topics
 excerpt: >-
   This API endpoint returns the most frequently used Topics associated with a
-  specific `Ref`. Use this endpoint as a fast way of identifying Topics that may
-  be shared between disparate `Ref`s.
+  specific `Ref`. Use this endpoint as a fast way of identifying Topics that
+  disparate `Ref`s may have in common.
 api:
   file: sefaria-api.json
   operationId: get-recommend-topics
