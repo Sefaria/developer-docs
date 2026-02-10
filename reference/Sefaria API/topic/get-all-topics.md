@@ -1,8 +1,9 @@
 ---
 title: All Topics
 excerpt: >-
-  The topics API returns a list of JSON objects, with each object containing all
-  of the metadata for each topic in the Sefaria database. 
+  The topics API returns a list of JSON objects. Each JSON object returned
+  contains the complete metadata for a specific Topic in the Sefaria Library
+  database. 
 api:
   file: sefaria-api.json
   operationId: get-all-topics
