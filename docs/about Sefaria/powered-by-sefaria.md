@@ -69,6 +69,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates the Sefaria Library with shiurim (lessons) from YUTorah & OUTorah.
 * [TorahSummary](http://www.torahsummary.com/) - Short summaries of the entire text of the Torah with links to the sources.
 * [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - App designed to help users learn to lead prayers for Rosh Hashanah and Yom Kippur.
+* [Yuchasin](https://netsysinc.com/Yuchasin/) - This project offers a genealogical analysis of Tanakh, incorporating all references in the Talmud to related biblical figures and passages.
 
 ***
 
