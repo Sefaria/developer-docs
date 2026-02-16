@@ -86,6 +86,9 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [The Jewish Story Through Books](https://joshcooper417.github.io/) - Shows where and when Jewish books were published throughout the ages.
 * [Zohar-stories.com](https://www.zohar-stories.com/) - Digital database of the stories of the sages that appear in the Zohar literature.
 * [Bina v’Da’at](https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t) - Interactive AI-powered Hebrew chatbot designed to support Torah learning.
+* [Tikkun.io](<* https://tikkun.io/>) - A tool for preparing Torah readings. 
+
+<br />
 
 ***
 
