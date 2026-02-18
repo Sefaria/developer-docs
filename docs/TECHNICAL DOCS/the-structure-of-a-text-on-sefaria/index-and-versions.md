@@ -20,9 +20,9 @@ next:
 ---
 # The Index
 
-The `Index` of a book describes the structure of the book (in the `schema` attribute) and details how it is categorized in our library.  It also contains metadata about the book, such as when it was written and who the author is.  To see a full `Index` record of a given book, see the [v2 Raw Index API](ref:get-v2-index). 
+The `Index` of a book describes the structure of the book (in the `schema` attribute) and details how it is categorized in our library.  It also contains metadata about the book, such as when it was written and who the author is.  To see a full `Index` record of a given book, see the [v2 Raw Index API](ref:get-v2-index).
 
-Below is a snippet from the `Index` record for the Book of Esther (to see the full record, click [here](https://www.sefaria.org/api/v2/raw/index/Esther)). You will see the book title, as well as metadata about the book. (Note: The `schema` field is collapsed, we will explore that in depth in [this article](doc:the-index-schema) describing the `schema`). 
+Below is a snippet from the `Index` record for the Book of Esther (to see the full record, click [here](https://www.sefaria.org/api/v2/raw/index/Esther)). You will see the book title, as well as metadata about the book. (Note: The `schema` field is collapsed, we will explore that in depth in [this article](doc:the-index-schema) describing the `schema`).
 
 ```
 {
@@ -60,21 +60,21 @@ Below is a snippet from the `Index` record for the Book of Esther (to see the fu
 
 # Versions
 
-Each `Version` reflects an edition of the text.  Each `Version` must relate to one `Index`.  The `Version` will be structured according to the shape defined in the Index `schema`.  Generally, there will be one `Version` reflecting the original edition of the text, and one `Version` for each different translation.  In some cases there may be multiple variant versions of the original, or a single translation may be spread across multiple `Version` records.  
+Each `Version` reflects an edition of the text.  Each `Version` must relate to one `Index`.  The `Version` will be structured according to the shape defined in the Index `schema`.  Generally, there will be one `Version` reflecting the original edition of the text, and one `Version` for each different translation.  In some cases there may be multiple variant versions of the original, or a single translation may be spread across multiple `Version` records.
 
-For example, Genesis is represented by a single `Index`. Associated with that `Index`,  we have close to fifty versions in multiple languages including Hebrew, English, French, Spanish, Yiddish, Ladino, Russian and German. A `Version` contains the metadata associated with that edition of the text, as well as the text itself. While each `Version` of an `Index` may differ slightly in its text, each `Version` of a given `Index` will follow the exact same structure. 
+For example, Genesis is represented by a single `Index`. Associated with that `Index`,  we have close to fifty versions in multiple languages including Hebrew, English, French, Spanish, Yiddish, Ladino, Russian and German. A `Version` contains the metadata associated with that edition of the text, as well as the text itself. While each `Version` of an `Index` may differ slightly in its text, each `Version` of a given `Index` will follow the exact same structure.
 
 For example, here is the text for `Genesis 1:1` across several of our versions:
 
-| Index Title | Version Title                                                                                            | Ref           | Text                                                      |
-| :---------- | :------------------------------------------------------------------------------------------------------- | :------------ | :-------------------------------------------------------- |
-| Genesis     | Tanach with Text Only                                                                                    | `Genesis 1:1` | בראשית ברא אלהים את השמים ואת הארץ                        |
-| Genesis     | Tanach with Nikkud                                                                                       | `Genesis 1:1` | בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ |
-| Genesis     | Bible du Rabbinat 1899 \[fr]                                                                             | `Genesis 1:1` | Au commencement, Dieu créa le ciel et la terre.           |
-| Genesis     | Russian Torah translation, by Dmitri Slivniak, Ph.D., edited by Dr. Itzhak Streshinsky. Da Project \[ru] | `Genesis 1:1` | Вначале, когда творил Бог небеса и землю,                 |
-| Genesis     | Jewish English Torah                                                                                     | `Genesis 1:1` | In the beginning God created the heavens and the earth    |
-| Genesis     | The Holy Scriptures: A New Translation (JPS 1917)                                                        | `Genesis 1:1` | In the beginning God created the heaven and the earth.    |
+| Index Title | Version Title                                                                                           | Ref           | Text                                                      |
+| :---------- | :------------------------------------------------------------------------------------------------------ | :------------ | :-------------------------------------------------------- |
+| Genesis     | Tanach with Text Only                                                                                   | `Genesis 1:1` | בראשית ברא אלהים את השמים ואת הארץ                        |
+| Genesis     | Tanach with Nikkud                                                                                      | `Genesis 1:1` | בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ |
+| Genesis     | Bible du Rabbinat 1899 [fr]                                                                             | `Genesis 1:1` | Au commencement, Dieu créa le ciel et la terre.           |
+| Genesis     | Russian Torah translation, by Dmitri Slivniak, Ph.D., edited by Dr. Itzhak Streshinsky. Da Project [ru] | `Genesis 1:1` | Вначале, когда творил Бог небеса и землю,                 |
+| Genesis     | Jewish English Torah                                                                                    | `Genesis 1:1` | In the beginning God created the heavens and the earth    |
+| Genesis     | The Holy Scriptures: A New Translation (JPS 1917)                                                       | `Genesis 1:1` | In the beginning God created the heaven and the earth.    |
 
-You will notice that the only real differences appear in the `versionTitle` for a given text, and in the translation/edition itself. All versions of the same text will definitionally share the same `Index`, and since they share that structure, the segments will be referred to by the same `Ref`. 
+You will notice that the only real differences appear in the `versionTitle` for a given text, and in the translation/edition itself. All versions of the same text will definitionally share the same `Index`, and since they share that structure, the segments will be referred to by the same `Ref`.
 
-To query a`Version`, see the [v3 Texts API](ref:get_api-v3-texts-tref).
+To query a`Version`, see the [v3 Texts API](https://developers.sefaria.org/reference/get-v3-texts).
