@@ -31,7 +31,7 @@ Each text in the Sefaria Library varies slightly in terms of copyright status an
 >
 > ### Understanding Reuse Licenses
 >
-> You’ll see three types of licenses when exploring the library.
+> You’ll see three types of licenses when exploring the Library.
 >
 > * Texts in the **public domain** can be reused without restriction.
 > * Texts with a **Creative Commons license** may carry requirements to give attribution, share derived work, or limit usage in commercial contexts.
@@ -39,7 +39,7 @@ Each text in the Sefaria Library varies slightly in terms of copyright status an
 >
 > To check the status of a specific text:
 >
-> * Click on any passage of text to open the Resource Panel.
+> * Click on any passage of text to open the Sefaria Library Resource Panel.
 > * Click on About this Text to open a panel with background information about the text in question.
 > * Underneath the title, background information, and (when available) date of composition, locate the Current Version subheading.
 > * Underneath the details about the current version being displayed, locate information about the source of acquisition.
