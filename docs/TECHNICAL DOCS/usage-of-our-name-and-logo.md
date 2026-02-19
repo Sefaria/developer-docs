@@ -1,6 +1,8 @@
 ---
 title: Copyright and Data Use
-excerpt: Copyright, usage of our Name and Logo
+excerpt: >-
+  Learn about how to find copyright details for texts in the Library and proper
+  usage of Sefaria's name and logo.
 deprecated: false
 hidden: false
 metadata:
@@ -12,22 +14,20 @@ next:
 ---
 ## Code License
 
-Our code is currently licensed under the GPL-3.0 license. To learn more, see [here](https://github.com/Sefaria/Sefaria-Project/blob/master/LICENSE.md).
+Sefaria's code is currently licensed under the GPL-3.0 license. To learn more, clicl [here](https://github.com/Sefaria/Sefaria-Project/blob/master/LICENSE.md).
 
 ## Text Copyright
 
-Each text on Sefaria varies slightly with regard to its copyright status, and its ability to be re-used in other projects. To learn how to check the copyright status of a text, check [this](https://help.sefaria.org/hc/en-us/articles/18490043237148-How-to-Find-and-Understand-Licensing-Information) article from the [Sefaria Help Center](help.sefaria.org).
+Each text in the Sefaria Library varies slightly in terms of copyright status and potential for reuse in other projects. Learn more about how to check the copyright status of a text in [this article](https://help.sefaria.org/hc/en-us/articles/18490043237148-How-to-Find-and-Understand-Licensing-Information) from the [Sefaria Help Center](help.sefaria.org).
 
-> ### :warning: Note: Text Licenses on Sefaria
+> ### :warning: Important: Text Licenses in the Sefaria Library
 >
-> While you can use most of the resources on Sefaria for independent projects, some texts have specific licensing requirements. In order to be sure you’re reusing a source with the proper credits, you'll need to check the license or copyright status of the resource in question.
+> While you can use most of the resources in the Sefaria Library for independent projects, some texts have specific licensing requirements. To ensure you’re reusing a source with the proper acknowledgments, please check the license or copyright status of the specific resource in question.
 >
-> Please note:
+> Please note: 
 >
-> Each version of a text has its own license. For example, the Tanakh translation by Dr. Everett Fox has a different copyright license than the Tanakh translation published in 2023 by JPS.
->
->
-> Different languages are considered individual editions of a text, each with individual license details.
+> * Each version of a text has its own license. For example, the Tanakh translation by Dr. Everett Fox has a different copyright license than the Tanakh translation published in 2023 by JPS.
+> * Different languages are considered individual editions of a text, each with individual license details.
 >
 > ### Understanding Reuse Licenses
 >
@@ -44,10 +44,10 @@ Each text on Sefaria varies slightly with regard to its copyright status, and it
 > * Underneath the title, background information, and (when available) date of composition, locate the Current Version subheading.
 > * Underneath the details about the current version being displayed, locate information about the source of acquisition.
 
-## Usage of our Name and Logo
+## Usage of Sefaria's Name and Logo
 
-While we make our data and code available for others to reuse, the same is not true of the name "Sefaria" and our logo, which are under trademark. The reason for this to keep clear to users whether a particular application was developed by Sefaria or by a third party. We do offer the following badges below that you can use to indicate that your project is powered by Sefaria, though not developed by Sefaria.
+While we make our data and code freely available for others to reuse, the same is not true of the name Sefaria and associated logos, which are under trademark. This trademark is essential, as it clarifies to users whether a particular application was developed by Sefaria or by a third party. That being said, we do offer the following badges for open use. These indicate to users that your project is powered by Sefaria, though not developed by Sefaria.
 
-<Image border={false} src="https://files.readme.io/87c5652-image.png" />
+![](https://files.readme.io/87c5652-image.png)
 
-<Image border={false} src="https://files.readme.io/dcee0a8-image.png" />
+![](https://files.readme.io/dcee0a8-image.png)
