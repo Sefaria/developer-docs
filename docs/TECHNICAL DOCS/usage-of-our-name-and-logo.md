@@ -14,7 +14,7 @@ next:
 ---
 ## Code License
 
-Sefaria's code is currently licensed under the GPL-3.0 license. To learn more, clicl [here](https://github.com/Sefaria/Sefaria-Project/blob/master/LICENSE.md).
+Sefaria's code is currently licensed under the GPL-3.0 license. To learn more, click [here](https://github.com/Sefaria/Sefaria-Project/blob/master/LICENSE.md).
 
 ## Text Copyright
 
