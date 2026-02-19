@@ -52,6 +52,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [AlHaTorah](https://alhatorah.org/) - Tools for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
 * [AllDaf](https://alldaf.org/) - Daf Yomi app created by the Orthodox Union with an English translation of the Talmud sourced from the Sefaria Library.
 * [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - Daily learning about the halakhah (Jewish law) that governs daily life.
+* [Bavli Kilvavi](https://bavli.onrender.com/) - A website for studying the Babylonian Talmud that brings together Rishonim, Acharonim, biographical details of Tannaim and Amoraim, and much more for a rich and accessible study experience. Available in Hebrew only. 
 * [Daf Quiz](https://dafquiz.com/daf-yomi) - Web application that generates a daily multiple-choice quiz based on the relevant page of Talmud, according to the Daf Yomi cycle. (Link to source code: [https://github.com/bentekkie/daf_quiz](https://github.com/bentekkie/daf_quiz))
 * [Daily Torah Study Trmnl Plugin](https://usetrmnl.com/recipes/151619) - Plugin for the Trmnl, which uses Sefaria’s Calendars API to present a daily Torah study schedule.
 * [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
@@ -68,6 +69,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Torah Library Add On for Google Docs](https://workspace.google.com/marketplace/app/torah_library/947071438143) - Helps users create beautiful and collaborative source sheets with ease.
 * [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates the Sefaria Library with shiurim (lessons) from YUTorah & OUTorah.
 * [TorahSummary](http://www.torahsummary.com/) - Short summaries of the entire text of the Torah with links to the sources.
+* [Torah Study Tracker](https://torahtracker.com/)- This personal archive for lifelong Torah learning uses the Sefaria API to log your study, track reviews, and create a visual record of your progress over time.
 * [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - App designed to help users learn to lead prayers for Rosh Hashanah and Yom Kippur.
 * [Yuchasin](https://netsysinc.com/Yuchasin/) - This project offers a genealogical analysis of Tanakh, incorporating all references in the Talmud to related biblical figures and passages.
 
@@ -86,7 +88,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [The Jewish Story Through Books](https://joshcooper417.github.io/) - Shows where and when Jewish books were published throughout the ages.
 * [Zohar-stories.com](https://www.zohar-stories.com/) - Digital database of the stories of the sages that appear in the Zohar literature.
 * [Bina v’Da’at](https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t) - Interactive AI-powered Hebrew chatbot designed to support Torah learning.
-* [Tikkun.io](<* https://tikkun.io/>) - A tool for preparing Torah readings. 
+* [Tikkun.io](<* https://tikkun.io/>) - A tool for preparing Torah readings.
 
 <br />
 
