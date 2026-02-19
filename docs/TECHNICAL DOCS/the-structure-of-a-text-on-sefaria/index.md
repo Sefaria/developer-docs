@@ -27,7 +27,9 @@ Each version of a text (a translation, a different edition, etc.) is represented
 
 **For more information about the `Index` and `Version` structures, see [Index and Versions](doc:each-book-is-an-index).**
 
-Each `Index` is supported by a schema which represents the structure of the book in question and provides important relevant metadata and structural information. 
+<br />
+
+Each `Index` is supported by a schema which represents the structure of the book in question and provides important relevant metadata and structural information.
 
 **For more information about the Index Schema structure, read about [the Index Schema](doc:the-index-schema).**
 
