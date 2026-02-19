@@ -25,6 +25,10 @@ Each book in the Sefaria Library is represented by a unique `Index`. Each book h
 
 Each version of a text (a translation, a different edition, etc.) is represented by a `Version` object. While it's possible for an `Index` to have no `Version` objects associated with it, this is not generally the case. More commonly, each `Index` will have at least one `Version` object associated with it.
 
-Each `Index` is supported by a schema to represent the structure of that book, and provide important metadata and structural information regarding the book. To take a deep dive into this structure, read about [the Index Schema](doc:the-index-schema).
+**For more information about the `Index` and `Version` structures, see [Index and Versions](doc:each-book-is-an-index).**
 
-**For a deep dive on `Index` and `Version`, see [Index and Versions](doc:each-book-is-an-index).**
+Each `Index` is supported by a schema which represents the structure of the book in question and provides important relevant metadata and structural information. 
+
+**For more information about the Index Schema structure, read about [the Index Schema](doc:the-index-schema).**
+
+<br />
