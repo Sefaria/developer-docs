@@ -15,6 +15,8 @@ metadata:
 next:
   description: ''
 ---
+> _Please note: All the projects below are built by individuals unaffiliated with Sefaria. While they rely on our data and API, they represent only the developers who created them. Sefaria is proud to power a diverse collection of projects, as this is a key part of our mission — providing the tech that brings the Jewish people into the digital age._
+
 <Callout icon="🔎" theme="default">
   ### Sefaria Staff Pick of the Month
 
@@ -57,7 +59,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Bavli Kilvavi](https://bavli.onrender.com/) - A website for studying the Babylonian Talmud that brings together Rishonim, Acharonim, biographical details of Tannaim and Amoraim, and much more for a rich and accessible study experience. Available in Hebrew only.
 * [Daf Quiz](https://dafquiz.com/daf-yomi) - Web application that generates a daily multiple-choice quiz based on the relevant page of Talmud, according to the Daf Yomi cycle. (Link to source code: [https://github.com/bentekkie/daf_quiz](https://github.com/bentekkie/daf_quiz))
 * [Daily Torah Study Trmnl Plugin](https://usetrmnl.com/recipes/151619) - Plugin for the Trmnl, which uses Sefaria’s Calendars API to present a daily Torah study schedule.
-* [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources. 
+* [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources.
 * [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Makes sources from the Sefaria Library readable on any Amazon Kindle device.
