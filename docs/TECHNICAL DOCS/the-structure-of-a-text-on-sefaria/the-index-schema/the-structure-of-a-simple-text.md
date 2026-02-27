@@ -36,7 +36,7 @@ The content for this book looks like this:
 ]
 ```
 
-The index schema describing the book of Genesis looks like this:
+The Index schema describing the book of Genesis looks like this:
 
 ```json
 {
@@ -73,7 +73,7 @@ The index schema describing the book of Genesis looks like this:
 
 ### Properties on the Schema
 
-Let's take a look at the various properties found on this specific index schema:
+Let's take a look at the various properties found on this specific Index schema:
 
 <Table align={["left","left","left"]}>
   <thead>
