@@ -105,7 +105,7 @@ Instead of listing its titles in the `titles` field, a node can also specify the
 Please note: 
 
 * Each shared title has a collection of title dictionaries that are used on the node as if they were defined there.
-* Valid keys for shared titles are defined by the `Term` class. 
+* The `Term` class defines valid keys for shared titles. 
 * A node that defines `sharedTitle` does not have a `titles` field.
 
 An example node with shared titles can be seen in the above example, on the `Introduction` and `Conclusion` nodes. For example, here's the `Introduction` node:
@@ -127,7 +127,7 @@ Notice that, instead of a `titles` field with a list of titles for this node, we
 
 Once again, let's take a look at the Index record for the example book described above. Note that the section containing the book's main content does not have a `sharedTitle` or a `titles` block; instead, it simply has the `default` field set to `True` and the `key` set to `default`.
 
-This is done to avoid adding further titles to this section of the book in question, which makes sense, as this node represents the book's main body. For example, a reference like `"Example Book, Contents 3:5"` would be unnecessary. All we need is: `"Example Book 3:5"`.  Seeing as we want anything that isn't the Introduction or Conclusion to be part of the book's main body, we make this node a default node.
+This is done to avoid adding further titles to this section of the book in question, which makes sense, as this node represents the book's main body. For example, a reference like `"Example Book, Contents 3:5"` would be unnecessary. All we need is: `"Example Book 3:5"`.  Since we want anything that isn't the Introduction or Conclusion to be part of the book's main body, we set this node as the default.
 
 Some rules about default nodes:
 
@@ -135,12 +135,12 @@ Some rules about default nodes:
 * Default nodes must have `default: True` specified
 * Default nodes do **not** have `titles` or `sharedTitle` attributes
 * Default nodes must **not** have any other sibling that is a default node (There can be only one default node among siblings)
-* Default nodes must be a content node (e.g. `JaggedArrayNode`)
+* Default nodes must be a content node (e.g., `JaggedArrayNode`)
 * Default nodes cannot have any children nodes
 
-Once a default node is specified, references to the parent that do not match other nodes will default to matching from the default node and below.
+Once a default node is specified, references to the parent that do not match any other nodes will default to matching the default node and its children.
 
-Example text using `default`:
+Here's an example text that uses a `default` node:
 
 ```
 {
@@ -151,7 +151,7 @@ Example text using `default`:
 
 ```
 
-Let's look at the entire `Index` record again for our Example book, omitting any unrelated fields so we can focus on titles and get a better idea of how this works:
+Let's look at the entire `Index` record for our example book again. This time, we'll omit any unrelated fields so we can focus on titles and get a better idea of how this works:
 
 ```
  "schema" : {
@@ -198,4 +198,4 @@ Let's look at the entire `Index` record again for our Example book, omitting any
     }
 ```
 
-You'll see that the titles for the text are defined on the root `SchemaNode`, at the bottom on the `Index` record. To refer to any content from the main body of the text, the `default` key will allow us to reference it by using any of those titles. So, `Ex Book 1:2`, `Example Book 1:2`, `The Book of Examples 1:2` and `ספר הדוגמא 1:2 ` will all get us to the same place. In contrast, to get to either the introduction or conclusion, one would have to write the title with the `sharedTitle` for that specific node, so a valid title would look like `Example Book, Introduction 1`, with the `sharedTitle` concatenated to the root title.
+You'll see that the titles for the text are defined on the root `SchemaNode`, at the bottom of the `Index` record. To refer to any content from the main body of the text, the `default` key will allow us to reference it by using any of those titles. So, `Ex Book 1:2`, `Example Book 1:2`, `The Book of Examples 1:2`, and `ספר הדוגמא 1:2 ` will all get us to the same place. In contrast, to get to either the introduction or conclusion, one would have to write the title with the `sharedTitle` for that specific node, so a valid title would look like `Example Book, Introduction 1`, with the `sharedTitle` concatenated to the root title.
