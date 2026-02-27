@@ -28,11 +28,11 @@ This article explains each of these title types and when they are used. First, l
 
 ## Background
 
-The full title of any node is built from the titles of all its parents, in order.  Looking at our example book from [The Structure of a Complex Text](doc:the-schema-of-a-complex-text), the normalized full title of the Introduction section would be `"Sample Book, Introduction"`.  A reference to that part of the book would use that title. As trees get deeper and the number of alternate titles grows, and also considering that node names can be separated by a space or a comma and space, there is a combinatorial expansion of the number of titles for a node.
+The full title of any node is built from the titles of all its parents, in order.  Looking at our example book from [The Structure of a Complex Text](doc:the-schema-of-a-complex-text), the normalized full title of the Introduction section would be `"Sample Book, Introduction"`.  A reference to that part of the book would use that title. As trees get deeper and the number of alternate titles grows, and considering that node names can be separated by a space or a comma and space, the number of titles for a node can expand combinatorially.
 
-# How titles are put together
+# How Titles Are Created
 
-Let's look at the way nodes get titles. As a reference, let's take another look at the the schema of our example book. This time, we'll pay close attention to the `sharedTitle` and `titles` fields (which were intentionally omitted in the last section):
+Let's look at the way nodes get titles. As a reference, let's take another look at the schema of our example book. This time, we'll pay close attention to the `sharedTitle` and `titles` fields (which were intentionally omitted in the last section):
 
 ```json
  "schema" : {
