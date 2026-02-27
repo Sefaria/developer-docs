@@ -16,7 +16,7 @@ next:
       slug: in-progress-alternate-structures
       title: Alternate Structures
 ---
-# Titles
+# Types of Titles
 
 There are three potential ways a title can be built:
 
@@ -26,13 +26,13 @@ There are three potential ways a title can be built:
 
 This article explains each of these title types and when they are used. First, let's look at some background.
 
-## Background
+### Notes on the Background of Titles
 
 The full title of any node is built from the titles of all its parents, in order.  Looking at our example book from [The Structure of a Complex Text](doc:the-schema-of-a-complex-text), the normalized full title of the Introduction section would be `"Sample Book, Introduction"`.  A reference to that part of the book would use that title. As trees get deeper and the number of alternate titles grows, and considering that node names can be separated by a space or a comma and space, the number of titles for a node can expand combinatorially.
 
 # How Titles Are Created
 
-Let's look at the way nodes get titles. As a reference, let's take another look at the schema of our example book. This time, we'll pay close attention to the `sharedTitle` and `titles` fields (which were intentionally omitted in the last section):
+Let's look at the way nodes get titles. As a reference, let's take another look at the schema of our example book (referenced above). This time, we'll pay close attention to the `sharedTitle` and `titles` fields (which were intentionally omitted in The Structure of a Complex Text):
 
 ```json
  "schema" : {
@@ -88,21 +88,27 @@ Let's look at the way nodes get titles. As a reference, let's take another look 
     }
 ```
 
-## Explicit Titles on Nodes
+## 1. Explicit Titles on Nodes
 
-A node can have explicit titles defined on it.  That is what we see in the example text, using the `titles` attribute of the node.  As we said above, this attribute is a list of dictionaries, and each title dictionary has three  keys:
+A node can have explicit titles defined on it.  That is what we see in the above example text, which uses the `titles` attribute of the node.  As noted above, this attribute is a list of dictionaries, and each title dictionary has three  keys:
 
-| Attribute | Status     | Examples       | Description                                                                                                                                                    |
-| :-------- | :--------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `text`    | _Required_ | `Example Book` | The title string                                                                                                                                               |
-| `lang`    | _Required_ | `en`           | The language code, either `"en"` or `"he"`.`                                                                                                                   |
-| `primary` | _Optional_ | `True`         | This field needs to be present and True for exactly one Hebrew and one English title.  It specifies the default title used for presentation and normalization. |
+| Attribute | Status     | Examples       | Description                                                                                                                                                       |
+| :-------- | :--------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `text`    | _Required_ | `Example Book` | The title string                                                                                                                                                  |
+| `lang`    | _Required_ | `en`           | The language code, either `"en"` or `"he"`.`                                                                                                                      |
+| `primary` | _Optional_ | `True`         | This field must be present and set to True for exactly one Hebrew and one English title.  It specifies the default title used for presentation and normalization. |
 
-## Shared Titles (Terms)
+## 2. Shared Titles (Terms)
 
-Instead of listing its titles in the `titles` field, a node can specify the key of a shared title in the `sharedTitles` field.  This is useful for titles that are used repeatedly, like _Parasha_ names or _Masechet_ names.  Each shared title has a collection of title dictionaries that are used on the node as if they were defined on that node. Valid keys for shared titles are defined by the `Term` class. A node that defines `sharedTitle` does not have a `titles` field.
+Instead of listing its titles in the `titles` field, a node can also specify the key of a shared title in the `sharedTitles` field.  This is useful for titles that are repeated, such as the names of Torah portions or talmudic tractates.  
 
-An example node with shared titles can be seen in our Example Book above, on the `Introduction` and `Conclusion` nodes. Let's zoom in on the `Introduction` node below:
+Please note: 
+
+* Each shared title has a collection of title dictionaries that are used on the node as if they were defined there.
+* Valid keys for shared titles are defined by the `Term` class. 
+* A node that defines `sharedTitle` does not have a `titles` field.
+
+An example node with shared titles can be seen in the above example, on the `Introduction` and `Conclusion` nodes. For example, here's the `Introduction` node:
 
 ```json
 {
@@ -115,13 +121,13 @@ An example node with shared titles can be seen in our Example Book above, on the
 }
 ```
 
-You'll see that instead of a `titles` field with a list of titles for this node, we have a `sharedTitle` instead - since the word `Introduction` is used repeatedly for titles of introductions to books across the Sefaria library. This key was first defined using the Term class, and then used here as a `sharedTitle`.
+Notice that, instead of a `titles` field with a list of titles for this node, we have a `sharedTitle`. This is because the word `Introduction` is used repeatedly in titles of introductions to books across the Sefaria Library. This key was first defined using the Term class, and then used here as a `sharedTitle`.
 
-## Default Nodes
+## 3. Default Nodes
 
-Look at our "Example Book" Index record above.  The section containing the main contents of the book does not have a `sharedTitle` or a `titles` block, instead it simply has the field `default` set to `True`, and the `key` set to `default`.
+Once again, let's take a look at the Index record for the example book described above. Note that the section containing the book's main content does not have a `sharedTitle` or a `titles` block; instead, it simply has the `default` field set to `True` and the `key` set to `default`.
 
-Since this node represents the main body of the book, we don't want further titles to this section. For example, a reference like `"Example Book, Contents 3:5"` would be extraneous, when all we need is `"Example Book 3:5"`.  We want anything that isn't the Introduction or Conclusion to go the main body of the book.  This can be accomplished by making the node a default node.
+This is done to avoid adding further titles to this section of the book in question, which makes sense, as this node represents the book's main body. For example, a reference like `"Example Book, Contents 3:5"` would be unnecessary. All we need is: `"Example Book 3:5"`.  Seeing as we want anything that isn't the Introduction or Conclusion to be part of the book's main body, we make this node a default node.
 
 Some rules about default nodes:
 
