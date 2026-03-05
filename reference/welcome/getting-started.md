@@ -21,7 +21,7 @@ next:
 
 The Sefaria API allows live access to the Sefaria Library’s structured database of Jewish texts and their interconnections. It is designed to make it as simple as possible to get a new web or mobile app up and running.
 
-## Welcome to the Sefaria API Reference.
+## Welcome to the Sefaria API Reference!
 
 This is where you will find documentation and interactive playgrounds for many of our most important API endpoints. This reference is powered by our [OpenAPI spec](https://github.com/Sefaria/Sefaria-Project/blob/master/docs/openAPI.json).
 
