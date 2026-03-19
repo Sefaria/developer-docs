@@ -72,8 +72,10 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Siddurim.com](https://play.google.com/store/apps/dev?id=6639480761921000346) - Real siddur featuring original pages of the Kavanat Halev siddur, Nusach Edot HaMizrach.
 * [Talmud.page](https://talmud.page/) - A simpler way to read the Talmud (among other texts), optimized for both mobile and web reading experiences.
 * [Tanach Study](https://tanachstudy.com/) - Online education platform that revolutionizes the way we study our foundational texts.
+* [Tehillim Reader](https://arithmomaniac.github.io/tehillim-reader/) - A kid-friendly Tehillim reading site that highlights each word or syllable as you navigate via keyboard, mouse, or scroll wheel, with text pre-fetched from the Sefaria API and bundled for fast, offline-capable use. [Github documentation](https://github.com/Arithmomaniac/tehillim-reader)
 * [The Daf Yomi Portal](http://daf-yomi.com/dafYomi.aspx) - App designed to support daily Talmud study, with English text from the Sefaria Library.
 * [The People's Talmud](https://www.thepeoplestalmud.com/) - Free, searchable online platform offering over 7,500 sections of the Talmud, 3,500 thematic links, and 3,000 one-line brain teasers designed to guide users through the Talmud’s wisdom in a personalized, curiosity-driven way.
+* [Torah Framework](https://www.torahframework.com/) - A Torah learning tool that guides you through eight interconnected lenses — from themes and concepts to history and practical skills.
 * [Torah Library Add On for Google Docs](https://workspace.google.com/marketplace/app/torah_library/947071438143) - Helps users create beautiful and collaborative source sheets with ease.
 * [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates the Sefaria Library with shiurim (lessons) from YUTorah & OUTorah.
 * [TorahSummary](http://www.torahsummary.com/) - Short summaries of the entire text of the Torah with links to the sources.
