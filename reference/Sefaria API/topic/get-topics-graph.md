@@ -1,9 +1,9 @@
 ---
 title: Topic Graph
 excerpt: >-
-  Use this endpoint to retrieve Topics and their links to other related Topics.
-  These links differ from links between Topics and refs — they specifically
-  relate to Topics that are connected in some way.
+  Endpoint to retrieve topics and their links between other topics. As opposed
+  to topic links to refs, this endpoint retrieve connections between one topic
+  to another topic. 
 api:
   file: sefaria-api.json
   operationId: get-topics-graph

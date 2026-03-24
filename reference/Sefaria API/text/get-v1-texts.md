@@ -1,8 +1,8 @@
 ---
 title: Texts (v1)
 excerpt: >-
-  Use this to retrieve a specific textual `Ref` from the Sefaria Library along
-  with relevant metadata. 
+  Retrieve the text and some additional metadata for a specific Sefaria textual
+  `Ref`
 api:
   file: sefaria-api.json
   operationId: get-v1-texts

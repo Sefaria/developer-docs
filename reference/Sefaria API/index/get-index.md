@@ -1,10 +1,10 @@
 ---
 title: Table of Contents
 excerpt: >-
-  The Table of Contents API endpoint returns the titles of all the titles in the
-  Sefaria Library arranged according to text category. Results also include
-  additional metadata. _Please note:_ This request is large and mostly static.
-  Therefore, we recommend caching results locally when utilizing this endpoint..
+  This API endpoint returns the titles of all the books in the Sefaria Library
+  arranged by their category along with some additional metadata. This is a
+  large and rarely changing request and should be cached locally if you utilize
+  it.
 api:
   file: sefaria-api.json
   operationId: get-index

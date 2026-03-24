@@ -1,8 +1,8 @@
 ---
 title: Shape
 excerpt: >-
-  Use this endpoint to retrieve basic statistics and information about the
-  "shape" of a specific `Index` in the Sefaria Library. 
+  Retrieve basic statistics and information about the "shape" of an `Index` on
+  Sefaria. 
 api:
   file: sefaria-api.json
   operationId: get-shape

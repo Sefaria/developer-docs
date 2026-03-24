@@ -1,8 +1,9 @@
 ---
 title: Social Media Image
 excerpt: >-
-  This endpoint uses a Sefaria text `Ref` and other optional parameters to
-  return a .png image ready to share on a social media platform. 
+  Given a Sefaria text `Ref` and some other optional parameters, this endpoint
+  returns a .png image ready to share on social media. At Sefaria.org we use it
+  primarily to auto-generate social media images for any page.
 api:
   file: sefaria-api.json
   operationId: get-img-gen

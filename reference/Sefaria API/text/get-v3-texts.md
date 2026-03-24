@@ -1,9 +1,8 @@
 ---
 title: Texts (v3)
 excerpt: >-
-  This up-to-date API endpoint can be used to retrieve a specific textual `Ref`
-  from the Sefaria Library and offers enhanced control over language, language
-  direction, and other parameters. 
+  The most up-to-date way to retrieve texts from Sefaria via the API, with
+  enhanced control over language, language direction, and other parameters. 
 api:
   file: sefaria-api.json
   operationId: get-v3-texts
