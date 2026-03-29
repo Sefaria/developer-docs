@@ -34,7 +34,7 @@ _Software Engineer_
 
 P.S. To learn more about how we work with AI (and how we don’t) [explore our AI on Sefaria page.](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXiaT8Du0_LFVOLcEu2i)
 
-HOT OFF THE PRESSES:
+## HOT OFF THE PRESSES:
 
 ### Meet the Interns!
 
@@ -44,7 +44,7 @@ From a streamlined app-testing tool to a highlighting feature that’s sure to m
 
 [LEARN MORE ABOUT THEIR PROJECTS](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXicT8Du0_LFVOLcEu2i)
 
-QUICK TECH TIP:
+## QUICK TECH TIP:
 
 ### The Passages API
 
@@ -70,7 +70,7 @@ In addition, we're experimenting with BRF (Braille Ready Format) support in our 
 
 [DROP US A LINE](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXidT8Du0_LFVOLcEu2i)
 
-SPOTLIGHT: POWERED BY SEFARIA
+## SPOTLIGHT: POWERED BY SEFARIA
 
 ### The Talmud Commentary Atlas
 
