@@ -1,6 +1,9 @@
 ---
 title: Celery Queues, Local Install and the Shape API (September 2024, Issue 2)
-excerpt: ''
+excerpt: >-
+  Sefaria's citation detection upgraded from regex to a CNN-based ML model
+  (Linker v3, available on HuggingFace), plus the underrated Shape API explained
+  and how Celery queues solved text upload timeouts.
 deprecated: false
 hidden: false
 metadata:
