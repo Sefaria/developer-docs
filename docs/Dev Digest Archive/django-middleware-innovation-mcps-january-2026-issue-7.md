@@ -16,7 +16,7 @@ Want to get this quarterly newsletter in your inbox? [Sign up today](https://sef
 
 **Issue 7 | January 28, 2026 |  10 Shevat, 5786**
 
-Each Kabbalat Shabbat, Jews around the world sing the 16th-century liturgical poem Lekha Dodi. The text includes the words "shamor vezakhor bedibbur echad" ("keep and remember in one saying"), a phrase that celebrates the mystical incomprehensibility of the revelation at Mount Sinai.
+Each Kabbalat Shabbat, Jews around the world sing the 16th-century liturgical poem [Lekha Dodi](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y7xeFr13InikA0_ueglPHFJXmc95_6yd-YVvFv2XMojq). The text includes the words "shamor vezakhor bedibbur echad" ("keep and remember in one saying"), a phrase that celebrates the mystical incomprehensibility of the revelation at Mount Sinai.
 
 This concept might make for lovely poetry, but saying shamor and zakhor at the same time doesn't make for a good user experience. That's why the engineering team has been hard at work creating a newly modularized structure for Sefaria's platform. This project adds no new features; it simply separates our content into distinct modules for the sake of a better user experience. Now the Sefaria  website is divided into three spaces: the Sefaria Library (for texts), Voices on Sefaria (for user-created content), and Developers on Sefaria (for developer tools).
 
