@@ -17,7 +17,7 @@ Want to get this quarterly newsletter in your inbox? [Sign up today ](https://se
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
-Issue #4 | March 19, 2025 | 19 Adar, 5785
+**Issue #4 | March 19, 2025 | 19 Adar, 5785**
 
 Last week, Jews around the world celebrated Purim — a holiday that’s all about hidden miracles, made even more mysterious by the intricate workings of hidden systems of providence. The book of Esther is unique among biblical texts; it never explicitly mentions God’s name, yet divine providence is woven throughout. Throughout the text, Mordechai and Esther must navigate a world of political intrigue and make careful, calculated moves to save their people.
 
@@ -29,13 +29,13 @@ Likewise, Esther and Mordechai didn’t get to choose the rules of the Persian E
 
 In the spirit of Purim, let’s take a moment to appreciate the unseen work — the hidden intricacies of engineering that make everything run smoothly. Like Esther and Mordechai, we may not always be in the spotlight, but our careful planning and execution shape the world in ways that matter.
 
-Happy coding!\
-Ephraim Damboritz\
+Happy coding!  
+Ephraim Damboritz  
 Principal Engineer
 
 ## HOT OFF THE PRESSES: Powered & Linked by Sefaria
 
-Want to know who else is using Sefaria to build apps and projects powered by our data? We’ve got you covered with two new pages on the Sefaria Developer Portal. 
+Want to know who else is using Sefaria to build apps and projects powered by our data? We’ve got you covered with two new pages on the Sefaria Developer Portal.
 
 **Powered by Sefaria:** See a detailed list of projects (including, in many cases, code repositories) using our data or API for everything from AI searches to audio/visual integrations with texts. [Learn more…](https://developers.sefaria.org/docs/powered-by-sefaria)
 
@@ -49,7 +49,7 @@ Have a project powered by Sefaria data and don’t see yourself on the page? We 
 
 Recently, a member of our developer community reached out and asked about how to retrieve Hebrew author names for texts. The answer is surprisingly simple — so we thought we’d share it here, too.
 
-Retrieving Hebrew-language author names (e.g., instead of “Rashi” retrieving “רש״י”) can be achieved most effectively via the v2/index API. See the below image for clarity on how to retrieve this data. 
+Retrieving Hebrew-language author names (e.g., instead of “Rashi” retrieving “רש״י”) can be achieved most effectively via the v2/index API. See the below image for clarity on how to retrieve this data.
 
 Note: While the v2/Index API is well documented on the Developer Portal, this specific endpoint is not yet documented. It’s in the works, though, so stay tuned!
 
@@ -59,7 +59,7 @@ Note: While the v2/Index API is well documented on the Developer Portal, this sp
 
 ## Behind the Scenes: CSS Tricks
 
-Earlier this month, Sefaria launched a new-and-improved Topics landing page, designed to help learners explore texts by topic instead of book title. As part of the page design, we wanted to display five rows of Topics that randomly populate on every page refresh. We achieved this by pinging the Topics API, which returns a large number of Topics. 
+Earlier this month, Sefaria launched a new-and-improved Topics landing page, designed to help learners explore texts by topic instead of book title. As part of the page design, we wanted to display five rows of Topics that randomly populate on every page refresh. We achieved this by pinging the Topics API, which returns a large number of Topics.
 
 Then, we restricted it to five rows using the `-webkit-line-clamp `[CSS property. ](https://developer.mozilla.org/en-US/docs/Web/CSS/line-clamp)This was great, but it still left us with a problem: `-webkit-line-clamp` appends an unnecessary ellipses after the last item! To work around this issue, we created a ‘[dummy’ font ](https://github.com/Sefaria/Sefaria-Project/blob/38c56cd3094a7306110b1db09170822f239563b1/static/css/s2.css)(as seen on [Stack Overflow](https://stackoverflow.com/questions/72207010/is-it-possible-to-use-line-clamp-without-displaying-an-ellipsis)) which takes the ellipses and reduces the size to 0%, essentially hiding it. You can see how it works in the below image.
 
@@ -67,7 +67,7 @@ Then, we restricted it to five rows using the `-webkit-line-clamp `[CSS property
 
 <br />
 
-# SPOTLIGHT: POWERED BY SEFARIA\*\*
+# SPOTLIGHT: POWERED BY SEFARIA**
 
 ## Read the Talmud
 
@@ -81,4 +81,4 @@ Then, we restricted it to five rows using the `-webkit-line-clamp `[CSS property
 
 # Helpful Links
 
-[The Developer Portal](https://developers.sefaria.org/)   \|   [Sefaria’s API ](https://developers.sefaria.org/reference/getting-started)  \|  [GitHub](https://github.com/Sefaria/Sefaria-Project)   \|   [About Sefaria](https://www.sefaria.org/about)
+[The Developer Portal](https://developers.sefaria.org/)   |   [Sefaria’s API ](https://developers.sefaria.org/reference/getting-started)  |  [GitHub](https://github.com/Sefaria/Sefaria-Project)   |   [About Sefaria](https://www.sefaria.org/about)
