@@ -73,7 +73,7 @@ Here's a simplified example, in which we can render history on a module-aware ba
 
 Do you use an AI assistant for everyday questions or coding projects? If so, you'll want to know about these two useful new tools. Each one integrates your AI tools with Sefaria's library and data in a distinct way. The Sefaria Developers MCP allows your favorite AI coding agent (like Claude Code or Cursor) to connect directly with our API and documentation. This means it can write code using the Sefaria API in just a few moments. The Sefaria Text MCP connects your AI assistant straight to our actual digital stacks, so you can ask Claude or ChatGPT to search in the Sefaria Library and get an answer in seconds.
 
-[LEARN HOW TO GET STARTED](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y7xeFr13InikA0_ueglPHFJXmc95_6yd-YVvFv2XMok8) 
+[LEARN HOW TO GET STARTED](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y7xeFr13InikA0_ueglPHFJXmc95_6yd-YVvFv2XMok8)
 
 <br />
 
