@@ -33,8 +33,6 @@ _Software Engineer_
 
 HOT OFF THE PRESSES
 
-
-
 ### Django Middleware for a Modularized Platform
 
 Building Sefaria's newly restructured platform was anything but simple. We had to split one space into two spaces for two distinct user experiences: the Sefaria Library for text study, Voices on Sefaria for producing or exploring user-created content. The core challenge was extracting user-created Sheets from the Library and building a new (and user-friendly!) space just for this independently created content. (Thankfully, Developers on Sefaria only needed a new homepage, but we still had to connect it to the other two products.)
@@ -67,10 +65,14 @@ Here's a simplified example, in which we can render history on a module-aware ba
 
 QUICK TECH TIP
 
-
-
 ### The Sefaria MCPs
 
 Do you use an AI assistant for everyday questions or coding projects? If so, you'll want to know about these two useful new tools. Each one integrates your AI tools with Sefaria's library and data in a distinct way. The Sefaria Developers MCP allows your favorite AI coding agent (like Claude Code or Cursor) to connect directly with our API and documentation. This means it can write code using the Sefaria API in just a few moments. The Sefaria Text MCP connects your AI assistant straight to our actual digital stacks, so you can ask Claude or ChatGPT to search in the Sefaria Library and get an answer in seconds.
 
 LEARN HOW TO GET STARTED
+
+<br />
+
+# Helpful Links
+
+[The Developer Portal](https://developers.sefaria.org/)   |   [Sefaria’s API ](https://developers.sefaria.org/reference/getting-started)  |  [GitHub](https://github.com/Sefaria/Sefaria-Project)   |   [About Sefaria](https://www.sefaria.org/about)
