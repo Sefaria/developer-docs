@@ -14,9 +14,9 @@ Want to get this quarterly newsletter in your inbox? [Sign up today](https://sef
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
-Issue 7 | January 28, 2026 |  10 Shevat, 5786
+**Issue 7 | January 28, 2026 |  10 Shevat, 5786**
 
-Hi Sarah,
+Hi there,
 
 Each Kabbalat Shabbat, Jews around the world sing the 16th-century liturgical poem Lekha Dodi. The text includes the words "shamor vezakhor bedibbur echad" ("keep and remember in one saying"), a phrase that celebrates the mystical incomprehensibility of the revelation at Mount Sinai.
 
