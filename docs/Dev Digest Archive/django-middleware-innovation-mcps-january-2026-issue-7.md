@@ -52,24 +52,28 @@ Using this elegant approach, we were able to meet our technical constraints and 
 ### Middleware Implementation
 
 The core pattern of the middleware is that the middleware parses the hostname, refers to the dictionary lookup, and then enriches the request with the specific module awareness. The middleware runs once per request, before any view code. There are no database queries, just in-memory dictionary lookups.
-Middleware implementation example
+
+<Image align="center" caption="Middleware implementation example" src="https://files.readme.io/db6878f5e7eae2061f2b467445d63547349138ab6eecbf32d0e2725cc249d227-image.png" />
 
 This is an example of a simplified implementation.
 
 ### Usage in Views & Templates
 
 Downstream, every view automatically has access to the valuable request.active_module which contains the const value of the current active module. This allows for content filtering (i.e., do I render sheets-topics or library-topics?), feature toggling, and even allows analytics to be module-aware and module-specific.
-Usage in views and templates example
 
 Here's a simplified example, in which we can render history on a module-aware basis (i.e., in the Voices on Sefaria product, this will show your history as related to Sheets, while in the Sefaria Library product, this will show your history as related to Library sources).
 
-QUICK TECH TIP
+<Image align="center" caption="Usage in views and templates example" src="https://files.readme.io/b94ad18b77da0b60c8f33fe97767625b2a1a3b56a624ac78813c90b17ce763e1-image.png" />
+
+<br />
+
+## QUICK TECH TIP
 
 ### The Sefaria MCPs
 
 Do you use an AI assistant for everyday questions or coding projects? If so, you'll want to know about these two useful new tools. Each one integrates your AI tools with Sefaria's library and data in a distinct way. The Sefaria Developers MCP allows your favorite AI coding agent (like Claude Code or Cursor) to connect directly with our API and documentation. This means it can write code using the Sefaria API in just a few moments. The Sefaria Text MCP connects your AI assistant straight to our actual digital stacks, so you can ask Claude or ChatGPT to search in the Sefaria Library and get an answer in seconds.
 
-LEARN HOW TO GET STARTED
+[LEARN HOW TO GET STARTED](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y7xeFr13InikA0_ueglPHFJXmc95_6yd-YVvFv2XMok8) 
 
 <br />
 
