@@ -21,7 +21,7 @@ Want to get this quarterly newsletter in your inbox? [Sign up today ](https://se
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
-Issue #3 | December 19, 2024 | 18 Kislev, 5785
+**Issue #3 | December 19, 2024 | 18 Kislev, 5785**
 
 Which specific texts should one study to fulfill the mitzvah of studying Torah? This can be a tricky question for many. The Talmud offers one potential answer, though! In tractate Kiddushin ([30a](https://www.sefaria.org.il/Kiddushin.30a.10?vhe=hebrew|William_Davidson_Edition_-_Vocalized_Aramaic\&lang=he)), the rabbis posit that we should ensure our study is evenly divided among three significant categories of the Jewish canon: Tanakh, Mishnah, and Talmud.
 
@@ -29,14 +29,14 @@ Recently, as I was participating in the technical aspects of curating sources fo
 
 The curation process involved gathering sources and evaluating them based on "relevance" (how relevant they are to the topic) and "diversity" (how different they are from one another in terms of their meaning and ideas). But how could we ensure that the selected sources were not only optimal in terms of relevance and diversity but also represented a broad range of categories?
 
-To address this challenge, we translated the problem into a linear programming framework — a general method for representing many optimization problems. We encoded our factors and constraints as a set of linear inequalities, with an objective function to maximize. In our case, the objective was to optimize for the inclusion of the greatest number of categories in the selected sources. We used [Python's PuLP library](https://github.com/Sefaria/LLM/blob/main/experiments/topic_source_curation/solver.py) to solve these Linear (Integer) Programming instances. If you'd like, you can see the formal mathematical Linear programming equations and objective function that we used [here](https://developers.sefaria.org/docs/linear-integer-programming-for-topic-pages-sources-selection). 
+To address this challenge, we translated the problem into a linear programming framework — a general method for representing many optimization problems. We encoded our factors and constraints as a set of linear inequalities, with an objective function to maximize. In our case, the objective was to optimize for the inclusion of the greatest number of categories in the selected sources. We used [Python's PuLP library](https://github.com/Sefaria/LLM/blob/main/experiments/topic_source_curation/solver.py) to solve these Linear (Integer) Programming instances. If you'd like, you can see the formal mathematical Linear programming equations and objective function that we used [here](https://developers.sefaria.org/docs/linear-integer-programming-for-topic-pages-sources-selection).
 
 I found this project fascinating — it took software engineering, theoretical computer science, and the words of our sages to tackle, and resolve, an important challenge.
 
 Thank you for being part of Sefaria's developer community!
 
-Until next time,\
-Yonadav Leibowitz\
+Until next time,  
+Yonadav Leibowitz  
 Junior Research Engineer
 
 ## HOT OFF THE PRESSES: Sefaria @ PyCon Israel
@@ -97,9 +97,9 @@ To see more projects powered by our data, [check out the complete list](https://
 
 <br />
 
-Want to get this quarterly newsletter in your inbox? [Sign up](🔗) today for the Sefaria Developer's Digest. 
+Want to get this quarterly newsletter in your inbox? [Sign up](🔗) today for the Sefaria Developer's Digest.
 
-### Your donation powers the future of Torah - for *all*.
+### Your donation powers the future of Torah - for _all_.
 
-Sefaria’s resources have always been free to use — and that will always be true.\
+Sefaria’s resources have always been free to use — and that will always be true.  
 [Join the community of Sefaria supporters](🔗https://donate.sefaria.org/) who are the force behind new resources, new tech, new tools, and more.
