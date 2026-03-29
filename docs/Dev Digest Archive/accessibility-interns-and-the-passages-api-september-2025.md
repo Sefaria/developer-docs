@@ -5,15 +5,13 @@ hidden: false
 metadata:
   robots: index
 ---
-Want to get this quarterly newsletter in your inbox? [Sign up today ](https://sefaria.activehosted.com/f/46)for the Sefaria Developer's Digest.
+****Want to get this quarterly newsletter in your inbox? [Sign up today ](https://sefaria.activehosted.com/f/46)for the Sefaria Developer's Digest.
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
 <br />
 
-**Issue 6 | September 25, 2025 | 3 Tishrei, 578**6
-
-Dear Sarah,
+**Issue 6 | September 25, 2025 | 3 Tishrei, 5786**
 
 A key part of Sefaria's vision is expanding access. From the outset, we’ve always been determined to build an open source database that would be future-proof, both serving Sefaria's UI and becoming the foundation of a world of Jewish learning as it grapples with unforeseen technologies. We are now beginning to see this future-focused intention come to fruition.
 
@@ -24,12 +22,10 @@ At Sefaria, we’re very careful when working with AI. We recognize the incredib
 Please remember that supporting our developer community is a core part of the Sefaria mission. Don’t hesitate to reach out with any question or request — just send an email to [developers@sefaria.org](mailto:developers@sefaria.org) and we’ll get back to you as soon as possible. To support this work (and more!) as we enter the new Jewish year, please consider making a matched donation.
 
 All the best,
-Headshot: Daniel Schreiber
-
 Daniel Schreiber
-Software Engineer
+_Software Engineer_
 
-P.S. To learn more about how we work with AI (and how we don’t) explore our AI on Sefaria page.
+P.S. To learn more about how we work with AI (and how we don’t) [explore our AI on Sefaria page.](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXiaT8Du0_LFVOLcEu2i)
 
 HOT OFF THE PRESSES:
 Meet the Interns!
