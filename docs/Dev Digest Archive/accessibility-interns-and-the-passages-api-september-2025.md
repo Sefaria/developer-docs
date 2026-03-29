@@ -5,9 +5,9 @@ hidden: false
 metadata:
   robots: index
 ---
-https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXidT8Du0_LFVOLcEu2ihttps://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXmbT8Du0_LFVOLcEu2ihttps://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXicT8Du0_LFVOLcEu2i
+https://github.com/AChompSitsIn/The-Talmud-Commentary-Atlas?tab=readme-ov-file#visualizations
 
-****Want to get this quarterly newsletter in your inbox? [Sign up today ](https://sefaria.activehosted.com/f/46)for the Sefaria Developer's Digest.
+Want to get this quarterly newsletter in your inbox? [Sign up today ](https://sefaria.activehosted.com/f/46)for the Sefaria Developer's Digest.
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
@@ -31,8 +31,6 @@ P.S. To learn more about how we work with AI (and how we don’t) [explore our A
 
 HOT OFF THE PRESSES:
 
-
-
 ### Meet the Interns!
 
 For the past few months, our Sefaria engineers have had the pleasure of working closely with three fantastic engineering interns on important upgrades to the library’s infrastructure and capabilities.
@@ -42,8 +40,6 @@ From a streamlined app-testing tool to a highlighting feature that’s sure to m
 [LEARN MORE ABOUT THEIR PROJECTS](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y.0OJs3HFzidbyj_Y2bHTDJXicT8Du0_LFVOLcEu2i)
 
 QUICK TECH TIP:
-
-
 
 ### The Passages API
 
@@ -71,8 +67,12 @@ In addition, we're experimenting with BRF (Braille Ready Format) support in our 
 
 SPOTLIGHT: POWERED BY SEFARIA
 
-
-
 ### The Talmud Commentary Atlas
 
-Ever wondered what a map of the rabbinic scholarship of the Talmud would look like? Wonder no longer! This project charts the breadth, depth, and evolution of commentary throughout the Babylonian Talmud through interactive visualizations and statistical analysis. By extracting and analyzing Jewish religious commentary from Sefaria's database (including over 30 million Hebrew words from 63 different collections that span all 36 sections of the Babylonian Talmud) the developers who created this project have created a refined dataset encompassing works from 47 verified religious scholars. Check out the Github documentation to see five sophisticated visualization analyses that reveal different aspects of talmudic scholarship patterns, including Archetypes of Scholarship, Center of Gravity Analysis, Evolving Style of Commentary, and more.
+Ever wondered what a map of the rabbinic scholarship of the Talmud would look like? Wonder no longer! This project charts the breadth, depth, and evolution of commentary throughout the Babylonian Talmud through interactive visualizations and statistical analysis. By extracting and analyzing Jewish religious commentary from Sefaria's database (including over 30 million Hebrew words from 63 different collections that span all 36 sections of the Babylonian Talmud) the developers who created this project have created a refined dataset encompassing works from 47 verified religious scholars. Check out the [GitHub documentation](https://github.com/AChompSitsIn/The-Talmud-Commentary-Atlas?tab=readme-ov-file#visualizations) to see five sophisticated visualization analyses that reveal different aspects of talmudic scholarship patterns, including Archetypes of Scholarship, Center of Gravity Analysis, Evolving Style of Commentary, and more.
+
+<Image align="center" src="https://files.readme.io/b694f092130a09830f6ed1f1485193b1e842fa1be5af748d1520f834f12ff6e6-archetypes_of_scholarship.png" />
+
+# Helpful Links
+
+[The Developer Portal](https://developers.sefaria.org/)   |   [Sefaria’s API ](https://developers.sefaria.org/reference/getting-started)  |  [GitHub](https://github.com/Sefaria/Sefaria-Project)   |   [About Sefaria](https://www.sefaria.org/about)
