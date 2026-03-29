@@ -29,6 +29,7 @@ We hope you enjoy the new Developers on Sefaria space (formerly the Sefaria Deve
 Happy coding,
 
 Steve Kaplan
+
 _Software Engineer_
 
 ## HOT OFF THE PRESSES
