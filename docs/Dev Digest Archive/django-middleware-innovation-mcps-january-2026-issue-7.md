@@ -10,6 +10,8 @@ hidden: false
 metadata:
   robots: index
 ---
+Want to get this quarterly newsletter in your inbox? [](https://sefaria.activehosted.com/f/46)
+
 <br />
 
 Issue 7 | January 28, 2026 |  10 Shevat, 5786
