@@ -2,8 +2,9 @@
 title: Accessibility, Interns, and the Passages API (September 2025, Issue 6)
 excerpt: >-
   Pass a Talmud reference, get back the full sugya — Sefaria's underrated
-  Passages API explained, plus a community project that mapped 30M Hebrew words
-  of commentary across the entire Babylonian Talmud.
+  Passages API explained, plus accessibility work making every element
+  keyboard-navigable, and a community project that mapped 30M Hebrew words of
+  commentary across the entire Babylonian Talmud.
 deprecated: false
 hidden: false
 metadata:
