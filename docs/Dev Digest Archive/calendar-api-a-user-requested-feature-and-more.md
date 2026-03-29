@@ -1,6 +1,9 @@
 ---
 title: Calendar API, a User-Requested feature, and More! (June 2025, Issue 5)
-excerpt: ''
+excerpt: >-
+  Sefaria's Calendar API quirk explained, how a state-management overhaul saved
+  half a million user sheets from data loss, and a tool that turns Torah verses
+  into sound waves via Gematria.
 deprecated: false
 hidden: false
 metadata:
