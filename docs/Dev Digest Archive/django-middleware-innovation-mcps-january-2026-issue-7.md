@@ -12,7 +12,7 @@ metadata:
 ---
 Want to get this quarterly newsletter in your inbox? [Sign up today](https://sefaria.activehosted.com/f/46) for the Sefaria Developer's Digest.
 
-<br />
+![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
 Issue 7 | January 28, 2026 |  10 Shevat, 5786
 
