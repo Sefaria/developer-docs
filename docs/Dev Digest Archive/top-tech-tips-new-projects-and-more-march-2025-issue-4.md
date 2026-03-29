@@ -2,8 +2,8 @@
 title: Top Tech Tips, New Projects, and More! (March 2025, Issue 4)
 excerpt: >-
   How to fetch Hebrew author names via the v2/index API, a zero-ellipsis CSS
-  trick for clamped topic grids, and a new directory of community projects
-  building on Sefaria's data.
+  trick for clamped topic grids, and an interesting community project for a
+  clean read of the Talmud building on Sefaria's data.
 deprecated: false
 hidden: false
 metadata:
