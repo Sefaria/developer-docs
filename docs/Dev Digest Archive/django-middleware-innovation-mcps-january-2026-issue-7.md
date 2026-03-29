@@ -31,7 +31,7 @@ Happy coding,
 Steve Kaplan
 _Software Engineer_
 
-HOT OFF THE PRESSES
+## HOT OFF THE PRESSES
 
 ### Django Middleware for a Modularized Platform
 
