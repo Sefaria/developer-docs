@@ -1,6 +1,9 @@
 ---
 title: Linear Programming, Topic Curation, and API Tips (December 2024, Issue 3)
-excerpt: ''
+excerpt: >-
+  How Sefaria used linear programming to optimize topic page curation across the
+  Jewish canon, plus a trick for deriving Texts API refs from the site URL and
+  calculating verse numbers using nested arrays.
 deprecated: false
 hidden: false
 metadata:
