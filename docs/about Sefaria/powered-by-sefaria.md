@@ -53,7 +53,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Weekday Torah Readings with AI Insights](http://jiveyeti.com/wtr) - Provides experimental AI insights for each reading of the weekday Torah readings, alongside the biblical texts in both Hebrew and English.
 * [Yanki](https://developers.sefaria.org/docs/www.yankiai.com) - All-in-one app built according to traditional halakhic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features — all in a filtered, AI-powered ecosystem for the frum Jewish world to enjoy.
 
-### Study Tools
+### Learning & Study Tools
 
 * [AlHaTorah](https://alhatorah.org/) - Tools for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
 * [AllDaf](https://alldaf.org/) - Daf Yomi app created by the Orthodox Union with an English translation of the Talmud sourced from the Sefaria Library.
@@ -64,6 +64,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources.
 * [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
+* [Jastrow Search](https://onegkg.github.io/Jastrow-Search/) - A clean, glanceable search engine for the Jastrow Talmud Dictionary, with definitions split for quick scanning. Link to Github: https://github.com/onegkg/Jastrow-Search
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Makes sources from the Sefaria Library readable on any Amazon Kindle device.
 * [Koveah](https://koveah.org/) - Create your own custom learning schedule using sources from the Sefaria Library.
 * [The Lightweight Hebrew Bible Reader](https://apps.apple.com/us/app/%D7%AA%D7%A0-%D7%9A/id6736739283?ign-itscg=30200\&ign-itsct=apps_box_link\&mttnsubad=6736739283) -  Enables readers to read, search, and explore the Tanakh with ease. Available both in [mobile app](https://apps.apple.com/us/app/%D7%AA%D7%A0-%D7%9A/id6736739283?ign-itscg=30200\&ign-itsct=apps_box_link\&mttnsubad=6736739283) and [web](https://dorpascal.com/tanakh/) versions.
