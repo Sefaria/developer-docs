@@ -59,6 +59,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [AllDaf](https://alldaf.org/) - Daf Yomi app created by the Orthodox Union with an English translation of the Talmud sourced from the Sefaria Library.
 * [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - Daily learning about the halakhah (Jewish law) that governs daily life.
 * [Bavli Kilvavi](https://bavli.onrender.com/) - A website for studying the Babylonian Talmud that brings together Rishonim, Acharonim, biographical details of Tannaim and Amoraim, and much more for a rich and accessible study experience. Available in Hebrew only.
+* [Binata](https://binata-ai.com/) - an AI Torah study assistant that answers questions with sourced references across Torah literature, with a built-in document editor and AI writing tools.
 * [Daf Quiz](https://dafquiz.com/daf-yomi) - Web application that generates a daily multiple-choice quiz based on the relevant page of Talmud, according to the Daf Yomi cycle. (Link to source code: [https://github.com/bentekkie/daf_quiz](https://github.com/bentekkie/daf_quiz))
 * [Daily Torah Study Trmnl Plugin](https://usetrmnl.com/recipes/151619) - Plugin for the Trmnl, which uses Sefaria’s Calendars API to present a daily Torah study schedule.
 * [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources.
@@ -71,6 +72,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Ma'agar HaMekorot HaTorani'im HaMekif](https://sites.google.com/view/yuda-taub-parashat-hashavua/%D7%90%D7%AA%D7%A8%D7%99%D7%9D-%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D-%D7%9C%D7%9E%D7%A9%D7%97%D7%A7%D7%99%D7%9D/%D7%9E%D7%92%D7%95%D7%95%D7%9F-%D7%A2%D7%A6%D7%95%D7%9D-%D7%A9%D7%9C-%D7%9E%D7%90%D7%92%D7%A8%D7%99%D7%9D) - This vast collection of Torah sources, including some from the Sefaria Library, generates responses in a specific rabbi’s own style, creating an immersive learning experience. Available only in Hebrew.
 * [Shnayim Mikra](http://www.shnayim.com/) - App and interface for learning Torah alongside Rashi’s commentary.
 * [Siddurim.com](https://play.google.com/store/apps/dev?id=6639480761921000346) - Real siddur featuring original pages of the Kavanat Halev siddur, Nusach Edot HaMizrach.
+* [Sidur KTS](https://toraparatodos.com/) - a mobile prayer application designed for Spanish speakers who are new to the Western Sephardic tradition.
 * [Talmud.page](https://talmud.page/) - A simpler way to read the Talmud (among other texts), optimized for both mobile and web reading experiences.
 * [Tanach Study](https://tanachstudy.com/) - Online education platform that revolutionizes the way we study our foundational texts.
 * [Tehillim Reader](https://arithmomaniac.github.io/tehillim-reader/) - A kid-friendly Tehillim reading site that highlights each word or syllable as you navigate via keyboard, mouse, or scroll wheel, with text pre-fetched from the Sefaria API and bundled for fast, offline-capable use. [Github documentation](https://github.com/Arithmomaniac/tehillim-reader)
@@ -81,6 +83,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates the Sefaria Library with shiurim (lessons) from YUTorah & OUTorah.
 * [TorahSummary](http://www.torahsummary.com/) - Short summaries of the entire text of the Torah with links to the sources.
 * [Torah Study Tracker](https://torahtracker.com/)- This personal archive for lifelong Torah learning uses the Sefaria API to log your study, track reviews, and create a visual record of your progress over time.
+* [TorahVerse](https://torahverse.powerjews.com/) - an interactive mind map that visualizes texts from the Torah and the Talmud, as well as midrashic, halakhic, and kabbalistic sources, and more as a living, connected whole branching from one shared root.
 * [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - App designed to help users learn to lead prayers for Rosh Hashanah and Yom Kippur.
 * [Yuchasin](https://yuchasin.com/) - This project offers a genealogical analysis of Tanakh, incorporating all references in the Talmud to related biblical figures and passages.
 
