@@ -37,13 +37,13 @@ Options can be passed to `sefaria.link()` as key-value pairs in an object.  (See
 
 ### `mode`
 
-The `mode` option affects how the found references behave.  If not specified, the default is "popup-click" mode.
+The `mode` option affects how the found references behave.   If not specified, the default is "link" mode.  This was changed in v3.  Previously, the default was "popup-click". 
 
 The value of `mode` is one of the following strings:
 
-* `"popup-click"` - when the the user clicks on a reference, a popup is displayed with the textual content.  Within the popup is a link to Sefaria.
-
 * `"link"` - The references are turned into links, which open in a new browser tab when clicked.  There is no popup with textual content.
+
+* `"popup-click"` - when the the user clicks on a reference, a popup is displayed with the textual content.  Within the popup is a link to Sefaria.
 
 ### `contentLang`
 
