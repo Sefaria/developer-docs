@@ -30,8 +30,6 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
 
 ## Quick Setup Guide
 
-### For Any MCP-Compatible Tool:
-
 1. Copy the relevant MCP URL:
    1. Sefaria Texts MCP [https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)
    2. Sefaria Developers MCP [https://developers.sefaria.org/mcp](https://developers.sefaria.org/mcp)
@@ -41,9 +39,7 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
    3. **ChatGPT**: Go to settings, enable Developer Mode, navigate to Apps and Connectors, click Create, configure accordingly
    4. **Other Tools:** Use the MCP URL in your client's server configuration
 3. Start Exploring:
-   1. Using the Sefaria Texts MCP, ask your questions about Jewish texts.
-      For example:
+   1. Using the Sefaria Texts MCP, ask your questions about Jewish texts. For example:
       1. "What does Genesis 1:1 say?" or "Find me talmudic discussions about kindness"
-   2. Using the Sefaria Developers MCP, ask the AI assistant to write code by pulling from our API.
-      For example:
+   2. Using the Sefaria Developers MCP, ask the AI assistant to write code by pulling from our API. For example:
       1. “Help me build a GUI which uses the Sefaria API to focus on Sforno's commentary on Genesis.”
