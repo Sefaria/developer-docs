@@ -87,6 +87,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [TorahVerse](https://torahverse.powerjews.com/) - an interactive mind map that visualizes texts from the Torah and the Talmud, as well as midrashic, halakhic, and kabbalistic sources, and more as a living, connected whole branching from one shared root.
 * [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - App designed to help users learn to lead prayers for Rosh Hashanah and Yom Kippur.
 * [Yuchasin](https://yuchasin.com/) - This project offers a genealogical analysis of Tanakh, incorporating all references in the Talmud to related biblical figures and passages.
+* [Jastrow App](https://jastrow.app/) - A progressive web app offering clean, mobile-friendly access to the Jastrow Talmudic dictionary alongside other essential Talmud study resources.
 
 ***
 
@@ -153,3 +154,4 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Yolaroo Library of Jewish Texts, code on GitHub](https://github.com/yolaroo/SefariaiOSv0.1)
 * [Sefaria-Container-Unofficial](https://github.com/orxaicom/Sefaria-Container-Unofficial) - Builds and publishes a docker container to run Sefaria
 * [Sefaria-Desktop-Unofficial](https://github.com/orxaicom/Sefaria-Desktop-Unofficial) - Desktop app for the Sefaria Library. Work in progress. Currently only Linux-supported.
+* [Bisl Torah](https://github.com/DaveDushi/bisl-torah)  - A developer-focused tool that surfaces a daily bite-sized Torah learning snippet from the Sefaria Library in a popup beside your terminal while an AI coding agent processes your prompt.
