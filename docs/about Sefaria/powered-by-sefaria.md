@@ -66,8 +66,10 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources.
 * [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
+* [Jastrow App](https://jastrow.app/) - A progressive web app offering clean, mobile-friendly access to the Jastrow Talmudic dictionary alongside other essential Talmud study resources.
 * [Jastrow Search](https://onegkg.github.io/Jastrow-Search/) - A clean, glanceable search engine for the Jastrow Talmud Dictionary, with definitions split for quick scanning. Link to Github: [https://github.com/onegkg/Jastrow-Search](https://github.com/onegkg/Jastrow-Search)
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Makes sources from the Sefaria Library readable on any Amazon Kindle device.
+* [Kol Torah](https://play.google.com/store/apps/details?id=com.almog.bar_mitzva) - A structured digital platform that guides students through an independent, step-by-step Bar Mitzvah Torah reading preparation process, available on both iOS and Android.
 * [Koveah](https://koveah.org/) - Create your own custom learning schedule using sources from the Sefaria Library.
 * [The Lightweight Hebrew Bible Reader](https://apps.apple.com/us/app/%D7%AA%D7%A0-%D7%9A/id6736739283?ign-itscg=30200\&ign-itsct=apps_box_link\&mttnsubad=6736739283) -  Enables readers to read, search, and explore the Tanakh with ease. Available both in [mobile app](https://apps.apple.com/us/app/%D7%AA%D7%A0-%D7%9A/id6736739283?ign-itscg=30200\&ign-itsct=apps_box_link\&mttnsubad=6736739283) and [web](https://dorpascal.com/tanakh/) versions.
 * [Ma'agar HaMekorot HaTorani'im HaMekif](https://sites.google.com/view/yuda-taub-parashat-hashavua/%D7%90%D7%AA%D7%A8%D7%99%D7%9D-%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D-%D7%9C%D7%9E%D7%A9%D7%97%D7%A7%D7%99%D7%9D/%D7%9E%D7%92%D7%95%D7%95%D7%9F-%D7%A2%D7%A6%D7%95%D7%9D-%D7%A9%D7%9C-%D7%9E%D7%90%D7%92%D7%A8%D7%99%D7%9D) - This vast collection of Torah sources, including some from the Sefaria Library, generates responses in a specific rabbi’s own style, creating an immersive learning experience. Available only in Hebrew.
@@ -87,7 +89,6 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [TorahVerse](https://torahverse.powerjews.com/) - an interactive mind map that visualizes texts from the Torah and the Talmud, as well as midrashic, halakhic, and kabbalistic sources, and more as a living, connected whole branching from one shared root.
 * [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - App designed to help users learn to lead prayers for Rosh Hashanah and Yom Kippur.
 * [Yuchasin](https://yuchasin.com/) - This project offers a genealogical analysis of Tanakh, incorporating all references in the Talmud to related biblical figures and passages.
-* [Jastrow App](https://jastrow.app/) - A progressive web app offering clean, mobile-friendly access to the Jastrow Talmudic dictionary alongside other essential Talmud study resources.
 
 ***
 
@@ -140,6 +141,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 
 ### Extensions, API Integrations and GitHub code
 
+* [Bisl Torah](https://github.com/DaveDushi/bisl-torah)  - A developer-focused tool that surfaces a daily bite-sized Torah learning snippet from the Sefaria Library in a popup beside your terminal while an AI coding agent processes your prompt.
 * [Learn](https://github.com/luvchurchill/learn) - CLI for accessing text from Sefaria in the terminal.
 * [Sefaria Sidebar Extension, code on GitHub](https://github.com/DovOps/SefariaSidebarExtension/) - Sidebar that brings up Sefaria resources on other related websites.
 * [I’m Learning Lucky, code on GitHub](https://github.com/jmcaplan/sefariaExtension) - Chrome browser extension for Sefaria.org utilizing the [Sefaria API](https://github.com/Sefaria/Sefaria-Project/wiki/API-Documentation#sefaria-apis) to raise fun insights while studying a text on the platform.
@@ -154,4 +156,3 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Yolaroo Library of Jewish Texts, code on GitHub](https://github.com/yolaroo/SefariaiOSv0.1)
 * [Sefaria-Container-Unofficial](https://github.com/orxaicom/Sefaria-Container-Unofficial) - Builds and publishes a docker container to run Sefaria
 * [Sefaria-Desktop-Unofficial](https://github.com/orxaicom/Sefaria-Desktop-Unofficial) - Desktop app for the Sefaria Library. Work in progress. Currently only Linux-supported.
-* [Bisl Torah](https://github.com/DaveDushi/bisl-torah)  - A developer-focused tool that surfaces a daily bite-sized Torah learning snippet from the Sefaria Library in a popup beside your terminal while an AI coding agent processes your prompt.
