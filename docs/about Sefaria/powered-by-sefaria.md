@@ -35,6 +35,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 
 ### AI Projects
 
+* [Ask the Rambam RAG Tutorial](https://www.youtube.com/watch?v=CNIO2MsfeTo)  - A retrieval-augmented Q&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
 * [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
 * [ChavrutAI](https://chavrutai.com/contents) - Free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
 * [DafBuddy](https://dafbuddy.com/) - A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
