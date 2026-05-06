@@ -20,13 +20,13 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Team Pick of the Month
 
-  # **<Anchor label="Darshan AI" target="_blank" href="https://darshan.siddur.xyz/">Darshan AI</Anchor>**
+  # **<Anchor label="Ask the Rambam RAG Tutorial" target="_blank" href="[](https://www.youtube.com/watch?v=CNIO2MsfeTo)">Ask the Rambam RAG Tutorial</Anchor>**
 
-  Educators, take notice! This platform can create an entire source sheet or lesson plan with just a few clicks. Plus, it will cite sources and link them to the Sefaria Library so you can confirm sources and learn with context.
+  A retrieval-augmented Q&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
 
-  # **<Anchor label="Weekday Torah Readings with AI Insights" target="_blank" href="http://jiveyeti.com/wtr">Weekday Torah Readings with AI Insights</Anchor>**
+  # **<Anchor label="DafBuddy" target="_blank" href="[](https://dafbuddy.com/)">DafBuddy</Anchor>**
 
-  This project provides experimental AI-generated insights to accompany each weekday Torah reading, alongside the biblical text in both Hebrew and English.
+  A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
 </Callout>
 
 In addition to the projects below, there are also 150+ websites using the Sefaria Linker to automatically link textual citations to the Sefaria Library. [Learn more and view a list of websites using the Linker >> ](https://developers.sefaria.org/docs/sites-using-the-linker).
