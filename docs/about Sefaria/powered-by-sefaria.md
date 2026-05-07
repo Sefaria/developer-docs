@@ -109,6 +109,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Zohar-stories.com](https://www.zohar-stories.com/) - Digital database of the stories of the sages that appear in the Zohar literature.
 * [Bina v’Da’at](https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t) - Interactive AI-powered Hebrew chatbot designed to support Torah learning.
 * [Tikkun.io](<* https://tikkun.io/>) - A tool for preparing Torah readings.
+* [Zmanim Checklist](https://apps.apple.com/app/id6751196074) - A prayer companion app that combines precise, location-based zmanim with configurable reminders, a daily checklist, and a full multi-nusach siddur powered by Sefaria. (There's also a version for Android, see [here](https://play.google.com/store/apps/details?id=com.tental.zmanimchecklist\&hl=en)). 
 
 <br />
 
