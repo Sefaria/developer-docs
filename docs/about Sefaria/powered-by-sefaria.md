@@ -67,6 +67,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources.
 * [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
+*  [IvritSuite.com](https://ivritsuite.com/) - A free suite of Hebrew language learning tools for Jewish students, featuring a Torah Trainer that transforms the weekly parasha into interactive reading practice using Sefaria's Tanakh data.
 * [Jastrow App](https://jastrow.app/) - A progressive web app offering clean, mobile-friendly access to the Jastrow Talmudic dictionary alongside other essential Talmud study resources.
 * [Jastrow Search](https://onegkg.github.io/Jastrow-Search/) - A clean, glanceable search engine for the Jastrow Talmud Dictionary, with definitions split for quick scanning. Link to Github: [https://github.com/onegkg/Jastrow-Search](https://github.com/onegkg/Jastrow-Search)
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Makes sources from the Sefaria Library readable on any Amazon Kindle device.
