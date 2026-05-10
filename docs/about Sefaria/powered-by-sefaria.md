@@ -46,6 +46,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
 * [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
 * [Orayta: Torah in Your Time](https://preview--orayta-learning-path.lovable.app/) - AI-powered learning app that helps busy people integrate Torah study into daily life by providing a tailored learning session with direct links to the Sefaria Library.
+* [PshatGPT](https://pshatgpt.com/) - An AI-powered study tool that streams contextual pshat explanations from Claude for any clicked line of gemara, Rashi, Rashbam, or Tosafot, drawing on Sefaria's Talmud Bavli corpus.
 * [RavGPT.ai](https://ravgpt.ai/) - An AI model designed to make Torah learning more accessible.
 * [Seferai.org](https://seferai.org/) - Helps users explore Jewish texts with AI-powered insights.
 * [Sefaria Chat](https://sefaria-chat.up.railway.app/) - This AI-powered tool provides cited, sourced answers to questions about Jewish texts, drawn directly from sources in the Sefaria Library.
@@ -67,10 +68,11 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources.
 * [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
 * [HaTanakh.com](http://www.hatanakh.com/) - Rich content for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
-*  [IvritSuite.com](https://ivritsuite.com/) - A free suite of Hebrew language learning tools for Jewish students, featuring a Torah Trainer that transforms the weekly parasha into interactive reading practice using Sefaria's Tanakh data.
+* [IvritSuite.com](https://ivritsuite.com/) - A free suite of Hebrew language learning tools for Jewish students, featuring a Torah Trainer that transforms the weekly parasha into interactive reading practice using Sefaria's Tanakh data.
 * [Jastrow App](https://jastrow.app/) - A progressive web app offering clean, mobile-friendly access to the Jastrow Talmudic dictionary alongside other essential Talmud study resources.
 * [Jastrow Search](https://onegkg.github.io/Jastrow-Search/) - A clean, glanceable search engine for the Jastrow Talmud Dictionary, with definitions split for quick scanning. Link to Github: [https://github.com/onegkg/Jastrow-Search](https://github.com/onegkg/Jastrow-Search)
 * [Kindle Seforim](https://kindleseforim.paritcher.com/) - Makes sources from the Sefaria Library readable on any Amazon Kindle device.
+* [Kitfei Anaqim](http://kitfei.org/) (כתפי ענקים) - A curated anthology of classical biblical commentary that distills the wisdom of the great commentators across the generations based on the Sefaria library.
 * [Kol Tanakh](https://toraparatodos.com/) - An Android app for deep Tanakh immersion featuring the "Davar Motor," a custom byte-precise audio synchronization engine built on Sefaria's API that keeps Hebrew text and audio in perfect word-for-word alignment.
 * [Kol Torah](https://play.google.com/store/apps/details?id=com.almog.bar_mitzva) - A structured digital platform that guides students through an independent, step-by-step Bar Mitzvah Torah reading preparation process, available on both iOS and Android.
 * [Koveah](https://koveah.org/) - Create your own custom learning schedule using sources from the Sefaria Library.
@@ -109,7 +111,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Zohar-stories.com](https://www.zohar-stories.com/) - Digital database of the stories of the sages that appear in the Zohar literature.
 * [Bina v’Da’at](https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t) - Interactive AI-powered Hebrew chatbot designed to support Torah learning.
 * [Tikkun.io](<* https://tikkun.io/>) - A tool for preparing Torah readings.
-* [Zmanim Checklist](https://apps.apple.com/app/id6751196074) - A prayer companion app that combines precise, location-based zmanim with configurable reminders, a daily checklist, and a full multi-nusach siddur powered by Sefaria. (There's also a version for Android, see [here](https://play.google.com/store/apps/details?id=com.tental.zmanimchecklist\&hl=en)). 
+* [Zmanim Checklist](https://apps.apple.com/app/id6751196074) - A prayer companion app that combines precise, location-based zmanim with configurable reminders, a daily checklist, and a full multi-nusach siddur powered by Sefaria. (There's also a version for Android, see [here](https://play.google.com/store/apps/details?id=com.tental.zmanimchecklist\&hl=en)).
 
 <br />
 
