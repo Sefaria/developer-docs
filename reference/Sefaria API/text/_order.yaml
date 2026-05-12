@@ -5,3 +5,5 @@
 - get-translations-lang
 - get-manuscripts
 - get-texts-random
+- get-bulktext
+- get-passages
