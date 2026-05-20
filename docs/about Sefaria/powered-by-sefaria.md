@@ -20,11 +20,11 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Team Pick of the Month
 
-  # **<Anchor label="Ask the Rambam RAG Tutorial" target="_blank" href="[](https://www.youtube.com/watch?v=CNIO2MsfeTo)">Ask the Rambam RAG Tutorial</Anchor>**
+  # **<Anchor label="Ask the Rambam RAG Tutorial" target="_blank" href="https://www.youtube.com/watch?v=CNIO2MsfeTo">Ask the Rambam RAG Tutorial</Anchor>**
 
   A retrieval-augmented Q&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
 
-  # **<Anchor label="DafBuddy" target="_blank" href="[](https://dafbuddy.com/)">DafBuddy</Anchor>**
+  # **<Anchor label="DafBuddy" target="_blank" href="https://dafbuddy.com/">DafBuddy</Anchor>**
 
   A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
 </Callout>
