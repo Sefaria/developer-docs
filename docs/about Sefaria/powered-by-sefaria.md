@@ -42,6 +42,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Dafyomi AI Summary](https://dormantone.github.io/dafyomi/) - Explores, summarizes, and translates key insights from the Talmud.
 * [Darshan AI](https://darshan.siddur.xyz/) - A platform that can create an entire lesson with just a few clicks, as well as citing sources and linking to the Sefaria Library.
 * [GoTorah!](https://gotorah.web.app/) - Intelligent chat that adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The acclaimed Dvar Torah feature instantly generates ready-to-use, source-based sermons that can be customized according to difficulty, length, and occasion.
+* [Hevruta AI](https://hevruta-ai.com/) - A beautifully designed web app that pairs learners with an AI study companion for an immersive, chavruta-style Torah learning experience. 
 * [Ituria](https://github.com/Sivan22/ituria) - This AI-agent-based search (GitHub repository) is based on [Otzaria](https://github.com/Sivan22/otzaria).
 * [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
 * [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
