@@ -144,6 +144,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Shulert](https://www.shulert.org/) - The ultimate app dedicated to organizing and enhancing your davening experience.
 * [T'Feeling](https://tfeeling.netlify.app/) - Explores the connections between tefillah (prayer) and emotions.
 * [TorahBot for Mi Yodea](https://www.reddit.com/r/Judaism/comments/53wa47/introducing_torahbot/) - Cite sources and brings texts automatically into Mi Yodea.
+* [Torah Scroll](http://www.scrolltorah.com/) - An online forum that brings Torah texts and community discussion together in one space for collaborative Jewish learning. 
 * [Tweet Yomi](https://tweetyomi.org/) - Creates daily Torah tweets.
 
 ***
