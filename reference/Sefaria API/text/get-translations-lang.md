@@ -2,7 +2,6 @@
 api:
   file: sefaria-api.json
   operationId: get-translations-lang
-deprecated: false
 hidden: false
 metadata:
   title: ''

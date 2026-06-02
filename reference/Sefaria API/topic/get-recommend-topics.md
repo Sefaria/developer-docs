@@ -2,7 +2,6 @@
 api:
   file: sefaria-api.json
   operationId: get-recommend-topics
-deprecated: false
 hidden: false
 metadata:
   title: ''

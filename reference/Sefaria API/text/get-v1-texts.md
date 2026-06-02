@@ -2,7 +2,6 @@
 api:
   file: sefaria-api.json
   operationId: get-v1-texts
-deprecated: true
 hidden: false
 metadata:
   title: ''
