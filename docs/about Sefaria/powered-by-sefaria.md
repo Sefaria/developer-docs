@@ -42,7 +42,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Dafyomi AI Summary](https://dormantone.github.io/dafyomi/) - Explores, summarizes, and translates key insights from the Talmud.
 * [Darshan AI](https://darshan.siddur.xyz/) - A platform that can create an entire lesson with just a few clicks, as well as citing sources and linking to the Sefaria Library.
 * [GoTorah!](https://gotorah.web.app/) - Intelligent chat that adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The acclaimed Dvar Torah feature instantly generates ready-to-use, source-based sermons that can be customized according to difficulty, length, and occasion.
-* [Hevruta AI](https://hevruta-ai.com/) - A beautifully designed web app that pairs learners with an AI study companion for an immersive, chavruta-style Torah learning experience. 
+* [Hevruta AI](https://hevruta-ai.com/) - A beautifully designed web app that pairs learners with an AI study companion for an immersive, chavruta-style Torah learning experience.
 * [Ituria](https://github.com/Sivan22/ituria) - This AI-agent-based search (GitHub repository) is based on [Otzaria](https://github.com/Sivan22/otzaria).
 * [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
 * [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
@@ -80,7 +80,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Koveah](https://koveah.org/) - Create your own custom learning schedule using sources from the Sefaria Library.
 * [The Lightweight Hebrew Bible Reader](https://apps.apple.com/us/app/%D7%AA%D7%A0-%D7%9A/id6736739283?ign-itscg=30200\&ign-itsct=apps_box_link\&mttnsubad=6736739283) -  Enables readers to read, search, and explore the Tanakh with ease. Available both in [mobile app](https://apps.apple.com/us/app/%D7%AA%D7%A0-%D7%9A/id6736739283?ign-itscg=30200\&ign-itsct=apps_box_link\&mttnsubad=6736739283) and [web](https://dorpascal.com/tanakh/) versions.
 * [Ma'agar HaMekorot HaTorani'im HaMekif](https://sites.google.com/view/yuda-taub-parashat-hashavua/%D7%90%D7%AA%D7%A8%D7%99%D7%9D-%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D-%D7%9C%D7%9E%D7%A9%D7%97%D7%A7%D7%99%D7%9D/%D7%9E%D7%92%D7%95%D7%95%D7%9F-%D7%A2%D7%A6%D7%95%D7%9D-%D7%A9%D7%9C-%D7%9E%D7%90%D7%92%D7%A8%D7%99%D7%9D) - This vast collection of Torah sources, including some from the Sefaria Library, generates responses in a specific rabbi’s own style, creating an immersive learning experience. Available only in Hebrew.
-* [QuizDrash](https://learn-jewish-text-quest.lovable.app/) - A whimsical, quiz-based learning experience that makes exploring Sefaria's texts playful and engaging for all levels. Vibe coded by educators using the Sefaria API. 
+* [QuizDrash](https://learn-jewish-text-quest.lovable.app/) - A whimsical, quiz-based learning experience that makes exploring Sefaria's texts playful and engaging for all levels. Vibe coded by educators using the Sefaria API.
 * [Shnayim Mikra](http://www.shnayim.com/) - App and interface for learning Torah alongside Rashi’s commentary.
 * [Siddurim.com](https://play.google.com/store/apps/dev?id=6639480761921000346) - Real siddur featuring original pages of the Kavanat Halev siddur, Nusach Edot HaMizrach.
 * [Sidur KTS](https://toraparatodos.com/) - a mobile prayer application designed for Spanish speakers who are new to the Western Sephardic tradition.
@@ -94,6 +94,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates the Sefaria Library with shiurim (lessons) from YUTorah & OUTorah.
 * [TorahSummary](http://www.torahsummary.com/) - Short summaries of the entire text of the Torah with links to the sources.
 * [Torah Study Tracker](https://torahtracker.com/)- This personal archive for lifelong Torah learning uses the Sefaria API to log your study, track reviews, and create a visual record of your progress over time.
+* [Torah Tree](https://torahtree.com/)  - A Hebrew-first, live collaborative Torah wiki built on the Rambam's hierarchical structure, featuring deep topic trees, real-time editing, and automatic reverse citation indexing powered by Sefaria's texts API.
 * [TorahVerse](https://torahverse.powerjews.com/) - an interactive mind map that visualizes texts from the Torah and the Talmud, as well as midrashic, halakhic, and kabbalistic sources, and more as a living, connected whole branching from one shared root.
 * [Yamim Noraim Machzor](https://play.google.com/store/apps/details?id=com.machzoryamimnoraim) - App designed to help users learn to lead prayers for Rosh Hashanah and Yom Kippur.
 * [Yuchasin](https://yuchasin.com/) - This project offers a genealogical analysis of Tanakh, incorporating all references in the Talmud to related biblical figures and passages.
@@ -144,7 +145,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Shulert](https://www.shulert.org/) - The ultimate app dedicated to organizing and enhancing your davening experience.
 * [T'Feeling](https://tfeeling.netlify.app/) - Explores the connections between tefillah (prayer) and emotions.
 * [TorahBot for Mi Yodea](https://www.reddit.com/r/Judaism/comments/53wa47/introducing_torahbot/) - Cite sources and brings texts automatically into Mi Yodea.
-* [Torah Scroll](http://www.scrolltorah.com/) - An online forum that brings Torah texts and community discussion together in one space for collaborative Jewish learning. 
+* [Torah Scroll](http://www.scrolltorah.com/) - An online forum that brings Torah texts and community discussion together in one space for collaborative Jewish learning.
 * [Tweet Yomi](https://tweetyomi.org/) - Creates daily Torah tweets.
 
 ***
