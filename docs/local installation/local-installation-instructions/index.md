@@ -22,17 +22,17 @@ next:
 
 First clone the [Sefaria-Project](https://github.com/Sefaria/Sefaria-Project) repository to a directory on your computer, then follow the instructions:
 
-*Note: if you are a developer that might want to contribute code to Sefaria, we suggest first making a fork of this repository by clicking the "Fork" button when logged in to GitHub.*
+_Note: if you are a developer that might want to contribute code to Sefaria, we suggest first making a fork of this repository by clicking the "Fork" button when logged in to GitHub._
 
-*Note for macOS users - Install`Homebrew`:*
+_Note for macOS users - Install`Homebrew`:_
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-There are two methods with which you can run the Sefaria-Project, docker-compose and local install. 
+There are two methods with which you can run the Sefaria-Project, docker-compose and local install.
 
-We recommend the local installation, however if you are interested in exploring the experimental `docker-compose` approach, please see [here](https://developers.sefaria.org/docs/docker-compose-sefaria). 
+We recommend the local installation, however if you are interested in exploring the experimental `docker-compose` approach, please see [here](https://developers.sefaria.org/docs/docker-compose-sefaria).
 
 > ❗️ Note
 >
@@ -42,15 +42,17 @@ We recommend the local installation, however if you are interested in exploring 
 
 ## Run locally
 
-#### 1\) Install Python 3.9
+####
 
-*We Recommend using the latest Python 3.9 as opposed to later versions of Python (esp 3.10 and up) since it has been known to cause some compatibility issues. These are solvable, but for an easier install experience, we currently recommend 3.8-3.9*
+#### 1) Install Python 3.12+
+
+_Python 3.12 is the minimum supported version. Earlier versions (3.9–3.11) will encounter dependency compatibility errors during `pip install`._
 
 ###### Linux and macOS
 
-Most UNIX systems come with a Python interpreter pre-installed. However, this is generally still Python 2. The recommended way to get Python 3, and not mess up any software the OS is dependent on, is by using Pyenv. You can use the instructions [here](https://github.com/pyenv/pyenv#installation) and also [here](https://opensource.com/article/19/5/python-3-default-mac#what-we-should-do).
+Most UNIX systems come with a Python interpreter pre-installed. However, this is generally still Python 2. The recommended way to get Python 3, and not disrupt any software the OS is dependent on, is by using Pyenv. You can use the instructions [here](https://github.com/pyenv/pyenv#installation) and also [here](https://opensource.com/article/19/5/python-3-default-mac#what-we-should-do).
 
-In a later step, we can configure virtual environments to work with Pyenv so you can completely isolate your Sefaria stack. 
+In a later step, we can configure virtual environments to work with Pyenv so you can completely isolate your Sefaria stack.
 
 ###### Windows:
 
@@ -58,17 +60,17 @@ The Pyenv repository above also has recommendations for Windows.
 
 In order to simply install Python:
 
-* Read the [Official Python documentation on Windows](https://docs.python.org/3.7/using/windows.html) 
+* Read the [Official Python documentation on Windows](https://docs.python.org/3.7/using/windows.html)
 * Go to the [Python Download Page](https://www.python.org/downloads/release/python-375/) and download and install Python.
-* Add the python directory to your OS' PATH variable if the installer has not done so. 
+* Add the python directory to your OS' PATH variable if the installer has not done so.
 
-#### 2\) Install virtualenv (Recommended, but optional):
+#### 2) Install virtualenv (Recommended, but optional):
 
 If you work on many Python projects, you may want to keep Sefaria's Python installation separate using Virtualenv.  If you're happy having Sefaria requirements in your main Python installation, skip this step.
 
 ##### Use With Pyenv (Recommended)
 
-You can use virtualenv functionality while also using Pyenv; this allows you to further isolate your code and requirements from other projects. 
+You can use virtualenv functionality while also using Pyenv; this allows you to further isolate your code and requirements from other projects.
 
 ###### Unix & Windows
 
@@ -76,34 +78,34 @@ Instructions [here](https://github.com/pyenv/pyenv-virtualenv#installing-as-a-py
 
 ###### macOS:
 
-Instructions [here](https://github.com/pyenv/pyenv-virtualenv#installing-with-homebrew-for-macos-users). 
+Instructions [here](https://github.com/pyenv/pyenv-virtualenv#installing-with-homebrew-for-macos-users).
 
-Create [a pyenv virtualenv](https://github.com/pyenv/pyenv-virtualenv#using-pyenv-virtualenv-with-pyenv). 
+Create [a pyenv virtualenv](https://github.com/pyenv/pyenv-virtualenv#using-pyenv-virtualenv-with-pyenv).
 
-In your Sefaria directory, run `pyenv local [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g. `3.7.5/envs/sefaria-venv`). This should serve to activate the virtualenv whenever you are in the Sefaria directory. 
+In your Sefaria directory, run `pyenv local [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g. `3.12/envs/sefaria-venv`). This should serve to activate the virtualenv whenever you are in the Sefaria directory.
 
-*Note: If, after following the installation and configuration instructions, running`python -V` still displays the system version, you may have to manually add the shims directory to your path.* If that does not correct the issue, you should check your bash init file (.zshrc, .bashrc, or the like) for the line `eval "$(pyenv init -)"` (not inside an if statement) and change it to `eval "$(pyenv init --path)"` and restart the shell.
+_Note: If, after following the installation and configuration instructions, running`python -V` still displays the system version, you may have to manually add the shims directory to your path._ If that does not correct the issue, you should check your bash init file (.zshrc, .bashrc, or the like) for the line `eval "$(pyenv init -)"` (not inside an if statement) and change it to `eval "$(pyenv init --path)"` and restart the shell.
 
-*Note: If you are using an IDE like PyCharm, you can (and should) configure the interpreter options on your Sefaria-Project to point to the Python executable of this virtualenv (e.g.`~/.pyenv/versions/3.7.5/envs/sefaria-venv/bin/python3.7`)*
+_Note: If you are using an IDE like PyCharm, you can (and should) configure the interpreter options on your Sefaria-Project to point to the Python executable of this virtualenv (e.g.`~/.pyenv/versions/3.12.x/envs/sefaria-venv/bin/python3.12`)_
 
 ##### Classic virtualenv
 
 Install [virtualenv](http://pypi.python.org/pypi/virtualenv), then enter these commands:
 
-*Note: You may need to install Pip (see below) first in order to install virtualenv*
+_Note: You may need to install Pip (see below) first in order to install virtualenv_
 
-*Note: You can perform this step from anywhere in your command line, but it might be easier and tidier to run this step from the root of your project directory that you just cloned. e.g`~/web-projects/Sefaria-Project $`*
+_Note: You can perform this step from anywhere in your command line, but it might be easier and tidier to run this step from the root of your project directory that you just cloned. e.g`~/web-projects/Sefaria-Project $`_
 
 ```
 virtualenv venv --distribute
 source venv/bin/activate
 ```
 
-Now you should see `(venv)` in front of your command prompt. The second command sets your shell to use the Python virtual environment that you have just created. This is something that you have to run every time you open a new shell and want to run the Sefaria demo. You can always tell if you're in the virtual environment by checking if `(venv)` is at the beginning of your command prompt. 
+Now you should see `(venv)` in front of your command prompt. The second command sets your shell to use the Python virtual environment that you have just created. This is something that you have to run every time you open a new shell and want to run the Sefaria demo. You can always tell if you're in the virtual environment by checking if `(venv)` is at the beginning of your command prompt.
 
-#### 3\) Pip:
+#### 3) Pip:
 
-If you used pyenv, Pip should be available via the pyenv version of Python. 
+If you used pyenv, Pip should be available via the pyenv version of Python.
 
 ###### Unix
 
@@ -113,9 +115,9 @@ If you don't already have it in your Python installation, install [Pip](https://
 
 Use instructions [here](http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/) and then make sure that the scripts subfolder of the python installation directory is also in PATH.
 
-*Note: this step (and**most** of the following command line instructions) must be run from the Sefaria-Project root directory*
+_Note: this step (and**most** of the following command line instructions) must be run from the Sefaria-Project root directory_
 
-Run the following command: 
+Run the following command:
 
 ```
 pip install -r requirements.txt
@@ -125,13 +127,13 @@ pip install -r requirements.txt
 >
 > Please note, sometimes the `psycopg2` package can cause installation issues, and it is not usually needed for a local installation.
 >
-> If you run into trouble, there is a recommended change in the `requirements.txt` file. Just comment out the existing line and uncomment the recommended line. 
+> If you run into trouble, there is a recommended change in the `requirements.txt` file. Just comment out the existing line and uncomment the recommended line.
 >
-> If that doesn't work, we recommend *temporarily* commenting out the line `psycopg2==2.8.6` in `requirements.txt` and then re-running `pip install -r requirements.txt`:
+> If that doesn't work, we recommend _temporarily_ commenting out the line `psycopg2==2.8.6` in `requirements.txt` and then re-running `pip install -r requirements.txt`:
 
-If you are *not* using virtualenv, you may have to run it with sudo: `sudo pip install -r requirements.txt`
+If you are _not_ using virtualenv, you may have to run it with sudo: `sudo pip install -r requirements.txt`
 
-*Note: You'll probably need to install the Python development libraries as well:*
+_Note: You'll probably need to install the Python development libraries as well:_
 
 ###### On Debian systems:
 
@@ -145,16 +147,16 @@ sudo apt-get install python-dev python3-dev libpq-dev
 sudo dnf install python3-devel libpq-devel
 ```
 
-*Note: If you see an error that`pg_config executable not found`, you need to install PostgreSQL. If on macOS you see an error while `Building wheel for psycopg2` for`linker command failed with exit code 1`, you may need to add the path to OpenSSL*
+_Note: If you see an error that`pg_config executable not found`, you need to install PostgreSQL. If on macOS you see an error while `Building wheel for psycopg2` for`linker command failed with exit code 1`, you may need to add the path to OpenSSL_
 
 ```
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 ```
 
-After installing the Python development libraries or other dependencies, run `pip install -r requirements.txt` again. 
+After installing the Python development libraries or other dependencies, run `pip install -r requirements.txt` again.
 
-#### 4\) Install gettext
+#### 4) Install gettext
 
 `gettext` is a GNU utility that Django uses to manage localizations.
 
@@ -177,9 +179,9 @@ export PATH=$PATH:/usr/local/Cellar/gettext/0.xx.x/bin
 sudo apt-get install gettext
 ```
 
-#### 5\) Create a local settings file:
+#### 5) Create a local settings file:
 
-*Note: this step must be run from the Sefaria-Project root directory*
+_Note: this step must be run from the Sefaria-Project root directory_
 
 ```
 cd sefaria
@@ -193,17 +195,17 @@ Note: Among the placeholder values that need to be replaced, set the `DATABASES`
 
 You can name your local database (`sefaria` will be the default created by `mongorestore` below). You can leave `SEFARIA_DB_USER` ad `SEFARIA_DB_PASSWORD` blank if you don't need to run authentication on Mongo.
 
-#### 6\) Create a log directory:
+#### 6) Create a log directory:
 
 Create a directory called `log` under the root project folder (i.e. `Sefaria-Project/`). To do this, run `mkdir log` from the project's root directory.
 
-The result should look like `Sefaria-Project/log`. 
+The result should look like `Sefaria-Project/log`.
 
 Make sure that the server user has write access to it by using a command such as `chmod 777 log`.
 
-#### 7\) Get Mongo running:
+#### 7) Get Mongo running:
 
-If you don't already have it, [install MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/). Our current data dump requires MongoDB version 4.4 or later. After installing Mongo according to the instructions, you should have a mongo service automatically running in the background. 
+If you don't already have it, [install MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/). Our current data dump requires MongoDB version 4.4 or later. After installing Mongo according to the instructions, you should have a mongo service automatically running in the background.
 
 Otherwise, run the mongo daemon with:
 
@@ -217,19 +219,19 @@ Or use your os service manager to have it start on startup.
 
 Mongo usually sets all the correct paths for itself to run properly nowadays, but see [here](https://www.mongodb.com/docs/manual/tutorial/manage-mongodb-processes/#start-mongod-processes) for details on setting a specific path for it to store data in.
 
-#### 8\) Put some texts in your database:
+#### 8) Put some texts in your database:
 
-MongoDB dumps of our database are available to download. 
+MongoDB dumps of our database are available to download.
 
-The recommended dump (which is a more manageable size) is available [here](https://storage.googleapis.com/sefaria-mongo-backup/dump_small.tar.gz). 
+The recommended dump (which is a more manageable size) is available [here](https://storage.googleapis.com/sefaria-mongo-backup/dump_small.tar.gz).
 
 A complete dump is also available [here](https://storage.googleapis.com/sefaria-mongo-backup/dump.tar.gz). The complete dump includes the `history` collections, which contains a complete revision history of every text in our library. For many applications, this data is not relevant. We recommend using the smaller dump unless you're specifically interested in texts revision history within Sefaria.
 
 Unzip the file and extract the `dump` folder. If you don't have an app for unzipping, this can be done from Command Prompt by navigating to the folder containing the download and using `tar -xf dump.tar.gz` or `tar -xf dump_small.tar.gz` (depending on which dump you downloaded).
 
-This `dump` must be restored as a MongoDB database. 
+This `dump` must be restored as a MongoDB database.
 
-From MongoDB version 4.4, mongorestore comes separately from the MongoDB server, so if you don't already have it, you'll also need to download and unzip the [Database Tools](https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools). You may then need to add its \\bin\\ directory to your PATH environment variables.
+From MongoDB version 4.4, mongorestore comes separately from the MongoDB server, so if you don't already have it, you'll also need to download and unzip the [Database Tools](https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools). You may then need to add its \bin\ directory to your PATH environment variables.
 
 Once you have the unzipped `dump`from the folder which contains `dump`, run:
 
@@ -241,16 +243,16 @@ This will create (or overwrite) a mongo database called `sefaria`.
 
 If you used the recommended dump, `dump_small.tar.gz`, create an empty collection inside the `sefaria` database called `history`. This can be done using the mongo client shell or a GUI you have installed, such as MongoDB Compass.
 
-#### 9\) Set up Django's local server
+#### 9) Set up Django's local server
 
-Sefaria is using Google's reCAPTCHA to verify the user is not a bot. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)).\
-For local development, the default test keys would suffice. The warning can be suppressed by uncommenting the following in the local\_settings.py file:
+Sefaria is using Google's reCAPTCHA to verify the user is not a bot. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)).  
+For local development, the default test keys would suffice. The warning can be suppressed by uncommenting the following in the local_settings.py file:
 
 ```
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 ```
 
-`manage.py` is used to run and manage the local server. It is located in the root directory of the `Sefaria-Project` codebase. 
+`manage.py` is used to run and manage the local server. It is located in the root directory of the `Sefaria-Project` codebase.
 
 Django auth features run on a separate database. To init this database and set up Django's auth system, switch to the root directory of the `Sefaria-Project` code base, and run (from the project root):
 
@@ -258,17 +260,17 @@ Django auth features run on a separate database. To init this database and set u
 python manage.py migrate
 ```
 
-#### 10\) Install Node:
+#### 10) Install Node:
 
-*Note: Older versions of`Node` and `npm` ran into a file name length limit on Windows OS. This problem should be mitigated in newer versions on Windows 10.*
+_Note: Older versions of`Node` and `npm` ran into a file name length limit on Windows OS. This problem should be mitigated in newer versions on Windows 10._
 
-Node is now required to run the site. Even if you choose to have Javascript run only on the client, we are also using [Webpack](https://webpack.js.org/) to bundle our Javascript. 
+Node is now required to run the site. Even if you choose to have Javascript run only on the client, we are also using [Webpack](https://webpack.js.org/) to bundle our Javascript.
 
 Installing Node and npm from the main installers on Node's homepage may cause permission issues. For that reason, it is recommended to use one of the alternative methods (with a preference for a version manager like nvm) listed [here](https://nodejs.org/en/download/package-manager/).
 
 ###### Debian, Ubuntu, and Linux Mint
 
-You are better off using `apt-get nodejs` or following the instructions [here](https://github.com/nodesource/distributions/blob/master/README.md). They will install both Node and npm. 
+You are better off using `apt-get nodejs` or following the instructions [here](https://github.com/nodesource/distributions/blob/master/README.md). They will install both Node and npm.
 
 ###### macOS
 
@@ -299,7 +301,7 @@ npm run watch-client
 
 #### Server-side rendering with Node:
 
-Sefaria uses React.js. To render HTML server-side, we use a Node.js server. For development, the site is fully functional without server-side rendering. For deploying in a production environment, however, server-side HTML is very important for bots and SEO. 
+Sefaria uses React.js. To render HTML server-side, we use a Node.js server. For development, the site is fully functional without server-side rendering. For deploying in a production environment, however, server-side HTML is very important for bots and SEO.
 
 ##### Install Redis
 
@@ -313,7 +315,7 @@ To run redis: `redis-server`. On macOS: `brew services start redis`
 
 Update your `local_settings.py` file and replace the `CACHES` variable with the `CACHES` variable meant for server-side rendering, commented out in `local_settings_example.py`.
 
-Also, make sure the following are set: 
+Also, make sure the following are set:
 
 ```
 SESSION_CACHE_ALIAS = "default" #declares where Django's session engine will store data
@@ -336,7 +338,7 @@ The following environment variables, defined in `./node/local_settings.js`, can 
 | `REDIS_HOST`  | `127.0.0.1` | The Redis instance to point Node to when running               |
 | `REDIS_PORT`  | `6379`      | The Default port Redis listens on                              |
 
-These variables can be set via command line explicitly, set up to be defined when your machine's shell runs, or set up in your IDE settings for running the node server. 
+These variables can be set via command line explicitly, set up to be defined when your machine's shell runs, or set up in your IDE settings for running the node server.
 
 For development, you can run the Node server using nodemon with:
 
@@ -356,7 +358,7 @@ or
 npm run watch
 ```
 
-#### 11\) Run the development server:
+#### 11) Run the development server:
 
 ```
 python manage.py runserver
