@@ -129,7 +129,7 @@ pip install -r requirements.txt
 >
 > If you run into trouble, there is a recommended change in the `requirements.txt` file. Just comment out the existing line and uncomment the recommended line.
 >
-> If that doesn't work, we recommend _temporarily_ commenting out the line `psycopg2==2.8.6` in `requirements.txt` and then re-running `pip install -r requirements.txt`:
+> If that doesn't work, we recommend _temporarily_ commenting out the `psycopg2` line in `requirements.txt` and then re-running `pip install -r requirements.txt`. (The pinned version in the file may differ from `2.8.6`.)
 
 If you are _not_ using virtualenv, you may have to run it with sudo: `sudo pip install -r requirements.txt`
 
