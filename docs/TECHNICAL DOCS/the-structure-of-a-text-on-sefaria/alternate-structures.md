@@ -1,6 +1,6 @@
 ---
 title: Alternate Structures
-excerpt: ''
+excerpt: Learn how to work with texts that feature alternate structures.
 deprecated: false
 hidden: false
 metadata:
@@ -16,22 +16,22 @@ next:
 ---
 # Alternate Structures
 
-Oftentimes a text is referred to using more than one overlapping scheme.  In cases like this, alternate structures may be specified on Index records.  Examples of this are Torah, which has both a chapter-verse addressing schema and a parsha-aliyah addressing schema; and Talmud, which has both a daf addressing schema and a chapter-mishnah schema.  
+Often, a text is referred to using multiple overlapping schemes. In these cases, alternate structures may be specified on Index records. Two examples of this phenomenon are the Torah, which has both a chapter-verse addressing schema and a parashah-aliyah addressing schema, and the Talmud, which has both a daf addressing schema and a chapter-mishnah addressing schema.
 
-The structure with the greatest detail is used as the storage format of the text.  It is specified in the `schema` attribute of the `Index` record.  The other structures are specified in the `alt_structs` attribute of the Index record.  
+If a text has multiple overlapping schemes, the text's storage format will be the structure that provides the greatest detail.  This is specified in the `schema` attribute of the `Index` record.  Other possible structures are specified in the `alt_structs` attribute of the text's Index record.
 
-`alt_structs` is a dictionary, mapping structure keys (which can be arbitrary) to alt structures.  Alt structures look very much like [the Index Schema](doc:the-index-schema) but with a few differences:
+In short, `alt_structs` acts as a dictionary, mapping structure keys (which can be arbitrary) to alt structures.  Alt structures look very much like [the Index Schema](doc:the-index-schema) but with a few key differences:
 
 * The `nodeType` is generally `ArrayMapNode`
-* The root node has no titles.  It uses the titles of the schema root. 
-* All nodes of the alt structure do not have `key` fields.  
-* Terminal nodes in an alt structure have mappings to underlying references, using one or two attributes:
-  * `wholeRef`: A single string, which has a ref to the whole range covered by this node
-  * `refs`: (required only when `depth` is greater than zero) A jagged array of refs that correspond to how `wholeRef` is broken into sections named by `sectionNames`.
-* You can set display attributes, which affect how an alternate structure is visualized in its Table of Contents:
+* The root node has no titles; instead, it uses the titles of the schema root.
+* All nodes of the alt structure do not have `key` fields.
+* Terminal nodes in an alternate structure have mappings to underlying references, using either one or both of the following attributes:
+  * `wholeRef`: This single string has a ref to the whole range covered by the relevant node.
+  * `refs`: This jagged array of refs corresponds to the way in which `wholeRef` is broken into sections, named by `sectionNames`. This attribute is only required when `depth` is greater than zero.
+* Display attributes can be customized. This affects how an alternate structure is visualized in its Table of Contents. Customization options include:
   * `includeSections`: when True, the node will include links to each individual section within `wholeRef` underneath the alternate node name (e.g., [Zohar](http://www.sefaria.org/Zohar)).
 
-Here is an example of one section of the alternate structure of the book of Exodus:
+**For example: A section of the alternate structure of the book of Exodus**
 
 ```
    "alt_structs" : {
