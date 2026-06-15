@@ -1,8 +1,8 @@
 ---
 title: Terms
 excerpt: >-
-  An object for grouping titles, alternate titles and other bilingual terms
-  reused across Sefaria.
+  Learn about these objects, used for grouping titles, alternate titles, and
+  other bilingual terms.
 deprecated: false
 hidden: false
 metadata:
@@ -16,13 +16,13 @@ next:
       slug: text-formatting-beyond-the-segment-level
       title: Text Formatting Beyond the Segment Level
 ---
-## Terms
+## What is a Term?
 
-A `Term` is a `sharedTitle `node which is used to group titles, alternate titles and titles in other languages (i.e. Hebrew).
+A `Term` is a `sharedTitle `node, used to group titles, alternate titles, and non-English titles (e.g., Hebrew). Some objects, such as `Index` records, store their own various titles. However, for other system objects, that is not possible at this time. This is why we use the `Term` object to add titles to items that need them, such as categories, `sharedTitles` on [Categories](doc:categories), and section names.
 
-Some objects, such as `Index` records, store their own various titles. However, for other system objects, that is not currently a possibility. To this end, we use the `Term` object to add titles to items that need them, such as categories, `sharedTitles` on [Categories](doc:categories), and section names.
+## Examples of Terms
 
-Here's a sample `Term` for the section name for `chapters`:
+Sample `Term` For the Section Name for `chapters`:
 
 ```json
 {
@@ -43,7 +43,7 @@ Here's a sample `Term` for the section name for `chapters`:
 }
 ```
 
-And here's a `Term` for the table of contents sub-category of `Geonim`:
+Sample `Term` For the Table Of Contents Sub-category `Geonim`:
 
 ```json
 {
