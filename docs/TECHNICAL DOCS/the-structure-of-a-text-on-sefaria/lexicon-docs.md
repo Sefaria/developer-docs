@@ -135,24 +135,24 @@ For example, if a word in biblical Hebrew has a different meaning it does in mod
 
 ### Many-to-Many
 
-When querying for a `WordForm` for a given string, one may receive many results to enable maximum flexibility in representing natural language.
+When querying for a `WordForm` for a given string, one may receive many results. This is possible in order to enable maximum flexibility in representing natural language.
 
 ## Index
 
-When a dictionary is presented as a text, it has a special `Index` record with a`lexiconName` element at the root, and a `DictionaryNode` element in the schema.   The `lexiconName` must match the `name` of the `Lexicon` object.  (In the reverse direction, `Lexicon.index_title` must match the `title` of the `Index` object.
+When a dictionary is presented as a text, it has a special `Index` record. This record includes a`lexiconName` element at the root and a `DictionaryNode` element in the schema. The `lexiconName` must match the `name` of the `Lexicon` object. Conversely, the `Lexicon.index_title` must match the `title` of the `Index` object.
 
 ### DictionaryNode
 
-A `DictionaryNode` can be placed anywhere within a complex schema tree.
+A `DictionaryNode` can be placed anywhere within a complex schema tree. For example:
 
-* `nodeType` - will be `DictionaryNode`
+* `nodeType`: This will be `DictionaryNode`
 * `lexiconName`
-* `default` - If it's true, entries can be referenced just with the dictionary name.
+* `default` : If true, entries can be referenced with the dictionary name alone.
 * `lastWord`
 * `firstWord`
 * `headwordMap`
 
-Below is the full record for the Jastrow dictionary.  Note the `lexiconName` and `DictionaryNode` element in the schema.
+Below is the full record for the Jastrow dictionary. Please note the `lexiconName` and `DictionaryNode` elements in the schema.
 
 ```
 { 
@@ -364,10 +364,10 @@ Below is the full record for the Jastrow dictionary.  Note the `lexiconName` and
 
 ## Version
 
-Necessary for any regular (non-definition) text.
+This is necessary for any regular (non-definition) text.
 
 ## Important Notes
 
 * In `sefaria/model/lexicon.py`, each dictionary relates to a subclass of `DictionaryEntry`.  Those correspondences are listed in `LexiconEntrySubClassMapping`
-* In `sefaria.js`, there is a line that lists the dictionaries:  `Sefaria.virtualBooksDict = [...]`
-* If this lexicon participates in the cross-dictionary auto-completer, it needs to be listed in `library.build_lexicon_auto_completers`
+* `sefaria.js` includes a line that lists the available dictionaries:  `Sefaria.virtualBooksDict = [...]`
+* If a lexicon participates in the cross-dictionary auto-completer, it needs to be listed in `library.build_lexicon_auto_completers`
