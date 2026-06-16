@@ -129,9 +129,9 @@ Please note: The `lookups` field represents the list of `LexiconEntry` objects. 
 
 ### Refs in WordForm
 
-The `refs` list is meant to be a way to further restrict the correspondence between the naturally occurring word in a given text and a `LexiconEntry`. While the word may appear in the same form throughout the Sefaria library, it may have different meanings based on the context or nature of the work within which it appears. The `refs` list will associate a given definition for a word with the instances in which it appears that word has identical meanings.
+The `refs` list is designed to further restrict the correspondence between naturally occurring words in a given text and a `LexiconEntry`. Though a word may appear identical in various sources in the Sefaria Library, it may have different meanings due to the specific context of the work within which it appears. The `refs` list associate a given definition for a word with the various instances in which it appears that the word in question has identical meanings.
 
-For example, if a word in Biblical Hebrew has a different meaning than when it appears in Modern Hebrew works, there will be separate `WordForm` objects: one representing the Biblical Hebrew word and associating it with `refs` from the Bible, and another representing the Modern Hebrew word and associating it with `refs` corresponding to its appearance in Modern Hebrew works.
+For example, if a word in biblical Hebrew has a different meaning it does in modern Hebrew works, there will be separate `WordForm` objects for each definition. The former object will represent the biblical Hebrew word and associating it with `refs` from the Bible, while the latter will represent the Modern Hebrew word and associate it with `refs` corresponding to its appearance in modern Hebrew works.
 
 ### Many-to-Many
 
