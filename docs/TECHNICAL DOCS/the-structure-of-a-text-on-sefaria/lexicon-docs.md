@@ -1,6 +1,6 @@
 ---
 title: Lexicon
-excerpt: Dictionaries at Sefaria
+excerpt: Learn about the structure of dictionaries in the Sefaria Library
 deprecated: false
 hidden: false
 metadata:
@@ -10,27 +10,29 @@ metadata:
 next:
   description: ''
 ---
-A Lexicon (dictionary) in Sefaria is composed of a `Lexicon` object representing the whole work, and `LexiconEntry` objects for each entry.  
+In Sefaria's parlance, a Lexicon is a dictionary or reference work. Lexicons are composed of a `Lexicon` object representing the entire reference work and `LexiconEntry` objects for each specific entry in the larger work.
 
-Additionally, a Lexicon can  have `WordForm` objects for each written expression of a word in the lexicon. `WordForm`objects represent various conjugations of words that appear in our texts, and attempt to link them to that specific headword. 
+Some Lexicons also have `WordForm` objects for each written expression of a word in the lexicon. `WordForm`objects represent various conjugations of words that appear in the texts in the Sefaria Library, and attempt to link them to the relevant headword.
 
-If the Lexicon is to be viewed as an independent text, it needs to have an `Index` record as well. This `Index` will have special fields, and can optionally have a `Version` record for any additional textual content which is not a dictionary entry (e.g. for introductory text to the lexicon.) 
+If the Lexicon is viewed as an independent text, it also needs an `Index` record. This `Index` will have special fields. It may also have a `Version` record for any additional textual content which is not a dictionary entry (e.g., introductory text to the Lexicon).
 
-To see documentation on our lexicon APIs, see [here](https://developers.sefaria.org/reference/get_api-lexicon)
+To see documentation on our lexicon APIs, visit [this link](https://developers.sefaria.org/reference/get_api-lexicon)
 
 # Understanding the Lexicon Object Model
 
 ## Lexicon
 
-If the Lexicon has an associated `Index`, `Lexicon.index_title` must match the `title` of the `Index` object, and on the Index, `lexiconName` must match the `name` of the `Lexicon` object.  If it has a `Version` associated with it, the title of the version should be placed in the `version_title`attribute, and language of the version in the`version_lang` attribute of the Lexicon.
+If the Lexicon has an associated `Index`, the `Lexicon.index_title` must match the `title` of the `Index` object. In addition, `lexiconName` must match the `name` of the `Lexicon` object on the Index.  If the Lexicon in question has a `Version` associated with it, the title of the version should be placed in the `version_title`attribute, and the language of the version should be noted in the`version_lang` attribute of the Lexicon. 
+
+Please note the following fields:
 
 * `name` is the key field for the Lexicon
-* `attribution`, `source` and `source_url` are descriptive.  
-* `language`  
-* `to_language` 
+* `attribution`, `source` and `source_url` are descriptive
+* `language` 
+* `to_language`
 * `text_categories`
 
-Example of a `Lexicon` object in our database: 
+See the following example of a `Lexicon` object in our database for clarification:
 
 ```
 { 
@@ -49,15 +51,15 @@ Example of a `Lexicon` object in our database:
 
 ## Lexicon Entry
 
-Recall that every `Lexicon` object is comprised of `LexiconEntry` objects which represent the words in that `Lexicon`. 
+As noted above, every `Lexicon` object is comprised of `LexiconEntry` objects, which represent the words in that `Lexicon`. 
 
-Notes:
+Please note the following characteristics of a Lexicon Entry:
 
-* `parent_lexicon` must match `Lexicon.name`
-* `headword` - together with `parent_lexicon`, `headword `is the key for the Lexicon entry.  Must be unique for this Lexicon. 
-* `prev_hw` - The headword for the entry just before this one.  (required when Lexicon is presented as a text, with an `Index`.)  
-* `next_hw` - The headword for the entry just after this one.  (required when Lexicon is presented as a text, with an `Index`)  
-* `rid` - unique ID.  Used for lexical sorting.  When presented in order, the rid should be in order.  `rid` values should begin with a letter, to ensure lexical and not numeric sorting. 
+* The `parent_lexicon` must match `Lexicon.name`
+* `headword` - together with `parent_lexicon`, `headword `is the key for the Lexicon entry.  Must be unique for this Lexicon.
+* `prev_hw` - The headword for the entry just before this one.  (required when Lexicon is presented as a text, with an `Index`.)
+* `next_hw` - The headword for the entry just after this one.  (required when Lexicon is presented as a text, with an `Index`)
+* `rid` - unique ID.  Used for lexical sorting.  When presented in order, the rid should be in order.  `rid` values should begin with a letter, to ensure lexical and not numeric sorting.
 
 ```
 { 
@@ -101,7 +103,7 @@ When a `Lexicon` is to be presented as a text in itself (with an `Index` record)
 
 ## WordForm
 
-There can be many `WordForm` objects corresponding to a `LexiconEntry` and many `LexiconEntry` objects for a `WordForm`. 
+There can be many `WordForm` objects corresponding to a `LexiconEntry` and many `LexiconEntry` objects for a `WordForm`.
 
 Example:
 
@@ -127,30 +129,30 @@ Note: `lookups` represents the list of `LexiconEntry` objects.  There can be man
 
 ### Refs in WordForm
 
-The `refs` list is meant to be a way to further restrict the correspondence between the naturally occurring word in a given text and a `LexiconEntry`. While the word may appear in the same form throughout the Sefaria library, it may have different meanings based on the context or nature of the work within which it appears. The `refs` list will associate a given definition for a word with the instances in which it appears that word has identical meanings. 
+The `refs` list is meant to be a way to further restrict the correspondence between the naturally occurring word in a given text and a `LexiconEntry`. While the word may appear in the same form throughout the Sefaria library, it may have different meanings based on the context or nature of the work within which it appears. The `refs` list will associate a given definition for a word with the instances in which it appears that word has identical meanings.
 
-For example, if a word in Biblical Hebrew has a different meaning than when it appears in Modern Hebrew works, there will be separate `WordForm` objects: one representing the Biblical Hebrew word and associating it with `refs` from the Bible, and another representing the Modern Hebrew word and associating it with `refs` corresponding to its appearance in Modern Hebrew works. 
+For example, if a word in Biblical Hebrew has a different meaning than when it appears in Modern Hebrew works, there will be separate `WordForm` objects: one representing the Biblical Hebrew word and associating it with `refs` from the Bible, and another representing the Modern Hebrew word and associating it with `refs` corresponding to its appearance in Modern Hebrew works.
 
 ### Many-to-Many
 
-When querying for a `WordForm` for a given string, one may receive many results to enable maximum flexibility in representing natural language. 
+When querying for a `WordForm` for a given string, one may receive many results to enable maximum flexibility in representing natural language.
 
 ## Index
 
-When a dictionary is presented as a text, it has a special `Index` record with a`lexiconName` element at the root, and a `DictionaryNode` element in the schema.   The `lexiconName` must match the `name` of the `Lexicon` object.  (In the reverse direction, `Lexicon.index_title` must match the `title` of the `Index` object.  
+When a dictionary is presented as a text, it has a special `Index` record with a`lexiconName` element at the root, and a `DictionaryNode` element in the schema.   The `lexiconName` must match the `name` of the `Lexicon` object.  (In the reverse direction, `Lexicon.index_title` must match the `title` of the `Index` object.
 
 ### DictionaryNode
 
-A `DictionaryNode` can be placed anywhere within a complex schema tree.  
+A `DictionaryNode` can be placed anywhere within a complex schema tree.
 
 * `nodeType` - will be `DictionaryNode`
 * `lexiconName`
 * `default` - If it's true, entries can be referenced just with the dictionary name.
-* `lastWord` 
+* `lastWord`
 * `firstWord`
 * `headwordMap`
 
-Below is the full record for the Jastrow dictionary.  Note the `lexiconName` and `DictionaryNode` element in the schema.  
+Below is the full record for the Jastrow dictionary.  Note the `lexiconName` and `DictionaryNode` element in the schema.
 
 ```
 { 
