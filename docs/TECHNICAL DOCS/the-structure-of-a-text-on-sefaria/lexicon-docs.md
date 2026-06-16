@@ -101,13 +101,11 @@ See the following example for a clarification of how a Lexicon Entry may appear:
 
 When a `Lexicon` is to be presented as a text in itself (with an `Index` record), the `LexiconEntry` objects are arranged with pointers to the entries before and after.
 
-<br />
-
 ## WordForm
 
-There can be many `WordForm` objects corresponding to a `LexiconEntry` and many `LexiconEntry` objects for a `WordForm`.
+There can be many `WordForm` objects that correspond to a single `LexiconEntry`. There can also be many `LexiconEntry` objects that correspond to a single `WordForm`.
 
-Example:
+For example:
 
 ```
 	{ 
@@ -127,7 +125,7 @@ Example:
 }
 ```
 
-Note: `lookups` represents the list of `LexiconEntry` objects.  There can be many objects in the list.
+Please note: The `lookups` field represents the list of `LexiconEntry` objects.  There can be many objects in the `lookups` list.
 
 ### Refs in WordForm
 
