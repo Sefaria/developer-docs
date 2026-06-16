@@ -53,13 +53,15 @@ See the following example of a `Lexicon` object in our database for clarificatio
 
 As noted above, every `Lexicon` object is comprised of `LexiconEntry` objects, which represent the words in that `Lexicon`. 
 
-Please note the following characteristics of a Lexicon Entry:
+Please note the following requirements and characteristics of a Lexicon Entry:
 
 * The `parent_lexicon` must match `Lexicon.name`
 * The`headword`, taken together with `parent_lexicon`, is the key for the Lexicon entry.  The `headword` must be unique to the Lexicon in question.
-* `prev_hw` - The headword for the entry just before this one.  (required when Lexicon is presented as a text, with an `Index`.)
-* `next_hw` - The headword for the entry just after this one.  (required when Lexicon is presented as a text, with an `Index`)
-* `rid` - unique ID.  Used for lexical sorting.  When presented in order, the rid should be in order.  `rid` values should begin with a letter, to ensure lexical and not numeric sorting.
+* `prev_hw` indicates the headword for the entry directly before the one you are referencing. This is required when the Lexicon is presented as a text with an `Index`.
+* `next_hw` indicates the headword for the entry directly before the one you are referencing. This is required when the Lexicon is presented as a text with an `Index`.
+* `rid` is a unique ID that is used for lexical sorting.  When presented in order, the rid should appear in order.  `rid` values should begin with a letter in order to ensure lexical sorting instead of numerical sorting.
+
+See the following example for a clarification of how a Lexicon Entry may appear:
 
 ```
 { 
