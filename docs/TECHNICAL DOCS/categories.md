@@ -20,13 +20,13 @@ Categories are present on the `Index` of a text, and are a requirement for `Inde
 
 To learn more about the Sefaria `Index`, see [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria) or [the Index API](ref:get_api-v2-raw-index-index-title).
 
-## Structure of the Category Object
+## The Structure of the Category Object
 
-### Required Fields:
+Category objects have specific field requirements. These include:
 
-#### `path`
+### `path`
 
-Category objects require `path`, which is a list of primary titles of categories that form the path of ancestors to this one.  The current category's title is included in the path. The path is stored in a list, with the highest level ancestor at position 0, and the current category's title at the end of the list.
+Category objects require `path`, which is a list of primary titles of categories that form the path of ancestors to this one.  The current category's title is included in the path. The path is stored in a list, with the highest-level ancestor at position 0, and the current category's title at the end of the list. See below for clarification:
 
 | Category                                                                                                             | Full Path of the Category Object                                                                              | Depth | Highest  Ancestor | Current Category (`lastPath`) |
 | :------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ | :---- | :---------------- | :---------------------------- |
@@ -36,11 +36,13 @@ Category objects require `path`, which is a list of primary titles of categories
 
 ***
 
-#### `titles` or `sharedTitle`
+### `titles` or `sharedTitle`
 
 Categories also must contain either `titles` or `sharedTitle`:
 
-* `titles` is a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this title is primary. An example of the titles list on the `Index` of `Bamidbar` can be found below:
+`titles` refers to a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this is a primary title. 
+
+See below for an example of the titles list on the `Index` of `Bamidbar`: 
 
 ```
 [
