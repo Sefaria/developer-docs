@@ -1,6 +1,6 @@
 ---
 title: Categories
-excerpt: Categorization of texts in the Sefaria library.
+excerpt: Learn about how texts are categorized in the Sefaria Library.
 deprecated: false
 hidden: false
 metadata:
@@ -14,11 +14,11 @@ next:
       slug: getting-started
       title: Getting Started With The Sefaria API
 ---
-All texts at Sefaria are sorted into categories. When interacting with [Sefaria.org](https://sefaria.org), one immediately sees the fourteen highest level categories, and uses those to peruse the library. Categories are first-class objects at Sefaria, and can be retrieved via the Categories API. 
+All texts at Sefaria are sorted into categories. The 14 highest-level categories are visible on the Sefaria Library homepage ([Sefaria.org](https://sefaria.org)). These include Tanakh, Talmud, Mishnah, and more, and can be used to navigate the digital stacks. In the Sefaria database, categories are first-class objects. They can be retrieved by using the Categories API.
 
-Categories are present on the `Index` of a text, and are a requirement for `Index` creation. For example, the `Index` of `Genesis`has a category of `Torah`. The `Torah` category is a child of the `Tanakh` highest level category, so the full category for `Genesis` would look like `["Tanakh", "Torah"]`. 
+Categories are present on the `Index` of a text, and are a requirement for `Index` creation. For example, the `Index` of `Genesis`has a category of `Torah`. The `Torah` category is a child of the `Tanakh` (a highest-level category), so the full category for `Genesis` would appear: `["Tanakh", "Torah"]`.
 
-To learn more about the Sefaria `Index`, see [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria) or [the Index API](ref:get_api-v2-raw-index-index-title). 
+To learn more about the Sefaria `Index`, see [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria) or [the Index API](ref:get_api-v2-raw-index-index-title).
 
 ## Structure of the Category Object
 
@@ -26,7 +26,7 @@ To learn more about the Sefaria `Index`, see [The Structure of a Book on Sefaria
 
 #### `path`
 
-Category objects require `path`, which is a list of primary titles of categories that form the path of ancestors to this one.  The current category's title is included in the path. The path is stored in a list, with the highest level ancestor at position 0, and the current category's title at the end of the list. 
+Category objects require `path`, which is a list of primary titles of categories that form the path of ancestors to this one.  The current category's title is included in the path. The path is stored in a list, with the highest level ancestor at position 0, and the current category's title at the end of the list.
 
 | Category                                                                                                             | Full Path of the Category Object                                                                              | Depth | Highest  Ancestor | Current Category (`lastPath`) |
 | :------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ | :---- | :---------------- | :---------------------------- |
@@ -40,7 +40,7 @@ Category objects require `path`, which is a list of primary titles of categories
 
 Categories also must contain either `titles` or `sharedTitle`:
 
-* `titles` is a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this title is primary. An example of the titles list on the `Index` of `Bamidbar` can be found below: 
+* `titles` is a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this title is primary. An example of the titles list on the `Index` of `Bamidbar` can be found below:
 
 ```
 [
@@ -57,13 +57,13 @@ Categories also must contain either `titles` or `sharedTitle`:
 ]
 ```
 
-* `sharedTitle`: a string key for an existing `Term` object. A `Term` is a shared title block which can be used across multiple `Index` objects and `Category` objects. **Note:** This Term must exist before attempting to create the category. 
+* `sharedTitle`: a string key for an existing `Term` object. A `Term` is a shared title block which can be used across multiple `Index` objects and `Category` objects. **Note:** This Term must exist before attempting to create the category.
 
 ### Derived Attributes:
 
 #### `lastPath`
 
-`lastPath` is derived from the `path` attribute, and doesn't need to be specified on object creation. This attribute contains the title of the current category, and is represented by the last string in the path list. 
+`lastPath` is derived from the `path` attribute, and doesn't need to be specified on object creation. This attribute contains the title of the current category, and is represented by the last string in the path list.
 
 #### `depth`
 
@@ -72,7 +72,7 @@ Categories also must contain either `titles` or `sharedTitle`:
 ### Optional Attributes
 
 * `enDesc`: An English language description of the category.
-* `heDesc`: A Hebrew language description of the category. 
+* `heDesc`: A Hebrew language description of the category.
 * `isPrimary`: A boolean flag.  When `True`, this category won't be nested within another, but will have its own page. An example of this is the Mishnah category, which you can see [here](https://sefaria.org/texts/Mishnah)
 * `searchRoot`: A string.  When present, this category will be moved within the specified root category, in the context of search filters.
 
