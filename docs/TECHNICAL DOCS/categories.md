@@ -61,22 +61,22 @@ See below for an example of the titles list on the `Index` of `Bamidbar`:
 
 `sharedTitle` refers to a string key for an existing `Term` object. A `Term` is a shared title block, which can be used across multiple `Index` objects and `Category` objects. Please note: This Term **must** exist before attempting to create the category.
 
-### Derived Attributes:
+## Derived Attributes
 
-#### `lastPath`
+### `lastPath`
 
-`lastPath` is derived from the `path` attribute, and doesn't need to be specified on object creation. This attribute contains the title of the current category, and is represented by the last string in the path list.
+`lastPath` is derived from the `path` attribute. It does not need to be specified on object creation. This attribute contains the title of the current category, and is represented by the last string in the path list.
 
-#### `depth`
+### `depth`
 
-`depth` is derived from the `path` attribute, and doesn't need to be specified on object creation.
+`depth` is derived from the `path` attribute. It also does not need to be specified on object creation.
 
-### Optional Attributes
+## Optional Attributes
 
-* `enDesc`: An English language description of the category.
-* `heDesc`: A Hebrew language description of the category.
-* `isPrimary`: A boolean flag.  When `True`, this category won't be nested within another, but will have its own page. An example of this is the Mishnah category, which you can see [here](https://sefaria.org/texts/Mishnah)
-* `searchRoot`: A string.  When present, this category will be moved within the specified root category, in the context of search filters.
+* `enDesc`: An English-language description of the category
+* `heDesc`: A Hebrew-language description of the category
+* `isPrimary`: A boolean flag, which, when `True`, means that this category won't be nested within another, but will have its own page. For example, the Mishnah category, which you can see [here](https://sefaria.org/texts/Mishnah), has its own page in the Sefaria Library because it is a primary category.
+* `searchRoot`: A string, which, when present, means that this category will be moved within the specified root category, in the context of search filters.
 
 ## Example Category Objects
 
