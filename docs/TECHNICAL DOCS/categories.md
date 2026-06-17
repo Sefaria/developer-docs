@@ -59,7 +59,7 @@ See below for an example of the titles list on the `Index` of `Bamidbar`:
 ]
 ```
 
-* `sharedTitle`: a string key for an existing `Term` object. A `Term` is a shared title block which can be used across multiple `Index` objects and `Category` objects. **Note:** This Term must exist before attempting to create the category.
+`sharedTitle` refers to a string key for an existing `Term` object. A `Term` is a shared title block, which can be used across multiple `Index` objects and `Category` objects. Please note: This Term **must** exist before attempting to create the category.
 
 ### Derived Attributes:
 
