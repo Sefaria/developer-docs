@@ -145,6 +145,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Daily Daf Tracker](https://mattpolanieckidev.github.io/dailydaf/) - AI-powered platform where users can ask questions about daily pages of Talmud
 * [Jew and A](https://seph-efd35.web.app/) - Presents questions with answers from the Jewish library.
 * [Shulert](https://www.shulert.org/) - The ultimate app dedicated to organizing and enhancing your davening experience.
+* [Sefaria Discord Bot with French Support](https://github.com/gchek/sefaria-discord-bot) - A multilingual Discord bot that lets users ask questions about the Tanakh and broader Jewish textual tradition in English, Hebrew, or French, drawing on Sefaria's library including its French translations.
 * [T'Feeling](https://tfeeling.netlify.app/) - Explores the connections between tefillah (prayer) and emotions.
 * [TorahBot for Mi Yodea](https://www.reddit.com/r/Judaism/comments/53wa47/introducing_torahbot/) - Cite sources and brings texts automatically into Mi Yodea.
 * [Torah Scroll](http://www.scrolltorah.com/) - An online forum that brings Torah texts and community discussion together in one space for collaborative Jewish learning.
