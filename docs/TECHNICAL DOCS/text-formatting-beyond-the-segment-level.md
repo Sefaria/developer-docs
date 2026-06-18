@@ -1,8 +1,9 @@
 ---
 title: Formatting within Sefaria Texts
 excerpt: >-
-  HTML supported by Sefaria for in-line text formatting, footnotes,
-  commentaries, and other emphasis.
+  Learn more about the HTML supported by Sefaria, used for in-line text
+  formatting, as well as adding footnotes, commentaries, and other in-text
+  emphasis.
 deprecated: false
 hidden: false
 metadata:
@@ -16,34 +17,38 @@ next:
       slug: text-references
       title: Text References
 ---
-On occasion, it becomes necessary to convey information about a specific word or location within a segment. A common example is text formatting. The structure we outlined in [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria) lacks a built-in method for indicating that certain words require distinct formatting.
+At times, texts in the Sefaria Library require an indication of a specific word or location within a larger segment of text. For example, a word or section of text may have specific formatting, but the structure outlined in [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria) lacks a built-in method for this indication.
 
-A common solution is to use html/xml tags within a segment. A major drawback of this is that the data within these tags is stored in the specific version of the text, as opposed to on the index, which provides a universal structure for all versions of the text. Unfortunately, this is the best method we currently have for including sub-segment level data.
+A common solution is to use HTML/XML tags within a segment, but this approach comes with a major drawback: Data within these tags is stored in the specific version of the text rather than in the index. If the data were stored in the index, it would provide a universal structure for all versions of the text. Unfortunately, this is the best method we currently have for including sub-segment level data. Below are a few examples of this type of tagging.
 
 ## Text Formatting
 
-Formatting text is relatively straightforward. One must only wrap the text that is to be formatted in an appropriate html tag. So, if one wishes to mark a word as bold, he or she would simply wrap it in a `<b>` tag. This is commonly used in commentaries that start off with a quote from the text they are commenting on (דיבור המתחיל).
+Formatting a text is a simple, single-step process. To do so, wrap the relevant text in an appropriate HTML tag. For example, to mark a word as bold, wrap it in a `<b>` tag. This approach is commonly used in commentaries that open with a quote from the text being commented on (_dibbur hamatkhil_, דיבור המתחיל).
 
 ## Footnotes
 
-Footnotes contain two parts - a marker (usually a number) and text. Footnotes can be added to text using a `<sup class="footnote-marker">` tag for the marker and an `<i class="footnote">` tag for the text. An example of a segment with a footnote:
+Footnotes contain two parts: (a) a marker, which is usually a number, and (b) text. Footnotes can be added to a text using a `<sup class="footnote-marker">` tag for the marker and an `<i class="footnote">` tag for the text. 
+
+For example, this segment contains a footnote:
 
 `The main text is here <sup class="footnote-marker">1</sup><i class="footnote">The text inside the footnote</i>and the main text continues here.`
 
-For an example of a footnote on Sefaria, see the asterisk in the first verse of Genesis in [this version](https://www.sefaria.org/Genesis.1.1?ven=The_Contemporary_Torah,_Jewish_Publication_Society,_2006\&lang=bi\&aliyot=0). 
+To see how a footnote appears in the Sefaria Library, see the asterisk in the first verse of the book of Genesis in [this version](https://www.sefaria.org/Genesis.1.1?ven=The_Contemporary_Torah,_Jewish_Publication_Society,_2006\&lang=bi\&aliyot=0).
 
-## Inline Reference
+## Inline References
 
-Sometimes a commentary will refer to a specific word or phrase within another text, but will not quote such a text. In printed books, a marker similar to a footnote can be found. Placing an entire commentary inside the parent text as we did with footnotes is not acceptable. In such a case, we display a small marker within the segment that will become apparent to the user when a commentary that requires such a reference is selected in the sidebar.
+Some commentaries refer to a specific word or phrase within another text, but will not quote the relevant text. In printed books, this may appear as a marker, similar to a footnote. In the Sefaria Library, however, it would not be appropriate to place an entire commentary inside the referenced text, as is done with footnotes. Therefore, inline references are displayed as a small marker within the segment, viewable only when a user has selected a commentary that requires such a reference in the Resource Panel.
 
-Creating such a reference requires data to exist not only within the text segment, but also on the link between the commentator and the parent text. The parent segment will contain an `<i>` tag with the css properties `data-commentator` and `data-order`. The `data-commentator` field must match the `collective_title` of the text (i.e. so for `Rashi on Genesis`, the `data-commentator` would match the `collective_title` of `Rashi`), and `data-order` will usually match the segment number of the linked comment (the exception to this rule is when individual comments are so long that they have their own internal structure - in such cases the section number can be used). In addition, an optional `data-label` can be added. This is an all purpose override of any display logic - whatever `data-label` is set to is what will be displayed.
+Creating an inline reference requires that data exist both within the text segment and in the link between the commentator and the parent text. To achieve this, the parent segment must contain an `<i>` tag with the CSS properties `data-commentator` and `data-order`, and the `data-commentator` field must match the `collective_title` of the text.
 
-The link object requires the field `inline_reference`. The value of `inline_reference` will be a dictionary with keys `data-commentator`, `data-order` and `data-label`(optional) whose values will be identical to what was set in the `<i>` tag in the parent segment.
+For example, in the case of `Rashi on Genesis`, the `data-commentator` field would match the `collective_title` of `Rashi`, and the `data-order` field will usually match the segment number of the linked comment. An exception to this rule is when individual comments are so long that they have their own internal structure, in which case the section number can be used. In addition, an optional `data-label` can be added as an all-purpose override of any display logic. When an optional `data-label`is added, whatever it is set to is what will be displayed.
 
-Parent segment:\
+Please note: The link object requires the field `inline_reference`. The value of `inline_reference` will be a dictionary with keys `data-commentator`, `data-order` and `data-label`(optional) with values that are identical to what was set in the `<i>` tag in the parent segment.
+
+For example, if the parent segment is:
 `Lorem ipsum <i data-commentator="Child" data-order="1"></i>consectetur adipiscing elit.`
 
-Link Object:
+The link object will be:
 
 ```
 {
@@ -56,15 +61,15 @@ Link Object:
 }
 ```
 
-Here as well, the `data-commentator` field must match the `collective_title` of the commentator.
+Here, as well, the `data-commentator` field must match the `collective_title` of the commentator.
 
 ## Allowed HTML Tags and Attributes
 
-Below is a chart of all of the allowed HTML tags in Sefaria texts, with their corresponding attributes (if any exist) and how they are used within the library:
+Below is a chart of all of the allowed HTML tags in Sefaria Library texts, with their corresponding attributes (if any) and the ways in which they are used within the Library:
 
 ### Allowed HTML Tags with Corresponding Attributes
 
-The following is a list of allowed HTML tags that have associated attributes. The table provides insight both into the tags and attributes supported by Sefaria, and how we specifically use them within texts in our library.
+The following is a list of allowed HTML tags with associated attributes. The table provides insight into both the tags and attributes supported by Sefaria and how we use them in the texts in our library.
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -90,30 +95,30 @@ The following is a list of allowed HTML tags that have associated attributes. Th
       </td>
 
       <td>
-        `class`  
+        `class`
 
-        `dir`  
+        `dir`
 
-        `data-overlay`  
+        `data-overlay`
 
-        `data-value`  
+        `data-value`
 
-        `data-commentator`  
+        `data-commentator`
 
-        `data-order`  
+        `data-order`
 
         `data-label`
       </td>
 
       <td>
-        There are three uses of `<i>` tags:\
-        1. **Footnotes**: Uses content internal to the`<i>` tag as explained above.\
-        2. **Commentary Placement**: Uses the `data-commentator`, `data-order` and `data-label` attributes, also explained in the previous section.\
-        3. **Structure Placement**: This indicates page transitions. Uses the `data-overlay` and `data-value` attributes.  
+        There are three uses of `<i>` tags:  
+        1. **Footnotes**: Uses content internal to the`<i>` tag, as explained above.  
+        2. **Commentary Placement**: Uses the `data-commentator`, `data-order` and `data-label` attributes, as explained above.
+        3. **Structure Placement**: Indicates page transitions and uses the `data-overlay` and `data-value` attributes.
 
-        The `class` attribute is used for CSS styling, as is standard.  
+        The `class` attribute is used for CSS styling, as is standard.
 
-        The `dir` attribute is used for indicated text direction inline, so for example `rtl` for a text that is right-to-left, or `ltr` for a text that is left-to-right. 
+        The `dir` attribute is used to indicate text direction inline. For example, `rtl` is used for a text that is read from right to left, and `ltr` is used for a text that is read from left to right.
       </td>
     </tr>
 
@@ -123,15 +128,15 @@ The following is a list of allowed HTML tags that have associated attributes. Th
       </td>
 
       <td>
-        `src`  
+        `src`
 
         `alt`
       </td>
 
       <td>
-        This tag is used for images in text, for example as seen in [Mishnat Eretz Yisrael](https://www.sefaria.org/Mishnat_Eretz_Yisrael_on_Pirkei_Avot.1.1.42?lang=en\&with=all\&lang2=en).  
+        This tag is used for images in text, as seen in [Mishnat Eretz Yisrael](https://www.sefaria.org/Mishnat_Eretz_Yisrael_on_Pirkei_Avot.1.1.42?lang=en\&with=all\&lang2=en).
 
-        `src` is the URL to the image.  
+        `src` is the URL to the image.
 
         `alt` is an alt-text for the image.
       </td>
@@ -147,7 +152,7 @@ The following is a list of allowed HTML tags that have associated attributes. Th
       </td>
 
       <td>
-        This tag is used for footnotes. For more on footnotes see the section above. 
+        This tag is used for footnotes. For more on footnotes see above.
       </td>
     </tr>
 
@@ -157,13 +162,13 @@ The following is a list of allowed HTML tags that have associated attributes. Th
       </td>
 
       <td>
-        `class`  
+        `class`
 
         `dir`
       </td>
 
       <td>
-        This tag is used inline for text when specific CSS styling (or direction) needs to be applied to a specific sub-segment of the text. 
+        This tag is used inline for text when specific CSS styling (or direction) needs to be applied to a specific sub-segment of the text.
       </td>
     </tr>
 
@@ -173,28 +178,28 @@ The following is a list of allowed HTML tags that have associated attributes. Th
       </td>
 
       <td>
-        `dir`  
+        `dir`
 
-        `class`  
+        `class`
 
-        `href`  
+        `href`
 
-        `data-ref`  
+        `data-ref`
 
-        `data-ven`  
+        `data-ven`
 
-        `data-vhe`  
+        `data-vhe`
 
         `data-scroll-link`
       </td>
 
       <td>
-        This tag is used for links featured within a version of the text. The Sefaria-specific attributes will be detailed below:  
+        This tag is used for links featured within a version of the text. The attributes specific to Sefaria are as followed:
 
-        `data-ref`- A way to refer to the `Ref` of the given text inline\
-        `data-ven` - A way to refer to the English version of a text inline\
-        `data-vhe` - A way to refer to the Hebrew version of a text inline\
-        `data-scroll-link`- A way to contain a link within the same book, and upon clicking, scroll to the new segment of the text instead of opening the text in a new panel.
+        `data-ref`: A way to refer to the `Ref` of the given text inline  
+        `data-ven`: A way to refer to the English version of a text inline  
+        `data-vhe`: A way to refer to the Hebrew version of a text inline  
+        `data-scroll-link`: A way to contain a link within the same book, and, upon clicking, scroll to the new segment of the text instead of opening the text in a new panel.
       </td>
     </tr>
   </tbody>
@@ -202,15 +207,17 @@ The following is a list of allowed HTML tags that have associated attributes. Th
 
 ### Allowed HTML Tags
 
-The following tags are allowed on Sefaria, and do not have any supported attributes associated with them. 
+The following tags are allowed on Sefaria, and do not have any supported attributes associated with them.
 
-| Tag        | Use in Sefaria Texts                                                                                                                                                                                                                                      |
-| :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<b>`      | This tag is used to bold a segment of the text, such as in the above example of emphasizing a Dibbur HaMatchil.                                                                                                                                           |
-| `<br>`     | Line breaks in a text. Sefaria does not support use of `<p>` within a version of a text.                                                                                                                                                                  |
-| `<strong>` | Another way of bolding portions of a text, present in some versions.                                                                                                                                                                                      |
-| `<em>`     | Another way of italicizing portions of a text, present in some versions.                                                                                                                                                                                  |
-| `<sub>`    | Subscripts.                                                                                                                                                                                                                                               |
-| `<u>`      | An outdated tag for underlining a portion of the text. Modern web development encourages the use of CSS for all text styling. This tag is supported, since it might be present in old digitized versions of Jewish texts inherited by Sefaria.            |
-| `<big>`    | An outdated tag for increasing the size of a portion of the text. Modern web development encourages the use of CSS for all text styling. This tag is supported, since it might be present in old digitized versions of Jewish texts inherited by Sefaria. |
-| `<small>`  | An outdated tag for decreasing the size of a portion of the text. Modern web development encourages the use of CSS for all text styling. This tag is supported, since it might be present in old digitized versions of Jewish texts inherited by Sefaria. |
+| Tag        | Use in Sefaria Texts                                                                                                                                                                                                                                                    |
+| :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<b>`      | This tag is used to mark a segment of the text as bold, such as in the above example of emphasizing a _dibbur hamatkhil_.                                                                                                                                               |
+| `<br>`     | This tag is used to create line breaks in a text. Sefaria does not support use of `<p>` within a version of a text.                                                                                                                                                     |
+| `<strong>` | This tag provides another way of bolding sections of a text, present in some versions.                                                                                                                                                                                  |
+| `<em>`     | This tag provides another way of italicizing sections of a text, present in some versions.                                                                                                                                                                              |
+| `<sub>`    | This tag provides a way to include subscripts.                                                                                                                                                                                                                          |
+| `<u>`      | This is an outdated tag, used for underlining a portion of the text. Modern web development encourages the use of CSS for all text styling. This tag is supported, since it might be present in old digitized versions of Jewish texts inherited by Sefaria.            |
+| `<big>`    | This is an outdated tag, used for increasing the size of a portion of the text. Modern web development encourages the use of CSS for all text styling. This tag is supported, since it might be present in old digitized versions of Jewish texts inherited by Sefaria. |
+| `<small>`  | This is an outdated tag, used for decreasing the size of a portion of the text. Modern web development encourages the use of CSS for all text styling. This tag is supported, since it might be present in old digitized versions of Jewish texts inherited by Sefaria. |
+
+<br />
