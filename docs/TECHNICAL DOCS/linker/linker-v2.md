@@ -1,6 +1,8 @@
 ---
-title: Embed Linker v2 on Your Site
-excerpt: ''
+title: Embed Linker v2 In Your Site
+excerpt: >-
+  Learn how to embed Sefaria's powerful citation linking tool into your
+  website. 
 deprecated: true
 hidden: false
 metadata:
@@ -10,11 +12,11 @@ metadata:
 next:
   description: ''
 ---
-> **Note:** [Linker v3](https://developers.sefaria.org/update/docs/linker-v3) offers advantages for both Hebrew and English content. It decreases incorrect links and catches many more types of citations, and is the default. 
+> **Please Note:** [Linker v3](https://developers.sefaria.org/update/docs/linker-v3) offers advantages for both Hebrew and English content by decreasing incorrect links and catching many more types of citations. Currently, Linker v3 is the default version of this tool.
 
-## Embed Code
+## Embedding Code
 
-Place this code on your web page, just before the `</body>` tag. These lines will work for a static HTML page. If your site dynamically loads content after the page loads (e.g. Single Page Applications) see [here](#dynamic-sites)
+In order to embed Linker v2 in your site, place this code on your web page, just before the `</body>` tag. These lines of code will work for a static HTML page. If your site dynamically loads content after the page loads (e.g., Single Page Applications), see [here](#dynamic-sites)
 
 ```
 	<script type="text/javascript" charset="utf-8" src="https://www.sefaria.org/linker.js"></script>
@@ -23,33 +25,33 @@ Place this code on your web page, just before the `</body>` tag. These lines wil
 	</script>
 ```
 
-## Options
+## Additional Options
 
-Options which can change the behavior of the plugin can be passed in an object to the call to`sefaria.link()`. Here are some available options:
+Options that change the behavior of the plugin can be passed in an object to the call to`sefaria.link()`. Here are some available options:
 
 ### `selector`
 
-The `selector` option is used to specify which elements should be checked for references.  The value of selector is a string - a CSS selector.  You can specify an `#id , a .class` , or any other CSS selector.
+The `selector` option specifies which elements should be checked for references.  The value of the selector is a string — a CSS selector.  You can specify a`#id`, a `.class`, or any other CSS selector.
 
-If a selector is not specified, all of the textual content within the `<body>` tag is checked for links.
+If a selector is not specified, all of the textual content within the `<body>` tag will be checked for links.
 
 ### `mode`
 
-The `mode` option affects how the found references behave.  If not specified, the default is "popup-click" mode.
+The `mode` option affects how the any references that are found will behave.  If not specified, the default is "pop-up-click" mode.
 
 The value of `mode` is one of the following strings:
 
-* "popup-click" - when the the user clicks on a reference, a popup is displayed with the textual content.  Within the popup is a link to Sefaria.
+* "pop-up-click": When a user clicks on a reference, a pop-up box opens and displays the relevant textual content and a link to the Sefaria Library.
 
-* "link" - The references are turned into links, which open in a new browser tab when clicked.  There is no popup with textual content.
+* "link": In this case, any references are turned into links, which open in a new browser tab when clicked, and no pop-up box with textual content appears.
 
 ### `contentLang`
 
-Sets the language used to display the textual content in the popup. Options are `bilingual`, `english`, and `hebrew`. The default value is `bilingual`.
+This specifies the language used to display the text in the pop-up box. Options are `bilingual`, `english`, and `hebrew`. The default value is `bilingual`.
 
 ### `interfaceLang`
 
-Sets the language of the popup interface which controls the text in the bottom bar, as well as the orientation (left to right or right to left). Options are `english` or `hebrew`. The default value is `english`.
+This specifies the language of the pop-up interface, which controls both the text in the bottom bar and its orientation (left-to-right or right-to-left). Options are `english` or `hebrew`. The default value is `english`.
 
 ### `excludeFromLinking`
 
