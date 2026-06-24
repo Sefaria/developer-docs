@@ -1,6 +1,8 @@
 ---
 title: Additional API Endpoints
-excerpt: ''
+excerpt: >-
+  Learn more about various API endpoints that are not yet listed in Sefaria's
+  API playground.
 deprecated: false
 hidden: false
 metadata:
@@ -14,7 +16,7 @@ next:
       slug: search-api
       title: 'Search API: Elastic Search Proxy'
 ---
-The Sefaria APIs allow live access to Sefaria's structured database of Jewish texts and their interconnections. It is designed to make getting up and running with a new web or mobile app as simple as possible. If you want to run your own database, please don't use this API to grab our data; instead, you can download a complete dump of our data on [GitHub](https://github.com/Sefaria/Sefaria-Project).
+The Sefaria API provides ongoing access to Sefaria's structured database of Jewish texts and their interconnections. It is designed to make it as simple as possible for anyone to start building a new web or mobile app using our data and code. Please note that in order to run your own database, it's best to download a complete dump of our data on [GitHub](https://github.com/Sefaria/Sefaria-Project) instead of using the API to grab Sefaria's data. 
 
 To learn more about our API, check out our [API Reference](https://developers.sefaria.org/reference/getting-started). There you can find documentation and playgrounds for our most essential API endpoints.
 
