@@ -1,6 +1,6 @@
 ---
-title: Elastic Search Proxy API
-excerpt: Understanding the Sefaria proxy API used to query the ElasticSearch API.
+title: ElasticSearch Proxy API
+excerpt: Understand how to use the Sefaria proxy API to query the ElasticSearch API.
 deprecated: false
 hidden: false
 metadata:
@@ -14,9 +14,9 @@ next:
       slug: shape-api
       title: Shape API
 ---
-For the simpler version of this API, see [Search API](doc:search-api). 
+For the simpler version of this API, see [Search API](doc:search-api).
 
-The API endpoint in this article serves as a proxy for the ElasticSearch API, which can be fairly complicated.
+The API endpoint in this article serves as a proxy for the ElasticSearch API, which can be fairly complicated to use.
 
 The search API sends a query to Sefaria's search engine and returns results. Note that our search engine is built on ElasticSearch. The current version of ElasticSearch that we are using is 8.8. To read the complete documentation of their API, see the [full documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html).
 
@@ -30,19 +30,19 @@ We expose one endpoint of the ElasticSearch API:
 
 The `index` path parameter can be either `text` or `sheet`. (**Note:** The `index` query parameter is specific to ES, and completely unrelated to the Sefaria-specific concept of an `Index`).
 
-* `text` - Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library. 
+* `text` - Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library.
 
-* `sheet` - Use this query parameter to query the source sheets hosted by Sefaria. For each match, the `title` and the `content` is returned. The `title` is the title of the source sheet, and the `content` is a string concatenation of all of the sources and text present on the sheet. 
+* `sheet` - Use this query parameter to query the source sheets hosted by Sefaria. For each match, the `title` and the `content` is returned. The `title` is the title of the source sheet, and the `content` is a string concatenation of all of the sources and text present on the sheet.
 
 ## Making a POST Request
 
 ### The Header of the Request
 
-It is important to set the field `Content-Type: application/json` in the header of the POST request when querying the search database. 
+It is important to set the field `Content-Type: application/json` in the header of the POST request when querying the search database.
 
 ### The Body of the Request
 
-When sending the POST request, the body must be sent in JSON. See some example body JSON queries below: 
+When sending the POST request, the body must be sent in JSON. See some example body JSON queries below:
 
 #### Example 1: Query `text` for Exact Text Results
 
@@ -177,7 +177,7 @@ Ranking is based on a variation of the [PageRank](https://en.wikipedia.org/wiki/
 
 #### Example 4: Query `text` for a Specific Book in the Sefaria Library
 
-Using the `filter` field, one can pass an object to `bool` `should` containing a list of regular expressions that should be matched. In the case below, the regular expression was written to filter all results to a path `Mishnah/Seder Zeraim/Mishnah Kilayim`, thus limiting the returned documents to segments from `Mishnah Kilayim`. 
+Using the `filter` field, one can pass an object to `bool` `should` containing a list of regular expressions that should be matched. In the case below, the regular expression was written to filter all results to a path `Mishnah/Seder Zeraim/Mishnah Kilayim`, thus limiting the returned documents to segments from `Mishnah Kilayim`.
 
 ```
 {
@@ -234,7 +234,7 @@ Using the `filter` field, one can pass an object to `bool` `should` containing a
 
 #### Example 5: Query `sheet` for a Specific Term
 
-Unlike the four previous examples which query `text`, this type of body is sent when querying `sheet` (i.e. `api/search/sheet/_search`. The primary difference here is that the `sort` field is missing, since those sort parameters don't exist on sheets. 
+Unlike the four previous examples which query `text`, this type of body is sent when querying `sheet` (i.e. `api/search/sheet/_search`. The primary difference here is that the `sort` field is missing, since those sort parameters don't exist on sheets.
 
 ```
 {
@@ -267,7 +267,7 @@ Unlike the four previous examples which query `text`, this type of body is sent 
 
 ### Returned JSON for `text` Queries
 
-Here is an example of what is returned when querying `text`, i.e. making a POST request to [sefaria.org/api/search/text/\_search](sefaria.org/api/search/text/_search). 
+Here is an example of what is returned when querying `text`, i.e. making a POST request to [sefaria.org/api/search/text/_search](sefaria.org/api/search/text/_search).
 
 ```
 {
@@ -322,7 +322,7 @@ Here is an example of what is returned when querying `text`, i.e. making a POST 
 }
 ```
 
-Below is a zoomed-in view of some of the **most critical** fields  within the returned document for a query to `text` or `sheet`. You'll find these fields for each document match, which can be found within the the `hits` field in the `hits` array, under the `_source` field on each returned document: 
+Below is a zoomed-in view of some of the **most critical** fields  within the returned document for a query to `text` or `sheet`. You'll find these fields for each document match, which can be found within the the `hits` field in the `hits` array, under the `_source` field on each returned document:
 
 ```
   {
