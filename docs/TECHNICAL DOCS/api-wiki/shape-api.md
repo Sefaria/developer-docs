@@ -1,6 +1,6 @@
 ---
 title: Shape API
-excerpt: ''
+excerpt: Learn more about how to use the Shape API.
 deprecated: false
 hidden: true
 metadata:
@@ -16,7 +16,7 @@ next:
 ---
 # Shape API
 
-The shape API allows one to retrieve information about the shape of an `Index` on Sefaria. The shape refers to some basic statistics about the `Index`- most prominently the number of chapters and segments per chapter. 
+The shape API allows one to retrieve information about the shape of an `Index` on Sefaria. The shape refers to some basic statistics about the `Index`, most prominently the number of chapters and segments per chapter.
 
 ## GET /api/shape/:title
 
@@ -32,7 +32,7 @@ The shape API allows one to retrieve information about the shape of an `Index` o
 
 ### Query Parameters
 
-The following two query parameters can be passed in calls to the Shape API to further filter results. 
+The following two query parameters can be passed in calls to the Shape API to further filter results.
 
 <Table align={["left","left","left","left"]}>
   <thead>
@@ -70,7 +70,7 @@ The following two query parameters can be passed in calls to the Shape API to fu
       </td>
 
       <td>
-        The `depth` parameter in the query string indicates how many levels in the category tree to descend.\
+        The `depth` parameter in the query string indicates how many levels in the category tree to descend.  
         If `depth=0`is passed, then the returned JSON descends to end of tree.
       </td>
     </tr>
@@ -89,7 +89,7 @@ The following two query parameters can be passed in calls to the Shape API to fu
       </td>
 
       <td>
-        The `dependents` parameter, if true, includes dependent texts.  By default, they are filtered out.
+        The `dependents` parameter, if true, includes dependent texts.  These are filtered out by default.
       </td>
     </tr>
   </tbody>
@@ -99,7 +99,7 @@ The following two query parameters can be passed in calls to the Shape API to fu
 
 #### Simple Texts
 
-For simple texts, the response returns a dict with keys that contains the following fields:
+For simple texts, the response returns a dict with keys that contain the following fields:
 
 ```
 {
@@ -112,7 +112,7 @@ For simple texts, the response returns a dict with keys that contains the follow
 }
 ```
 
-Sample response for `sefaria.org/api/shape/Jonah`:
+Below is an example of a response for `sefaria.org/api/shape/Jonah`:
 
 ```
 [
@@ -135,9 +135,9 @@ Sample response for `sefaria.org/api/shape/Jonah`:
 
 #### Complex Texts
 
-For complex texts or categories, the Shape API will return a list of dicts for each text within that category or text. 
+For complex texts or categories, the Shape API will return a list of dicts for each text within that category or text.
 
-Here is a snippet of what is returned when querying the Shape API for the category `Liturgy`. To see the full response, [try the full query here](https://www.sefaria.org/api/shape/Liturgy). 
+Here is a snippet of what is returned when querying the Shape API for the category `Liturgy`. To see the full response, [try the full query here](https://www.sefaria.org/api/shape/Liturgy).
 
 ```
 [
