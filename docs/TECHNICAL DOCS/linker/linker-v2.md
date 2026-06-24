@@ -55,11 +55,11 @@ This specifies the language of the pop-up interface, which controls both the tex
 
 ### `excludeFromLinking`
 
-Sets a CSS selector that defines elements on the page that you do _not_ want to be linked. This may be useful, for example, if you have page headers where links or popups could be distracting. Anything within an existing `<a>` tag will be excluded by default. Citations that are found but excluded are still tracked for usage in the Web Pages section on Sefaria. The value of the parameter is a string which is any valid CSS selector.
+This sets a CSS selector that selects elements on the page that you do _not_ want linked. This may be useful, for example, if you have page headers where links or pop-ups may be distracting. Anything within an existing `<a>` tag will be excluded by default. Citations that are found but excluded are still tracked for usage in the Web Pages section in the Sefaria Library, a panel that links Library users to sites across the web that reference a specific text. The value of the parameter is a string, which is any valid CSS selector.
 
 ### `excludeFromTracking`
 
-Sets a CSS selector that defines elements on the page that you do _not_ want tracked to be displayed on the Web Pages section on Sefaria. This may be useful if you have recurring citations on your page that are not specifically relevant to that page in particular. For example, a widget that always shows today's daf in Daf Yomi. The value of the parameter is a string which is any valid CSS selector.
+This sets a CSS selector that defines elements on the page that you do _not_ want tracked to appear in the Web Pages section in the Sefaria Library (described above). This may be useful if you have recurring citations on your page that are not specifically relevant to that page in particular. For example, a widget that always shows today's page of Talmud in the ongoing cycle of Daf Yomi study. The value of the parameter is a string, which is any valid CSS selector.
 
 ### `quotationOnly`
 
