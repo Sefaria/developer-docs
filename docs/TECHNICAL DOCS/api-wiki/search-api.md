@@ -16,33 +16,31 @@ next:
 ---
 For the simpler version of this API, see [Search API](doc:search-api).
 
-The API endpoint in this article serves as a proxy for the ElasticSearch API, which can be fairly complicated to use.
+The API endpoint in this article serves as a proxy for the ElasticSearch (ES) API, which can be fairly complicated to use. The search API sends a query to Sefaria's search engine and returns results. Our search engine is built on ElasticSearch, and currently uses version 8.8. You can read the complete documentation of ElasticSearch's API [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html).
 
-The search API sends a query to Sefaria's search engine and returns results. Note that our search engine is built on ElasticSearch. The current version of ElasticSearch that we are using is 8.8. To read the complete documentation of their API, see the [full documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html).
-
-We expose one endpoint of the ElasticSearch API:
-
-`/api/search/:index/\_search`
+We expose one endpoint of the ElasticSearch API:`/api/search/:index/\_search`
 
 ***
 
 # POST `/api/search/:index/\_search`
 
-The `index` path parameter can be either `text` or `sheet`. (**Note:** The `index` query parameter is specific to ES, and completely unrelated to the Sefaria-specific concept of an `Index`).
+The `index` path parameter can be either `text` or `sheet`. Please note that the `index` query parameter is specific to ES. Despite their similar names, the ES `index` parameter is completely unrelated to the Sefaria-specific concept of an `Index`.
 
-* `text` - Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library.
+**When to Use Specific Query Parameters:**
 
-* `sheet` - Use this query parameter to query the source sheets hosted by Sefaria. For each match, the `title` and the `content` is returned. The `title` is the title of the source sheet, and the `content` is a string concatenation of all of the sources and text present on the sheet.
+* `text`: Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library.
+
+* `sheet`: Use this query parameter to query the user-created Sheets hosted by Sefaria. Each match returns both the `title` and the `content`.  The `title` is the title of the Sheet, while the `content` is a string concatenation of all of the sources and text present on the Sheet.
 
 ## Making a POST Request
 
-### The Header of the Request
+### The Request's Header
 
 It is important to set the field `Content-Type: application/json` in the header of the POST request when querying the search database.
 
-### The Body of the Request
+### The Request's Body
 
-When sending the POST request, the body must be sent in JSON. See some example body JSON queries below:
+When sending the POST request, the body must be sent in JSON. Below are a few examples of query bodies in JSON: 
 
 #### Example 1: Query `text` for Exact Text Results
 
@@ -87,7 +85,7 @@ When sending the POST request, the body must be sent in JSON. See some example b
 
 #### Example 2: Query `text` Using Broad Analyzer
 
-Query the text database using the field `sefaria-naive-lemmatizer`. This field parses Hebrew queries using heuristics. This involves converting plural to singular, removing prefixes and dealing with מלא and חסר spellings.
+Query the text database using the field `sefaria-naive-lemmatizer`. This field parses Hebrew queries using heuristics. Parsing involves converting plural to singular, removing prefixes, and navigating both spellings that include full vocalization (מלא) and those that include partial vocalization (חסר).
 
 ```
 {
@@ -138,7 +136,7 @@ Query the text database using the field `sefaria-naive-lemmatizer`. This field p
 
 #### Example 3: Query `text` Using Relevance Ranking.
 
-Ranking is based on a variation of the [PageRank](https://en.wikipedia.org/wiki/PageRank) algorithm using our link set plus references cited in source sheets.
+Ranking is based on a variation of the [PageRank](https://en.wikipedia.org/wiki/PageRank) algorithm, which uses our link set along with references cited in Sheets.
 
 ```
 {
@@ -177,7 +175,7 @@ Ranking is based on a variation of the [PageRank](https://en.wikipedia.org/wiki/
 
 #### Example 4: Query `text` for a Specific Book in the Sefaria Library
 
-Using the `filter` field, one can pass an object to `bool` `should` containing a list of regular expressions that should be matched. In the case below, the regular expression was written to filter all results to a path `Mishnah/Seder Zeraim/Mishnah Kilayim`, thus limiting the returned documents to segments from `Mishnah Kilayim`.
+Using the `filter` field, one can pass an object to `bool` `should` containing a list of regular expressions that should be matched. In the case below, the regular expression was written to filter all results to a path `Mishnah/Seder Zeraim/Mishnah Kilayim`. In this way, the returned documents are limited to segments from `Mishnah Kilayim`.
 
 ```
 {
@@ -234,7 +232,7 @@ Using the `filter` field, one can pass an object to `bool` `should` containing a
 
 #### Example 5: Query `sheet` for a Specific Term
 
-Unlike the four previous examples which query `text`, this type of body is sent when querying `sheet` (i.e. `api/search/sheet/_search`. The primary difference here is that the `sort` field is missing, since those sort parameters don't exist on sheets.
+Unlike the four examples above, all of which query `text`, this type of body is sent when querying `sheet` (i.e. `api/search/sheet/_search`. The primary difference here is that the `sort` field is missing, since those sort parameters don't exist on Sheets.
 
 ```
 {
@@ -267,7 +265,7 @@ Unlike the four previous examples which query `text`, this type of body is sent 
 
 ### Returned JSON for `text` Queries
 
-Here is an example of what is returned when querying `text`, i.e. making a POST request to [sefaria.org/api/search/text/_search](sefaria.org/api/search/text/_search).
+Below is an example, showing what is returned when querying `text` (i.e., making a POST request to [sefaria.org/api/search/text/_search](sefaria.org/api/search/text/_search)).
 
 ```
 {
@@ -343,16 +341,16 @@ Below is a zoomed-in view of some of the **most critical** fields  within the re
    }
 ```
 
-An explanation of the most critical fields:
+**The Definitions of the Most Critical Fields:**
 
-* `exact`: Holds content from Sefaria segment. Field is indexed by the `standard` analyzer. Read more about analyzers [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html)
-* `naive_lemmatizer`: Holds content from Sefaria segment. Field is indexed by the `sefaria-naive-lemmatizer` analyzer. This analyzer does basic lemmatization for Hebrew inputs
-* `ref`: The Sefaria reference
-* `lang`: Language of content.
+* `exact`: This field holds content from a Sefaria segment. It is indexed by the `standard` analyzer. You can read more about analyzers [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html).
+* `naive_lemmatizer`: This field holds content from a Sefaria segment. It is indexed by the `sefaria-naive-lemmatizer` analyzer. This analyzer does basic lemmatization for Hebrew inputs.
+* `ref`: This field refers to the Sefaria reference
+* `lang`: This field refers to the language of the content in question.
 
 ### Returned JSON for `sheet` Queries
 
-In the JSON returned for queries to `sheet` (i.e.`api/search/sheet/_search`),  the `content` returned is not a segment of matching text, but rather **the entire contents of the sheet** concatenated into a single string. An example result is below:
+In the JSON returned for queries to `sheet` (i.e.`api/search/sheet/_search`),  the `content` returned is not a segment of matching text, but rather **the entire contents of the Sheet** concatenated into a single string. See the below example for clarification:
 
 ```
 {
