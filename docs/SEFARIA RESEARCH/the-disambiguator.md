@@ -1,5 +1,6 @@
 ---
 title: The Disambiguator
+excerpt: Precise linking improvements through citation disambiguation
 deprecated: false
 hidden: false
 metadata:
