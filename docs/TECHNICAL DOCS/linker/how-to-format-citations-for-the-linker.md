@@ -1,6 +1,8 @@
 ---
 title: How to Format Citations for the Linker
-excerpt: ''
+excerpt: >-
+  Learn about formatting citations to ensure they're recognized by the Sefaria
+  Linker. 
 deprecated: false
 hidden: false
 metadata:
@@ -12,17 +14,17 @@ next:
 ---
 ## Citation Format
 
-We've worked pretty hard to help the linker capture as many references as possible.  In general, if the title is written out in full, followed by the numeric references, it will work well.  Every text on Sefaria can be referenced, but some of them are trickier than others. 
+Sefaria's engineers have endeavored to build the Linker to capture as many references as possible. Generally speaking, if a title is written out in full, followed by the numeric references, the Linker will work well. Every text on Sefaria can be referenced, but some of them are trickier than others.
 
-Going into a bit more detail:
+Please note the following details:
 
-* Punctuation shouldn't be an issue - space, comma, period, and colon in a reference will all be fine. 
+* Punctuation: Standard punctuation (e.g., spaces, commas, periods, and colons) shouldn't inhibit the Linker's recognition capabilities. 
 
-* Dash has special meaning - it indicates a range (see the examples, below.)  Any extra dash will trip us up.  
+* Dash: When using a dash or hyphen, please note that it indicates a range of verses or sections of text (see the examples below.)  Therefore, extra hyphens will cause confusion.
 
-* For each text, we recognize a number of common spelling variants.  For example, for "2 Kings", we'll recognize the titles: Melachim Bet, Melachim II, Second Kings, 2 Kings, II Melachim, Kings II, II Melakhim, and II Kings.  
+* Spelling Variants: The Linker recognizes a number of common spelling variants for texts in the Library.  For example: When citing "2 Kings", we'll recognize the titles Melachim Bet, Melachim II, Second Kings, 2 Kings, II Melachim, Kings II, II Melakhim, and II Kings.
 
-* We'll recognize chapter level and verse level references, as well as ranges, so all of these are valid:
+* Chapter and Verse References: The Linker recognizes both chapter-level and verse-level references, as well as ranges of verses or chapters. Therefore, all of these are valid citations:
 
   * `Second Kings 2`
   * `II Kings, 2:5`
@@ -31,18 +33,19 @@ Going into a bit more detail:
   * `2 Kings 2:3-6`
   * `Melachim II 2:3-3:3`
 
-* Some texts use Talmudic numbering (not just the Talmud); for those, we expect the references in that form.  For example:
+* Some texts use Talmudic numbering (and not just the Talmud). When citing these texts, we expect the references to appear in a talmudic form.  For example:
 
   * `Shabbat 7b`
-  * `Zohar 2, 20b`  (Refers to volume 2, page 20b)
-  * `Rif Shabbat 7b` (Refers to 7b in 'dapei ha Rif')
+  * `Zohar 2, 20b`  (referring to volume 2, page 20b)
+  * `Rif Shabbat 7b` (referring to 7b in _dapei ha Rif_)
 
-* You can make Talmud citations more specific by adding segment numbers matching Sefaria's segmentation of the Talmud. These citations will look like `Shabbat 3b:6`, and can also support ranges like `Shabbat 3b:5-11`. You can find Sefaria's segment numbers in the margins of the text on Sefaria. When you click a segment or highlight a range of segments, you will also see the segments reflected in the page URL. When you have a more specific citation, we'll be able to show users more relevant text in the popup, as the links will point to a more precise location. Precise links are prioritized above more general links in the Web Pages section pointing to your site on Sefaria as well.
+* Specifying Talmudic Citations: Make these more specific by adding segment numbers that match Sefaria's segmentation of the Talmud. These citations will look like `Shabbat 3b:6`. The Linker can also support ranges, like `Shabbat 3b:5-11`. You can find Sefaria's segment numbers in the margins of the text as displayed in the Sefaria Library. When you click a segment or highlight a range of segments, you will also see the segments reflected in the page URL. More specific citations allow the Linker to show users more relevant text in a pop-up, as the links will point to a more precise location. Precise links are also prioritized above more general links in the Web Pages section of the Sefaria Library Resource Panel that points to your site.
 
-When the title is interwoven in the text, the linker will fail to catch the reference.  For example:\
-`Mishnah Taanit 4:3` would work well, but `In the 3rd Mishnah of Taanit, chapter 4` would fail to match.  The general rule: cite completely, and don't mix anything into the citation.  That will work well for most of the core canon - Tanakh, Mishnah, Tosefta, Talmud, Midrash, Zohar, etc. 
+* Interwoven Titles: When a title is spelled out in a literary context, the linker will fail to catch the reference.  For example, `Mishnah Taanit 4:3` would work well, but `In the 3rd Mishnah of Taanit, chapter 4` would not be recognized.  In general, it's best to use complete citations, written explicitly. This will ensure most of the core Jewish canon (Tanakh, Mishnah, Tosefta, Talmud, Midrash, Zohar, etc.) is recognized and linked.
 
-Where it gets trickier is with texts that have a complex structure.  For example, to cite the Four Questions in the Haggadah, this citation would work: `Haggadah, Magid, Four Questions`, as would a number of variants.  However, it is unlikely that a citation like that will occur on its own.  The Mishneh Torah is a similar situation - we record many variants of section names of the Mishneh Torah, but citations are hard to get right without looking at exactly how it is recorded in our system.  A foolproof way of always getting a good reference is to navigate to the text on Sefaria, select the text, and copy the citation from the URL.
+### Trickier Texts
+
+Texts that have a complex structure are more challenging for the Linker to recognize.  For example, when citing the Four Questions of the Haggadah, this citation would work: `Haggadah, Magid, Four Questions`, as would a number of variants. However, it is unlikely that a citation like that will occur on its own. The Mishneh Torah presents a similar situation. While we record many variants of section names in the Mishneh Torah, citations are hard to get right without looking at the precise way in which the text is recorded in the Sefaria Library. In order to ensure you're always getting a correct reference, navigate to the text in the Sefaria Library, select the text in question, and copy the citation as it appears in the URL.
 
 ### Testing Citations
 
