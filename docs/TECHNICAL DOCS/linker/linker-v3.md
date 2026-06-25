@@ -1,8 +1,8 @@
 ---
 title: Embed Linker v3 on Your Site
 excerpt: >-
-  The Sefaria Linker recognizes references on an external web page and links
-  them to the corresponding texts on Sefaria
+  Learn about the Sefaria Linker: A tool that links references on external
+  webpages and links them to corresponding texts in the Sefaria Library.
 deprecated: false
 hidden: false
 metadata:
@@ -12,17 +12,17 @@ metadata:
 next:
   description: ''
 ---
-The Sefaria Linker automatically connects Torah content across the internet to primary sources in our library,                and vice versa. Websites that use the Sefaria Linker give their users direct access on site to any primary sources they cite, allowing curious learners to explore more. The Linker also makes it possible for websites to be automatically linked to from the Sefaria sidebar when our users are exploring texts your site mentions, exposing your site to new learners on Sefaria.
+The Sefaria Linker automatically connects references to Jewish texts on pages across the internet to primary sources in the Sefaria Library, and vice versa. Websites that use the Sefaria Linker give their users direct on-site access to any primary sources they cite. The Linker also automatically links websites to the Sefaria Resource Panel, so Sefaria users exploring texts mentioned on your site see a direct link to the relevant content. In this way, Sefaria users may learn about your site. 
 
 Linker v3 offers advantages for both Hebrew and English content. It decreases incorrect links and catches many more types of citations. For documentation for the previous version, see [Linker v2](doc:linker-v2).
 
 ## Bookmarklet
 
-We don't currently have a Javascript bookmarklet available for Linker v3, although you can easily adapt the bookmarklet linked at the bottom of [this page](http://www.sefaria.org/linker) by following this documentation.
+Currently, there is no Javascript bookmarklet available for Linker v3. That being said, you can easily adapt the bookmarklet linked at the bottom of [this page](http://www.sefaria.org/linker) by following the documentation below.
 
-## Embed Code
+## Embedding Code
 
-Place this code on your web page, just before the `</body>` tag. These lines will work for a static HTML page. If your site dynamically loads content after the page loads (e.g. Single Page Applications) see the note at the bottom for dynamic sites.
+Place this code on your web page, just before the `</body>` tag. These lines will work for a static HTML page. If your site loads content dynamically after the page loads (e.g., Single Page Applications), see the note at the bottom for dynamic sites.
 
 ```
 	<script type="text/javascript" charset="utf-8" src="https://www.sefaria.org/linker.v3.js"></script>
@@ -33,11 +33,11 @@ Place this code on your web page, just before the `</body>` tag. These lines wil
 
 ## Options
 
-Options can be passed to `sefaria.link()` as key-value pairs in an object.  (See examples below)
+Options can be passed to `sefaria.link()` as key-value pairs in an object.  See below for examples of this functionality.
 
 ### `mode`
 
-The `mode` option affects how the found references behave.   If not specified, the default is "link" mode.  This was changed in v3.  Previously, the default was "popup-click". 
+The `mode` option affects how the found references behave.   If not specified, the default is "link" mode.  This was changed in v3.  Previously, the default was "popup-click".
 
 The value of `mode` is one of the following strings:
 
