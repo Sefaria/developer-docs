@@ -126,7 +126,7 @@ Given these candidates, determine the exact segment being referenced — or decl
 
 ## How It Works
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -257,6 +257,8 @@ Given these candidates, determine the exact segment being referenced — or decl
     </tr>
   </tbody>
 </Table>
+
+<Image align="center" src="https://files.readme.io/b984ed51cefba58c98b4189f30bd4f56e73949c7d96939028ac8eba8943fbaa2-image_3.png" />
 
 ## What Changed in Practice
 
