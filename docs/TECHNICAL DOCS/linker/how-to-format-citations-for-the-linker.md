@@ -47,8 +47,8 @@ Please note the following details:
 
 Texts that have a complex structure are more challenging for the Linker to recognize.  For example, when citing the Four Questions of the Haggadah, this citation would work: `Haggadah, Magid, Four Questions`, as would a number of variants. However, it is unlikely that a citation like that will occur on its own. The Mishneh Torah presents a similar situation. While we record many variants of section names in the Mishneh Torah, citations are hard to get right without looking at the precise way in which the text is recorded in the Sefaria Library. In order to ensure you're always getting a correct reference, navigate to the text in the Sefaria Library, select the text in question, and copy the citation as it appears in the URL.
 
-### Testing Citations
+### Tip: Testing Citations With the Sefaria Library Search Bar
 
-If you are trying to create a citation in a way that Sefaria can understand, you can use the Sefaria search bar to test. If you type a recognized citation into the search bar and hit enter, it will navigate directly to the text. If it performs a keyword search instead, the citation was not recognized. As you start typing into the search bar, you can use the autocomplete suggestions to see all of the spelling variations that Sefaria understands, which can help you get to the valid citation.
+If you are trying to create a citation in a way that Sefaria can understand, you can use the Sefaria Library search bar to test it out. For example, if you type a recognized citation into the search bar and press enter, it will navigate directly to the text. If it performs a keyword search instead, the citation was not recognized. As you start typing into the search bar, you can use the autocomplete suggestions to see all of the spelling variations that Sefaria understands, which can help you get to the valid citation.
 
-Alternatively, if you can find the text you are citing in Sefaria, the URL will include its citation as Sefaria understands. You will want to replace `_` with ` `, and `.` with `:`.
+Alternatively, if you can find the text you are citing in Sefaria, the URL will include its citation in a way Sefaria understands. Make sure to replace `_` with ` `, and `.` with `:`.
