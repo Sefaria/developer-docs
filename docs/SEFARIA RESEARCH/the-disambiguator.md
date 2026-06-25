@@ -1,0 +1,293 @@
+---
+title: The Disambiguator
+deprecated: false
+hidden: false
+metadata:
+  robots: index
+---
+# Bringing Redemption to Citations: Building Sefaria's Citation Disambiguator
+
+_The Rabbis taught in their famous statement in [Megillah 15a](https://www.sefaria.org/Megillah.15a.20?lang=he\&with=all\&lang2=he):_
+
+> וְאָמַר רַבִּי אֶלְעָזָר אָמַר רַבִּי חֲנִינָא: כׇּל הָאוֹמֵר דָּבָר בְּשֵׁם אוֹמְרוֹ מֵבִיא גְּאוּלָּה לָעוֹלָם
+
+_"Anyone who says a matter in the name of the one who said it brings redemption to the world."_
+
+This teaching highlights the importance of attribution. On Sefaria, attribution is not merely a scholarly convention. It is one of the primary ways readers navigate the library. Every citation is a potential path from one text to another.
+
+When a learner encounters a citation, they expect a click to take them directly to the source being discussed. But rabbinic citations were written for human readers, not computers. They are often abbreviated, ambiguous, or imprecise in ways that make automatic linking surprisingly difficult.
+
+Over the past several months, we have been working on a citation disambiguator: a system designed to make Sefaria's links more precise by identifying exactly what passage an author intended to reference.
+
+## The Challenge
+
+At first glance, linking citations sounds straightforward. If a commentator cites Jeremiah, link to Jeremiah. If a text cites Nazir, link to Nazir.
+
+**In practice, things are rarely that simple.**
+
+Broadly speaking, we found two recurring problems: overly broad citations and ambiguous citations. Often they appear separately. Sometimes they appear together.
+
+## Problem #1: Citations That Are Too Broad
+
+Many citations identify the correct book or chapter but stop short of the specific passage being discussed.
+
+Consider this example from [Shemot Rabbah](https://www.sefaria.org/Shemot_Rabbah.29.9?lang=he\&with=all\&lang2=he):
+
+> דבר אחר: אנכי ה' אלהיך, הה"ד (עמוס ג): אריה שאג מי לא יירא, וזהו דכתיב **(ירמיה י)**:
+>
+> **מי לא ייראך מלך הגוים כי לך יאתה**
+>
+> אמרו הנביאים לירמיהו: מה ראית לומר מלך הגוים...
+
+The linker correctly identifies the citation as Jeremiah chapter 10.
+
+But a human reader immediately notices that the quoted words:
+
+> מי לא ייראך מלך הגוים
+
+appear specifically in [Jeremiah 10:7](https://www.sefaria.org/Jeremiah.10.7?lang=he):
+
+> **מי לא ייראך מלך הגוים כי לך יאתה כי בכל חכמי הגוים ובכל מלכותם מאין כמוך**
+
+Linking to Jeremiah 10 is technically correct, but linking to Jeremiah 10:7 is much more useful. The challenge is teaching software to make the same inference.
+
+## Problem #2: Citations That Are Ambiguous
+
+Some citations are not merely broad. They are genuinely ambiguous.
+
+Consider this example from [Malbim Beur Hamilot on Isaiah](https://www.sefaria.org/Malbim_Beur_Hamilot_on_Isaiah.26.7.1?lang=he\&with=all\&lang2=he):
+
+> ומגביל לו שם מעגל הנאמר על דרך הסבובי, צדק ומשפט ומישרים כל מעגל טוב,
+>
+> **(שם ב')**
+>
+> מישרים הוא הדרך האמצעי
+
+The highlighted citation simply says:
+
+_"There, chapter 2."_
+
+But where is "there"?
+
+Earlier in the discussion, both Genesis and Proverbs had been mentioned. The linker therefore produces multiple candidates:
+
+* Genesis 2
+* Proverbs 2
+
+A human reader resolves the ambiguity using the surrounding words:
+
+> צדק ומשפט ומישרים
+
+These words closely match [Proverbs 2:9](https://www.sefaria.org/Proverbs.2.9?lang=he):
+
+> **אז תבין צדק ומשפט ומישרים כל מעגל טוב**
+
+The correct destination is therefore Proverbs 2:9, not Genesis 2.
+
+Notice that the key challenge is not simply understanding the citation itself. The citation is only two words long. The challenge is understanding the surrounding discussion well enough to determine what the author meant.
+
+## A Compound Case: Broad and Ambiguous
+
+Some citations contain both problems at once.
+
+In [Ikar Tosafot Yom Tov on Mishnah Terumot](https://www.sefaria.org/Ikar_Tosafot_Yom_Tov_on_Mishnah_Terumot.8.8.1?lang=he\&with=all\&lang2=he), we find:
+
+> אבל כשהם שתי חביות ברשות היחיד אין לטמא שתיהם...
+>
+> דלא ילפינן מסוטה דספק טומאה ברשות היחיד טמא אלא דבר שיכול להיות.
+>
+> ועיין בריש פרק ח' דנזיר
+
+The highlighted citation means:
+
+_"See the beginning of chapter 8 of Nazir."_
+
+**This is not only a broad citation. It is also an ambiguous one.**
+
+First, the system has to determine which Nazir is being cited. Does the author mean Mishnah Nazir, Bavli Nazir, or another text associated with Nazir? Then, after choosing the right work, it still has to determine what "the beginning of chapter 8" refers to more precisely; in this case, the correct resolution is [Nazir 57a:6](https://www.sefaria.org/Nazir.57a.6?lang=he\&with=all\&lang2=he).
+
+A human reader handles these steps together, using both the citation and the surrounding discussion. Software has to make those steps explicit: identify the possible targets, search inside them, compare the surrounding language to candidate passages, and only then decide whether there is enough evidence to create a more precise link.
+
+Together, these examples reveal a common pattern: even after the linker has done the hard work of identifying a citation, determining where that citation should actually lead can require a second layer of reasoning.
+
+## Building a Citation Disambiguator
+
+To address these cases, we built a second-pass system that runs after Sefaria's linker has identified a citation but before the final link is created.
+
+The disambiguator receives:
+
+* The citation span identified by the linker
+* The surrounding text in which the citation appears
+* One or more candidate references produced by the linker
+
+Its job is simple:
+
+Given these candidates, determine the exact segment being referenced — or decline to make a decision if the evidence is insufficient.
+
+## How It Works
+
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Stage
+      </th>
+
+      <th>
+        What Happens
+      </th>
+
+      <th>
+        Why It Matters
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        1. Linker output
+      </td>
+
+      <td>
+        The standard linker identifies a citation span and produces one or more possible refs.
+      </td>
+
+      <td>
+        The disambiguator starts with a bounded problem: refine a broad ref or choose among candidates.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        2. Context window
+      </td>
+
+      <td>
+        The system loads the full citing text, normalizes it, and extracts the words around the citation.
+      </td>
+
+      <td>
+        The surrounding discussion often contains the real clue.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        3. Dicta parallel matching
+      </td>
+
+      <td>
+        The context is sent to Dicta's Parallels API, which looks for close textual matches.
+      </td>
+
+      <td>
+        If the source is quoted or closely paraphrased, Dicta can often find the exact segment.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        4. Dicta review
+      </td>
+
+      <td>
+        If Dicta finds a candidate, the system either accepts high-confidence non-segment matches directly or sends lower-confidence candidates to LLM confirmation.
+      </td>
+
+      <td>
+        This preserves the shortcut for statistically strong Dicta matches while still checking less certain results.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        5. Keyword search fallback
+      </td>
+
+      <td>
+        If Dicta finds no usable candidate, or if the LLM rejects a lower-confidence Dicta candidate, an LLM generates short keyword queries for Sefaria search.
+      </td>
+
+      <td>
+        Search is the fallback path when Dicta does not produce an accepted resolution.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        6. Candidate narrowing
+      </td>
+
+      <td>
+        If more than 25 candidates appear, the system ranks them by word overlap with the citing passage and keeps the strongest candidates.
+      </td>
+
+      <td>
+        This keeps the final LLM decision focused without discarding smaller candidate sets unnecessarily.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        7. LLM selection and confirmation
+      </td>
+
+      <td>
+        A model chooses among remaining candidates when needed and verifies that the citation really points there.
+      </td>
+
+      <td>
+        The system remains conservative: better no link than a confident wrong one.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        8. Save resolution
+      </td>
+
+      <td>
+        If confirmed, Sefaria updates the marked citation and creates the more precise link.
+      </td>
+
+      <td>
+        The learner now lands closer to the text actually being cited.
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+## What Changed in Practice
+
+One of the biggest changes is in Talmud citations. Historically, these links were not very visible to users at the level where Sefaria readers often need them most: the individual Talmud segment.
+
+That is partly because Sefaria's Talmud segmentation follows the Koren-Steinsaltz edition. Older rabbinic authors, of course, did not cite the Talmud according to those modern segment boundaries. They cited a masekhet, a perek, a daf, or an amud. Those links were useful, but they usually stopped at a broader unit of text.
+
+The disambiguator changes that. By comparing the surrounding citation context against candidate passages, it can turn many of those broader Talmud references into links to specific Talmudic segments. In practice, this has produced more than 440,000 Talmud segment resolutions, making a large body of previously broad citations much more directly useful to readers.
+
+## Why Some Matches Can Skip the LLM
+
+Dicta's contribution has been central to this project. Their Parallels API gives the disambiguator a way to detect close textual matches across Jewish texts, which is often the strongest evidence that a broad or ambiguous citation points to a particular segment.
+
+One of the most useful parts of the system is that not every case needs a model call.
+
+When Dicta finds a very strong textual parallel, and that match appears close to the citation itself, the evidence is often strong enough to accept directly.
+
+For example, if a source writes:
+
+> **(ירמיה י)**
+
+and immediately quotes:
+
+> **מי לא ייראך מלך הגוים**
+
+then a close match to [Jeremiah 10:7](https://www.sefaria.org/Jeremiah.10.7?lang=he) is highly convincing.
+
+This is not blind trust in an external API. It is a measured shortcut based on observed patterns. A high-scoring match right next to the citation is much stronger evidence than a similar phrase appearing far away in the passage.
+
+When a reader follows a citation from a midrash to a verse, from a commentary to a sugya, or from one commentator to another, they should arrive at the passage the author actually had in mind.
+
+In a library built from those connections, even a single click matters.
+
+As always, we welcome questions, ideas, and feedback. You can reach us any time at [developers@sefaria.org](mailto:developers@sefaria.org).
