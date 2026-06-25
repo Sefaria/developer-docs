@@ -1,5 +1,6 @@
 ---
-title: Sefaria Research at PyConn 2024
+title: Beyond KMeans - PyCon 2024
+excerpt: Using LLMs to improve text clustering
 deprecated: false
 hidden: false
 metadata:
