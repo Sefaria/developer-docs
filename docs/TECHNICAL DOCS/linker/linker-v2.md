@@ -1,8 +1,8 @@
 ---
 title: Embed Linker v2 In Your Site
 excerpt: >-
-  Learn how to embed Sefaria's powerful citation linking tool into your
-  website. 
+  Learn how to embed version two of Sefaria's powerful citation linking tool
+  into your website. 
 deprecated: true
 hidden: false
 metadata:
@@ -37,11 +37,11 @@ If a selector is not specified, all of the textual content within the `<body>` t
 
 ### `mode`
 
-The `mode` option affects how the any references that are found will behave.  If not specified, the default is "pop-up-click" mode.
+The `mode` option affects how any references found will behave.  If not specified, the default is "pop-up-click" mode.
 
 The value of `mode` is one of the following strings:
 
-* "pop-up-click": When a user clicks on a reference, a pop-up box opens and displays the relevant textual content and a link to the Sefaria Library.
+* "pop-up-click": When a user clicks on a reference, a pop-up box opens and displays the relevant textual content along with a link to the Sefaria Library.
 
 * "link": In this case, any references are turned into links, which open in a new browser tab when clicked, and no pop-up box with textual content appears.
 
@@ -98,7 +98,7 @@ The Linker code searches for citations and creates links once when `sefaria.link
 
 ## Versions
 
-Occasionally, we may update the Linker to provide additional functionality or modify the interface. If you plan on injecting custom styles, you may prefer to use a specific version of the linker. To do so, simply append the version number to the base file name of the linker. e.g. `linker.v2.js`. The unversioned `linker.js` file will always be the most up-to-date.
+Occasionally, we may update the Linker to provide additional functionality or modify the interface. If you plan on injecting custom styles, you may prefer to use a specific version of the linker. To do so, simply append the version number to the base file name of the Linker (e.g., `linker.v2.js`). The unversioned `linker.js` file will always be the most up-to-date.
 
 ## Examples of Calling the Plugin With Options
 
