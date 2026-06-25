@@ -153,7 +153,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 
 ***
 
-### Extensions, API Integrations and GitHub code
+### Extensions and API Integrations
 
 * [Bisl Torah](https://github.com/DaveDushi/bisl-torah)  - A developer-focused tool that surfaces a daily bite-sized Torah learning snippet from the Sefaria Library in a popup beside your terminal while an AI coding agent processes your prompt.
 * [Learn](https://github.com/luvchurchill/learn) - CLI for accessing text from Sefaria in the terminal.
