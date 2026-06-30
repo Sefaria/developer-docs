@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-<br />
+Want to get this quarterly newsletter in your inbox? [Sign up today](https://sefaria.activehosted.com/f/46) for the Sefaria Developer's Digest.
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
