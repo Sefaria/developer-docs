@@ -9,6 +9,8 @@ Want to get this quarterly newsletter in your inbox? [Sign up today](https://sef
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
+**Issue 8 | April 29, 2026 | 12 Iyyar, 5786**
+
 It’s been an exciting few months, as we hear about more and more projects being built with Sefaria’s API or codebase. You can learn about a few recent highlights below — and if you haven’t told us about your Powered by Sefaria project yet, please do! Fill out [this form](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form) to share with our team and [get your project listed](https://developers.sefaria.org/docs/powered-by-sefaria) here.
 
 Now, read on to discover a helpful index of Sefaria’s open-source data, an invitation to take on a coding challenge, and some examples of recent Sefaria-based projects.
