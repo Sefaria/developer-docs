@@ -43,6 +43,10 @@ Recent additions to our ongoing list include:
 * Torah Study Tracker: This personal archive for lifelong Torah learning uses the Sefaria API to log your study, track reviews, and create a visual record of your progress over time
 * Derekh Learning: An AI-powered Jewish study companion that transforms texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources for deeper exploration.
 
-And many more!
+[And many more!](https://developers.sefaria.org/docs/powered-by-sefaria)
+
+# Helpful Links
+
+[Developers on Sefaria](https://developers.sefaria.org/)   |   [Sefaria’s API ](https://developers.sefaria.org/reference/getting-started)  |  [GitHub](https://github.com/Sefaria/Sefaria-Project)   |   [About Sefaria](https://www.sefaria.org/about)
 
 <br />
