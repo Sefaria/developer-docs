@@ -5,7 +5,9 @@ hidden: false
 metadata:
   robots: index
 ---
-Issue 8 | April 29, 2026 | 12 Iyyar, 5786
+<br />
+
+![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
 It’s been an exciting few months, as we hear about more and more projects being built with Sefaria’s API or codebase. You can learn about a few recent highlights below — and if you haven’t told us about your Powered by Sefaria project yet, please do! Fill out [this form](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form) to share with our team and [get your project listed](https://developers.sefaria.org/docs/powered-by-sefaria) here.
 
@@ -21,7 +23,7 @@ Bulk-downloading Sefaria Library data just got way easier! We’ve updated our G
 
 Do you know about DeepWiki? This AI-powered documentation tool indexes open-source repositories and turns them into interactive, searchable documentation. Last summer, an engineer in the Sefaria community used DeepWiki to create an index of Sefaria’s open-source data. You can use this index to understand how different parts of our system connect, explore the data model and API in a hands-on way, and get a clearer view of the underlying architecture and relationships.
 
-[START EXPLORING](https://deepwiki.com/Sefaria/Sefaria-Project) 
+[START EXPLORING](https://deepwiki.com/Sefaria/Sefaria-Project)
 
 ## Help Us Solve the Dictionary Export Puzzle
 
