@@ -1,5 +1,5 @@
 ---
-title: Sefaria-Export, A Data Puzzle and Deep Wiki
+title: Sefaria-Export, A Data Puzzle and Deep Wiki (April 2026, Issue 8)
 deprecated: false
 hidden: true
 metadata:
