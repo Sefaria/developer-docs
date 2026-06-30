@@ -1,5 +1,6 @@
 ---
-title: Async Task API
+title: The Sefaria Linker Async Task API
+excerpt: Learn how to use the Sefaria Linker Async Task API
 deprecated: false
 hidden: false
 metadata:
