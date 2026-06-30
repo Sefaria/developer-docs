@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Want to get this quarterly newsletter in your inbox? [Sign up today](https://sefaria.activehosted.com/f/46) for the Sefaria Developer's Digest.
+https://eitz-harabanim.com/https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546Want to get this quarterly newsletter in your inbox? [Sign up today](https://sefaria.activehosted.com/f/46) for the Sefaria Developer's Digest.
 
 ![](https://files.readme.io/ee0af6a0bec4e5f4a924d030475173f240b368a68075d233d6299f82ff110f93-image.png)
 
@@ -39,9 +39,8 @@ Built something with Sefaria data that isn’t yet featured on the Powered by Se
 
 Recent additions to our ongoing list include:
 
-* Eitz HaRabanim: This project uses Sefaria data to create an interactive tree visualization of Talmudic sages.
-* Torah Study Tracker: This personal archive for lifelong Torah learning uses the Sefaria API to log your study, track reviews, and create a visual record of your progress over time
-* Derekh Learning: An AI-powered Jewish study companion that transforms texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources for deeper exploration.
+* [Eitz HaRabanim](https://eitz-harabanim.com/): This project uses Sefaria data to create an interactive tree visualization of Talmudic sages.
+* [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546): An AI-powered Jewish study companion that transforms texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources for deeper exploration.
 
 [And many more!](https://developers.sefaria.org/docs/powered-by-sefaria)
 
