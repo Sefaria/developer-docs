@@ -33,7 +33,7 @@ Sefaria houses multiple major reference works, including Jastrow’s Dictionary 
 
 Do you have an elegant, user-friendly solution to this dictionary puzzle? Maybe a script to process the data dump, a conversion tool, or even a proposal for a new export format? Let us know at [developers@sefaria.org](mailto:developers@sefaria.org)! We'd love to feature solutions in a future newsletter.
 
-## COMMUNITY SPOTLIGHT Share your Project
+## COMMUNITY SPOTLIGHT: Share your Project
 
 Built something with Sefaria data that isn’t yet featured on the Powered by Sefaria page? As mentioned above, we always want to know what you’re building. Submitting your project helps to inspire other developers by showing what’s possible, strengthens the broader ecosystem of Jewish learning tools, and gives your work added visibility within the Sefaria community.
 
