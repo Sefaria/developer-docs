@@ -1,6 +1,6 @@
 ---
 title: Linker API
-excerpt: ''
+excerpt: Learn how to use the Linker API.
 deprecated: false
 hidden: false
 metadata:
@@ -10,46 +10,46 @@ metadata:
 next:
   description: ''
 ---
-The [Sefaria Linker](https://www.sefaria.org/linker) relies on a POST API, documented below.
+The [Sefaria Linker](https://www.sefaria.org/linker) relies on a POST API, as documented below.
 
 # Introduction
 
-Takes in text input and returns the location, as well as a Sefaria link for each citation in the text. 
+Takes in text input and returns the corresponding location, along with a Sefaria link for each citation recognized in the text input.
 
-:warning: NOTE: The response format has changed recently. See [Response Format](#response-format) below.
+_Please note: The response format has changed recently. See [Response Format](#response-format) below._
 
-Below is a table detailing current support by language.
+See the table below for information on current support by language.
 
-| Language | Support                                                                                                                                                                                                           |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| English  | Relies on convolutional neural network (CNN) models. Aim is to limit false positives. Supports ibid citations. Will return multiple options if a citation is ambiguous.                                           |
-| Hebrew   | Relies on a BERT-based transformer model. Aim is to limit false positives. Supports ibid citations. Will return multiple options if a citation is ambiguous. Performance should be better than the English model. |
+| Language | Support                                                                                                                                                                                                                     |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| English  | Relies on Convolutional Neural Network (CNN) models. Aims to limit false positives, supports ibid citations, and will return multiple options if a citation is ambiguous.                                                   |
+| Hebrew   | Relies on a BERT-based transformer model. Aims to limit false positives, supports ibid citations, and will return multiple options if a citation is ambiguous. Performance is often better than found in the English model. |
 
-# API
+# The API
 
 ## POST /api/find-refs
 
-This endpoint takes text as input and returns the location as well as a Sefaria link for each citation.
+This endpoint takes a text input and returns the corresponding location along with a Sefaria link for each recognized citation.
 
-### URL parameters
+### URL Parameters
 
-| URL param    | Description                                                                                                                                            | Type                   | Default |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ------- |
-| with_text    | Return the text for each citation. See [with_text format section](#with_text-format) for details.                                                      | 0 or 1                 | 0       |
-| debug        | Return debug information for each citation. See [debug format section](#debug-format) for details.                                                     | 0 or 1                 | 0       |
-| max_segments | When `with_text` is `1`, what is the max number of segments to return for a citation. Limits size of response for general citations like `פרשת בראשית` | int. 0 means no limit. | 0       |
+| URL param    | Description                                                                                                                                                             | Type                   | Default |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------- |
+| with_text    | Returns the text for each citation. See [with_text format section](#with_text-format) for details.                                                                      | 0 or 1                 | 0       |
+| debug        | Returns debug information for each citation. See [debug format section](#debug-format) for details.                                                                     | 0 or 1                 | 0       |
+| max_segments | When `with_text` is `1`, this defines the max number of segments to return for a citation and limits the size of the response for general citations like `פרשת בראשית`. | int. 0 means no limit. | 0       |
 
 ### POST body
 
-POST body should be a serialized JSON with the following fields
+The POST body should be a serialized JSON with the following fields:
 
 | Field | Description                                                                           | Required |
 | ----- | ------------------------------------------------------------------------------------- | -------- |
 | text  | Text to search for citations in. See [text format section](#text-format) for details. | Yes      |
 
-### Response format
+### Response Format
 
-Responds with HTTP code 202 (indicating the request was accepted but not yet completed) and a task ID in the following format
+This responds with HTTP code 202, indicating the request was accepted but not yet completed, and a task ID in the following format:
 
 ```javascript
 {
@@ -57,7 +57,7 @@ Responds with HTTP code 202 (indicating the request was accepted but not yet com
 }
 ```
 
-This task ID can then be used to poll the async API until a 200 response code is received. When the async API returns a 200, the response will contain a `"result"` key with the following object. See [example](#example).
+This task ID can then be used to poll the async API until a 200 response code is received. When the async API returns a 200, the response will contain a `"result"` key with the following object: 
 
 ```javascript
 {
@@ -90,19 +90,23 @@ This task ID can then be used to poll the async API until a 200 response code is
 }
 ```
 
+For further information on this, see the following [example](#example).
+
 ### with_text format
 
-When `with_text` URL param is `1`, the following keys are added to the response object at `response.title.refData` and `response.body.refData`.
+When `with_text` URL param is `1`, the following keys are added to the response object at `response.title.refData` and `response.body.refData`:
 
-| Field       | Description                                                                |
-| ----------- | -------------------------------------------------------------------------- |
-| he          | Hebrew text of `<ref>` where `<ref>` is the key of the `refData` element.  |
-| en          | English text of `<ref>` where `<ref>` is the key of the `refData` element. |
-| isTruncated | Was text truncated according to `max_segments` URL param.                  |
+| Field       | Description                                                                            |
+| ----------- | -------------------------------------------------------------------------------------- |
+| he          | Hebrew text of `<ref>`, where `<ref>` is the key of the `refData` element.             |
+| en          | English text of `<ref>`, where `<ref>` is the key of the `refData` element.            |
+| isTruncated | Defines whether text has been truncated according to the `max_segments` URL parameter. |
 
 ### debug format
 
-When the `debug` URL param is `1`, the `debugData` field is added to the response object at `response.title` and `response.body`. The `debugData` field has the same shape as `response.title.results` and `response.body.results` (a 2-D array where the outer array is for each citation found and inner arrays are for each possible way of parsing a given citation). Below is an example of a single element in `debugData` with comments explaining each field:
+When the `debug` URL param is `1`, the `debugData` field is added to the response object at `response.title` and `response.body`. The `debugData` field has the same shape as the `response.title.results` and `response.body.results` fields (a 2-D array, wherein the outer array describes each citation found and the inner arrays describe each possible way of parsing a given citation). 
+
+Here is an example of a single element in `debugData` with comments explaining each field:
 
 ```javascript
  {
@@ -141,7 +145,7 @@ When the `debug` URL param is `1`, the `debugData` field is added to the respons
 
 ### text format
 
-The POST data field `text` should be formatted as follows:
+The POST data field `text` should be formatted in the following manner:
 
 ```javascript
 {
@@ -150,31 +154,33 @@ The POST data field `text` should be formatted as follows:
 }
 ```
 
-# Example
+# Linker API Example
 
-Below is an example in cURL which uses all the URL parameters. Note, none of the URL parameters are required. The example shows how a citation found in the "title" field can be used as context for citations in the "body" field.
+Below is an example in cURL format that uses all the URL parameters. Please note that none of the URL parameters in this example are required; they are included here for explanatory purposes. The example below shows how a citation in the "title" field may provide context for citations in the "body" field.
 
-## Input
+## Example Input
 
 ```curl
 curl -X POST 'https://www.sefaria.org/api/find-refs?debug=1&with_text=1&max_segments=5' --data-raw '{"text":{"body": "ראה מה שכתוב בפסוק א.", "title": "עיון על איוב פרק יז"}}'
 ```
 
-## Output
+## Example Output
 
-The API call above will return a task ID such as the following:
+The API call above will return a task ID such as: 
 
 ```javascript
 { "task_id": "my-task-id" }
 ```
 
-Poll the async API until you get a 200 response code.
+Once you receive the task ID, poll the async API until you get a 200 response code:
 
 ```curl
 curl -X GET 'https://www.sefaria.org/api/async/my-task-id
 ```
 
- When the async API does return a 200 response code, you will see the following response. Note, the linker API response data is in the `"result"`field.
+When the async API returns a 200 response code, you will see the following response: 
+
+_Please note: The linker API response data is found in the `"result"`field._
 
 ```javascript
 {
@@ -319,9 +325,9 @@ curl -X GET 'https://www.sefaria.org/api/async/my-task-id
 }
 ```
 
-# Debug using local webpage
+# Debugging Using Local Webpage
 
-In order to easily debug why certain citations aren't working, it is useful to use the linker.js plugin, as it has certain debug tools built in. Below is a skeleton HTML page that can be used to test content against the linker. This webpage has linker.js embedded in debug mode, which will show all citations caught, including ones that weren't linked. See [here](https://github.com/Sefaria/Sefaria-Project/wiki/Sefaria-Auto-Linker-v3#debug) for more information on how the `debug` option works.
+To easily debug why certain citations aren't working, it is useful to use the linker.js plugin, which has built-in debug tools. Below is a skeleton HTML page you can use to test content against the linker. This webpage has linker.js embedded in debug mode, which will show all citations caught, including ones that weren't linked. See [here](https://github.com/Sefaria/Sefaria-Project/wiki/Sefaria-Auto-Linker-v3#debug) for more information on how the `debug` option works.
 
 ```html
 <html>
