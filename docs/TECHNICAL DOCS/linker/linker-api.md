@@ -1,6 +1,6 @@
 ---
-title: Linker API
-excerpt: Learn how to use the Linker API.
+title: The Sefaria Linker API
+excerpt: Learn how to use the Sefaria Linker API.
 deprecated: false
 hidden: false
 metadata:
