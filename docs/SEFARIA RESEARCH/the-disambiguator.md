@@ -16,7 +16,7 @@ _"Anyone who says a matter in the name of the one who said it brings redemption 
 
 This teaching highlights the importance of attribution. On Sefaria, attribution is not merely a scholarly convention. It is one of the primary ways readers navigate the library. Every citation is a potential path from one text to another.
 
-When a learner encounters a citation, they expect a click to take them directly to the source being discussed. But rabbinic citations were written for human readers, not computers. They are often abbreviated, ambiguous, or imprecise in ways that make automatic linking surprisingly difficult.
+When a learner encounters a citation, they expect a click to take them directly to the source being discussed. But rabbinic citations are often ambiguous, or imprecise in ways that make automatic linking surprisingly difficult.
 
 Over the past several months, we have been working on a citation disambiguator: a system designed to make Sefaria's links more precise by identifying exactly what passage an author intended to reference.
 
@@ -85,7 +85,7 @@ These words closely match [Proverbs 2:9](https://www.sefaria.org/Proverbs.2.9?la
 
 The correct destination is therefore Proverbs 2:9, not Genesis 2.
 
-Notice that the key challenge is not simply understanding the citation itself. The citation is only two words long. The challenge is understanding the surrounding discussion well enough to determine what the author meant.
+Notice that the key challenge is not simply understanding the citation itself. The citation is only two words long. The challenge is understanding the surrounding discussion well enough to determine what the citation specifically refers to.
 
 ## A Compound Case: Broad and Ambiguous
 
@@ -119,7 +119,7 @@ The disambiguator receives:
 
 * The citation span identified by the linker
 * The surrounding text in which the citation appears
-* One or more candidate references produced by the linker
+* Two or more candidate references produced by the linker.
 
 Its job is simple:
 
