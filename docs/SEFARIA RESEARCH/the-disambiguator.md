@@ -273,9 +273,11 @@ The disambiguator changes that. By comparing the surrounding citation context ag
 
 Dicta's contribution has been central to this project. Their Parallels API gives the disambiguator a way to detect close textual matches across Jewish texts, which is often the strongest evidence that a broad or ambiguous citation points to a particular segment.
 
-One of the most useful parts of the system is that not every case needs a model call.
+One useful feature of the system is that some cases can be resolved without an LLM call.
 
-When Dicta finds a very strong textual parallel, and that match appears close to the citation itself, the evidence is often strong enough to accept directly.
+When Dicta returns a strong textual parallel, the disambiguator also checks how close the matched phrase appears to the citation span in the source text. If the Dicta score is high enough and the matched phrase is sufficiently nearby, the system accepts the match directly.
+
+The thresholds for this shortcut were not chosen arbitrarily. They were derived from a statistical analysis of Dicta results, comparing match scores, phrase distance, and observed resolution accuracy.
 
 For example, if a source writes:
 
@@ -285,9 +287,7 @@ and immediately quotes:
 
 > **מי לא ייראך מלך הגוים**
 
-then a close match to [Jeremiah 10:7](https://www.sefaria.org/Jeremiah.10.7?lang=he) is highly convincing.
-
-This is not blind trust in an external API. It is a measured shortcut based on observed patterns. A high-scoring match right next to the citation is much stronger evidence than a similar phrase appearing far away in the passage.
+then a close match to [Jeremiah 10:7](https://www.sefaria.org/Jeremiah.10.7?lang=he) is strong evidence that the broad citation points specifically to that verse.
 
 When a reader follows a citation from a midrash to a verse, from a commentary to a sugya, or from one commentator to another, they should arrive at the passage the author actually had in mind.
 
