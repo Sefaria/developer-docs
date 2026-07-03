@@ -74,8 +74,8 @@ But where is "there"?
 
 Earlier in the discussion, both Genesis and Proverbs had been mentioned. The linker therefore produces multiple candidates:
 
-* Genesis 2
-* Proverbs 2
+- Genesis 2
+- Proverbs 2
 
 A human reader resolves the ambiguity using the surrounding words:
 
@@ -109,7 +109,7 @@ _"See the beginning of chapter 8 of Nazir."_
 
 First, the system has to determine which Nazir is being cited. Does the author mean Mishnah Nazir, or Bavli Nazir? Then, after choosing the right work, it still has to determine what "the beginning of chapter 8" refers to more precisely; in this case, the correct resolution is [Nazir 57a:6](https://www.sefaria.org/Nazir.57a.6?lang=he\&with=all\&lang2=he).
 
-Together, these examples reveal a common pattern: even after the linker has done the hard work of identifying a citation, determining where that citation should actually lead can require a second layer of reasoning.
+In each case, the linker has found something real, but the result still needs refinement before it becomes a useful link.
 
 ## Building a Citation Disambiguator
 
@@ -117,9 +117,9 @@ To address these cases, we built a second-pass system that runs after Sefaria's 
 
 The disambiguator receives:
 
-* The citation span identified by the linker
-* The surrounding text in which the citation appears
-* Two or more candidate references produced by the linker.
+- The citation span identified by the linker
+- The surrounding text in which the citation appears
+- Two or more candidate references produced by the linker.
 
 Its job is simple:
 
@@ -259,7 +259,9 @@ Given these candidates, determine the exact segment being referenced — or decl
   </tbody>
 </Table>
 
-<Image align="center" src="https://files.readme.io/b984ed51cefba58c98b4189f30bd4f56e73949c7d96939028ac8eba8943fbaa2-image_3.png" />
+
+<Image src="https://files.readme.io/b984ed51cefba58c98b4189f30bd4f56e73949c7d96939028ac8eba8943fbaa2-image_3.png" align="center" />
+
 
 ## What Changed in Practice
 
