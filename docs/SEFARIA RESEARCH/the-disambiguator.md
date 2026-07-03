@@ -105,9 +105,7 @@ _"See the beginning of chapter 8 of Nazir."_
 
 **This is not only a broad citation. It is also an ambiguous one.**
 
-First, the system has to determine which Nazir is being cited. Does the author mean Mishnah Nazir, Bavli Nazir, or another text associated with Nazir? Then, after choosing the right work, it still has to determine what "the beginning of chapter 8" refers to more precisely; in this case, the correct resolution is [Nazir 57a:6](https://www.sefaria.org/Nazir.57a.6?lang=he\&with=all\&lang2=he).
-
-A human reader handles these steps together, using both the citation and the surrounding discussion. Software has to make those steps explicit: identify the possible targets, search inside them, compare the surrounding language to candidate passages, and only then decide whether there is enough evidence to create a more precise link.
+First, the system has to determine which Nazir is being cited. Does the author mean Mishnah Nazir, or Bavli Nazir? Then, after choosing the right work, it still has to determine what "the beginning of chapter 8" refers to more precisely; in this case, the correct resolution is [Nazir 57a:6](https://www.sefaria.org/Nazir.57a.6?lang=he\&with=all\&lang2=he).
 
 Together, these examples reveal a common pattern: even after the linker has done the hard work of identifying a citation, determining where that citation should actually lead can require a second layer of reasoning.
 
