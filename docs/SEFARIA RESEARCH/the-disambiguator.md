@@ -6,6 +6,8 @@ hidden: false
 metadata:
   robots: index
 ---
+[View source code →](https://github.com/Sefaria/Sefaria-Project/blob/master/sefaria/helper/linker/disambiguator.py)
+
 # Bringing Redemption to Citations: Building Sefaria's Citation Disambiguator
 
 _The Rabbis taught in their famous statement in [Megillah 15a](https://www.sefaria.org/Megillah.15a.20?lang=he\&with=all\&lang2=he):_
@@ -292,3 +294,9 @@ When a reader follows a citation from a midrash to a verse, from a commentary to
 In a library built from those connections, even a single click matters.
 
 As always, we welcome questions, ideas, and feedback. You can reach us any time at [developers@sefaria.org](mailto:developers@sefaria.org).
+
+[View source code →](https://github.com/Sefaria/Sefaria-Project/blob/master/sefaria/helper/linker/disambiguator.py)
+
+<br />
+
+<br />
