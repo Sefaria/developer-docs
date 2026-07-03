@@ -14,19 +14,19 @@ _The Rabbis taught in their famous statement in [Megillah 15a](https://www.sefar
 
 _"Anyone who says a matter in the name of the one who said it brings redemption to the world."_
 
-This teaching highlights the importance of attribution. On Sefaria, attribution is not merely a scholarly convention. It is one of the primary ways readers navigate the library. Every citation is a potential path from one text to another.
+On Sefaria, one way this shows up is through links. When a text cites another text, we want readers to be able to click the citation and get to the right place.
 
-When a learner encounters a citation, they expect a click to take them directly to the source being discussed. But rabbinic citations are often ambiguous, or imprecise in ways that make automatic linking surprisingly difficult.
+That sounds simple, but rabbinic citations were written for people, not machines. An author might write “as it says in chapter 2,” “see there,” “in the Gemara,” or cite a page when they really mean one line on that page. A learned reader can often use the surrounding words to figure out what the author meant. A computer sees several possible destinations, or a reference that is technically correct but much too broad.
 
-Over the past several months, we have been working on a citation disambiguator: a system designed to make Sefaria's links more precise by identifying exactly what passage an author intended to reference.
+For example, a citation may point to Berakhot 19b, but the useful link is really to Berakhot 19b:1 (in Sefaria system). A citation may say only “chapter 2,” but the surrounding discussion makes clear which book’s chapter 2 is meant out of the all techinically possible options.
 
-## The Challenge
+Over the past several months, we have been building Sefaria’s citation disambiguator: a system that uses the surrounding text to choose the specific source a citation is referring to.
 
-At first glance, linking citations sounds straightforward. If a commentator cites Jeremiah, link to Jeremiah. If a text cites Nazir, link to Nazir.
+## After the Linker
 
-**In practice, things are rarely that simple.**
+The linker first finds citations and possible refs. The disambiguator runs next, handling cases where the linker found a ref that is too broad, like a page or chapter, or found several possible refs for the same citation.
 
-Broadly speaking, we found two recurring problems: overly broad citations and ambiguous citations. Often they appear separately. Sometimes they appear together.
+Broadly speaking, it handles two problems: overly broad citations and ambiguous citations.
 
 ## Problem #1: Citations That Are Too Broad
 
