@@ -263,13 +263,7 @@ Given these candidates, determine the exact segment being referenced — or decl
 <Image src="https://files.readme.io/b984ed51cefba58c98b4189f30bd4f56e73949c7d96939028ac8eba8943fbaa2-image_3.png" align="center" />
 
 
-## What Changed in Practice
-
-One of the biggest changes is in Talmud citations. Historically, these links were not very visible to users at the level where Sefaria readers often need them most: the individual Talmud segment.
-
-That is partly because Sefaria's Talmud segmentation follows the Koren-Steinsaltz edition. Older rabbinic authors, of course, did not cite the Talmud according to those modern segment boundaries. They cited a masekhet, a perek, a daf, or an amud. Those links were useful, but they usually stopped at a broader unit of text.
-
-The disambiguator changes that. By comparing the surrounding citation context against candidate passages, it can turn many of those broader Talmud references into links to specific Talmudic segments. In practice, this has produced more than 440,000 Talmud segment resolutions, making a large body of previously broad citations much more directly useful to readers.
+##
 
 ## Why Some Matches Can Skip the LLM
 
@@ -293,6 +287,14 @@ then a close match to [Jeremiah 10:7](https://www.sefaria.org/Jeremiah.10.7?lang
 
 More specifically, the disambiguator uses a direct-accept path when Dicta returns a high-scoring match and the matched phrase appears very close to the citation in the source text. If the original citation is section-level, the system accepts the match when the Dicta score is at least 5 and the matched<br />phrase is within 10 characters of the citation span. For other cases, the bar is higher: the Dicta score must be at least 15, and the matched phrase must be within 5 characters.
 
+## What Changed in Practice
+
+One of the biggest changes is in Talmud citations. Historically, these links were not very visible to users at the level where Sefaria readers often need them most: the individual Talmud segment.
+
+That is partly because Sefaria's Talmud segmentation follows the Koren-Steinsaltz edition. Older rabbinic authors, of course, did not cite the Talmud according to those modern segment boundaries. They cited a masekhet, a perek, a daf, or an amud. Those links were useful, but they usually stopped at a broader unit of text.
+
+The disambiguator changes that. By comparing the surrounding citation context against candidate passages, it can turn many of those broader Talmud references into links to specific Talmudic segments. In practice, this has produced more than 440,000 Talmud segment resolutions, making a large body of previously broad citations much more directly useful to readers.
+
 ## Results
 
 The impact has been substantial. So far, the disambiguator has helped resolve about **537,000 Bavli citations** and **32,000 Yerushalmi citations** to exact lines. It has also made more than **110,000 Tanakh citations** and more than **100,000 Halakhah citations** more precise.
@@ -303,6 +305,8 @@ to point to more precise segment-level refs.
 
 <Image src="https://files.readme.io/b8b229267ee0e3548f41661a1aa3a74bd4894f96f2b84fb0229ec02511263bd0-image.png" align="center" caption="Summary of Disambiguator impact" border={true} />
 
+
+<br />
 
 
 <Image src="https://files.readme.io/40c694ee9553bb3b4cf771f61e7c5e55d36071e318aa4206090b4abfcf0b92a0-image.png" align="center" caption="Reader sidebar view of Shabbat.88a.5 BEFORE disambiguator launch" border={true} framed={true} />
