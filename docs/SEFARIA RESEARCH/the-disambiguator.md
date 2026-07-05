@@ -279,7 +279,7 @@ One useful feature of the system is that some cases can be resolved without an L
 
 When Dicta returns a strong textual parallel, the disambiguator also checks how close the matched phrase appears to the citation span in the source text. If the Dicta score is high enough and the matched phrase is sufficiently nearby, the system accepts the match directly.
 
-The thresholds for this shortcut were not chosen arbitrarily. They were derived from a statistical analysis of Dicta results, comparing match scores, phrase distance, and observed resolution accuracy.
+The thresholds for this shortcut were not chosen arbitrarily. These thresholds were derived by analyzing roughly 3,000 Dicta queries and comparing match score, phrase distance, and observed correctness.
 
 For example, if a source writes:
 
@@ -290,6 +290,27 @@ and immediately quotes:
 > **מי לא ייראך מלך הגוים**
 
 then a close match to [Jeremiah 10:7](https://www.sefaria.org/Jeremiah.10.7?lang=he) is strong evidence that the broad citation points specifically to that verse.
+
+More specifically, the disambiguator uses a direct-accept path when Dicta returns a high-scoring match and the matched phrase appears very close to the citation in the source text. If the original citation is section-level, the system accepts the match when the Dicta score is at least 5 and the matched<br />phrase is within 10 characters of the citation span. For other cases, the bar is higher: the Dicta score must be at least 15, and the matched phrase must be within 5 characters.
+
+## Results
+
+The impact has been substantial. So far, the disambiguator has helped resolve about **537,000 Bavli citations** and **32,000 Yerushalmi citations** to exact lines. It has also made more than **110,000 Tanakh citations** and more than **100,000 Halakhah citations** more precise.
+
+Across the library, this work affected about **787,000 links in total**: roughly **320,000 new links** were added, and about **467,000 existing links** were modified
+to point to more precise segment-level refs.
+
+
+<Image src="https://files.readme.io/172619abac6ba248c4b8e47d659741efc2c552700ad3b88d5c0f24f607041260-image.png" align="center" caption="Summary of Disambiguator impact" />
+
+
+
+<Image src="https://files.readme.io/40c694ee9553bb3b4cf771f61e7c5e55d36071e318aa4206090b4abfcf0b92a0-image.png" align="center" caption="Reader sidebar view of Shabbat.88a.5 BEFORE disambiguator launch" border={true} framed={true} />
+
+
+
+<Image src="https://files.readme.io/15a6be8e83fe9ceb05d3bd158777bd60d3afa77a0deb3e0ddd07a7bd08400d57-image.png" align="center" caption="Reader sidebar view of Shabbat.88a.5 AFTER disambiguator launch" border={true} framed={true} />
+
 
 When a reader follows a citation from a midrash to a verse, from a commentary to a sugya, or from one commentator to another, they should arrive at the passage the author actually had in mind.
 
