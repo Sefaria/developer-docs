@@ -301,12 +301,14 @@ Across the library, this work affected about **787,000 links in total**: roughly
 to point to more precise segment-level refs.
 
 
-<Image src="https://files.readme.io/172619abac6ba248c4b8e47d659741efc2c552700ad3b88d5c0f24f607041260-image.png" align="center" caption="Summary of Disambiguator impact" />
+<Image src="https://files.readme.io/b8b229267ee0e3548f41661a1aa3a74bd4894f96f2b84fb0229ec02511263bd0-image.png" align="center" caption="Summary of Disambiguator impact" border={true} />
 
 
 
 <Image src="https://files.readme.io/40c694ee9553bb3b4cf771f61e7c5e55d36071e318aa4206090b4abfcf0b92a0-image.png" align="center" caption="Reader sidebar view of Shabbat.88a.5 BEFORE disambiguator launch" border={true} framed={true} />
 
+
+<br />
 
 
 <Image src="https://files.readme.io/15a6be8e83fe9ceb05d3bd158777bd60d3afa77a0deb3e0ddd07a7bd08400d57-image.png" align="center" caption="Reader sidebar view of Shabbat.88a.5 AFTER disambiguator launch" border={true} framed={true} />
