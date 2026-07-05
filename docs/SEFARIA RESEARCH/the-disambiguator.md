@@ -60,9 +60,9 @@ Some citations are not merely broad. They are genuinely ambiguous.
 
 Consider this example from [Malbim Beur Hamilot on Isaiah](https://www.sefaria.org/Malbim_Beur_Hamilot_on_Isaiah.26.7.1?lang=he\&with=all\&lang2=he):
 
-> ומגביל לו שם מעגל הנאמר על דרך הסבובי, צדק ומשפט ומישרים כל מעגל טוב,
+> ,ומגביל לו שם מעגל הנאמר על דרך הסבובי, צדק ומשפט ומישרים כל מעגל טוב
 >
-> **(שם ב')**
+> **('שם ב)**
 >
 > מישרים הוא הדרך האמצעי
 
@@ -87,7 +87,7 @@ These words closely match [Proverbs 2:9](https://www.sefaria.org/Proverbs.2.9?la
 
 The correct destination is therefore Proverbs 2:9, not Genesis 2.
 
-Notice that the key challenge is not simply understanding the citation itself. The citation is only two words long. The challenge is understanding the surrounding discussion well enough to determine what the citation specifically refers to.
+Notice that the key challenge here is not recognizing the citation or parsing its possible meanings. The linker can already identify **('שם ב)** as a citation and determine, syntactically, the refs it could point to. The part we are concerned with now is choosing the best option, which requires looking at the words amd context around it.
 
 ## A Compound Case: Broad and Ambiguous
 
