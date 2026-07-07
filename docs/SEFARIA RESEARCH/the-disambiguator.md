@@ -285,7 +285,7 @@ and immediately quotes:
 
 then a close match to [Jeremiah 10:7](https://www.sefaria.org/Jeremiah.10.7?lang=he) is strong evidence that the broad citation points specifically to that verse.
 
-More specifically, the disambiguator uses a direct-accept path when Dicta returns a high-scoring match and the matched phrase appears very close to the citation in the source text. If the original citation is section-level, the system accepts the match when the Dicta score is at least 5 and the matched<br />phrase is within 10 characters of the citation span. For other cases, the bar is higher: the Dicta score must be at least 15, and the matched phrase must be within 5 characters.
+More specifically, the disambiguator uses a direct-accept path when Dicta returns a high-scoring match and the matched phrase appears very close to the citation in the source text. If the original citation is section-level, the system accepts the match when the Dicta score is at least 5 and the matched phrase is within 10 characters of the citation span. For other cases, the bar is higher: the Dicta score must be at least 15, and the matched phrase must be within 5 characters.
 
 ## What Changed in Practice
 
