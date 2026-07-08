@@ -128,73 +128,77 @@ You can find instructions for using Pip with Windows [here.](http://www.tylerbut
 
 _Please note: Both this step and more of the following command line instructions must be run from within the Sefaria-Project root directory._
 
-Run the following command:
+In order to install Pip, run the following command:
 
 ```
 pip install -r requirements.txt
 ```
 
 <Callout icon="🚧" theme="warn">
-  ### Warning
+  ### Important!
 
-  Please note, sometimes the `psycopg2` package can cause installation issues, and it is not usually needed for a local installation.
+  **Please note that sometimes the&#x20;**`psycopg2`**&#x20;package can cause installation issues, and it is not usually needed for a local installation.**
 
-  If you run into trouble, there is a recommended change in the `requirements.txt` file. Just comment out the existing line and uncomment the recommended line.
+  If you run into trouble, the `requirements.txt` file has a recommended change: Simply comment out the existing line and uncomment the recommended line.
 
-  If that doesn't work, we recommend _temporarily_ commenting out the `psycopg2` line in `requirements.txt` and then re-running `pip install -r requirements.txt`. (The pinned version in the file may differ from `2.8.6`.)
+  If that doesn't work, we recommend _temporarily_ commenting out the `psycopg2` line in `requirements.txt` and then re-running `pip install -r requirements.txt`. The pinned version in the file may differ from `2.8.6`.
 </Callout>
 
-If you are _not_ using virtualenv, you may have to run it with sudo: `sudo pip install -r requirements.txt`
+If you are _not_ using virtualenv, you may have to run the above command with sudo: `sudo pip install -r requirements.txt`
 
-_Note: You'll probably need to install the Python development libraries as well:_
+_Please note: In most cases, you will need to install these Python development libraries as well:_
 
-###### On Debian systems:
+#### On Debian systems:
 
 ```
 sudo apt-get install python-dev python3-dev libpq-dev
 ```
 
-###### On Fedora systems:
+#### On Fedora systems:
 
 ```
 sudo dnf install python3-devel libpq-devel
 ```
 
-_Note: If you see an error that_`pg_config executable not found`_, you need to install PostgreSQL. If on macOS you see an error while&#x20;_`Building wheel for psycopg2`_&#x20;for_`linker command failed with exit code 1`_, you may need to add the path to OpenSSL_
+<br />
+
+_Please note: If you see an error stating that&#x20;_`pg_config executable not found`_, this means you need to install PostgreSQL. If you're working with macOS and you see an error while&#x20;_`Building wheel for psycopg2`_&#x20;for&#x20;_`linker command failed with exit code 1`_, you may need to add the path to OpenSSL as described in the image below:_
 
 ```
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 ```
 
+<br />
+
 After installing the Python development libraries or other dependencies, run `pip install -r requirements.txt` again.
 
-#### 4) Install gettext
+### 4) Install gettext
 
 `gettext` is a GNU utility that Django uses to manage localizations.
 
-###### On macOS:
+#### For macOS:
 
 ```
 brew install gettext
 ```
 
-On some macOS systems `gettext` will still not run after installation and `django manage.py makemessages` will fail. In such a case, one easy solution is to add (replace x's with your gettext version number) to your .bashrc (or its equivalent on your system):
+_Please note: On some macOS systems,&#x20;_`gettext`_&#x20;will still not run after installation and&#x20;_`django manage.py makemessages`_&#x20;will fail. In this case, one easy solution is to add the following to your .bashrc (or its equivalent on your system), and enter your gettext version number in place of the letter x where indicated:_
 
 ```
 export TEMP_PATH=$PATH
 export PATH=$PATH:/usr/local/Cellar/gettext/0.xx.x/bin
 ```
 
-###### On Debian systems
+#### On Debian systems:
 
 ```
 sudo apt-get install gettext
 ```
 
-#### 5) Create a local settings file:
+### 5) Create a local settings file
 
-_Note: this step must be run from the Sefaria-Project root directory_
+This step must be run from the Sefaria-Project root directory.
 
 ```
 cd sefaria
@@ -202,13 +206,13 @@ cp local_settings_example.py local_settings.py
 vim local_settings.py
 ```
 
-Replace the placeholder values with those matching your environment. For the most part, you should only have to specify values in the top part of the file where it directs you to change the given values.
+When creating a local settings file, replace the placeholder values with those matching your environment. For the most part, you should only have to specify values in the top part of the file, where it directs you to change the given values.
 
-Note: Among the placeholder values that need to be replaced, set the `DATABASES` default `NAME` field to a path (including a file name) where Django can create a sqlite database. Using `/path/to/Sefaria-Project/db.sqlite` is sufficient, as we git-ignore all `.sqlite` files.
+Among the placeholder values that need to be replaced, set the `DATABASES` default `NAME` field to a path (including a file name) where Django can create a sqlite database. Using `/path/to/Sefaria-Project/db.sqlite` is sufficient, as we git-ignore all `.sqlite` files.
 
 You can name your local database (`sefaria` will be the default created by `mongorestore` below). You can leave `SEFARIA_DB_USER` ad `SEFARIA_DB_PASSWORD` blank if you don't need to run authentication on Mongo.
 
-#### 6) Create a log directory:
+### 6) Create a log directory:
 
 Create a directory called `log` under the root project folder (i.e. `Sefaria-Project/`). To do this, run `mkdir log` from the project's root directory.
 
