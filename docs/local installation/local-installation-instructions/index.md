@@ -88,40 +88,45 @@ To work with pyenv in macOS, use [these instructions](https://github.com/pyenv/p
 
 #### How to Create a [pyenv virtualenv](https://github.com/pyenv/pyenv-virtualenv#using-pyenv-virtualenv-with-pyenv).
 
-In your Sefaria directory, run `pyenv local [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g. `3.12/envs/sefaria-venv`). This should serve to activate the virtualenv whenever you are in the Sefaria directory.
+In your Sefaria directory, run `pyenv local [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g., `3.12/envs/sefaria-venv`), which should activate the virtualenv whenever you are in the Sefaria directory.
 
-_Note: If, after following the installation and configuration instructions, running_`python -V`_&#x20;still displays the system version, you may have to manually add the shims directory to your path._ If that does not correct the issue, you should check your bash init file (.zshrc, .bashrc, or the like) for the line `eval "$(pyenv init -)"` (not inside an if statement) and change it to `eval "$(pyenv init --path)"` and restart the shell.
+_Please note:&#x20;_
 
-_Note: If you are using an IDE like PyCharm, you can (and should) configure the interpreter options on your Sefaria-Project to point to the Python executable of this virtualenv (e.g._`~/.pyenv/versions/3.12.x/envs/sefaria-venv/bin/python3.12`_)_
+- _If, after following the installation and configuration instructions, running_`python -V`_&#x20;still displays the system version, you may have to manually add the shims directory to your path._ _If manual addition does not correct the issue, you should check your bash init file (.zshrc, .bashrc, or the like) for the line&#x20;_`eval "$(pyenv init -)"`_&#x20;(not inside an if statement) and change it to&#x20;_`eval "$(pyenv init --path)"`_&#x20;and restart the shell._
+- _If you are using an IDE like PyCharm, you can (and should) configure the interpreter options on your Sefaria-Project to point to the Python executable of this virtualenv (e.g.,&#x20;_`~/.pyenv/versions/3.12.x/envs/sefaria-venv/bin/python3.12`_)_
 
-##### Classic virtualenv
+#### Classic virtualenv
 
-Install [virtualenv](http://pypi.python.org/pypi/virtualenv), then enter these commands:
+You can perform this step from anywhere in your command line, but it might be easier and tidier to run this step from the root of your project directory that you just cloned. e.g`~/web-projects/Sefaria-Project `
 
-_Note: You may need to install Pip (see below) first in order to install virtualenv_
+_Please note: Before installing virtualnv, you may need to install Pip (see below for further details).&#x20;_
 
-_Note: You can perform this step from anywhere in your command line, but it might be easier and tidier to run this step from the root of your project directory that you just cloned. e.g_`~/web-projects/Sefaria-Project $`
+Once [virtualenv](http://pypi.python.org/pypi/virtualenv) is installed, enter these commands:
+
+_Note:&#x20;_`$`
 
 ```
 virtualenv venv --distribute
 source venv/bin/activate
 ```
 
-Now you should see `(venv)` in front of your command prompt. The second command sets your shell to use the Python virtual environment that you have just created. This is something that you have to run every time you open a new shell and want to run the Sefaria demo. You can always tell if you're in the virtual environment by checking if `(venv)` is at the beginning of your command prompt.
+Once the first command is entered, you should see `(venv)` preceding your command prompt. The second command sets your shell to use the Python virtual environment that you have just created.&#x20;
 
-#### 3) Pip:
+This is something that you have to run every time you open a new shell and want to run the Sefaria demo. You can always tell if you're in the virtual environment by checking if `(venv)` is at the beginning of your command prompt.
 
-If you used pyenv, Pip should be available via the pyenv version of Python.
+### 3) Working With Pip:
 
-###### Unix
+If you are using pyenv, Pip should be available via the pyenv version of Python.
 
-If you don't already have it in your Python installation, install [Pip](https://pip.pypa.io/en/stable/installing/). Then use it to install the required Python packages.
+#### For Unix:
 
-###### Windows
+If you don't already have [Pip](https://pip.pypa.io/en/stable/installing/) in your Python installation, you need to install it in order to install the required Python packages.
 
-Use instructions [here](http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/) and then make sure that the scripts subfolder of the python installation directory is also in PATH.
+#### For Windows:
 
-_Note: this step (and_**_most_**_&#x20;of the following command line instructions) must be run from the Sefaria-Project root directory_
+You can find instructions for using Pip with Windows [here.](http://www.tylerbutler.com/2012/05/how-to-install-python-pip-and-virtualenv-on-windows-with-powershell/) Once installed, make sure that the scripts subfolder of the Python installation directory is also in PATH.
+
+_Please note: Both this step and more of the following command line instructions must be run from within the Sefaria-Project root directory._
 
 Run the following command:
 
