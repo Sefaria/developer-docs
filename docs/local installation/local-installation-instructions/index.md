@@ -15,7 +15,7 @@ next:
 <Callout icon="🚧" theme="warn">
   ### Recommended: Use API Instead of Local Install
 
-  We recommend that users wishing to interact with Sefaria use our public [API](ref:getting-started-with-your-api) to do so. For those wanting a more in-depth interaction with our code, we provide these installation instructions.
+  If you're interested in working with Sefaria's data, we recommend using our [public API.](ref:getting-started-with-your-api) If you prefer a more in-depth interaction with our code, the following installation instructions explain how to do so.
 
   **This page is under review**. While we are working to make it as accurate as up to date as possible, there may still be some inaccuracies.
 </Callout>
