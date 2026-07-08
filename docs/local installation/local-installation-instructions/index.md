@@ -173,6 +173,8 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 After installing the Python development libraries or other dependencies, run `pip install -r requirements.txt` again.
 
+<br />
+
 ### 4) Install gettext.
 
 `gettext` is a GNU utility that Django uses to manage localizations.
@@ -196,6 +198,8 @@ export PATH=$PATH:/usr/local/Cellar/gettext/0.xx.x/bin
 sudo apt-get install gettext
 ```
 
+<br />
+
 ### 5) Create a local settings file.
 
 This step must be run from the Sefaria-Project root directory.
@@ -212,29 +216,33 @@ Among the placeholder values that need to be replaced, set the `DATABASES` defau
 
 You can name your local database (`sefaria` will be the default created by `mongorestore` below). You can leave `SEFARIA_DB_USER` ad `SEFARIA_DB_PASSWORD` blank if you don't need to run authentication on Mongo.
 
+<br />
+
 ### 6) Create a log directory.
 
-Create a directory called `log` under the root project folder (i.e. `Sefaria-Project/`). To do this, run `mkdir log` from the project's root directory.
+Create a directory called `log` under the root project folder (i.e., `Sefaria-Project/`). To do this, run `mkdir log` from the project's root directory.
 
-The result should look like `Sefaria-Project/log`.
+The result should look something like `Sefaria-Project/log`.
 
 Make sure that the server user has write access to it by using a command such as `chmod 777 log`.
 
-#### 7) Get Mongo running:
+<br />
 
-If you don't already have it, [install MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/). Our current data dump requires MongoDB version 4.4 or later. After installing Mongo according to the instructions, you should have a mongo service automatically running in the background.
+### 7) Get Mongo running:
 
-Otherwise, run the mongo daemon with:
+If you don't already have it, [install MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/). Our current data dump requires MongoDB version 4.4 or later. After installing Mongo according to the instructions, you should have a Mongo service automatically running in the background.
+
+Otherwise, run the Mongo daemon with:
 
 ```
 mongod
 ```
 
-(Only use sudo if necessary, as it may result in a locked socket file being created that may prevent mongo from running later on).
+_Please note: Only use sudo if necessary, as it may result in a locked socket file being created that may prevent mongo from running later on._
 
-Or use your os service manager to have it start on startup.
+You can also use your operating system service manager to have Mongo start on startup.
 
-Mongo usually sets all the correct paths for itself to run properly nowadays, but see [here](https://www.mongodb.com/docs/manual/tutorial/manage-mongodb-processes/#start-mongod-processes) for details on setting a specific path for it to store data in.
+These days, Mongo usually sets all the correct paths for itself to run properly. See [here](https://www.mongodb.com/docs/manual/tutorial/manage-mongodb-processes/#start-mongod-processes) for details on setting a specific path for it to store data in.
 
 #### 8) Put some texts in your database:
 
