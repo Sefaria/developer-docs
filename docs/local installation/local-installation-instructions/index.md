@@ -384,7 +384,7 @@ python manage.py runserver 0.0.0.0:8000
 
 ## Command Line Interface
 
-The shell script `cli` will invoke a Python interpreter with the core models loaded, and can be used as a standalone interface to texts or for testing.
+The shell script `cli` will invoke a Python interpreter with the core models loaded, and can be used as a standalone interface to texts or for testing as follows:
 
 ```
 $ ./cli
