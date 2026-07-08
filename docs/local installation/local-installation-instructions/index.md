@@ -317,13 +317,13 @@ npm run watch-client
 
 Sefaria uses React.js. To render HTML server-side, we use a Node.js server. For development, the site is fully functional without server-side rendering. For deploying in a production environment, however, server-side HTML is very important for bots and SEO.
 
-##### Install Redis
+#### Install Redis
 
-To use server-side rendering, you must also install Redis Cache. `brew install redis` or `sudo apt-get install redis`.
+To use server-side rendering, you must also install Redis Cache: `brew install redis` or `sudo apt-get install redis`.
 
 To run redis: `redis-server`. On macOS: `brew services start redis`
 
-##### Configure Django and Node to use Redis as a shared datastore
+#### Configure Django and Node to use Redis as a shared datastore
 
 **Django**
 
