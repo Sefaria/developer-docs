@@ -160,8 +160,6 @@ sudo apt-get install python-dev python3-dev libpq-dev
 sudo dnf install python3-devel libpq-devel
 ```
 
-<br />
-
 _Please note: If you see an error stating that&#x20;_`pg_config executable not found`_, this means you need to install PostgreSQL. If you're working with macOS and you see an error while&#x20;_`Building wheel for psycopg2`_&#x20;for&#x20;_`linker command failed with exit code 1`_, you may need to add the path to OpenSSL as described in the image below:_
 
 ```
@@ -172,8 +170,6 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 <br />
 
 After installing the Python development libraries or other dependencies, run `pip install -r requirements.txt` again.
-
-<br />
 
 ### 4) Install gettext.
 
@@ -198,8 +194,6 @@ export PATH=$PATH:/usr/local/Cellar/gettext/0.xx.x/bin
 sudo apt-get install gettext
 ```
 
-<br />
-
 ### 5) Create a local settings file.
 
 This step must be run from the Sefaria-Project root directory.
@@ -216,8 +210,6 @@ Among the placeholder values that need to be replaced, set the `DATABASES` defau
 
 You can name your local database (`sefaria` will be the default created by `mongorestore` below). You can leave `SEFARIA_DB_USER` ad `SEFARIA_DB_PASSWORD` blank if you don't need to run authentication on Mongo.
 
-<br />
-
 ### 6) Create a log directory.
 
 Create a directory called `log` under the root project folder (i.e., `Sefaria-Project/`). To do this, run `mkdir log` from the project's root directory.
@@ -226,11 +218,9 @@ The result should look something like `Sefaria-Project/log`.
 
 Make sure that the server user has write access to it by using a command such as `chmod 777 log`.
 
-<br />
-
 ### 7) Get Mongo running:
 
-If you don't already have it, [install MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/). Our current data dump requires MongoDB version 4.4 or later. After installing Mongo according to the instructions, you should have a Mongo service automatically running in the background.
+If you don't already have it, [install MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/). Our current data dump requires MongoDB version 4.4 or later. After installing MongoDB according to the provided instructions, its service automatically running in the background.
 
 Otherwise, run the Mongo daemon with:
 
@@ -244,19 +234,19 @@ You can also use your operating system service manager to have Mongo start on st
 
 These days, Mongo usually sets all the correct paths for itself to run properly. See [here](https://www.mongodb.com/docs/manual/tutorial/manage-mongodb-processes/#start-mongod-processes) for details on setting a specific path for it to store data in.
 
-#### 8) Put some texts in your database:
+### 8) Add some texts in your database.
 
 MongoDB dumps of our database are available to download.
 
 The recommended dump (which is a more manageable size) is available [here](https://storage.googleapis.com/sefaria-mongo-backup/dump_small.tar.gz).
 
-A complete dump is also available [here](https://storage.googleapis.com/sefaria-mongo-backup/dump.tar.gz). The complete dump includes the `history` collections, which contains a complete revision history of every text in our library. For many applications, this data is not relevant. We recommend using the smaller dump unless you're specifically interested in texts revision history within Sefaria.
+If you prefer, you can also access a complete dump (which is much larger) [here](https://storage.googleapis.com/sefaria-mongo-backup/dump.tar.gz). The complete dump includes the `history` collections, which contains a complete revision history of every text in our library. For many applications, this data is not relevant. We recommend using the smaller dump unless you're specifically interested in the history of text revisions within Sefaria.
 
-Unzip the file and extract the `dump` folder. If you don't have an app for unzipping, this can be done from Command Prompt by navigating to the folder containing the download and using `tar -xf dump.tar.gz` or `tar -xf dump_small.tar.gz` (depending on which dump you downloaded).
+Once downloaded, unzip the file and extract the `dump` folder. If you don't have an app for unzipping, you can do this from Command Prompt by navigating to the folder containing the download and using either `tar -xf dump.tar.gz` or `tar -xf dump_small.tar.gz` , depending on which dump you downloaded.
 
-This `dump` must be restored as a MongoDB database.
+_Please note: This&#x20;_`dump`_&#x20;must be restored as a MongoDB database._
 
-From MongoDB version 4.4, mongorestore comes separately from the MongoDB server, so if you don't already have it, you'll also need to download and unzip the [Database Tools](https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools). You may then need to add its \bin\ directory to your PATH environment variables.
+In MongoDB versions 4.4+, mongorestore comes separately from the MongoDB server. Therefore, if you don't already have it, you'll also need to download and unzip the [Database Tools](https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools). You may need to add its \bin\ directory to your PATH environment variables as well.
 
 Once you have the unzipped `dump`from the folder which contains `dump`, run:
 
