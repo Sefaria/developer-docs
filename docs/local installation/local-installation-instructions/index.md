@@ -254,11 +254,11 @@ Once you have the unzipped `dump`from the folder which contains `dump`, run:
 mongorestore --drop
 ```
 
-This will create (or overwrite) a mongo database called `sefaria`.
+This will create (or overwrite) a Mongo database called `sefaria`.
 
-If you used the recommended dump, `dump_small.tar.gz`, create an empty collection inside the `sefaria` database called `history`. This can be done using the mongo client shell or a GUI you have installed, such as MongoDB Compass.
+If you chose to download the recommended dump (`dump_small.tar.gz`) create an empty collection inside the `sefaria` database called `history`. This can be done using either the Mongo client shell or a GUI you have installed, such as MongoDB Compass.
 
-#### 9) Set up Django's local server
+### 9) Set up Django's local server
 
 Sefaria is using Google's reCAPTCHA to verify the user is not a bot. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)).<br />For local development, the default test keys would suffice. The warning can be suppressed by uncommenting the following in the local\_settings.py file:
 
