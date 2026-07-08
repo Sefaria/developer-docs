@@ -327,9 +327,7 @@ To run redis: `redis-server`. On macOS: `brew services start redis`
 
 **Django**
 
-Update your `local_settings.py` file and replace the `CACHES` variable with the `CACHES` variable meant for server-side rendering, commented out in `local_settings_example.py`.
-
-Also, make sure the following are set:
+Update your `local_settings.py` file and replace the `CACHES` variable with the `CACHES` variable meant for server-side rendering, commented out in `local_settings_example.py`. Also, make sure the following are set:
 
 ```
 SESSION_CACHE_ALIAS = "default" #declares where Django's session engine will store data
@@ -352,7 +350,7 @@ The following environment variables, defined in `./node/local_settings.js`, can 
 | `REDIS_HOST`  | `127.0.0.1` | The Redis instance to point Node to when running               |
 | `REDIS_PORT`  | `6379`      | The Default port Redis listens on                              |
 
-These variables can be set via command line explicitly, set up to be defined when your machine's shell runs, or set up in your IDE settings for running the node server.
+These variables can be set explicitly via command line. This sets them up to be either defined when your machine's shell runs or set up in your IDE settings for running the node server.
 
 For development, you can run the Node server using nodemon with:
 
@@ -372,13 +370,13 @@ or
 npm run watch
 ```
 
-#### 11) Run the development server:
+### 11) Run the development server:
 
 ```
 python manage.py runserver
 ```
 
-You can also make it publicly available by specifying 0.0.0.0 for the host:
+You can also make it publicly available by specifying 0.0.0.0 for the host as follows:
 
 ```
 python manage.py runserver 0.0.0.0:8000    
