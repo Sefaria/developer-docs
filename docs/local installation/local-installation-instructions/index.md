@@ -274,23 +274,23 @@ Django authentication features run on a separate database. To initialize this da
 python manage.py migrate
 ```
 
-#### 10) Install Node:
+### 10) Install Node.
 
-_Note: Older versions of_`Node`_&#x20;and&#x20;_`npm`_&#x20;ran into a file name length limit on Windows OS. This problem should be mitigated in newer versions on Windows 10._
+_Please note: Older versions of_`Node`_&#x20;and&#x20;_`npm`_&#x20;ran into a file name length limit on Windows OS. This problem is usually mitigated in newer versions on Windows 10._
 
-Node is now required to run the site. Even if you choose to have Javascript run only on the client, we are also using [Webpack](https://webpack.js.org/) to bundle our Javascript.
+Node is now required to run the site. Even if you choose to have Javascript run only on the client, we also use [Webpack](https://webpack.js.org/) to bundle our Javascript.
 
-Installing Node and npm from the main installers on Node's homepage may cause permission issues. For that reason, it is recommended to use one of the alternative methods (with a preference for a version manager like nvm) listed [here](https://nodejs.org/en/download/package-manager/).
+Installing Node and npm from the main installers on Node's homepage may cause permission issues. This is why we recommend using one of the alternative methods listed [here](https://nodejs.org/en/download/package-manager/). We prefer a version manager, like nvm.
 
-###### Debian, Ubuntu, and Linux Mint
+#### For Debian, Ubuntu, and Linux Mint:
 
-You are better off using `apt-get nodejs` or following the instructions [here](https://github.com/nodesource/distributions/blob/master/README.md). They will install both Node and npm.
+You'll get better results when using `apt-get nodejs` or following the instructions found [here](https://github.com/nodesource/distributions/blob/master/README.md). They will install both Node and npm.
 
-###### macOS
+#### For macOS:
 
-use `brew install node` or [`nvm`](https://nodejs.org/en/download/package-manager/#nvm)
+We recommend using either `brew install node` or [`nvm.`](https://nodejs.org/en/download/package-manager/#nvm)
 
-Now download the required Javascript libraries and install some global tools for development with the `setup` script (from the project root).
+Once you have installed Node or npm, download the required Javascript libraries and install some global tools for development with the `setup` script from the project root as follows:
 
 ```
 npm install
