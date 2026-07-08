@@ -20,31 +20,33 @@ next:
   **This page is under review**. While we are working to make it as accurate as up to date as possible, there may still be some inaccuracies.
 </Callout>
 
+<br />
+
+_Please note: if you are a developer interested in contributing code to Sefaria, we suggest first making a fork of this repository by clicking the "Fork" button when logged in to GitHub._
+
 # Getting Started
 
-First clone the [Sefaria-Project](https://github.com/Sefaria/Sefaria-Project) repository to a directory on your computer, then follow the instructions:
+Begin by cloning the [Sefaria-Project](https://github.com/Sefaria/Sefaria-Project) repository to a directory on your computer. Once cloning is complete, follow these steps:
 
-_Note: if you are a developer that might want to contribute code to Sefaria, we suggest first making a fork of this repository by clicking the "Fork" button when logged in to GitHub._
-
-_Note for macOS users - Install_`Homebrew`_:_
+_Note for macOS users: Ensure you have installed&#x20;_`Homebrew`_&#x20;like this:_
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-There are two methods with which you can run the Sefaria-Project, docker-compose and local install.
+You can run the Sefaria-Project in two ways: docker-compose and local install.
 
-We recommend the local installation, however if you are interested in exploring the experimental `docker-compose` approach, please see [here](https://developers.sefaria.org/docs/docker-compose-sefaria).
+We recommend using local installation. However if you are interested in exploring the experimental `docker-compose` approach, please see further information [here](https://developers.sefaria.org/docs/docker-compose-sefaria).
 
 <Callout icon="❗️" theme="error">
-  ### Note
+  ### Please note:
 
-  These installation instructions are optimized for users of Mac OS. We strongly encourage Windows users to explore our experimental [docker-compose method](https://developers.sefaria.org/docs/docker-compose-sefaria) of set up, or to retrieve our data entirely via the API.
+  The following installation instructions are optimized for users of macOS. We strongly encourage Windows users to either explore our experimental [docker-compose set up method](https://developers.sefaria.org/docs/docker-compose-sefaria) or retrieve our data entirely via the API.
 </Callout>
 
 ***
 
-## Run locally
+## Running Sefaria-Project Locally
 
 ####
 
