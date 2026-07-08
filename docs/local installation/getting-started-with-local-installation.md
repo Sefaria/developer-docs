@@ -10,4 +10,4 @@ metadata:
 next:
   description: ''
 ---
-We recommend that users wishing to interact with Sefaria use our public [API](ref:getting-started-with-your-api) to do so. The docs in this section are only relevant to users who wish to work with the local set up.
+If you're interested in working with Sefaria's data, we recommend using our [public API](ref:getting-started-with-your-api). To work with a local set-up, use the documentation in this section to learn how to proceed.
