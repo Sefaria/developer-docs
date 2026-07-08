@@ -50,15 +50,15 @@ We recommend using local installation. However if you are interested in explorin
 
 To run Sefaria-Project locally, complete the following steps:
 
-### 1) Install Python 3.12+
+### 1) Install Python 3.12 or later.
 
 _Python 3.12 is the minimum supported version. Earlier versions (3.9–3.11) will encounter dependency compatibility errors during&#x20;_`pip install`_._
 
-#### For Linux and macOS
+#### For Linux and macOS:
 
-Most UNIX systems come with a Python interpreter pre-installed. However, this is generally still Python 2. The recommended way to get Python 3 without disrupting any software the OS is dependent on is by using Pyenv. You can find instructions for this process [here](https://github.com/pyenv/pyenv#installation) and [here](https://opensource.com/article/19/5/python-3-default-mac#what-we-should-do).
+Most Unix systems come with a Python interpreter pre-installed. However, this is generally still Python 2. The recommended way to get Python 3 without disrupting any software the OS is dependent on is by using pyenv. You can find instructions for this process [here](https://github.com/pyenv/pyenv#installation) and [here](https://opensource.com/article/19/5/python-3-default-mac#what-we-should-do).
 
-_Please note: Below, we'll discuss how to configure virtual environments to work with Pyenv so you can isolate your Sefaria stack sompletely._
+_Please note: Below, we'll discuss how to configure virtual environments to work with pyenv so you can completely isolate your Sefaria stack._
 
 #### For Windows:
 
@@ -70,7 +70,7 @@ In order to simply install Python:
 - Go to the [Python Download Page](https://www.python.org/downloads/release/python-375/) and download and install Python.
 - Add the python directory to your OS' PATH variable if the installer has not done so.
 
-### 2) Install virtualenv (optional but recommended):
+### 2) Install virtualenv (optional but recommended).
 
 If you work on many Python projects, you may want to keep Sefaria's Python installation separate by using Virtualenv. However, if you're happy having Sefaria requirements in your main Python installation, you can skip this step.
 
@@ -114,7 +114,7 @@ Once the first command is entered, you should see `(venv)` preceding your comman
 
 This is something that you have to run every time you open a new shell and want to run the Sefaria demo. You can always tell if you're in the virtual environment by checking if `(venv)` is at the beginning of your command prompt.
 
-### 3) Working With Pip:
+### 3) Install Pip (if necessary).
 
 If you are using pyenv, Pip should be available via the pyenv version of Python.
 
@@ -173,7 +173,7 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 After installing the Python development libraries or other dependencies, run `pip install -r requirements.txt` again.
 
-### 4) Install gettext
+### 4) Install gettext.
 
 `gettext` is a GNU utility that Django uses to manage localizations.
 
@@ -196,7 +196,7 @@ export PATH=$PATH:/usr/local/Cellar/gettext/0.xx.x/bin
 sudo apt-get install gettext
 ```
 
-### 5) Create a local settings file
+### 5) Create a local settings file.
 
 This step must be run from the Sefaria-Project root directory.
 
@@ -212,7 +212,7 @@ Among the placeholder values that need to be replaced, set the `DATABASES` defau
 
 You can name your local database (`sefaria` will be the default created by `mongorestore` below). You can leave `SEFARIA_DB_USER` ad `SEFARIA_DB_PASSWORD` blank if you don't need to run authentication on Mongo.
 
-### 6) Create a log directory:
+### 6) Create a log directory.
 
 Create a directory called `log` under the root project folder (i.e. `Sefaria-Project/`). To do this, run `mkdir log` from the project's root directory.
 
