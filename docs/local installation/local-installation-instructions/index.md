@@ -301,13 +301,13 @@ If the second command fails, you may have to install using `sudo npm run setup`.
 
 #### Run Webpack
 
-To get the site running, you need to bundle the Javascript with Webpack. Run:
+To get the site running, you need to bundle the Javascript with Webpack. In order to bundle once, run the following:
 
 ```
 npm run build-client
 ```
 
-to bundle once. To watch the Javascript for changes and automatically rebuild, run:
+In order to watch the Javascript for changes and automatically rebuild, run the following:
 
 ```
 npm run watch-client
