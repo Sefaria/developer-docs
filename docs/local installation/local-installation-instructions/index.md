@@ -48,21 +48,21 @@ We recommend using local installation. However if you are interested in explorin
 
 ## Running Sefaria-Project Locally
 
-####
+To run Sefaria-Project locally, complete the following steps:
 
-#### 1) Install Python 3.12+
+### 1) Install Python 3.12+
 
 _Python 3.12 is the minimum supported version. Earlier versions (3.9–3.11) will encounter dependency compatibility errors during&#x20;_`pip install`_._
 
-###### Linux and macOS
+#### For Linux and macOS
 
-Most UNIX systems come with a Python interpreter pre-installed. However, this is generally still Python 2. The recommended way to get Python 3, and not disrupt any software the OS is dependent on, is by using Pyenv. You can use the instructions [here](https://github.com/pyenv/pyenv#installation) and also [here](https://opensource.com/article/19/5/python-3-default-mac#what-we-should-do).
+Most UNIX systems come with a Python interpreter pre-installed. However, this is generally still Python 2. The recommended way to get Python 3 without disrupting any software the OS is dependent on is by using Pyenv. You can find instructions for this process [here](https://github.com/pyenv/pyenv#installation) and [here](https://opensource.com/article/19/5/python-3-default-mac#what-we-should-do).
 
-In a later step, we can configure virtual environments to work with Pyenv so you can completely isolate your Sefaria stack.
+_Please note: Below, we'll discuss how to configure virtual environments to work with Pyenv so you can isolate your Sefaria stack sompletely._
 
-###### Windows:
+#### For Windows:
 
-The Pyenv repository above also has recommendations for Windows.
+The Pyenv repository linked above also provides options for those working in Windows.
 
 In order to simply install Python:
 
@@ -70,23 +70,23 @@ In order to simply install Python:
 - Go to the [Python Download Page](https://www.python.org/downloads/release/python-375/) and download and install Python.
 - Add the python directory to your OS' PATH variable if the installer has not done so.
 
-#### 2) Install virtualenv (Recommended, but optional):
+### 2) Install virtualenv (optional but recommended):
 
-If you work on many Python projects, you may want to keep Sefaria's Python installation separate using Virtualenv.  If you're happy having Sefaria requirements in your main Python installation, skip this step.
+If you work on many Python projects, you may want to keep Sefaria's Python installation separate by using Virtualenv. However, if you're happy having Sefaria requirements in your main Python installation, you can skip this step.
 
-##### Use With Pyenv (Recommended)
+#### Working With Pyenv (Recommended)
 
-You can use virtualenv functionality while also using Pyenv; this allows you to further isolate your code and requirements from other projects.
+You can use both virtualenv functionality and pyenv simultaneously. This allows you to further isolate your code and requirements from other projects.
 
-###### Unix & Windows
+#### For Unix & Windows
 
-Instructions [here](https://github.com/pyenv/pyenv-virtualenv#installing-as-a-pyenv-plugin).
+To work with pyenv in either Unix or Windows operation systems, use [these intructions](https://github.com/pyenv/pyenv-virtualenv#installing-as-a-pyenv-plugin).
 
-###### macOS:
+#### macOS:
 
-Instructions [here](https://github.com/pyenv/pyenv-virtualenv#installing-with-homebrew-for-macos-users).
+To work with pyenv in macOS, use [these instructions](https://github.com/pyenv/pyenv-virtualenv#installing-with-homebrew-for-macos-users).
 
-Create [a pyenv virtualenv](https://github.com/pyenv/pyenv-virtualenv#using-pyenv-virtualenv-with-pyenv).
+#### How to Create a [pyenv virtualenv](https://github.com/pyenv/pyenv-virtualenv#using-pyenv-virtualenv-with-pyenv).
 
 In your Sefaria directory, run `pyenv local [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g. `3.12/envs/sefaria-venv`). This should serve to activate the virtualenv whenever you are in the Sefaria directory.
 
