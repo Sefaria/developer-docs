@@ -62,7 +62,7 @@ _Please note: Below, we'll discuss how to configure virtual environments to work
 
 #### For Windows:
 
-The Pyenv repository linked above also provides options for those working in Windows.
+The pyenv repository linked above also provides options for those working in Windows.
 
 In order to simply install Python:
 
