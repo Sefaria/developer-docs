@@ -260,15 +260,15 @@ If you chose to download the recommended dump (`dump_small.tar.gz`) create an em
 
 ### 9) Set up Django's local server
 
-Sefaria is using Google's reCAPTCHA to verify the user is not a bot. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)).<br />For local development, the default test keys would suffice. The warning can be suppressed by uncommenting the following in the local\_settings.py file:
+Sefaria uses Google's reCAPTCHA in order to verify that users are not bots. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)). For local development, the default test keys will suffice. This warning can be suppressed by uncommenting the following in the local\_settings.py file:
 
 ```
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 ```
 
-`manage.py` is used to run and manage the local server. It is located in the root directory of the `Sefaria-Project` codebase.
+_Please note:&#x20;_`manage.py`_&#x20;is used to run and manage the local server. It is located in the root directory of the&#x20;_`Sefaria-Project`_&#x20;codebase.&#x20;_
 
-Django auth features run on a separate database. To init this database and set up Django's auth system, switch to the root directory of the `Sefaria-Project` code base, and run (from the project root):
+Django authentication features run on a separate database. To initialize this database and set up Django's authentication system, switch to the root directory of the `Sefaria-Project` code base and run the following from the project root:
 
 ```
 python manage.py migrate
