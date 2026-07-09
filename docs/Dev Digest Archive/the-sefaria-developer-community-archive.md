@@ -17,7 +17,7 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 - Community launch
 
-### Project Highlights
+:wrench: Project Highlights
 
 - **IvritSuite**: Hebrew learning suite with worksheet generator, dictionary, Torah Trainer, and custom font creator&#x20;
 - **Ruth**: Hebrew learning app targeting conversion-curious learners with TTS pronunciation&#x20;
