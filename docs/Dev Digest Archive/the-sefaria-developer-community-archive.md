@@ -13,8 +13,6 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
-<br />
-
 ## **July 9th, 2026: Weekly Review**
 
 - Community launch
