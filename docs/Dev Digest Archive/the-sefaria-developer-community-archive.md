@@ -15,8 +15,6 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 ## **July 9th, 2026: Weekly Review**
 
-- Community launch
-
 ### :wrench: Project Highlights
 
 - **IvritSuite**: Hebrew learning suite with worksheet generator, dictionary, Torah Trainer, and custom font creator&#x20;
