@@ -12897,7 +12897,7 @@
             }
           }
         ],
-        "description": "Returns the seven aliyot ranges for a given parasha. Used by the source sheet builder when seeding a sheet from a weekly reading.",
+        "description": "Returns a breakdown of the seven Torah readings for a given parashah. Used by Sheet builders when seeding a Sheet from a weekly reading.",
         "responses": {
           "200": {
             "content": {
@@ -12925,7 +12925,8 @@
             },
             "description": "Successful Response"
           }
-        }
+        },
+        "summary": "Aliyot for a Parashah"
       }
     },
     "/api/calendars/topics/parasha": {
