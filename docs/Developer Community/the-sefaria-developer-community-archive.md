@@ -1,7 +1,7 @@
 ---
 title: The Sefaria Developer Community Archive
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
