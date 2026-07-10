@@ -22,32 +22,35 @@ This tool is designed to integrate [Workflowy](https://workflowy.com/) capabilit
 
 ## How can we use Workflowy to add texts to the Sefaria Library?
 
-As mentioned above, we can use [Workflowy](https://workflowy.com/) to create a table of contents for a text (an `Index` record), and to even fill in simple text for that Index (a `Version`).
+As mentioned above, we can use [Workflowy](https://workflowy.com/) to create a table of contents for a text (an `Index` record), and even to fill in simple text for that Index (a `Version`).
 
 This involves two main steps:
 
 1. Creating a [Workflowy](https://workflowy.com/) document representing the text
 2. Uploading the `.opml` file on your local instance of Sefaria
 
-# Step 1: Preparing the [Workflowy](https://workflowy.com/) Document:
+# Preparing the [Workflowy](https://workflowy.com/) Document:
 
-[Workflowy](https://workflowy.com/) stores nodes in outline form. The parsing script mentioned above will utilize this form to create a layered table of contents.
+[Workflowy](https://workflowy.com/) stores nodes as an outline. The parsing script (mentioned above) will use this form to create a layered table of contents.
 
-First create a new [Workflowy](https://workflowy.com/) Document.
+In order to begin, you'll need to create a new [Workflowy](https://workflowy.com/) document.
 
-1. If you don't already have an account, you'll need to sign up for one (it's free).
-2. Then, use their online interface to create a new document
+_Please note: To use Workflowy, you'll need to register for and log in to a free account._
 
-## Defining Book Structure
+Once logged in to your Workflowy account, use their interface to create a new document, then define the following criteria.
 
-Below are instructions for using Workflowy to define a book structure:
+### 1) Book Structure Definition
 
-1. Add a SINGLE bullet to the main page containing the title of the book being described (All other bullets describing the internal structure of the text **MUST** be nested under this bullet).
-2. Separate the English title from the Hebrew title (both are required) by using the forward slash `/` character on the keyboard.
-3. If you wish to add alternate English or Hebrew titles, please group each language together (i.e. do not write one English then one Hebrew and then another in English) separated by the `/` character. Each of the languages should internally separate the alternate title variations using the pipe `|` character (usually above the enter key).
+In order to use Workflowy to define a book structure:
+
+1. Add a single bullet to the main page containing the title of the book being described. All other bullets describing the internal structure of the text **must be nested under this initial bullet**.
+2. Separate the English title from the Hebrew title by using the forward slash `/` character on the keyboard. Titles in both languages are required.&#x20;
+3. If you wish to add alternate English or Hebrew titles, please group each language together (i.e., do _not_ write one English title, then one Hebrew title, and then another English title), separated by the `/` character. Alternate titles should be separated into their respective language catgories using the pipe `|` character, usually found above the enter key (on a PC) or the return key (on a Mac).
+
+   The result should look like: English Title 1|English Title 2 / Hebrew Title 1|Hebrew Title 2
 4. Proceed to add nested bullets as needed to describe the text structure. The same rules of adding titles apply to each of the nested bullets.
 
-#### An Example:
+#### For example:
 
 - Siddur A / סידור א
   - Shacharit / תפילת שחרית
@@ -55,33 +58,33 @@ Below are instructions for using Workflowy to define a book structure:
     - Maariv|Arvit / מעריב|ערבית
       - Vehu Rachum / והוא רחום
 
-## Specifying Segment Depth
+### 2) Segment Depth Specification
 
-The deepest bullet at any point will be the one where text is actually stored on. By default, this means that you can only create a series of paragraphs at a single level of depth at this point. For example, a bullet titled "The Tale of the Four Kings", unless otherwise specified, will only be able to have references such as `The Tale of the Four Kings.1`, `The Tale of the Four Kings.2` etc.
+The deepest bullet at any point will be the one where text is actually stored. By default, this means that you can only create a series of paragraphs at a single level of depth at this point. For example: A bullet titled "The Tale of the Four Kings" will only be able to have references such as `The Tale of the Four Kings.1`, `The Tale of the Four Kings.2`, etc., unless otherwise specified.
 
-This means that if you want a certain bullet title to also use numeric continuation at a depth larger than one (such as Chapter and Verse), you must specify this in square brackets `[]` after the titles.
+Therefore, if you want a certain bullet title to use numeric continuation at a depth larger than one (such as Chapter and Verse), you must specify this in square brackets `[]` after the titles.
 
-#### Examples
+#### For example:
 
-##### Using only a number to denote depth
+When using only a number to denote depth, indicate it like this:
 
 - Midrash on Kings
   - Introduction
   - The Tale of the Four Kings \[2]
 
-##### Using section names (and the depth is implied from the number of section names):
+When using section names and implying depth from the number of section names, indicate it like this:
 
 - Midrash on Kings
   - Introduction
   - The Tale of the Four Kings \['Chapter', 'Verse']
 
-##### Using both section names and types:
+When using both section names and types, indicate them like this:
 
 - Midrash on Kings
   - Introduction
   - The Tale of the Four Kings \["Chapter:Integer", "Verse:Integer"]
 
-## Default Titles
+### 3) Default Titles
 
 Sometimes you will find yourself with a structure like this:
 
@@ -91,17 +94,21 @@ Sometimes you will find yourself with a structure like this:
 
 In such a case, we use a notion called a default node in order to eliminate the title repetition. To accomplish this, simply replace the redundant title with the special string `\*\*default\*\*`:
 
-#### Example of an Index Outline with a Default String
+#### For example:&#x20;
+
+When creating an Index Outline with a default string, indicate it like this:
 
 - The Tale of the Four Kings
   - Introduction
   - `\*\*default\*\*`
 
-## Specifying Categories
+### 4) Specifying Categories
 
-If you wish to specify categories in the Sefaria table of contents (e.g. Talmud->Bavli->Seder Zeraim), please add them to the root bullet, after the titles. Surround this categories text with the percent sign `%`. The categories themselves should be separated from each other by a comma (e.g. Talmud,Bavli,Seder Zeraim).
+If you wish to specify text categories that align with those found in the Sefaria Library (e.g., Talmud --> Bavli --> Seder Zeraim), please add them to the root bullet after the title. Surround the text category with the percent sign( `%`). The categories themselves should be separated with a comma (e.g., Talmud,Bavli,Seder Zeraim).
 
-#### Example of a Text with Categories
+#### For example:&#x20;
+
+When creating an Index Outline that includes text categories, indicate them like this:
 
 - Modern Commentary on Esther / פירוש מודרני על מגילת אסתר %Tanakh,Commentary,Modern Commentary%
   - Introduction / הקדמה
@@ -109,7 +116,7 @@ If you wish to specify categories in the Sefaria table of contents (e.g. Talmud-
     - Part Two / חלק ב׳
   - `\*\*default\*\*`
 
-## Important Notes
+# Important Notes
 
 ### Delimiters and Forbidden Characters
 
