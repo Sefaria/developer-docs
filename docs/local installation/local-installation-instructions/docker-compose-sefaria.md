@@ -48,13 +48,13 @@ mongorestore --host localhost:27018
 
 ### 4) Update your local settings file:
 
-Copy the local settings file:
+Copy the local settings file in the following way:
 
 ```
 cp sefaria/local_settings_example.py sefaria/local_settings.py
 ```
 
-Replace the following values:
+Once copied, replace the following values:
 
 ```
 DATABASES = {
@@ -72,38 +72,36 @@ DATABASES = {
 MONGO_HOST = "db"
 ```
 
-Optionally, you can replace the cache values as well:
+You can also replace both the cache values and the respective values in CACHES:
 
 ```
 MULTISERVER_REDIS_SERVER = "cache"
 REDIS_HOST = "cache"
 ```
 
-and the respective values in CACHES
+### 5) Connect to the Django container and run migrations.
 
-##### 5) Connect to the django container and run migrations:
-
-In a new terminal window run:
+In a new terminal window, run the following:
 
 ```
 docker exec -it sefaria-project-web-1 bash
 ```
 
-This will connect you to the django container. Now run:
+This will connect you to the Django container. Once that has been completed, run the following:
 
 ```
 python manage.py migrate
 ```
 
-##### 6) Run webpack:
+### 6) Run webpack.
 
-In a new terminal window, run:
+In a new terminal window, run the following:
 
 ```
 docker exec -it sefaria-project-node-1 bash
 ```
 
-This will connect you to the django container. Now run:
+This will connect you to the Django container. Once that has been completed, run either:
 
 ```
     npm run build-client
@@ -115,8 +113,8 @@ or
     npm run watch-client
 ```
 
-##### 7) Visit the site:
+### 7) Visit the site.
 
-In your browser go to http\://localhost:8000
+In your browser, navigate to http\://localhost:8000
 
 If the server isn't running, you may need to run `docker-compose up` again.
