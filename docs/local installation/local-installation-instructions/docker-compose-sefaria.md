@@ -10,41 +10,43 @@ metadata:
 next:
   description: ''
 ---
-## Run with `docker-compose`
+# How to Run Sefaria With `docker-compose`
 
-> 🚧 Note
->
-> This approach is **experimental** and **has not yet been fully tested**. If this is a method that would help you, please [contact us](page:contact-us) and let us know.
+<Callout icon="🚧" theme="warn">
+  ### Please note:
 
-##### 1\) Install Docker and Docker Compose
+  **This approach is** **experimental** **and** **has not yet been fully tested**. If working with docker-compose is a method that would help you, please [contact us.](page:contact-us)
+</Callout>
 
-Follow the instructions [here](https://docs.docker.com/docker-for-mac/install/) to install Docker and [here](https://docs.docker.com/compose/install/) to install Docker Compose.
+<br />
 
-Windows users might need special support, see the [official Docker documentation](https://docs.docker.com/desktop/setup/install/windows-install/) for more. 
+### 1) Install Docker and Docker Compose
 
-##### 2\) Run the project
+Begin by installing Docker (instructions [here](https://docs.docker.com/docker-for-mac/install/)) and Docker Compose (instructions [here](https://docs.docker.com/compose/install/)). If you're working with Windows, you might need special support. For further information on this, see the [official Docker documentation](https://docs.docker.com/desktop/setup/install/windows-install/).
 
-In your terminal run:
+### 2) Run the project
+
+In your terminal, run the following:
 
 ```
 docker-compose up
 ```
 
-This will build the project and run it. You should now have all the proper services set up! Now, let's add some texts.
+This will build the project and run it. Once you've run the above, you should have all the proper services set up. The next step is to add some texts.
 
-##### 3\) Connect to mongo and add texts:
+### 3) Connect to Mongo and add texts.
 
-Connect to mongo running on port 27018. We use 27018 instead of the standard port 27017 to avoid conflicts with any mongo instance you may already have running.
+Connect to Mongo, running on port 27018. Sefaria uses 27018 instead of the standard port (27017) in order to avoid conflicts with any Mongo instances you may already have running.
 
-Follow instructions in section 8 below to download the mongo dump.
+_Please note: You can find instructions for downloading the Mongo dump below, in section 8.&#x20;_
 
-Restore the mongodump to the dockerized mongo instance with the following command:
+Once you've connected Mongo, restore the mongodump to the dockerized Mongo instance with the following command:
 
 ```
 mongorestore --host localhost:27018
 ```
 
-##### 4\) Update your local settings file:
+### 4) Update your local settings file:
 
 Copy the local settings file:
 
@@ -79,7 +81,7 @@ REDIS_HOST = "cache"
 
 and the respective values in CACHES
 
-##### 5\) Connect to the django container and run migrations:
+##### 5) Connect to the django container and run migrations:
 
 In a new terminal window run:
 
@@ -93,7 +95,7 @@ This will connect you to the django container. Now run:
 python manage.py migrate
 ```
 
-##### 6\) Run webpack:
+##### 6) Run webpack:
 
 In a new terminal window, run:
 
@@ -107,13 +109,13 @@ This will connect you to the django container. Now run:
     npm run build-client
 ```
 
-or 
+or
 
 ```
     npm run watch-client
 ```
 
-##### 7\) Visit the site:
+##### 7) Visit the site:
 
 In your browser go to http\://localhost:8000
 
