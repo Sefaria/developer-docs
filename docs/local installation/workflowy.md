@@ -193,12 +193,14 @@ Once logged in, navigate to `/modtools`. On most machines this will be found at 
 <Image src="https://files.readme.io/a93b28b-Screen_Shot_2024-02-21_at_12.58.33.png" align="center" width="60% " border={true} />
 
 
-Hit the button `choose file`, and select the `.opml` file downloaded from Workflowy. Select whether or not you are just creating an `Index` or also adding a `Version` of text. When complete, hit `upload` to upload your text to your local Sefaria database.
+Click on `choose file` and select the `.opml` file downloaded from Workflowy. Select whether you are **only&#x20;**&#x63;reating an `Index` or **both creating an&#x20;**`Index`**&#x20;and also adding a&#x20;**`Version`**&#x20;of the text**.&#x20;
 
-Upon success, in the text box beneath the `upload` button you will see the full `Index` record for the newly created text:
+Once you've completed selection, click `upload` to upload your text to your local Sefaria database.
+
+Upon success, you will see the full `Index` record for the newly created text in the text box beneath the `upload` button, like this:
 
 
 <Image src="https://files.readme.io/e067bb5-Screen_Shot_2024-02-21_at_12.47.22.png" align="center" width="60% " border={true} />
 
 
-(To see this in the code, navigate to [Sefaria-Project/sefaria/views.py](https://github.com/Sefaria/Sefaria-Project/blob/54f78cb72a2c071261cee3cfd8317141fc5bed9d/sefaria/views.py#L1334) to see the `modtools_upload_workflowy()` function).
+_Please note: To see this in the code, navigate to&#x20;_[_Sefaria-Project/sefaria/views.py_](https://github.com/Sefaria/Sefaria-Project/blob/54f78cb72a2c071261cee3cfd8317141fc5bed9d/sefaria/views.py#L1334)_&#x20;and look at the&#x20;_`modtools_upload_workflowy()`_&#x20;function._
