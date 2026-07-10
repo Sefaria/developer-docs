@@ -20,7 +20,7 @@ This tool is designed to integrate [Workflowy](https://workflowy.com/) capabilit
 
 [Workflowy](https://workflowy.com/) is a versatile web-based tool for organizing information through nested lists, offering features such as tagging, collaboration, and offline access. [Workflowy](https://workflowy.com/) allows users to build nested lists that can be exported to an `.opml` file. Once exported, the lists can be parsed and ingested as an `Index` or `Version` in the Sefaria Library.
 
-## How Can We Use Workflowy To Add Texts to Sefaria?
+## How can we use Workflowy to add texts to the Sefaria Library?
 
 As mentioned above, we can use [Workflowy](https://workflowy.com/) to create a table of contents for a text (an `Index` record), and to even fill in simple text for that Index (a `Version`).
 
