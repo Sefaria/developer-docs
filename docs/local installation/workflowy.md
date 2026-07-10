@@ -29,7 +29,7 @@ This involves two main steps:
 1. Creating a [Workflowy](https://workflowy.com/) document representing the text
 2. Uploading the `.opml` file on your local instance of Sefaria
 
-# Preparing the [Workflowy](https://workflowy.com/) Document:
+# Part 1: Preparing the [Workflowy](https://workflowy.com/) Document:
 
 [Workflowy](https://workflowy.com/) stores nodes as an outline. The parsing script (mentioned above) will use this form to create a layered table of contents.
 
@@ -120,18 +120,18 @@ When creating an Index Outline that includes text categories, indicate them like
 
 ### Delimiters and Forbidden Characters
 
-The following characters are used as delimiters, and therefore may **NOT** be used inside of any title:
+The following characters are used as delimiters, and therefore may **not** be used inside of any title:
 
 - `/` - The forward slash
 - `|` - The pipe character
 
-Additionally, do **not** use a hyphen (i.e. `-`) inside titles. The titles are used to craft URLs to Sefaria and a hyphen is an illegal character inside a URL.
+Additionally, do **not** use a hyphen (i.e., `-`) as part of a title. Titles are used to craft URLs to Sefaria, and a hyphen is an illegal character inside a URL.
 
-### Comments
+### Commenting
 
-Should you need to make a comment that will not be parsed, please place the text surrounded by the pound sign `#` parentheses. It will then be ignored.
+If you need to make a comment that should not be parsed, surround the comment by the pound sign `#` , so it will be ignored.
 
-#### Example
+#### For example:
 
 - Modern Commentary on Esther / פירוש מודרני על מגילת אסתר %Tanakh,Commentary,Modern Commentary%
   - Introduction / הקדמה
@@ -139,26 +139,28 @@ Should you need to make a comment that will not be parsed, please place the text
     - Part Two / חלק ב׳ # I have the text in a .docx file, must convert!
   - `\*\*default\*\*`
 
-## Optional Step: Adding optional text to the Workflowy ouline
+### 5) Optional: Adding version text to the Workflowy outline
 
-In some cases, entering the version text into the Workflowy rather than later through the Sefaria GUI might be preferred. If so, text can be added to outline nodes using the Workflowy "add note" feature. Simply hover the cursor over the appropriate bullet and select "add note". Please note that only text of depth 1 can be added, but not of any higher depth (.e.g. a list of verses can be added, but a list of chapters with verses inside them cannot)
+In some cases, it might be preferable to enter the version text into the Workflowy rather than later, through the Sefaria GUI. In this case, text can be added to outline nodes using the Workflowy "add note" feature. In order to use this feature, hover the cursor over the appropriate bullet and select "add note".&#x20;
 
-### Parsing Text Formatting
+_Please note: Only text of depth 1 can be added in this way. Any higher depth will not be possible (e.g., you can add a list of verses, but not a list of chapters with verses inside them)._
 
-A few standards are used by this script when parsing:
+#### Parsing Text Formatting
 
-- Text inside parenthesis `()` - is italicized (`<em>`).
-- A paragraph break \[ie: the enter key] separates paragraphs.
+This script uses the following standards when parsing:
+
+- Text inside parenthesis `()`  is italicized (`<em>`).
+- A paragraph break \[i.e., the enter or return key] separates paragraphs.
 - Forward slashes `/` are interpreted as line breaks.
-- iI you need to list version attributes (i.e. versionTitle, versionSource, etc) use the notes on the primary text title (the topmost title- for the whole book) as that will usually not have other text under it.
+- If you need to list version attributes (e.g., versionTitle, versionSource, etc.), use the notes on the primary text title (the topmost title that refers to the whole book), as that will usually not have other text under it.
 
-## Exporting the Workflowy:
+### 6) Exporting the Workflowy:
 
-To export, simply hover the cursor over the bullet of a root node in the Workflowy. Select "export" and choose opml. Save to `.opml` file.
+To export, simply hover the cursor over the bullet of a root node in the Workflowy document. Select "export" and choose opml. Save to `.opml` file.
 
-### Example `.opml` File
+#### For example:
 
-A sample `.opml` file can be seen below:
+An `.opml` file may look like this:
 
 ```html OPML
 <?xml version="1.0"?>
@@ -179,13 +181,13 @@ A sample `.opml` file can be seen below:
 </opml>
 ```
 
-# Step 2: Uploading the Index via Moderator Tools
+# Part 2: Uploading the Index via Moderator Tools
 
 To upload the text to Sefaria, make sure your local installation of the project is running.
 
-Log-in to your local user account, make sure you have admin permissions set.
+To do so, log in to your local user account and make sure you have admin permissions set.
 
-Navigate to `/modtools`, on most machines this will be at [http://127.0.0.1:8000/modtools](http://127.0.0.1:8000/modtools). Scroll down to the `Workflowy Outline Upload` section, pictured below:
+Once logged in, navigate to `/modtools`. On most machines this will be found at [http://127.0.0.1:8000/modtools](http://127.0.0.1:8000/modtools). Then, scroll down to the `Workflowy Outline Upload` section, pictured below:
 
 
 <Image src="https://files.readme.io/a93b28b-Screen_Shot_2024-02-21_at_12.58.33.png" align="center" width="60% " border={true} />
