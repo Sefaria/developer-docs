@@ -18,15 +18,15 @@ next:
 > _Please note: All the projects below are built by individuals unaffiliated with Sefaria. While they rely on our data and API, they represent only the developers who created them. Sefaria is proud to power a diverse collection of projects, as this is a key part of our mission — providing the tech that brings the Jewish people into the digital age. If you encounter any challenges with the tools and products below, please contact the relevant developer._
 
 <Callout icon="🔎" theme="default">
-  ### Sefaria Team Pick of the Month
+  ### Sefaria Team Picks of the Month
 
   # [Torah Research Board](https://torah-research.yaakovbeckerman.com/)
 
   An infinite-canvas research tool that pulls Torah texts and commentaries from Sefaria and pairs them with an AI analysis engine, designed for deep, multi-source study across foundational topics.
 
-  # **<Anchor target="_blank" href="https://dafbuddy.com/">DafBuddy</Anchor>**
+  # [Lishkod](https://lishkod.app/)
 
-  A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
+  A free, Hebrew-first progressive web app that consolidates all major daily Torah study cycles — including Chitas, Rambam, Daf Yomi, and more — into a single audio-enabled card feed with offline support and progress tracking, powered by Sefaria's calendars and texts APIs.
 </Callout>
 
 In addition to the projects below, there are also 150+ websites using the Sefaria Linker to automatically link textual citations to the Sefaria Library. [Learn more and view a list of websites using the Linker >> ](https://developers.sefaria.org/docs/sites-using-the-linker).
