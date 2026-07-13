@@ -119,6 +119,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Bina v’Da’at](https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t) - Interactive AI-powered Hebrew chatbot designed to support Torah learning.
 - [Tikkun.io](<* https://tikkun.io/>) - A tool for preparing Torah readings.
 - [Zmanim Checklist](https://apps.apple.com/app/id6751196074) - A prayer companion app that combines precise, location-based zmanim with configurable reminders, a daily checklist, and a full multi-nusach siddur powered by Sefaria. (There's also a version for Android, see [here](https://play.google.com/store/apps/details?id=com.tental.zmanimchecklist\&hl=en)).
+- [Zmanim Today](https://zmanim-today-1f2656a3.base44.app/) - A personal davening toolkit that combines a precise, location-based zmanim calculator with a Jerusalem-pointing compass, multi-nusach siddurim powered by Sefaria, and customizable prayer time notifications — all in one place.
 
 <br />
 
@@ -168,6 +169,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Sefaria Embedded, code on GitHub](https://github.com/nassan/sefaria-embedded/tree/master) - A server for generating embeddable iframes for texts via Sefaria API.
 - [Sefaria Wordpress Plugin, code on Github](https://github.com/JoshMB/sefaria-wp-plugin)
 - [Shnayim Mikrah](https://www.npmjs.com/package/@orthodox-union/shnayimmikrah) - A wrapper over the Sefaria API to enable presenting Shnayim Mikrah text by aliyah.
+- [Stndr](https://github.com/danilius/Stndr) -A focused desktop Jewish text reader that brings the Sefaria library offline with tabbed navigation, commentaries, cross-references, and advanced search, built for in-depth personal study.
 - [Yolaroo Library of Jewish Texts, code on GitHub](https://github.com/yolaroo/SefariaiOSv0.1)
 - [Sefaria-Container-Unofficial](https://github.com/orxaicom/Sefaria-Container-Unofficial) - Builds and publishes a docker container to run Sefaria
 - [Sefaria-Desktop-Unofficial](https://github.com/orxaicom/Sefaria-Desktop-Unofficial) - Desktop app for the Sefaria Library. Work in progress. Currently only Linux-supported.
