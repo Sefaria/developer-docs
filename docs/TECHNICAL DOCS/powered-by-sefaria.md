@@ -20,9 +20,9 @@ next:
 <Callout icon="🔎" theme="default">
   ### Sefaria Team Pick of the Month
 
-  # **<Anchor target="_blank" href="https://www.youtube.com/watch?v=CNIO2MsfeTo">Ask the Rambam RAG Tutorial</Anchor>**
+  # [Torah Research Board](https://torah-research.yaakovbeckerman.com/)
 
-  A retrieval-augmented Q\&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
+  An infinite-canvas research tool that pulls Torah texts and commentaries from Sefaria and pairs them with an AI analysis engine, designed for deep, multi-source study across foundational topics.
 
   # **<Anchor target="_blank" href="https://dafbuddy.com/">DafBuddy</Anchor>**
 
