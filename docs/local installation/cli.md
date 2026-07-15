@@ -1,6 +1,6 @@
 ---
-title: CLI
-excerpt: The Sefaria Command-Line-Interface tool.
+title: Command-Line-Interface (CLI)
+excerpt: Learn more about Sefaria's Command-Line-Interface tool.
 deprecated: false
 hidden: false
 metadata:
