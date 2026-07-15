@@ -1,8 +1,8 @@
 ---
 title: The Sefaria MCPs
 excerpt: >-
-  Use our MCPs to integrate your LLM of choice with Sefaria's rich library of
-  Jewish texts and huge cache of open-source data.
+  Use our MCPs to integrate your LLM of choice with the texts in the Sefaria
+  Library and with our open-source data.
 deprecated: false
 hidden: false
 link:
