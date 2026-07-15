@@ -22,7 +22,7 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
 
 ### The Sefaria Texts MCP \[[https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)]
 
-This tool allows your AI assistant of choice to converse directly with the Sefaria library. This means your LLM can search and retrieve any text from our database and return a response with precise citations to specific sources. Now, when you ask Claude or ChatGPT what Rashi says about Genesis 1:6, you can be sure you’re getting a precise answer.
+This tool allows your AI assistant of choice to converse directly with the Sefaria Library. This means your LLM can search and retrieve any text from our database and return a response with precise citations to specific sources. Now, when you ask Claude or ChatGPT what Rashi says about Genesis 1:6, you can be sure you’re getting a precise answer.
 
 <Callout icon="❗️" theme="error">
   ### Second-Party Requirements
@@ -33,8 +33,8 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
 ## Quick Setup Guide
 
 1. Copy the relevant MCP URL:
-   1. Sefaria Texts MCP [https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)
-   2. Sefaria Developers MCP [https://developers.sefaria.org/mcp](https://developers.sefaria.org/mcp)
+   1. Sefaria Texts MCP: [https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)
+   2. Sefaria Developers MCP: [https://developers.sefaria.org/mcp](https://developers.sefaria.org/mcp)
 2. Add to Your AI Tool:
    1. **Claude**: Go to settings, add as a Custom Connector, enable.
    2. **Cursor**: Configure in MCP settings
