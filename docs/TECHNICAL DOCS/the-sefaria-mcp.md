@@ -16,15 +16,17 @@ The Sefaria MCP (Model Context Protocol) servers connect your favorite AI tools 
 
 An MCP is a standardized way for LLMs to connect to external data sources and APIs. It's a bridge that lets your AI chat with databases, search engines, and specialized libraries. Think of it as an adaptor cable that lets your AI tools connect seamlessly with an external source.
 
-### The Sefaria Developers MCP [[https://developers.sefaria.org/mcp](https://developers.sefaria.org/mcp)]
+### The Sefaria Developers MCP \[[https://developers.sefaria.org/mcp](https://developers.sefaria.org/mcp)]
 
 This tool allows your AI assistant of choice to converse directly with the Sefaria API. This means your LLM can search and retrieve any data and write the code you need to build tools and programs based on Sefaria’s indices. Connect to Claude Code, Cursor, or any other MCP-Compatible AI tool, and watch the JavaScript write itself.
 
-### The Sefaria Texts MCP [[https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)]
+### The Sefaria Texts MCP \[[https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)]
 
 This tool allows your AI assistant of choice to converse directly with the Sefaria library. This means your LLM can search and retrieve any text from our database and return a response with precise citations to specific sources. Now, when you ask Claude or ChatGPT what Rashi says about Genesis 1:6, you can be sure you’re getting a precise answer.
 
 <Callout icon="❗️" theme="error">
+  ### Second-Party Requirements
+
   **Please note:** You must have a paid Claude or ChatGPT account to connect an MCP
 </Callout>
 
@@ -43,3 +45,5 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
       1. "What does Genesis 1:1 say?" or "Find me talmudic discussions about kindness"
    2. Using the Sefaria Developers MCP, ask the AI assistant to write code by pulling from our API. For example:
       1. “Help me build a GUI which uses the Sefaria API to focus on Sforno's commentary on Genesis.”
+
+<br />
