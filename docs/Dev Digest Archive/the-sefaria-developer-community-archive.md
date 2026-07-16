@@ -13,6 +13,19 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## July 16th, 2026: Weekly Review
+
+### &#x20;🎯 Key Support Questions & Answers
+
+- **Source Sheet Creation via API** - A developer asked about creating sheets programmatically. The team clarified that POST The `api/sheets` endpoint is undocumented and discouraged because it requires developers to supply full text payloads. Instead, authenticated cookie-based requests are recommended for updating existing sheets, with a provided Python script template. However, this remains a friction point: developers want to reference Sefaria refs without pre-fetching text.
+- **Text Update Tracking** - No dedicated API exists for checking if texts have been updated since a given date. The team pointed to workaround: `https://www.sefaria.org/activity/{index_name}/{lang}/{version}` accessible via GUI revision history. A developer requested a proper API for this (useful for offline readers like Stndr that need update checks). This appears to be a feature request worth considering.&#x20;
+- **Data Dump Frequency** - The small MongoDB dump (`dump_small.tar.gz`) updates every 24 hours but lags live changes. Note it excludes edit history, private collections, and copyright-restricted texts.&#x20;
+
+### 💡 Notable Insights
+
+- **Language Code Inconsistency**: The team acknowledged a legacy issue where activity URLs use `en`/`he` codes regardless of actual language (ISO codes like the database's `actualLanguage` field would be preferable). A known limitation. &#x20;
+- **Agent Skills for Source Sheets**: Proposal to add source sheet editing as an AI agent capability for power users—interesting direction for automation.&#x20;
+
 ## **July 9th, 2026: Weekly Review**
 
 ### :wrench: Project Highlights
