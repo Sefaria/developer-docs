@@ -16891,7 +16891,7 @@
         "tags": [
           "Sheets"
         ],
-        "description": "Returns all sheet tags with their usage counts. Sorted by count (descending) by default.",
+        "description": "Returns all Sheet tags with their usage counts. By default, the information is sorted by count highest to lowest. ",
         "responses": {
           "200": {
             "content": {
