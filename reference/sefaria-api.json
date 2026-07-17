@@ -16645,7 +16645,7 @@
             }
           }
         ],
-        "description": "Returns a user's public sheets, paginated and sorted. Same response shape as the unparameterized variant.",
+        "description": "Returns all of a specific user's public Sheets, paginated and sorted. Same response shape as the unparameterized variant.",
         "responses": {
           "200": {
             "content": {
