@@ -16850,7 +16850,7 @@
             "required": true
           }
         ],
-        "description": "Fetches lightweight summaries for many sheets at once. The path parameter is a pipe-delimited (`|`) list of sheet IDs. Each ID is found the same way as for single-sheet endpoints (the number in the sheet's URL on `voices.sefaria.org`).",
+        "description": "Returns brief summaries of many Sheets at once. The path parameter is a pipe-delimited (`|`) list of sheet IDs. Each ID is found in the same way it is found for single-Sheet endpoints (i.e., the number in the Sheet's URL on Voices on Sefaria).",
         "responses": {
           "200": {
             "content": {
