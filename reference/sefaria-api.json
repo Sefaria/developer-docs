@@ -17609,7 +17609,7 @@
             }
           }
         ],
-        "description": "Returns public sheets that cite the given Sefaria ref.",
+        "description": "Returns public Sheets that cite a given Sefaria ref.",
         "responses": {
           "200": {
             "content": {
