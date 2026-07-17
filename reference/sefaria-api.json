@@ -15210,7 +15210,7 @@
             }
           }
         ],
-        "description": "Returns the full sheet if it has been modified since the given timestamp; otherwise returns an empty/unchanged response. Useful for clients that cache sheets.",
+        "description": "Returns a full Sheet if it has been modified since the given timestamp. If it the Sheet has not been modified, returns an empty/unchanged response. This endpoint is useful for clients that cache Sheets.",
         "responses": {
           "200": {
             "content": {
