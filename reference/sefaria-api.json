@@ -15502,7 +15502,7 @@
             "required": true
           }
         ],
-        "description": "Returns a user's public sheets. For anonymous callers, only public sheets are returned. An authenticated user requesting their own user_id additionally sees their private sheets.",
+        "description": "Returns all of a specific user's public Sheets. For anonymous callers, only public Sheets are returned. For an authenticated user requesting their own user_id, will return both public and private Sheets.",
         "responses": {
           "200": {
             "content": {
