@@ -18860,7 +18860,7 @@
             "required": true
           }
         ],
-        "description": "Returns the collections that a specific user owns or belongs to.",
+        "description": "Returns Collections owned by or collaborated on by a specific user. ",
         "responses": {
           "200": {
             "content": {
