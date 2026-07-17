@@ -17997,7 +17997,7 @@
             }
           }
         ],
-        "description": "Returns a paginated list of all public sheets.",
+        "description": "Returns a paginated list of all public Sheets.",
         "responses": {
           "200": {
             "content": {
