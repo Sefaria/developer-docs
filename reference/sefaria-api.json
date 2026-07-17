@@ -17147,7 +17147,7 @@
             "required": true
           }
         ],
-        "description": "Returns the topic tags used on a specific user's public sheets.",
+        "description": "Returns the Topic tags used on a specific user's public Sheets.",
         "responses": {
           "200": {
             "content": {
