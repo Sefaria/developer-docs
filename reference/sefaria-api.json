@@ -18299,7 +18299,7 @@
         "tags": [
           "Collections"
         ],
-        "description": "Returns the list of Sefaria collections. Unauthenticated callers see only publicly-listed collections in `public`; the `private` array is empty. Authenticated users additionally see private collections they belong to.",
+        "description": "Returns a list of Sefaria Sheet Collections. Unauthenticated callers see only publicly listed Collections in `public`, while the `private` array will be empty. Authenticated users will also see private Collections they are authorized to see (e.g., Collections they have authored or co-authored)..",
         "responses": {
           "200": {
             "content": {
