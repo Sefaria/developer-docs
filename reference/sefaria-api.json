@@ -15031,7 +15031,7 @@
             "description": "Successful Response"
           }
         },
-        "description": "Retrieves the full content and metadata of a single Sefaria source sheet."
+        "description": "Retrieves the full content and metadata of a single Sheet from Voices on Sefaria."
       }
     },
     "/api/sheets/trending-tags": {
