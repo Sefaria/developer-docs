@@ -15173,7 +15173,7 @@
             "description": "Successful Response"
           }
         },
-        "description": "Returns the most-used sheet tags from recent activity."
+        "description": "Returns the most-used Sheet tags from recent activity."
       }
     },
     "/api/sheets/modified/{sheet_id}/{timestamp}": {
