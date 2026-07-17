@@ -18381,7 +18381,7 @@
             }
           }
         ],
-        "description": "Returns the full content of a single collection, including its member sheets. For unauthenticated callers, only publicly-listed collections are accessible.",
+        "description": "Returns the full content of a single Sheet Collection, including its member Sheets. For unauthenticated callers, only public Collections are accessible through this endpoint.",
         "responses": {
           "200": {
             "content": {
