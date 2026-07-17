@@ -17024,7 +17024,7 @@
             }
           }
         ],
-        "description": "Returns all sheet tags with their usage counts, sorted by the given key.",
+        "description": "Returns all Sheet tags with their usage counts. The information returned is sorted by a given key.",
         "responses": {
           "200": {
             "content": {
