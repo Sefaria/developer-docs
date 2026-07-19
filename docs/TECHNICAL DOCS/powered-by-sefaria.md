@@ -35,28 +35,31 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 
 ### AI Projects
 
-- [Ask the Rambam RAG Tutorial](https://www.youtube.com/watch?v=CNIO2MsfeTo)  - A retrieval-augmented Q\&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
-- [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
-- [ChavrutAI](https://chavrutai.com/contents) - Free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
-- [DafBuddy](https://dafbuddy.com/) - A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
-- [Dafyomi AI Summary](https://dormantone.github.io/dafyomi/) - Explores, summarizes, and translates key insights from the Talmud.
-- [Darshan AI](https://darshan.siddur.xyz/) - A platform that can create an entire lesson with just a few clicks, as well as citing sources and linking to the Sefaria Library.
-- [GoTorah!](https://gotorah.web.app/) - Intelligent chat that adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The acclaimed Dvar Torah feature instantly generates ready-to-use, source-based sermons that can be customized according to difficulty, length, and occasion.
-- [Hevruta AI](https://hevruta-ai.com/) - A beautifully designed web app that pairs learners with an AI study companion for an immersive, chavruta-style Torah learning experience.
-- [Ituria](https://github.com/Sivan22/ituria) - This AI-agent-based search (GitHub repository) is based on [Otzaria](https://github.com/Sivan22/otzaria).
-- [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
-- [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
-- [Orayta: Torah in Your Time](https://preview--orayta-learning-path.lovable.app/) - AI-powered learning app that helps busy people integrate Torah study into daily life by providing a tailored learning session with direct links to the Sefaria Library.
-- [PshatGPT](https://pshatgpt.com/) - An AI-powered study tool that streams contextual pshat explanations from Claude for any clicked line of gemara, Rashi, Rashbam, or Tosafot, drawing on Sefaria's Talmud Bavli corpus.
-- [RavGPT.ai](https://ravgpt.ai/) - An AI model designed to make Torah learning more accessible.
-- [Seferai.org](https://seferai.org/) - Helps users explore Jewish texts with AI-powered insights.
-- [Sefaria Chat](https://sefaria-chat.up.railway.app/) - This AI-powered tool provides cited, sourced answers to questions about Jewish texts, drawn directly from sources in the Sefaria Library.
-- [Torah Chat](https://apps.microsoft.com/detail/9pkgfhbjlz52?hl=en-US\&gl=US) - A desktop app that uses AI to support exploration of the Sefaria Library by retrieving cited passages with Hebrew and Aramaic alongside English translations and commentaries. See the [source code on Github](https://github.com/jleznek/torah-chat).
-- [Torah Research Board](https://torah-research.yaakovbeckerman.com/) - An infinite-canvas research tool that pulls Torah texts and commentaries from Sefaria and pairs them with an AI analysis engine, designed for deep, multi-source study across foundational topics.
-- [Torah Scholar (OpenClaw/MCP Format)](https://github.com/abeperl/torah-scholar) - This AI agent skill (OpenClaw/MCP format) gives AI assistants instant access to the Sefaria Library, allowing users to search texts, retrieve verses in Hebrew and English, find commentaries, and more.
-- [TzadekAI](https://tzadek.ai/) - A halakhic Q\&A application using data from Sefaria to explore how rabbinic voices from different historical periods approached similar questions.
-- [Weekday Torah Readings with AI Insights](http://jiveyeti.com/wtr) - Provides experimental AI insights for each reading of the weekday Torah readings, alongside the biblical texts in both Hebrew and English.
-- [Yanki](https://developers.sefaria.org/docs/www.yankiai.com) - All-in-one app built according to traditional halakhic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features — all in a filtered, AI-powered ecosystem for the frum Jewish world to enjoy.
+- [AI Torah](https://aitorah.ai/) - Instant Torah answers to any question about Jewish law and life, drawing on the breadth of Sefaria's library.&#x20;
+
+* [Ask the Rambam RAG Tutorial](https://www.youtube.com/watch?v=CNIO2MsfeTo)  - A retrieval-augmented Q\&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
+* [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
+* [ChavrutAI](https://chavrutai.com/contents) - Free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
+* [DafBuddy](https://dafbuddy.com/) - A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
+* [Dafyomi AI Summary](https://dormantone.github.io/dafyomi/) - Explores, summarizes, and translates key insights from the Talmud.
+* [Darshan AI](https://darshan.siddur.xyz/) - A platform that can create an entire lesson with just a few clicks, as well as citing sources and linking to the Sefaria Library.
+* [GoTorah!](https://gotorah.web.app/) - Intelligent chat that adapts to each user, offering contextual learning through sage-specific dialogue, chavruta study, and guided discovery. The acclaimed Dvar Torah feature instantly generates ready-to-use, source-based sermons that can be customized according to difficulty, length, and occasion.
+* [Hevruta AI](https://hevruta-ai.com/) - A beautifully designed web app that pairs learners with an AI study companion for an immersive, chavruta-style Torah learning experience.
+* [Ituria](https://github.com/Sivan22/ituria) - This AI-agent-based search (GitHub repository) is based on [Otzaria](https://github.com/Sivan22/otzaria).
+* [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
+* [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
+* [Orayta: Torah in Your Time](https://preview--orayta-learning-path.lovable.app/) - AI-powered learning app that helps busy people integrate Torah study into daily life by providing a tailored learning session with direct links to the Sefaria Library.
+* [PshatGPT](https://pshatgpt.com/) - An AI-powered study tool that streams contextual pshat explanations from Claude for any clicked line of gemara, Rashi, Rashbam, or Tosafot, drawing on Sefaria's Talmud Bavli corpus.
+* [RavGPT.ai](https://ravgpt.ai/) - An AI model designed to make Torah learning more accessible.
+* [Seferai.org](https://seferai.org/) - Helps users explore Jewish texts with AI-powered insights.
+* [Sefaria Chat](https://sefaria-chat.up.railway.app/) - This AI-powered tool provides cited, sourced answers to questions about Jewish texts, drawn directly from sources in the Sefaria Library.
+* [Torah Chat](https://apps.microsoft.com/detail/9pkgfhbjlz52?hl=en-US\&gl=US) - A desktop app that uses AI to support exploration of the Sefaria Library by retrieving cited passages with Hebrew and Aramaic alongside English translations and commentaries. See the [source code on Github](https://github.com/jleznek/torah-chat).
+* [Torah Research Board](https://torah-research.yaakovbeckerman.com/) - An infinite-canvas research tool that pulls Torah texts and commentaries from Sefaria and pairs them with an AI analysis engine, designed for deep, multi-source study across foundational topics.
+* [Torah Scholar (OpenClaw/MCP Format)](https://github.com/abeperl/torah-scholar) - This AI agent skill (OpenClaw/MCP format) gives AI assistants instant access to the Sefaria Library, allowing users to search texts, retrieve verses in Hebrew and English, find commentaries, and more.
+* [TzadekAI](https://tzadek.ai/) - A halakhic Q\&A application using data from Sefaria to explore how rabbinic voices from different historical periods approached similar questions.
+* [Weekday Torah Readings with AI Insights](http://jiveyeti.com/wtr) - Provides experimental AI insights for each reading of the weekday Torah readings, alongside the biblical texts in both Hebrew and English.
+* [Yanki](https://developers.sefaria.org/docs/www.yankiai.com) - All-in-one app built according to traditional halakhic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features — all in a filtered, AI-powered ecosystem for the frum Jewish world to enjoy.
+* [Yochai](https://www.yochai.wiki/chat) from [Lightning Studios](https://www.lightningstudios.ai/) - A Socratic AI chevruta that guides learners, powered by 1,000+ primary Jewish sources , 2.5M entities and 16M entity relationships built on Sefaria.&#x20;
 
 ### Learning & Study Tools
 
@@ -65,7 +68,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - Daily learning about the halakhah (Jewish law) that governs daily life.
 - [Bavli Kilvavi](https://bavli.onrender.com/) - A website for studying the Babylonian Talmud that brings together Rishonim, Acharonim, biographical details of Tannaim and Amoraim, and much more for a rich and accessible study experience. Available in Hebrew only.
 - [Binata](https://binata-ai.com/) - an AI Torah study assistant that answers questions with sourced references across Torah literature, with a built-in document editor and AI writing tools.
-- [Daf Quiz](https://dafquiz.com/daf-yomi) - Web application that generates a daily multiple-choice quiz based on the relevant page of Talmud, according to the Daf Yomi cycle. (Link to source code: [https://github.com/bentekkie/daf\_quiz](https://github.com/bentekkie/daf_quiz))
+- [Daf Quiz](https://dafquiz.com/daf-yomi) - Web application that generates a daily multiple-choice quiz based on the relevant page of Talmud, according to the Daf Yomi cycle. (Link to source code: [https://github.com/bentekkie/daf_quiz](https://github.com/bentekkie/daf_quiz))
 - [Daily Torah Study Trmnl Plugin](https://usetrmnl.com/recipes/151619) - Plugin for the Trmnl, which uses Sefaria’s Calendars API to present a daily Torah study schedule.
 - [Derekh Learning](https://apps.apple.com/us/app/derekh-learning-ai-chevruta/id6757946546) - This AI-powered Jewish study companion turns texts from the Sefaria Library into personalized lessons and generates fully linked study guides, reflection prompts, and tools connected to the original sources.
 - [Hadran](https://hadran.org.il/) - An organization dedicated to inspiring women to learn Talmud, providing Daf Yomi classes that use text from the Sefaria Library.
