@@ -4194,7 +4194,7 @@
             "description": "Successful Response"
           }
         },
-        "description": "Returns the list of indexes (works) attributed to a given Sefaria author."
+        "description": "Returns the list of indexes (works) in the Sefaria Library that are attributed to a given author."
       }
     },
     "/api/index/titles": {
