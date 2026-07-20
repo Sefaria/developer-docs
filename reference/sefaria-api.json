@@ -11617,7 +11617,7 @@
             }
           }
         ],
-        "description": "Returns the number of links between every book in `cat1` and every book in `cat2`. Returns an error response if no links exist between the requested category pair.",
+        "description": "Returns the number of links between every book in `cat1` and every book in `cat2`. If no links exist between the requested category pair, this endpoint will return an error.",
         "responses": {
           "200": {
             "content": {
