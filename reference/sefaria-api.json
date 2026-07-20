@@ -11746,7 +11746,7 @@
             }
           }
         ],
-        "description": "Returns the word count for a specific text version. Example: title=`Genesis`, version=`Miqra according to the Masorah`, language=`he`.",
+        "description": "Returns the word count for a specific version of a given text. For example: title=`Genesis`, version=`Miqra according to the Masorah`, language=`he`.",
         "responses": {
           "200": {
             "content": {
