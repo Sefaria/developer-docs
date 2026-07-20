@@ -13044,7 +13044,7 @@
             "required": false
           }
         ],
-        "description": "Returns topic metadata for the active holiday on the requested date. Returns 404 when no holiday is in season for the given day. Use the `year`, `month`, `day` query params (all three required together) to query a specific date; otherwise the current date is used.",
+        "description": "Returns topic metadata for an active holiday on the requested date. If no holiday exists for the given day, this endpoint will return a 404 error. All three parameters (`year`, `month`, `day`) are required to query a specific date. If no date is specified, the endpoint uses the current date.",
         "responses": {
           "200": {
             "content": {
