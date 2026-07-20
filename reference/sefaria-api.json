@@ -12898,7 +12898,7 @@
             }
           }
         ],
-        "description": "Returns a breakdown of the seven Torah readings for a given parashah. Used by Sheet builders when seeding a Sheet from a weekly reading.",
+        "description": "Returns a breakdown of the seven Torah readings for a given parashah. This endpoint is useful for Sheet builders when seeding a Sheet from a weekly Torah reading.",
         "responses": {
           "200": {
             "content": {
