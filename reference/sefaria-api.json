@@ -12627,7 +12627,7 @@
             }
           }
         ],
-        "description": "Returns a summary of all links targeting a ref, grouped by category, with per-book breakdowns.",
+        "description": "Returns a summary of all links targeting a ref with per-book breakdowns, grouped by category.",
         "responses": {
           "200": {
             "content": {
