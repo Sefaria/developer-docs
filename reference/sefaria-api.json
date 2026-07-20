@@ -5419,7 +5419,7 @@
             }
           }
         ],
-        "description": "Same as `GET /api/index/{title}`. Returns metadata for a single index (work) by title.",
+        "description": "Works in the same way as `GET /api/index/{title}`. Returns metadata for a single index (work) by title.",
         "responses": {
           "200": {
             "content": {
