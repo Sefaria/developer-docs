@@ -1875,7 +1875,7 @@
             }
           }
         ],
-        "description": "Maps each requested ref to the canonical passage that contains it. Particularly useful for Talmud sugyot — a single amud ref is mapped to the full sugya boundary. Also works for Tanakh, where a verse maps to its parasha-style passage. Pass a pipe-delimited list of refs.",
+        "description": "Maps each requested ref to the canonical passage that contains it. This endpoint is particularly useful for passages of Talmud, as it maps a ref for a single page to the full sugya boundary. It can also be used for Tanakh texts, where a verse maps to its correlating parashah. Pass a pipe-delimited list of refs.",
         "responses": {
           "200": {
             "content": {
