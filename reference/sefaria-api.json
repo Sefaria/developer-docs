@@ -12938,7 +12938,7 @@
         "tags": [
           "Calendars"
         ],
-        "description": "Returns topic metadata for the current week's parasha — title, ref, category ordering, and bilingual display values.",
+        "description": "Returns topic metadata for the current week's parashah. These include title, ref, category ordering, and bilingual display values.",
         "responses": {
           "200": {
             "content": {
@@ -12986,7 +12986,8 @@
             },
             "description": "Successful Response"
           }
-        }
+        },
+        "summary": "Parashah Topic"
       }
     },
     "/api/calendars/topics/holiday": {
