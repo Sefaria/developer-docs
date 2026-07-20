@@ -13044,7 +13044,7 @@
             "required": false
           }
         ],
-        "description": "Returns topic metadata for an active holiday on the requested date. If no holiday exists for the given day, this endpoint will return a 404 error. All three parameters (`year`, `month`, `day`) are required to query a specific date. If no date is specified, the endpoint uses the current date.",
+        "description": "Returns topic metadata for an active holiday on a requested date. If no holiday exists for the given day, this endpoint will return a 404 error. All three parameters (`year`, `month`, `day`) are required to query a specific date. If no date is specified, the endpoint uses the current date.",
         "responses": {
           "200": {
             "content": {
