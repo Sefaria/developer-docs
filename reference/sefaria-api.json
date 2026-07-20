@@ -4263,7 +4263,7 @@
             }
           }
         ],
-        "description": "Returns metadata for a single index (work) by title — categories, schema (text structure), authors, descriptive copy, and ordering hints.",
+        "description": "Returns metadata for a single index (work) by title. This includes categories, schema (text structure), authors, descriptive copy, and ordering hints.",
         "responses": {
           "200": {
             "content": {
