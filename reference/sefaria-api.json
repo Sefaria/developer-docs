@@ -1813,7 +1813,7 @@
             }
           }
         ],
-        "description": "Returns the English and Hebrew text plus metadata such as the language, ref for the url, etc. for many refs at once. The path parameter is a pipe-delimited list of refs.",
+        "description": "Returns the English and Hebrew text plus metadata such as the language, ref for the url, and so forth for many refs at once. The path parameter is a pipe-delimited list of refs.",
         "responses": {
           "200": {
             "content": {
