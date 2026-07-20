@@ -4205,7 +4205,7 @@
         "tags": [
           "Index"
         ],
-        "description": "Returns the complete list of recognized title strings on Sefaria, including alternate titles and abbreviations. Useful for client-side autocomplete and ref recognition. Note: this response is multiple megabytes.",
+        "description": "Returns a complete list of recognized title strings on Sefaria, including alternate titles and abbreviations. This endpoint is useful for client-side autocomplete and ref recognition. Please note: This endpoint will return a response that will be multiple megabytes in size.",
         "responses": {
           "200": {
             "content": {
