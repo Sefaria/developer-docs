@@ -6575,7 +6575,7 @@
             }
           }
         ],
-        "description": "Returns word and segment counts for a text, broken down by language.",
+        "description": "Returns word and segment counts for a given text, organized by language.",
         "responses": {
           "200": {
             "content": {
