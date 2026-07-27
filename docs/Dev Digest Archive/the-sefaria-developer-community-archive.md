@@ -13,6 +13,60 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## July 24th, 2026: Weekly Review
+
+<br />
+
+### :sparkles:Notable Projects & Community Tools&#x20;
+
+#### **New Powered-by-Sefaria Projects:**&#x20;
+
+- [**Yochai**](https://www.yochai.wiki/) ([Lightning Studios](https://www.lightningstudios.ai/)): A Socratic AI chevruta leveraging 1,000+ primary sources and 16M entity relationships&#x20;
+- [**AI Torah**](https://aitorah.ai/): Instant answers on Jewish law and life using Sefaria's library&#x20;
+- **Jastrow Dictionary Tool**: A game-changing Gemara learning tool enabling word lookup without prior lemmatization. The developer is crowdsourcing accuracy reviews at [https://daniepstein.com/gold-review/](https://daniepstein.com/gold-review/) and plans open-source release. The reasoning behind the development of a tool like this can be found [here](https://daniepstein.com/gold-review/why-not-just-sefaria.html).&#x20;
+- [**Sefaria Source Sheet Builder**](https://zakdev26.github.io/sefaria-links/): User-friendly tool for building source sheets, exporting to Kindle/Word/PDF with AI integration support&#x20;
+
+### :wrench:Infrastructure & API Insights&#x20;
+
+**High-Volume API Usage Alert**: The Sefaria team identified several high-volume automated clients and offered optimization alternatives:&#x20;
+
+- Supabase Edge Functions: \~800k requests/day (33% erroring)&#x20;
+- Google Apps Script: \~60k requests/day on `/api/sheets` endpoint&#x20;
+- Node service: \~200k requests/day on `/api/search-wrapper/es8`&#x20;
+- Bulk text corpus downloads: 100k-300k requests/day from various projects&#x20;
+
+**Recommendation**: For bulk data needs, use [Sefaria-Export](http://github.com/Sefaria/Sefaria-Export) (structured JSON exports) instead of per-ref API calls—faster for developers, lighter on infrastructure.&#x20;
+
+### 🎯 Support Questions & Answers
+
+**Q: 504 errors on link endpoint for multiple verses**&#x20;
+
+A: Use Sefaria-Export for bulk data; consider the [Sefaria Developers MCP](https://developers.sefaria.org/docs/the-sefaria-mcp) to optimize API calls.&#x20;
+
+<br />
+
+**Q: Available language translations?**&#x20;
+
+A: Sefaria has texts across 22 different languages. To learn more, see the API Reference: [get-translations endpoint](https://developers.sefaria.org/reference/get-translations)&#x20;
+
+<br />
+
+**Q: Jastrow dictionary downloads for offline use?**&#x20;
+
+A: Not in standard Sefaria-Export, but community member created [this exporter](https://gist.github.com/Arithmomaniac/924ef9e00ff2cabf72142d75c9263da0) (Mongo to JSONL/CSV)&#x20;
+
+<br />
+
+**Reminder:**
+
+In addition to the Sefaria MCP, there's a separate MCP available for developers.sefaria.org to help your agent gain fluency in our docs and API. Learn more [here](https://developers.sefaria.org/docs/the-sefaria-mcp).&#x20;
+
+<br />
+
+**Policy Note&#x20;**
+
+Sefaria maintains a community-first integration approach—excellent tools stay independent in the "[Powered by Sefaria](https://developers.sefaria.org/docs/powered-by-sefaria)" registry rather than direct adoption, balancing ecosystem growth with user autonomy.
+
 ## July 16th, 2026: Weekly Review
 
 ### &#x20;🎯 Key Support Questions & Answers
