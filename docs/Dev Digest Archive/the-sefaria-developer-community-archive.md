@@ -22,7 +22,7 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 - [**Yochai**](https://www.yochai.wiki/) ([Lightning Studios](https://www.lightningstudios.ai/)): A Socratic AI chevruta leveraging 1,000+ primary sources and 16M entity relationships&#x20;
 - [**AI Torah**](https://aitorah.ai/): Instant answers on Jewish law and life using Sefaria's library&#x20;
 - **Jastrow Dictionary Tool**: A game-changing Gemara learning tool enabling word lookup without prior lemmatization. The developer is crowdsourcing accuracy reviews at [https://daniepstein.com/gold-review/](https://daniepstein.com/gold-review/) and plans open-source release. The reasoning behind the development of a tool like this can be found [here](https://daniepstein.com/gold-review/why-not-just-sefaria.html).&#x20;
-- [**Sefaria Source Sheet Builder**](https://zakdev26.github.io/sefaria-links/): User-friendly tool for building source sheets, exporting to Kindle/Word/PDF with AI integration support&#x20;
+- [**Sefaria Links**](https://zakdev26.github.io/sefaria-links/): User-friendly tool for building source sheets, exporting to Kindle/Word/PDF with AI integration support&#x20;
 
 ### :wrench:Infrastructure & API Insights&#x20;
 
