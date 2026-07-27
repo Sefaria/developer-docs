@@ -15,8 +15,6 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 ## July 24th, 2026: Weekly Review
 
-<br />
-
 ### :sparkles:Notable Projects & Community Tools&#x20;
 
 #### **New Powered-by-Sefaria Projects:**&#x20;
@@ -43,13 +41,13 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 A: Use Sefaria-Export for bulk data; consider the [Sefaria Developers MCP](https://developers.sefaria.org/docs/the-sefaria-mcp) to optimize API calls.&#x20;
 
-<br />
+\-
 
 **Q: Available language translations?**&#x20;
 
 A: Sefaria has texts across 22 different languages. To learn more, see the API Reference: [get-translations endpoint](https://developers.sefaria.org/reference/get-translations)&#x20;
 
-<br />
+\-
 
 **Q: Jastrow dictionary downloads for offline use?**&#x20;
 
