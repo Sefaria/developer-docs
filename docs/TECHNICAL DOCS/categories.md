@@ -18,7 +18,7 @@ All texts at Sefaria are sorted into categories. The 14 highest-level categories
 
 Categories are present on the `Index` of a text, and are a requirement for `Index` creation. For example, the `Index` of `Genesis`has a category of `Torah`. The `Torah` category is a child of the `Tanakh` (a highest-level category), so the full category for `Genesis` would appear: `["Tanakh", "Torah"]`.
 
-To learn more about the Sefaria `Index`, see [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria) or [the Index API](ref:get_api-v2-raw-index-index-title).
+To learn more about the Sefaria `Index`, see [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria) or [the Index API](ref:get-v2-index).
 
 ## The Structure of the Category Object
 
@@ -40,9 +40,9 @@ Category objects require `path`, which is a list of primary titles of categories
 
 Categories also must contain either `titles` or `sharedTitle`:
 
-`titles` refers to a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this is a primary title. 
+`titles` refers to a list of `title` objects, with each object containing the language code (`lang`), the `text`, and a boolean indicating whether or not this is a primary title.
 
-See below for an example of the titles list on the `Index` of `Bamidbar`: 
+See below for an example of the titles list on the `Index` of `Bamidbar`:
 
 ```
 [
@@ -73,10 +73,10 @@ See below for an example of the titles list on the `Index` of `Bamidbar`:
 
 ## Optional Attributes
 
-* `enDesc`: An English-language description of the category
-* `heDesc`: A Hebrew-language description of the category
-* `isPrimary`: A boolean flag, which, when `True`, means that this category won't be nested within another, but will have its own page. For example, the Mishnah category, which you can see [here](https://sefaria.org/texts/Mishnah), has its own page in the Sefaria Library because it is a primary category.
-* `searchRoot`: A string, which, when present, means that this category will be moved within the specified root category, in the context of search filters.
+- `enDesc`: An English-language description of the category
+- `heDesc`: A Hebrew-language description of the category
+- `isPrimary`: A boolean flag, which, when `True`, means that this category won't be nested within another, but will have its own page. For example, the Mishnah category, which you can see [here](https://sefaria.org/texts/Mishnah), has its own page in the Sefaria Library because it is a primary category.
+- `searchRoot`: A string, which, when present, means that this category will be moved within the specified root category, in the context of search filters.
 
 ## Example Category Objects
 
@@ -118,3 +118,5 @@ See below for an example of the titles list on the `Index` of `Bamidbar`:
     "order" : NumberInt(20)
 }
 ```
+
+<br />
