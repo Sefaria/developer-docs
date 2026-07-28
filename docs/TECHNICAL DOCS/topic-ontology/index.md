@@ -16,7 +16,7 @@ next:
       slug: api-wiki
       title: The Sefaria API
 ---
-To learn more about Topics on Sefaria, see the [Topics API](ref:get_api-topics-topic-slug).
+To learn more about Topics on Sefaria, see the [Topics API](ref:get-topic-slug).
 
 Sefaria's Topics collection is organized as an ontology based on [BFO](https://en.wikipedia.org/wiki/Basic_Formal_Ontology). Below is a basic overview of BFO's structure, followed by some of the more important nodes Sefaria has added. The `slug` is the unique ID used in our database.
 
@@ -64,7 +64,7 @@ The following table includes information about the various nodes and their meani
 
 # Overview of Sefaria's Nodes
 
-Below are some of the most important nodes the Sefaria infrastructure uses, in addition to the existing ontology. In the table below, you'll see them delineated according to the relevant BFO node. 
+Below are some of the most important nodes the Sefaria infrastructure uses, in addition to the existing ontology. In the table below, you'll see them delineated according to the relevant BFO node.
 
 ## BFO Node: Process
 
@@ -204,8 +204,8 @@ The topic `religion` here could also be referred to as `religious-idea` or simil
 
 Below is a comprehensive list of link types that can exist between nodes in the Sefaria infrastructure. Please note:
 
-* Every Topic link in our database must be one of these types. 
-* Every link is bidirectional. Therefore, if you're reading the link in the forward direction, you should use `slug`, but if you're reading it in the backward direction, use `inverseSlug`. 
+- Every Topic link in our database must be one of these types.
+- Every link is bidirectional. Therefore, if you're reading the link in the forward direction, you should use `slug`, but if you're reading it in the backward direction, use `inverseSlug`.
 
 Below is an example of a bidirectional Topic link:
 
@@ -225,17 +225,17 @@ Links with the same `slug` and `inverseSlug` are symmetrical. As yet, we have no
 
 The following are link types that connect two individual people.
 
-| `slug`              | `inverseSlug`       | Description                                                                                                                      |
-| ------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `child-of`          | `parent-of`         |                                                                                                                                  |
-| `child-in-law-of`   | `parent-in-law-of`  |                                                                                                                                  |
-| `sibling-of`        | `sibling-of`        |                                                                                                                                  |
-| `descendant-of`     | `ancestor-of`       | Used for relating a descendant to their ancestor, e.g., David -`descendant-of` -> Ruth                                           |
-| `taught`            | `learned-from`      | Usually used for connecting a rabbi and a student                                                                                |
-| `corresponded-with` | `corresponded-with` | Used to connect two people who have communicated with one another, and whose relationship does not fit under another link type.  |
-| `opposed`           | `opposed`           | Used to connect two people whose views are in opposition to one another.                                                         |
-| `cousin-of`         | `cousin-of`         |                                                                                                                                  |
-| `spouse-of`         | `spouse-of`         |                                                                                                                                  |
+| `slug`              | `inverseSlug`       | Description                                                                                                                     |
+| ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `child-of`          | `parent-of`         |                                                                                                                                 |
+| `child-in-law-of`   | `parent-in-law-of`  |                                                                                                                                 |
+| `sibling-of`        | `sibling-of`        |                                                                                                                                 |
+| `descendant-of`     | `ancestor-of`       | Used for relating a descendant to their ancestor, e.g., David -`descendant-of` -> Ruth                                          |
+| `taught`            | `learned-from`      | Usually used for connecting a rabbi and a student                                                                               |
+| `corresponded-with` | `corresponded-with` | Used to connect two people who have communicated with one another, and whose relationship does not fit under another link type. |
+| `opposed`           | `opposed`           | Used to connect two people whose views are in opposition to one another.                                                        |
+| `cousin-of`         | `cousin-of`         |                                                                                                                                 |
+| `spouse-of`         | `spouse-of`         |                                                                                                                                 |
 
 ## Link Types Between Other Types of Nodes
 
@@ -271,3 +271,5 @@ The following link types can connect any two nodes:
 | `dissimilar-to`     | `dissimilar-to`         | This describes two topics that share few attributes. For example, `work` is -`dissimilar-to`-> `rest`                                                                       |
 | `related-to`        | `related-to`            | This describes two topics that are related in a general sense. Usually, this is used to describe two Topics with a relationship that doesn't fit under any other link type. |
 | `sheets-related-to` | `has-sheets-related-to` | This describes two topics with a relationship derived from co-location of tags on Sheets.                                                                                   |
+
+<br />
