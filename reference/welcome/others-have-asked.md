@@ -119,7 +119,7 @@ That will return the ref for the parashah read on the week of January 1st, 2025.
 
 The process for retrieving an English-language version of a commentary that is in Hebrew is similar to the one described above, regarding Rashi's commentary on Parashat Toldot. Retrieving the English for a text is as simple as passing the parameter `version=english` on the query.
 
-You can read more about this process in [our documentation](ref:get_api-v3-texts-tref):
+You can read more about this process in [our documentation](ref:get-v3-texts):
 
 > **version** (string)
 >
