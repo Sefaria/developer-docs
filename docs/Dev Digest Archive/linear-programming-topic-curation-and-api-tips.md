@@ -35,9 +35,7 @@ I found this project fascinating — it took software engineering, theoretical c
 
 Thank you for being part of Sefaria's developer community!
 
-Until next time,  
-Yonadav Leibowitz  
-Junior Research Engineer
+Until next time,<br />Yonadav Leibowitz<br />Junior Research Engineer
 
 ## HOT OFF THE PRESSES: Sefaria @ PyCon Israel
 
@@ -47,15 +45,17 @@ To learn more, [watch Noah's presentation](https://www.youtube.com/watch?v=JUSW7
 
 ## QUICK TECH TIP: Using the Texts API
 
-Trying to use the [Texts API](https://developers.sefaria.org/reference/get_api-v3-texts) for a text like the siddur? You might run into trouble trying to figure out which [ref](https://developers.sefaria.org/docs/text-references) to pass in. Unlike Tanakh or Talmud, where refs are more intuitive (i.e. Genesis 1.1 or Berakhot 2a), texts like the Siddur or the Passover Haggadah are structured a bit less intuitively.
+Trying to use the [Texts API](https://developers.sefaria.org/reference/get-v3-texts) for a text like the siddur? You might run into trouble trying to figure out which [ref](https://developers.sefaria.org/docs/text-references) to pass in. Unlike Tanakh or Talmud, where refs are more intuitive (i.e. Genesis 1.1 or Berakhot 2a), texts like the Siddur or the Passover Haggadah are structured a bit less intuitively.
 
-But there's a simple solution! When you navigate to your desired text on [Sefaria.org](www.sefaria.org), you'll notice the header of the page contains a path to that specific text. This path is the same as the ref needed to query that specific text via the texts API!
+But there's a simple solution! When you navigate to your desired text on [Sefaria.org](https://www.sefaria.org), you'll notice the header of the page contains a path to that specific text. This path is the same as the ref needed to query that specific text via the texts API!
 
 In the example below, you'd follow Siddur Edot HaMizrach → Preparatory Prayers → Modeh Ani
 
 Once you get the hang of it, you can shortcut the whole process by deriving the ref from the work's Table of Contents (ToC). The ref is often a sequence of the path through the ToC.
 
-<Image align="center" width="500px" src="https://files.readme.io/e2e52bd8b7e647a1dc4106f22b0c25d28c925f989ea11f3a8f16123e15261686-Screenshot_2025-01-26_at_11.23.41.png" />
+
+<Image src="https://files.readme.io/e2e52bd8b7e647a1dc4106f22b0c25d28c925f989ea11f3a8f16123e15261686-Screenshot_2025-01-26_at_11.23.41.png" align="center" width="500px" />
+
 
 ## Behind the Scenes
 
@@ -69,11 +69,13 @@ Since our text is returned in a nested array structure, combining the dimensions
 
 The basic logic was a simple nested `for` loop:
 
-<Image align="center" width="500px" src="https://files.readme.io/e0f8b68b640bd4ebb06e887603815c4c485c4e1657c3b3611d5e7cf6085036ed-Screenshot_2025-01-26_at_11.26.41.png" />
 
-* `toSections` - If there's a start segment explicit in the data, set the counter to start at that value. If not, set it to `1`. In the above, example, the counter would be set to `23` as seen in `sections`. **Note**: In cases where the `ref` is an entire chapter, there is no second value in the arrays `sections` or `toSections`.
-* Iterate verse by verse through the length of the chapter until the end of the text, incrementing the verse number. Upon beginning the next chapter, restart the verse counter at `1`.
-* Prior to insertion into the text (via simple text concatenation), we call another function to convert the number to Hebrew gematria for Hebrew texts.
+<Image src="https://files.readme.io/e0f8b68b640bd4ebb06e887603815c4c485c4e1657c3b3611d5e7cf6085036ed-Screenshot_2025-01-26_at_11.26.41.png" align="center" width="500px" />
+
+
+- `toSections` - If there's a start segment explicit in the data, set the counter to start at that value. If not, set it to `1`. In the above, example, the counter would be set to `23` as seen in `sections`. **Note**: In cases where the `ref` is an entire chapter, there is no second value in the arrays `sections` or `toSections`.
+- Iterate verse by verse through the length of the chapter until the end of the text, incrementing the verse number. Upon beginning the next chapter, restart the verse counter at `1`.
+- Prior to insertion into the text (via simple text concatenation), we call another function to convert the number to Hebrew gematria for Hebrew texts.
 
 We're thrilled to have used this logic to deploy a new enhancement for Tanakh sources this past month and hope to continue iterating in the future!
 
@@ -85,7 +87,9 @@ Hadran is an online educational resources dedicated to making Talmud study acces
 
 ...and it's also powered by Sefaria! By using our API to integrate relevant texts, Hadran learners have access to the entire Talmud alongside lessons by season women teachers and explanatory essays. In short, Hadran's site doesn't have to build the entire infrastructure or digitize the whole Talmud from scratch — they can just use our systems and data to connect their learns to a wealth of resources.
 
-<Image align="center" width="500px" src="https://files.readme.io/0aa9b75dd89d91b7f001fc7eafc01efd964193465feefa324e7e45fb3dd49b4e-Screenshot_2025-01-26_at_11.28.38.png" />
+
+<Image src="https://files.readme.io/0aa9b75dd89d91b7f001fc7eafc01efd964193465feefa324e7e45fb3dd49b4e-Screenshot_2025-01-26_at_11.28.38.png" align="center" width="500px" />
+
 
 To see more projects powered by our data, [check out the complete list](https://developers.sefaria.org/docs/powered-by-sefaria).
 
@@ -101,5 +105,4 @@ Want to get this quarterly newsletter in your inbox? [Sign up](🔗) today for t
 
 ### Your donation powers the future of Torah - for _all_.
 
-Sefaria’s resources have always been free to use — and that will always be true.  
-[Join the community of Sefaria supporters](🔗https://donate.sefaria.org/) who are the force behind new resources, new tech, new tools, and more.
+Sefaria’s resources have always been free to use — and that will always be true.<br />[Join the community of Sefaria supporters](https://www.sefaria.org/donate) who are the force behind new resources, new tech, new tools, and more.
