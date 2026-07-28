@@ -10,4 +10,4 @@ metadata:
 next:
   description: ''
 ---
-If you're interested in working with Sefaria's data, we recommend using our [public API](ref:getting-started-with-your-api). To work with a local set-up, use the documentation in this section to learn how to proceed.
+If you're interested in working with Sefaria's data, we recommend using our [public API](ref:getting-started). To work with a local set-up, use the documentation in this section to learn how to proceed.
