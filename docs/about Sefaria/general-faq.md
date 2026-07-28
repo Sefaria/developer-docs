@@ -20,7 +20,7 @@ Something old, something new—just like what we’re developing. Sefaria comes 
 
 ## How does Sefaria make money?
 
-Sefaria is a 501(c)(3) nonprofit organization, supported by [donations](https://donate.sefaria.org/) from individuals and foundations. We’re not trying to make money, we’re trying to increase access to the Jewish textual tradition.
+Sefaria is a 501(c)(3) nonprofit organization, supported by [donations](https://www.sefaria.org/donate) from individuals and foundations. We’re not trying to make money, we’re trying to increase access to the Jewish textual tradition.
 
 ## Are you trying to put book publishers out of business?
 
@@ -50,7 +50,9 @@ If it is a community translation, you can make the correction yourself by loggin
 
 You can also give feedback via the connections panel on the website. Click on the text you'd like to submit a correction for, scroll down, and hit "feedback".
 
-<Image align="center" width="70% " src="https://files.readme.io/cdc29e5-Screen_Shot_2024-03-13_at_13.29.18.png" />
+
+<Image src="https://files.readme.io/cdc29e5-Screen_Shot_2024-03-13_at_13.29.18.png" align="center" width="70% " />
+
 
 If you find a mistake in a printed edition translation, like a typo, please alert [corrections@sefaria.org](mailto:corrections@sefaria.org).
 
