@@ -52,7 +52,7 @@ Before we start coding, let's go over the game structure and which endpoints eac
       </td>
 
       <td>
-        [Shape](ref:get_api-shape-title) API
+        [Shape](ref:get-shape) API
       </td>
     </tr>
 
@@ -66,7 +66,7 @@ Before we start coding, let's go over the game structure and which endpoints eac
       </td>
 
       <td>
-        [Shape](ref:get_api-shape-title)  API
+        [Shape](ref:get-shape)  API
       </td>
     </tr>
 
@@ -80,9 +80,7 @@ Before we start coding, let's go over the game structure and which endpoints eac
       </td>
 
       <td>
-        [Texts (v3)](ref:get_api-v3-texts-tref) API  
-        _and_  
-        [Ref-Topic-Links](ref:get_api-ref-topic-links-tref) API
+        [Texts (v3)](ref:get-v3-texts) API<br />_and_<br />[Ref-Topic-Links](ref:get-ref-topic-links) API
       </td>
     </tr>
   </tbody>
@@ -173,7 +171,7 @@ The first two questions we'll ask rely heavily on the [Shape](ref:get_api-shape-
 }
 ```
 
-The most interesting data here appears in the `length` and the `chapters` fields. The `length` field tells you the how many chapters are in the text at hand. In this case, the book of Esther has 10 chapters). The `chapters` field contains integers that indicate the number of verses in a specific chapter. 
+The most interesting data here appears in the `length` and the `chapters` fields. The `length` field tells you the how many chapters are in the text at hand. In this case, the book of Esther has 10 chapters). The `chapters` field contains integers that indicate the number of verses in a specific chapter.
 
 All books of Tanakh have `length` number of integers. Taking the book of Esther as an example, we can see a `chapters` array with 10 integers. Each position in the array corresponds with a chapter, with each value corresponding to the number of verses in that chapter. The first integer in the array indicates that there are 22 verses in the first chapter of the book of Esther, the fifth indicates that there are 14 verses in chapter five, and so forth.
 
@@ -266,7 +264,7 @@ Sorry! That's incorrect. The correct answer was: 24. You answered 1/3 question(s
 
 For the final question, we will use the [Ref-Topic-Links](ref:get_api-ref-topic-links-tref) API in order to ask the user which topics might be related to a given verse.
 
-First, we need to prompt the user to provide us with a specific reference to a verse. 
+First, we need to prompt the user to provide us with a specific reference to a verse.
 
 _Note: if this were a real game, and not just a tutorial, we would add some data validation at this point. For the purposes of this tutorial, we are keeping it simple._
 
@@ -341,7 +339,7 @@ We invite you to dive deeper into our API and to explore the infinite possibilit
 
 # Summary: The Full Code
 
-Below is the full working code for this game. 
+Below is the full working code for this game.
 
 _Please note: We've generalized some repeating code into rudimentary functions and added some first steps of data validation or checking in order to avoid unnecessary erroring._
 
@@ -478,6 +476,8 @@ if __name__ == '__main__':
 
 ## Please Note:
 
-* As stated above, this tutorial is just that: a tutorial, with the intention of showcasing a few different ways of using Sefaria's data and API. 
-* Any attempt to flesh this out and get it ready for use in a real-world settings would require more data validation, checks, `try` / `except` blocks and more.
-* Up for the challenge? Feel free to give it a try and build off of this — and drop us a note to [let us know](https://developers.sefaria.org/page/contact-us)!
+- As stated above, this tutorial is just that: a tutorial, with the intention of showcasing a few different ways of using Sefaria's data and API.
+- Any attempt to flesh this out and get it ready for use in a real-world settings would require more data validation, checks, `try` / `except` blocks and more.
+- Up for the challenge? Feel free to give it a try and build off of this — and drop us a note to [let us know](https://developers.sefaria.org/page/contact-us)!
+
+<br />
