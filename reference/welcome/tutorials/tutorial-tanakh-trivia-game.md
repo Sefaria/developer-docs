@@ -146,7 +146,7 @@ else:
 
 ## 3. Bringing in the Shape API
 
-The first two questions we'll ask rely heavily on the [Shape](ref:get_api-shape-title) API, which returns data about the structure of a book in the Sefaria Library. For example, if someone were to query the [Shape](ref:get_api-shape-title) API for the book of `Esther`, they'd get the following JSON in return:
+The first two questions we'll ask rely heavily on the [Shape](ref:get-shape) API, which returns data about the structure of a book in the Sefaria Library. For example, if someone were to query the [Shape](ref:get-shape) API for the book of `Esther`, they'd get the following JSON in return:
 
 ```json
 {
@@ -262,7 +262,7 @@ Sorry! That's incorrect. The correct answer was: 24. You answered 1/3 question(s
 
 ## 6. One Last Round
 
-For the final question, we will use the [Ref-Topic-Links](ref:get_api-ref-topic-links-tref) API in order to ask the user which topics might be related to a given verse.
+For the final question, we will use the [Ref-Topic-Links](ref:get-ref-topic-links) API in order to ask the user which topics might be related to a given verse.
 
 First, we need to prompt the user to provide us with a specific reference to a verse.
 
@@ -275,7 +275,7 @@ chapVerse = input(
 ref = f"{index_title} {chapVerse}"
 ```
 
-Next, we'll query the [Texts (v3)](ref:get_api-v3-texts-tref) API to retrieve the text of the given verse in English (or another language) to display for the user in order to make it easier for them to guess the answer.
+Next, we'll query the [Texts (v3)](ref:get-v3-texts) API to retrieve the text of the given verse in English (or another language) to display for the user in order to make it easier for them to guess the answer.
 
 ```python
 url = f"https://www.sefaria.org/api/v3/texts/{ref}?version=english"
