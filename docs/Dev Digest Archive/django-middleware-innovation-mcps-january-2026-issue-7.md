@@ -18,7 +18,7 @@ Want to get this quarterly newsletter in your inbox? [Sign up today](https://sef
 
 Each Kabbalat Shabbat, Jews around the world sing the 16th-century liturgical poem [Lekha Dodi](https://newsletter.sefaria.org/lt.php?x=4lZy~GDDU6ScE8Ctyt~LVulu13QljQH0kewvYHTJV3XN583.-0y7xeFr13InikA0_ueglPHFJXmc95_6yd-YVvFv2XMojq). The text includes the words "shamor vezakhor bedibbur echad" ("keep and remember in one saying"), a phrase that celebrates the mystical incomprehensibility of the revelation at Mount Sinai.
 
-This concept might make for lovely poetry, but saying _shamor_ and _zakhor_ at the same time doesn't make for a good user experience. That's why the engineering team has been hard at work creating a newly modularized structure for Sefaria's platform. This project adds no new features; it simply separates our content into distinct modules for the sake of a better user experience. Now the Sefaria website is divided into three spaces: the [Sefaria Library](sefaria.org) (for texts), [Voices on Sefaria](voices.sefaria.org) (for user-created content), and [Developers on Sefaria](developers.sefaria.org) (for developer tools).
+This concept might make for lovely poetry, but saying _shamor_ and _zakhor_ at the same time doesn't make for a good user experience. That's why the engineering team has been hard at work creating a newly modularized structure for Sefaria's platform. This project adds no new features; it simply separates our content into distinct modules for the sake of a better user experience. Now the Sefaria website is divided into three spaces: the [Sefaria Library](https://www.sefaria.org) (for texts), [Voices on Sefaria](https://voices.sefaria.org) (for user-created content), and [Developers on Sefaria](https://developers.sefaria.org) (for developer tools).
 
 The engineering of a modularized Sefaria has been almost entirely a matter of refactoring and reorganizing our code, a process that brings to mind the work of the 12th-century scholar Rambam when composing his seminal text, the Mishneh Torah. He, too, was reorganizing — separating the Talmud into 14 different books.
 
@@ -44,9 +44,9 @@ Two domains, two products, two distinct themes, two sets of features. And one co
 
 Our solution? Implementing subdomain-based routing with middleware that made every request "module-aware". This enabled us to:
 
-* Simplify rendering of over 100 views (just hostname parsing by the middleware, no database calls)
-* Achieve zero performance degradation despite dividing into two products vs. single-product baseline
-* Maintain the monolith legacy codebase, while being flexible for modularity (a shared database with a separate UX)
+- Simplify rendering of over 100 views (just hostname parsing by the middleware, no database calls)
+- Achieve zero performance degradation despite dividing into two products vs. single-product baseline
+- Maintain the monolith legacy codebase, while being flexible for modularity (a shared database with a separate UX)
 
 Using this elegant approach, we were able to meet our technical constraints and enable module separation while minimizing code duplication and preventing performance degradation. The core of the configuration is the DOMAIN_MODULES setting structure, which serves as the single source of truth to map hostnames to the product modules. This is then used in the deployment configuration, to help with the frontend theming, and for the backend routing via the middleware.
 
@@ -54,7 +54,9 @@ Using this elegant approach, we were able to meet our technical constraints and 
 
 The core pattern of the middleware is that the middleware parses the hostname, refers to the dictionary lookup, and then enriches the request with the specific module awareness. The middleware runs once per request, before any view code. There are no database queries, just in-memory dictionary lookups.
 
-<Image align="center" caption="Middleware implementation example" src="https://files.readme.io/db6878f5e7eae2061f2b467445d63547349138ab6eecbf32d0e2725cc249d227-image.png" />
+
+<Image src="https://files.readme.io/db6878f5e7eae2061f2b467445d63547349138ab6eecbf32d0e2725cc249d227-image.png" align="center" caption="Middleware implementation example" />
+
 
 This is an example of a simplified implementation.
 
@@ -64,7 +66,9 @@ Downstream, every view automatically has access to the valuable request.active_m
 
 Here's a simplified example, in which we can render history on a module-aware basis (i.e., in the Voices on Sefaria product, this will show your history as related to Sheets, while in the Sefaria Library product, this will show your history as related to Library sources).
 
-<Image align="center" caption="Usage in views and templates example" src="https://files.readme.io/b94ad18b77da0b60c8f33fe97767625b2a1a3b56a624ac78813c90b17ce763e1-image.png" />
+
+<Image src="https://files.readme.io/b94ad18b77da0b60c8f33fe97767625b2a1a3b56a624ac78813c90b17ce763e1-image.png" align="center" caption="Usage in views and templates example" />
+
 
 <br />
 
