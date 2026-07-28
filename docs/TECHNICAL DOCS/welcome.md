@@ -23,13 +23,15 @@ next:
 ---
 # Welcome to Sefaria's Technical Documentation
 
-Please note: For our API Documentation, see [Getting Started With The Sefaria API](ref:getting-started-with-your-api).
+Please note: For our API Documentation, see [Getting Started With The Sefaria API](ref:getting-started).
 
-This section is home to Sefaria's continuously evolving documentation, offering insights into the intricate structure of texts in the Sefaria Library, as well as related technical aspects such as formatting and accessibility. It also includes documentation of API endpoints that go beyond the [API reference](ref:getting-started-with-your-api), providing you with a richer understanding of our powerful platform.
+This section is home to Sefaria's continuously evolving documentation, offering insights into the intricate structure of texts in the Sefaria Library, as well as related technical aspects such as formatting and accessibility. It also includes documentation of API endpoints that go beyond the [API reference](ref:getting-started), providing you with a richer understanding of our powerful platform.
 
-> 🚧 This is a work in progress.
->
-> As we grow our platform and evolve our technology, we also update and improve our documentation.  Looking for something you can't find? [Contact us](page:contact-us) and let us know! We'd love to hear from you.
+<Callout icon="🚧" theme="warn">
+  ### This is a work in progress.
+
+  As we grow our platform and evolve our technology, we also update and improve our documentation.  Looking for something you can't find? [Contact us](page:contact-us) and let us know! We'd love to hear from you.
+</Callout>
 
 ***
 
@@ -37,7 +39,7 @@ This section is home to Sefaria's continuously evolving documentation, offering 
 
 ### Need more information before exploring Sefaria's API?
 
-Read through [Text References](doc:text-references) for background information, then head over to [Getting Started With the Sefaria API](ref:getting-started-with-your-api) to try retrieving some text.
+Read through [Text References](doc:text-references) for background information, then head over to [Getting Started With the Sefaria API](ref:getting-started) to try retrieving some text.
 
 ### Interested in the structure of the Sefaria Library?
 
