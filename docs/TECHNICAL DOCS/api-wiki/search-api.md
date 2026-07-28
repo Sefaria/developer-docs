@@ -28,9 +28,9 @@ The `index` path parameter can be either `text` or `sheet`. Please note that the
 
 **When to Use Specific Query Parameters:**
 
-* `text`: Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library.
+- `text`: Use this query parameter to query the texts of the Sefaria library. Each document returned represents a segment in our library.
 
-* `sheet`: Use this query parameter to query the user-created Sheets hosted by Sefaria. Each match returns both the `title` and the `content`.  The `title` is the title of the Sheet, while the `content` is a string concatenation of all of the sources and text present on the Sheet.
+- `sheet`: Use this query parameter to query the user-created Sheets hosted by Sefaria. Each match returns both the `title` and the `content`.  The `title` is the title of the Sheet, while the `content` is a string concatenation of all of the sources and text present on the Sheet.
 
 ## Making a POST Request
 
@@ -40,7 +40,7 @@ It is important to set the field `Content-Type: application/json` in the header 
 
 ### The Request's Body
 
-When sending the POST request, the body must be sent in JSON. Below are a few examples of query bodies in JSON: 
+When sending the POST request, the body must be sent in JSON. Below are a few examples of query bodies in JSON:
 
 #### Example 1: Query `text` for Exact Text Results
 
@@ -265,7 +265,7 @@ Unlike the four examples above, all of which query `text`, this type of body is 
 
 ### Returned JSON for `text` Queries
 
-Below is an example, showing what is returned when querying `text` (i.e., making a POST request to [sefaria.org/api/search/text/_search](sefaria.org/api/search/text/_search)).
+Below is an example, showing what is returned when querying `text` (i.e., making a POST request to [sefaria.org/api/search/text/\_search](https://www.sefaria.org/api/search/text/_search)).
 
 ```
 {
@@ -343,10 +343,10 @@ Below is a zoomed-in view of some of the **most critical** fields  within the re
 
 **The Definitions of the Most Critical Fields:**
 
-* `exact`: This field holds content from a Sefaria segment. It is indexed by the `standard` analyzer. You can read more about analyzers [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html).
-* `naive_lemmatizer`: This field holds content from a Sefaria segment. It is indexed by the `sefaria-naive-lemmatizer` analyzer. This analyzer does basic lemmatization for Hebrew inputs.
-* `ref`: This field refers to the Sefaria reference
-* `lang`: This field refers to the language of the content in question.
+- `exact`: This field holds content from a Sefaria segment. It is indexed by the `standard` analyzer. You can read more about analyzers [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html).
+- `naive_lemmatizer`: This field holds content from a Sefaria segment. It is indexed by the `sefaria-naive-lemmatizer` analyzer. This analyzer does basic lemmatization for Hebrew inputs.
+- `ref`: This field refers to the Sefaria reference
+- `lang`: This field refers to the language of the content in question.
 
 ### Returned JSON for `sheet` Queries
 
@@ -403,3 +403,5 @@ In the JSON returned for queries to `sheet` (i.e.`api/search/sheet/_search`),  t
     }
 }
 ```
+
+<br />
