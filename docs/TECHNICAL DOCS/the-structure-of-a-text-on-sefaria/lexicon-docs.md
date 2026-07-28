@@ -16,21 +16,21 @@ Some Lexicons also have `WordForm` objects for each written expression of a word
 
 If the Lexicon is viewed as an independent text, it also needs an `Index` record. This `Index` will have special fields. It may also have a `Version` record for any additional textual content which is not a dictionary entry (e.g., introductory text to the Lexicon).
 
-To see documentation on our lexicon APIs, visit [this link](https://developers.sefaria.org/reference/get_api-lexicon)
+To see documentation on our lexicon APIs, visit [this link](https://developers.sefaria.org/reference/get-words)
 
 # Understanding the Lexicon Object Model
 
 ## Lexicon
 
-If the Lexicon has an associated `Index`, the `Lexicon.index_title` must match the `title` of the `Index` object. In addition, `lexiconName` must match the `name` of the `Lexicon` object on the Index.  If the Lexicon in question has a `Version` associated with it, the title of the version should be placed in the `version_title`attribute, and the language of the version should be noted in the`version_lang` attribute of the Lexicon. 
+If the Lexicon has an associated `Index`, the `Lexicon.index_title` must match the `title` of the `Index` object. In addition, `lexiconName` must match the `name` of the `Lexicon` object on the Index.  If the Lexicon in question has a `Version` associated with it, the title of the version should be placed in the `version_title`attribute, and the language of the version should be noted in the`version_lang` attribute of the Lexicon.
 
 Please note the following fields:
 
-* `name` is the key field for the Lexicon
-* `attribution`, `source` and `source_url` are descriptive
-* `language` 
-* `to_language`
-* `text_categories`
+- `name` is the key field for the Lexicon
+- `attribution`, `source` and `source_url` are descriptive
+- `language`
+- `to_language`
+- `text_categories`
 
 See the following example of a `Lexicon` object in our database for clarification:
 
@@ -51,15 +51,15 @@ See the following example of a `Lexicon` object in our database for clarificatio
 
 ## Lexicon Entry
 
-As noted above, every `Lexicon` object is comprised of `LexiconEntry` objects, which represent the words in that `Lexicon`. 
+As noted above, every `Lexicon` object is comprised of `LexiconEntry` objects, which represent the words in that `Lexicon`.
 
 Please note the following requirements and characteristics of a Lexicon Entry:
 
-* The `parent_lexicon` must match `Lexicon.name`
-* The`headword`, taken together with `parent_lexicon`, is the key for the Lexicon entry.  The `headword` must be unique to the Lexicon in question.
-* `prev_hw` indicates the headword for the entry directly before the one you are referencing. This is required when the Lexicon is presented as a text with an `Index`.
-* `next_hw` indicates the headword for the entry directly before the one you are referencing. This is required when the Lexicon is presented as a text with an `Index`.
-* `rid` is a unique ID that is used for lexical sorting.  When presented in order, the rid should appear in order.  `rid` values should begin with a letter in order to ensure lexical sorting instead of numerical sorting.
+- The `parent_lexicon` must match `Lexicon.name`
+- The`headword`, taken together with `parent_lexicon`, is the key for the Lexicon entry.  The `headword` must be unique to the Lexicon in question.
+- `prev_hw` indicates the headword for the entry directly before the one you are referencing. This is required when the Lexicon is presented as a text with an `Index`.
+- `next_hw` indicates the headword for the entry directly before the one you are referencing. This is required when the Lexicon is presented as a text with an `Index`.
+- `rid` is a unique ID that is used for lexical sorting.  When presented in order, the rid should appear in order.  `rid` values should begin with a letter in order to ensure lexical sorting instead of numerical sorting.
 
 See the following example for a clarification of how a Lexicon Entry may appear:
 
@@ -145,12 +145,12 @@ When a dictionary is presented as a text, it has a special `Index` record. This 
 
 A `DictionaryNode` can be placed anywhere within a complex schema tree. For example:
 
-* `nodeType`: This will be `DictionaryNode`
-* `lexiconName`
-* `default` : If true, entries can be referenced with the dictionary name alone.
-* `lastWord`
-* `firstWord`
-* `headwordMap`
+- `nodeType`: This will be `DictionaryNode`
+- `lexiconName`
+- `default` : If true, entries can be referenced with the dictionary name alone.
+- `lastWord`
+- `firstWord`
+- `headwordMap`
 
 Below is the full record for the Jastrow dictionary. Please note the `lexiconName` and `DictionaryNode` elements in the schema.
 
@@ -368,6 +368,8 @@ This is necessary for any regular (non-definition) text.
 
 ## Important Notes
 
-* In `sefaria/model/lexicon.py`, each dictionary relates to a subclass of `DictionaryEntry`.  Those correspondences are listed in `LexiconEntrySubClassMapping`
-* `sefaria.js` includes a line that lists the available dictionaries:  `Sefaria.virtualBooksDict = [...]`
-* If a lexicon participates in the cross-dictionary auto-completer, it needs to be listed in `library.build_lexicon_auto_completers`
+- In `sefaria/model/lexicon.py`, each dictionary relates to a subclass of `DictionaryEntry`.  Those correspondences are listed in `LexiconEntrySubClassMapping`
+- `sefaria.js` includes a line that lists the available dictionaries:  `Sefaria.virtualBooksDict = [...]`
+- If a lexicon participates in the cross-dictionary auto-completer, it needs to be listed in `library.build_lexicon_auto_completers`
+
+<br />
