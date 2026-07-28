@@ -15,7 +15,7 @@ next:
 ---
 ## 1. How do I retrieve the text of a particular parashah (weekly Torah reading)?
 
-There are two steps involved in retrieving the text of a parashah: 
+There are two steps involved in retrieving the text of a parashah:
 
 1. Call the Calendars API. If no date parameters are explicitly passed, this will retrieve the weekly passage read on the week in which you're calling the API.
 
@@ -68,11 +68,11 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-As seen above, the only difference is the addition of the parameter `version=english`. These processes (and more) are detailed in our documentation. To see more, take a look at the description of the parameters and the responses for our [texts API ](ref:get_api-v3-texts-tref).
+As seen above, the only difference is the addition of the parameter `version=english`. These processes (and more) are detailed in our documentation. To see more, take a look at the description of the parameters and the responses for our [texts API ](ref:get-v3-texts).
 
 ## 2. How do I retrieve a commentary?
 
-In order to retrieve a commentary on a text in the Sefaria Library, pass the specific commentary to the [Texts API](ref:get_api-v3-texts-tref).
+In order to retrieve a commentary on a text in the Sefaria Library, pass the specific commentary to the [Texts API](ref:get-v3-texts).
 
 For example, in order to retrieve writings by 11th-century scholar Rashi on the weekly Torah portion referenced above, the query would appear like this:
 
@@ -84,14 +84,14 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-Please note: 
+Please note:
 
-* The above query includes the parameter `version=english`, which will return the English-language version of Rashi's writing. This will only work if there is an English-language version of the queried text in the Sefaria Library. 
-* It is not currently possible to navigate to a commentary from the API calls to a text. Therefore, the best way to see the available commentaries for a given text is to use our [Related API](ref:get_api-related-tref). For more information on how commentaries are associated with texts, take a look at our documentation. 
+- The above query includes the parameter `version=english`, which will return the English-language version of Rashi's writing. This will only work if there is an English-language version of the queried text in the Sefaria Library.
+- It is not currently possible to navigate to a commentary from the API calls to a text. Therefore, the best way to see the available commentaries for a given text is to use our [Related API](ref:get-related). For more information on how commentaries are associated with texts, take a look at our documentation.
 
 ## 3. How can I retrieve a range of verses?
 
-This process is the same as the process for retrieving the weekly parashah, described in question one. 
+This process is the same as the process for retrieving the weekly parashah, described in question one.
 
 ## 4. How can I retrieve a specific parashah along with commentary by Rashi?
 
@@ -99,7 +99,7 @@ This process is the same as the process of passing in `Rashi on Genesis 25:19-28
 
 ## 5. How do I use the Calendar API to retrieve a different weekly Torah portion?
 
-As described in the documentation relating to the [Calendar API ](ref:get_api-calendars-1):
+As described in the documentation relating to the [Calendar API ](ref:get-calendars):
 
 > By default, the API returns for the current time. You can override this default by using a combination of the year, day, and month parameters. All three of these must be used or the API will fallback to the default.
 
@@ -113,7 +113,7 @@ headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 ```
 
-That will return the ref for the parashah read on the week of January 1st, 2025. Once you have that ref, you can pass it into the Texts API in order to retrieve the text. You can find more information on this process in the answer to question one. 
+That will return the ref for the parashah read on the week of January 1st, 2025. Once you have that ref, you can pass it into the Texts API in order to retrieve the text. You can find more information on this process in the answer to question one.
 
 ## 6. How do I retrieve English versions of commentaries that are in Hebrew?
 
@@ -132,10 +132,10 @@ You can read more about this process in [our documentation](ref:get_api-v3-texts
 >
 > Notes:
 >
-> * `language` is the full English name of the language. In cases of dialectics with varying sub-specifities, please pass the ‘mother’ language (so for example, `arabic` rather than `judeo-arabic`). This field is NOT case sensitive.
-> * `versionTitle` is the exact English `versionTitle `of the given version in the Sefaria database.
-> * When only `language` is passed, the response will return a single version of the text in that language, the one that is highest priority in the Sefaria database.
-> * Requests can have more than one version param. If no version was passed, the API defaults to `version=primary`.
+> - `language` is the full English name of the language. In cases of dialectics with varying sub-specifities, please pass the ‘mother’ language (so for example, `arabic` rather than `judeo-arabic`). This field is NOT case sensitive.
+> - `versionTitle` is the exact English `versionTitle `of the given version in the Sefaria database.
+> - When only `language` is passed, the response will return a single version of the text in that language, the one that is highest priority in the Sefaria database.
+> - Requests can have more than one version param. If no version was passed, the API defaults to `version=primary`.
 
 <br />
 
