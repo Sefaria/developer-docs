@@ -38,12 +38,7 @@ You may be able to look up connections in resources like the Torah Temimah, or y
 
 There are many types of connections we're looking for:
 
-**Commentary:** One text explicitly comments on another.\
-**Quotation:** The words of one text appear quoted in another.\
-**Reference:** One text refers to another.\
-**Summary:** One text summarizes the other.\
-**Explication:** One text explicates the meaning of another.\
-**Related Passage:** Two texts are related or parallel in a way worth comparing.
+**Commentary:** One text explicitly comments on another.<br />**Quotation:** The words of one text appear quoted in another.<br />**Reference:** One text refers to another.<br />**Summary:** One text summarizes the other.<br />**Explication:** One text explicates the meaning of another.<br />**Related Passage:** Two texts are related or parallel in a way worth comparing.
 
 To add a connection follow these steps:
 
@@ -55,9 +50,9 @@ To add a connection follow these steps:
 
 ### 2. Correct Errors
 
-If you see an error in Sefaria, please don't stand idly by! The more people who feel a responsibility to improve Sefaria's quality, the better it will get. Report the issue directly by clicking on the "Feedback" button in the resource panel of the website and selecting "Report an issue with the text" or selecting "Report Error" on the app. 
+If you see an error in Sefaria, please don't stand idly by! The more people who feel a responsibility to improve Sefaria's quality, the better it will get. Report the issue directly by clicking on the "Feedback" button in the resource panel of the website and selecting "Report an issue with the text" or selecting "Report Error" on the app.
 
-If you recognize a problem but don't know how to fix it, please report it to [corrections@sefaria.org](corrections@sefaria.org).
+If you recognize a problem but don't know how to fix it, please report it to [corrections@sefaria.org](mailto:corrections@sefaria.org).
 
 ***
 
