@@ -58,7 +58,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Torah Scholar (OpenClaw/MCP Format)](https://github.com/abeperl/torah-scholar) - This AI agent skill (OpenClaw/MCP format) gives AI assistants instant access to the Sefaria Library, allowing users to search texts, retrieve verses in Hebrew and English, find commentaries, and more.
 * [TzadekAI](https://tzadek.ai/) - A halakhic Q\&A application using data from Sefaria to explore how rabbinic voices from different historical periods approached similar questions.
 * [Weekday Torah Readings with AI Insights](http://jiveyeti.com/wtr) - Provides experimental AI insights for each reading of the weekday Torah readings, alongside the biblical texts in both Hebrew and English.
-* [Yanki](https://developers.sefaria.org/docs/www.yankiai.com) - All-in-one app built according to traditional halakhic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features — all in a filtered, AI-powered ecosystem for the frum Jewish world to enjoy.
+* [Yanki](https://www.yankiai.com) - All-in-one app built according to traditional halakhic values, offering secure access to Torah content, mitzvah tools, kosher services, and community features — all in a filtered, AI-powered ecosystem for the frum Jewish world to enjoy.
 * [Yochai](https://www.yochai.wiki/chat) from [Lightning Studios](https://www.lightningstudios.ai/) - A Socratic AI chevruta that guides learners, powered by 1,000+ primary Jewish sources , 2.5M entities and 16M entity relationships built on Sefaria.&#x20;
 
 ### Learning & Study Tools
@@ -123,7 +123,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [The Jewish Story Through Books](https://joshcooper417.github.io/) - Shows where and when Jewish books were published throughout the ages.
 - [Zohar-stories.com](https://www.zohar-stories.com/) - Digital database of the stories of the sages that appear in the Zohar literature.
 - [Bina v’Da’at](https://chatgpt.com/g/g-679019fbe68c819193f16337c76081ee-bynh-vd-t) - Interactive AI-powered Hebrew chatbot designed to support Torah learning.
-- [Tikkun.io](<* https://tikkun.io/>) - A tool for preparing Torah readings.
+- [Tikkun.io](https://tikkun.io) - A tool for preparing Torah readings.
 - [Zmanim Checklist](https://apps.apple.com/app/id6751196074) - A prayer companion app that combines precise, location-based zmanim with configurable reminders, a daily checklist, and a full multi-nusach siddur powered by Sefaria. (There's also a version for Android, see [here](https://play.google.com/store/apps/details?id=com.tental.zmanimchecklist\&hl=en)).
 - [Zmanim Today](https://zmanim-today-1f2656a3.base44.app/) - A personal davening toolkit that combines a precise, location-based zmanim calculator with a Jerusalem-pointing compass, multi-nusach siddurim powered by Sefaria, and customizable prayer time notifications — all in one place.
 
