@@ -45,7 +45,7 @@ Read through [Text References](doc:text-references) for background information, 
 
 Explore [The Structure of a Book on Sefaria](doc:the-structure-of-a-text-on-sefaria). We recommend examining [Index and Versions](doc:each-book-is-an-index) and the details within [The Index Schema](doc:the-index-schema) closely for clarity.
 
-### Looking for additional endpoints beyond the [API Reference](ref:getting-started-with-your-api)?
+### Looking for additional endpoints beyond the [API Reference](ref:getting-started)?
 
 Check out our documentation about the [Shape API](doc:shape-api), [Categories API](doc:categories), and [Search API: Elastic Search Proxy](doc:search-api).
 
