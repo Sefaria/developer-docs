@@ -15,7 +15,7 @@ next:
 <Callout icon="🚧" theme="warn">
   ### Recommended: Use API Instead of Local Install
 
-  If you're interested in working with Sefaria's data, we recommend using our [public API.](ref:getting-started-with-your-api) If you prefer a more in-depth interaction with our code, the following installation instructions explain how to do so.
+  If you're interested in working with Sefaria's data, we recommend using our [public API.](ref:getting-started) If you prefer a more in-depth interaction with our code, the following installation instructions explain how to do so.
 
   **This page is under review**. While we are working to make it as accurate as up to date as possible, there may still be some inaccuracies.
 </Callout>
@@ -260,7 +260,7 @@ If you chose to download the recommended dump (`dump_small.tar.gz`) create an em
 
 ### 9) Set up Django's local server
 
-Sefaria uses Google's reCAPTCHA in order to verify that users are not bots. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)). For local development, the default test keys will suffice. This warning can be suppressed by uncommenting the following in the local\_settings.py file:
+Sefaria uses Google's reCAPTCHA in order to verify that users are not bots. For a deployment, you should register and use your own reCAPTCHA keys ([https://pypi.org/project/django-recaptcha/#installation](https://pypi.org/project/django-recaptcha/#installation)). For local development, the default test keys will suffice. This warning can be suppressed by uncommenting the following in the local_settings.py file:
 
 ```
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
