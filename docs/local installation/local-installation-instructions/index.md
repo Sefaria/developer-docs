@@ -88,7 +88,9 @@ To work with pyenv in macOS, use [these instructions](https://github.com/pyenv/p
 
 #### How to Create a [pyenv virtualenv](https://github.com/pyenv/pyenv-virtualenv#using-pyenv-virtualenv-with-pyenv).
 
-In your Sefaria directory, run `pyenv local [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g., `3.12/envs/sefaria-venv`), which should activate the virtualenv whenever you are in the Sefaria directory.
+In your Sefaria directory, run `pyenv virtualenv <version> [venv-name]`. This will create a `.python-version` and write the version name provided to the file (e.g., `3.12/envs/sefaria-venv`), which should activate the virtualenv whenever you are in the Sefaria directory.
+
+You may need to install the correct version of Python first for pyenv, `pyenv install --list` to see the versions, and then `pyenv install <selection-version`.&#x20;
 
 _Please note:&#x20;_
 
