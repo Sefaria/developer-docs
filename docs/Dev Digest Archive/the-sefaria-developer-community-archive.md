@@ -13,6 +13,23 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## July 31st, 2026: Weekly Review
+
+### :sparkles:Notable Projects & Community Tools
+
+- **Sefarim.net Launch**: Creator shared a semantic search project built on Sefaria's API, enabling multilingual Tanakh Q\&A with Claude-powered citation verification (English, French, Hebrew). The project demonstrates preference for use of [Sefaria-Export](https://github.com/Sefaria/Sefaria-Export) instead of API batch requests. Two new projects were added to the Powered-by-Sefaria page this week.&#x20;
+- **Terminal-Based Kabbalah Tools**: Developer inquired about contributing Hebrew dictionary and gematria/cipher mapping applications to Sefaria.&#x20;
+
+### :wrench:Key Technical Insights&#x20;
+
+- **Patot Library Issues Resolved**: A developer identified and reported critical dependency problems in Patot's chunking module (undeclared `stanza` dependency, hardcoded machine-specific paths). The Sefaria Research Team confirmed these were fixed in v0.1.5 but the README still referenced older installation instructions—now updated.&#x20;
+- **Disambiguator Project Impact**: The Sefaria Research Team clarified that the new Disambiguator project resolves ambiguous citations (like "ibid" references) to segment-level precision, making previously hidden cross-references visible in the UI. Future work may include detecting quotations without explicit citations using trained models rather than LLMs (cost/scale considerations).&#x20;
+
+### 🎯Support & Best Practices&#x20;
+
+- **Data Access Guidance**: The team consistently directed developers to use the [Sefaria-Export](https://github.com/Sefaria/Sefaria-Export) for bulk data needs rather than the API, which is simpler and more efficient than sequential API calls.&#x20;
+- **Communication Culture**: Team encouraged public channel discussions over DMs to benefit the broader community.
+
 ## July 24th, 2026: Weekly Review
 
 ### :sparkles:Notable Projects & Community Tools&#x20;
@@ -101,5 +118,3 @@ Sefaria maintains a community-first integration approach—excellent tools stay 
 
 - Developer seeking developer partner for comprehensive Midrash app&#x20;
 - **Multiple developers** expressing openness to partnerships and collaboration on overlapping projects&#x20;
-
-<br />
