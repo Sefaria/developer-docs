@@ -159,6 +159,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [TorahBot for Mi Yodea](https://www.reddit.com/r/Judaism/comments/53wa47/introducing_torahbot/) - Cite sources and brings texts automatically into Mi Yodea.
 - [Torah Scroll](http://www.scrolltorah.com/) - An online forum that brings Torah texts and community discussion together in one space for collaborative Jewish learning.
 - [Tweet Yomi](https://tweetyomi.org/) - Creates daily Torah tweets.
+- [V'Hagita](https://vehagita.co.il/) - A Hebrew-language Torah social network that makes the Jewish library feel as intuitive and engaging as a modern social media feed, powered by Sefaria's texts and links.
 
 ***
 
