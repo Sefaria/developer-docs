@@ -48,6 +48,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Ituria](https://github.com/Sivan22/ituria) - This AI-agent-based search (GitHub repository) is based on [Otzaria](https://github.com/Sivan22/otzaria).
 * [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
 * [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
+* [My Torah Quest](https://mytorahquest.com/) - A gamified Mishnah quiz app that uses Sefaria's texts and a trained LLM to generate questions, helping students across North America independently test their learning in a fun, self-paced format.
 * [Orayta: Torah in Your Time](https://preview--orayta-learning-path.lovable.app/) - AI-powered learning app that helps busy people integrate Torah study into daily life by providing a tailored learning session with direct links to the Sefaria Library.
 * [PshatGPT](https://pshatgpt.com/) - An AI-powered study tool that streams contextual pshat explanations from Claude for any clicked line of gemara, Rashi, Rashbam, or Tosafot, drawing on Sefaria's Talmud Bavli corpus.
 * [RavGPT.ai](https://ravgpt.ai/) - An AI model designed to make Torah learning more accessible.
@@ -179,5 +180,3 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Yolaroo Library of Jewish Texts, code on GitHub](https://github.com/yolaroo/SefariaiOSv0.1)
 - [Sefaria-Container-Unofficial](https://github.com/orxaicom/Sefaria-Container-Unofficial) - Builds and publishes a docker container to run Sefaria
 - [Sefaria-Desktop-Unofficial](https://github.com/orxaicom/Sefaria-Desktop-Unofficial) - Desktop app for the Sefaria Library. Work in progress. Currently only Linux-supported.
-
-<br />
