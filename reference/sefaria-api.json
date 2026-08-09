@@ -1813,7 +1813,7 @@
             }
           }
         ],
-        "description": "Returns the English and Hebrew text plus metadata such as the language, ref for the url, and so forth for many refs at once. The path parameter is a pipe-delimited list of refs.",
+        "description": "Returns the English and Hebrew text plus metadata such as the language, ref for the url, etc. for many refs at once. The path parameter is a pipe-delimited list of refs.",
         "responses": {
           "200": {
             "content": {
@@ -1875,7 +1875,7 @@
             }
           }
         ],
-        "description": "Maps each requested ref to the canonical passage that contains it. This endpoint is particularly useful for passages of Talmud, as it maps a ref for a single page to the full sugya boundary. It can also be used for Tanakh texts, where a verse maps to its correlating parashah. Pass a pipe-delimited list of refs.",
+        "description": "Maps each requested ref to the canonical passage that contains it. Particularly useful for Talmud sugyot — a single amud ref is mapped to the full sugya boundary. Also works for Tanakh, where a verse maps to its parasha-style passage. Pass a pipe-delimited list of refs.",
         "responses": {
           "200": {
             "content": {
@@ -2582,7 +2582,7 @@
             }
           },
           "name": "index_title",
-          "description": "A title of a valid Sefaria `Index`. For a complete list of works in the [Sefaria](sefaria.org) library, as well as their index titles, query the [api/index](https://www.sefaria.org/api/index/) endpoint. ",
+          "description": "A title of a valid Sefaria `Index`. For a complete list of works in the [Sefaria](https://www.sefaria.org) library, as well as their index titles, query the [api/index](https://www.sefaria.org/api/index/) endpoint. ",
           "schema": {
             "type": "string",
             "default": "Genesis"
@@ -4194,7 +4194,7 @@
             "description": "Successful Response"
           }
         },
-        "description": "Returns the list of indexes (works) in the Sefaria Library that are attributed to a given author."
+        "description": "Returns the list of indexes (works) attributed to a given Sefaria author."
       }
     },
     "/api/index/titles": {
@@ -4205,7 +4205,7 @@
         "tags": [
           "Index"
         ],
-        "description": "Returns a complete list of recognized title strings on Sefaria, including alternate titles and abbreviations. This endpoint is useful for client-side autocomplete and ref recognition. Please note: This endpoint will return a response that will be multiple megabytes in size.",
+        "description": "Returns the complete list of recognized title strings on Sefaria, including alternate titles and abbreviations. Useful for client-side autocomplete and ref recognition. Note: this response is multiple megabytes.",
         "responses": {
           "200": {
             "content": {
@@ -4263,7 +4263,7 @@
             }
           }
         ],
-        "description": "Returns metadata for a single index (work) by title. This includes categories, schema (text structure), authors, descriptive copy, and ordering hints.",
+        "description": "Returns metadata for a single index (work) by title — categories, schema (text structure), authors, descriptive copy, and ordering hints.",
         "responses": {
           "200": {
             "content": {
@@ -5419,7 +5419,7 @@
             }
           }
         ],
-        "description": "Works in the same way as `GET /api/index/{title}`. Returns metadata for a single index (work) by title.",
+        "description": "Same as `GET /api/index/{title}`. Returns metadata for a single index (work) by title.",
         "responses": {
           "200": {
             "content": {
@@ -6575,7 +6575,7 @@
             }
           }
         ],
-        "description": "Returns word and segment counts for a given text, organized by language.",
+        "description": "Returns word and segment counts for a text, broken down by language.",
         "responses": {
           "200": {
             "content": {
@@ -11617,7 +11617,7 @@
             }
           }
         ],
-        "description": "Returns the number of links between every book in `cat1` and every book in `cat2`. If no links exist between the requested category pair, this endpoint will return an error.",
+        "description": "Returns the number of links between every book in `cat1` and every book in `cat2`. Returns an error response if no links exist between the requested category pair.",
         "responses": {
           "200": {
             "content": {
@@ -11746,7 +11746,7 @@
             }
           }
         ],
-        "description": "Returns the word count for a specific version of a given text. For example: title=`Genesis`, version=`Miqra according to the Masorah`, language=`he`.",
+        "description": "Returns the word count for a specific text version. Example: title=`Genesis`, version=`Miqra according to the Masorah`, language=`he`.",
         "responses": {
           "200": {
             "content": {
@@ -11765,8 +11765,7 @@
             },
             "description": "Successful Response"
           }
-        },
-        "summary": "Word Count For Version"
+        }
       }
     },
     "/api/related/{tref}": {
@@ -12627,7 +12626,7 @@
             }
           }
         ],
-        "description": "Returns a summary of all links targeting a ref with per-book breakdowns, grouped by category.",
+        "description": "Returns a summary of all links targeting a ref, grouped by category, with per-book breakdowns.",
         "responses": {
           "200": {
             "content": {
@@ -12898,7 +12897,7 @@
             }
           }
         ],
-        "description": "Returns a breakdown of the seven Torah readings for a given parashah. This endpoint is useful for Sheet builders when seeding a Sheet from a weekly Torah reading.",
+        "description": "Returns the seven aliyot ranges for a given parasha. Used by the source sheet builder when seeding a sheet from a weekly reading.",
         "responses": {
           "200": {
             "content": {
@@ -12926,8 +12925,7 @@
             },
             "description": "Successful Response"
           }
-        },
-        "summary": "Aliyot for a Parashah"
+        }
       }
     },
     "/api/calendars/topics/parasha": {
@@ -12938,7 +12936,7 @@
         "tags": [
           "Calendars"
         ],
-        "description": "Returns topic metadata for the current week's parashah. These include title, ref, category ordering, and bilingual display values.",
+        "description": "Returns topic metadata for the current week's parasha — title, ref, category ordering, and bilingual display values.",
         "responses": {
           "200": {
             "content": {
@@ -12986,8 +12984,7 @@
             },
             "description": "Successful Response"
           }
-        },
-        "summary": "Parashah Topic"
+        }
       }
     },
     "/api/calendars/topics/holiday": {
@@ -13044,7 +13041,7 @@
             "required": false
           }
         ],
-        "description": "Returns topic metadata for an active holiday on a requested date. If no holiday exists for the given day, this endpoint will return a 404 error. All three parameters (`year`, `month`, `day`) are required to query a specific date. If no date is specified, the endpoint uses the current date.",
+        "description": "Returns topic metadata for the active holiday on the requested date. Returns 404 when no holiday is in season for the given day. Use the `year`, `month`, `day` query params (all three required together) to query a specific date; otherwise the current date is used.",
         "responses": {
           "200": {
             "content": {
@@ -15033,7 +15030,7 @@
             "description": "Successful Response"
           }
         },
-        "description": "Retrieves the full content and metadata of a single Sheet from Voices on Sefaria."
+        "description": "Retrieves the full content and metadata of a single Sefaria source sheet."
       }
     },
     "/api/sheets/trending-tags": {
@@ -15175,7 +15172,7 @@
             "description": "Successful Response"
           }
         },
-        "description": "Returns the most-used Sheet tags from recent activity."
+        "description": "Returns the most-used sheet tags from recent activity."
       }
     },
     "/api/sheets/modified/{sheet_id}/{timestamp}": {
@@ -15212,7 +15209,7 @@
             }
           }
         ],
-        "description": "Returns a full Sheet if it has been modified since the given timestamp. If it the Sheet has not been modified, returns an empty/unchanged response. This endpoint is useful for clients that cache Sheets.",
+        "description": "Returns the full sheet if it has been modified since the given timestamp; otherwise returns an empty/unchanged response. Useful for clients that cache sheets.",
         "responses": {
           "200": {
             "content": {
@@ -15504,7 +15501,7 @@
             "required": true
           }
         ],
-        "description": "Returns all of a specific user's public Sheets. For anonymous callers, only public Sheets are returned. For an authenticated user requesting their own user_id, will return both public and private Sheets.",
+        "description": "Returns a user's public sheets. For anonymous callers, only public sheets are returned. An authenticated user requesting their own user_id additionally sees their private sheets.",
         "responses": {
           "200": {
             "content": {
@@ -16647,7 +16644,7 @@
             }
           }
         ],
-        "description": "Returns all of a specific user's public Sheets, paginated and sorted. Same response shape as the unparameterized variant.",
+        "description": "Returns a user's public sheets, paginated and sorted. Same response shape as the unparameterized variant.",
         "responses": {
           "200": {
             "content": {
@@ -16852,7 +16849,7 @@
             "required": true
           }
         ],
-        "description": "Returns brief summaries of many Sheets at once. The path parameter is a pipe-delimited (`|`) list of sheet IDs. Each ID is found in the same way it is found for single-Sheet endpoints (i.e., the number in the Sheet's URL on Voices on Sefaria).",
+        "description": "Fetches lightweight summaries for many sheets at once. The path parameter is a pipe-delimited (`|`) list of sheet IDs. Each ID is found the same way as for single-sheet endpoints (the number in the sheet's URL on `voices.sefaria.org`).",
         "responses": {
           "200": {
             "content": {
@@ -16893,7 +16890,7 @@
         "tags": [
           "Sheets"
         ],
-        "description": "Returns all Sheet tags with their usage counts. By default, the information is sorted by count highest to lowest. ",
+        "description": "Returns all sheet tags with their usage counts. Sorted by count (descending) by default.",
         "responses": {
           "200": {
             "content": {
@@ -17026,7 +17023,7 @@
             }
           }
         ],
-        "description": "Returns all Sheet tags with their usage counts. The information returned is sorted by a given key.",
+        "description": "Returns all sheet tags with their usage counts, sorted by the given key.",
         "responses": {
           "200": {
             "content": {
@@ -17149,7 +17146,7 @@
             "required": true
           }
         ],
-        "description": "Returns the Topic tags used on a specific user's public Sheets.",
+        "description": "Returns the topic tags used on a specific user's public sheets.",
         "responses": {
           "200": {
             "content": {
@@ -17611,7 +17608,7 @@
             }
           }
         ],
-        "description": "Returns public Sheets that cite a given Sefaria ref.",
+        "description": "Returns public sheets that cite the given Sefaria ref.",
         "responses": {
           "200": {
             "content": {
@@ -17999,7 +17996,7 @@
             }
           }
         ],
-        "description": "Returns a paginated list of all public Sheets.",
+        "description": "Returns a paginated list of all public sheets.",
         "responses": {
           "200": {
             "content": {
@@ -18301,7 +18298,7 @@
         "tags": [
           "Collections"
         ],
-        "description": "Returns a list of Sefaria Sheet Collections. Unauthenticated callers see only publicly listed Collections in `public`, while the `private` array will be empty. Authenticated users will also see private Collections they are authorized to see (e.g., Collections they have authored or co-authored)..",
+        "description": "Returns the list of Sefaria collections. Unauthenticated callers see only publicly-listed collections in `public`; the `private` array is empty. Authenticated users additionally see private collections they belong to.",
         "responses": {
           "200": {
             "content": {
@@ -18383,7 +18380,7 @@
             }
           }
         ],
-        "description": "Returns the full content of a single Sheet Collection, including its member Sheets. For unauthenticated callers, only public Collections are accessible through this endpoint.",
+        "description": "Returns the full content of a single collection, including its member sheets. For unauthenticated callers, only publicly-listed collections are accessible.",
         "responses": {
           "200": {
             "content": {
@@ -18862,7 +18859,7 @@
             "required": true
           }
         ],
-        "description": "Returns Collections owned by or collaborated on by a specific user. ",
+        "description": "Returns the collections that a specific user owns or belongs to.",
         "responses": {
           "200": {
             "content": {
@@ -19447,7 +19444,7 @@
             "required": true
           }
         ],
-        "description": "Returns the public profile of a Voices on Sefaria user.",
+        "description": "Returns the public profile for a Sefaria user.",
         "responses": {
           "200": {
             "content": {
@@ -19808,7 +19805,7 @@
             "type": "string"
           },
           "url": {
-            "description": "If `type=ref`, this returns the URL path to link to the submitted text on [Sefaria.org](sefaria.org)",
+            "description": "If `type=ref`, this returns the URL path to link to the submitted text on [Sefaria.org](https://www.sefaria.org)",
             "type": "string"
           },
           "index": {
@@ -24504,7 +24501,7 @@
       },
       "OrderTopicLinkJSON": {
         "title": "Root Type for OrderTopicLinkJSON",
-        "description": "This JSON includes the various metrics that are relevant for ordering the link on a topics page. We use these metrics at [Sefaria.org](sefaria.org) to change the order on the topics page.",
+        "description": "This JSON includes the various metrics that are relevant for ordering the link on a topics page. We use these metrics at [Sefaria.org](https://www.sefaria.org) to change the order on the topics page.",
         "type": "object",
         "properties": {
           "tfidf": {
@@ -25480,7 +25477,7 @@
       },
       "MediaJSON": {
         "title": "Root Type for MediaJSON",
-        "description": "JSON containing metadata for media linked to `Ref`s on [Sefaria](sefaria.org)",
+        "description": "JSON containing metadata for media linked to `Ref`s on [Sefaria](https://www.sefaria.org)",
         "type": "object",
         "properties": {
           "media_url": {
@@ -25686,7 +25683,7 @@
       },
       "SheetsJSON": {
         "title": "Root Type for SheetsJSON",
-        "description": "JSON containing metadata relating for a given source sheet on [Sefaria](sefaria.org).",
+        "description": "JSON containing metadata relating for a given source sheet on [Voices on Sefaria](https://voices.sefaria.org).",
         "type": "object",
         "properties": {
           "owner": {
@@ -25695,7 +25692,7 @@
             "type": "integer"
           },
           "id": {
-            "description": "The `id` of the sheet. This is used in the URL to retrieve sheets, for example, a sheet with an `id` of 1, would be accessible on [Sefaria](sefaria.org) at [sefaria.org/sheets/1](sefaria.org/sheets/1).",
+            "description": "The `id` of the sheet. This is used in the URL to retrieve sheets, for example, a sheet with an `id` of 1, would be accessible on [Voices on Sefaria](https://voices.sefaria.org) at [voices.sefaria.org/sheets/1](https://voices.sefaria.org/sheets/1).",
             "type": "string"
           },
           "public": {

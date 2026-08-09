@@ -1,6 +1,6 @@
 ---
 title: Calendars
-excerpt: ''
+excerpt: Operations related to retrieving calendar data
 deprecated: false
 hidden: false
 metadata:

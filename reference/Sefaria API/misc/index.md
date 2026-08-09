@@ -1,6 +1,6 @@
 ---
 title: Misc
-excerpt: ''
+excerpt: Miscellaneous API endpoints
 deprecated: false
 hidden: false
 metadata:

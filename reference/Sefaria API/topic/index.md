@@ -1,6 +1,6 @@
 ---
 title: Topic
-excerpt: ''
+excerpt: Operations related to retrieving topic data
 deprecated: false
 hidden: false
 metadata:

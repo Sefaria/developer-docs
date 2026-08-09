@@ -1,6 +1,6 @@
 ---
 title: Related
-excerpt: ''
+excerpt: Operations related to retrieving links and relationships between texts
 deprecated: false
 hidden: false
 metadata:

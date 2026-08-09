@@ -1,6 +1,6 @@
 ---
 title: Text
-excerpt: ''
+excerpt: Operations related to retrieving texts
 deprecated: false
 hidden: false
 metadata:

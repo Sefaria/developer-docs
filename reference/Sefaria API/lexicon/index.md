@@ -1,6 +1,6 @@
 ---
 title: Lexicon
-excerpt: ''
+excerpt: Operations related to retrieving lexicon (dictionary) data
 deprecated: false
 hidden: false
 metadata:
