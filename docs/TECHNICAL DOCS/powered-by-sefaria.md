@@ -116,6 +116,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Abba Saul](https://github.com/scopreon/abba-saul/) - A mishnah bot for Discord users.
 - [Artscroll Smart Siddur](https://apps.apple.com/us/app/artscroll-smart-siddur-%D7%A1%D7%93%D7%95%D7%A8/id988119206) - A siddur app by Artscroll.
 - [Goof](https://goof.surge.sh/) - App that shows where parts of the human body show up in liturgical text.
+- [HolyScroll](https://github.com/akiva10b/HollyScroll) - An open-source iPhone app that turns Torah study time into an allowance for distraction-free scrolling, using Sefaria's random text API to make every learning session count.
 - [Mishnah.org](https://www.mishnah.org/) - Platform that uses texts from the Sefaria Library to support Mishnah study.
 - [Parasha Bytes](https://github.com/azemon/parashabytes) - Helps users explore the foods of the Torah.
 - [Pninim](https://pninim.yiddishe-kop.com/) - Platform that helps users write personal insights on Talmud.
