@@ -13,6 +13,22 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## August 7th, 2026: Weekly Review
+
+### :sparkles:Notable Projects & Community Tools
+
+**Sefaria Web Components Project Launch**&#x20;
+
+A community developer employed at Microsoft announced an incubating project for Microsoft's Global Hackathon 2026: **Sefaria Web Components** — reusable, composable web components (e.g., `, `) that abstract common functionality like punctuation toggling, BIDI support, and link navigation.&#x20;
+
+- **Key Value Proposition:** Eliminate wheel-reinvention across Sefaria API implementations by providing standardized, extracted components from existing web and mobile codebases, plus utility libraries like `@sefaria/ref`.&#x20;
+- **Call for Feedback:** The team is actively seeking input on pain points and desired features. If you're building with the Sefaria API, this is a good time to share what standardized components would solve for you.&#x20;
+- **Repository:** [https://github.com/Arithmomaniac/sefaria-web-components](https://github.com/Arithmomaniac/sefaria-web-components)&#x20;
+
+### :handshake: Community Connection&#x20;
+
+A developer inquired about connecting with the creator of vehagita.co.il (a Hebrew social network for Torah study). If you're the developer behind this project or know them, they're looking to connect in the community.
+
 ## July 31st, 2026: Weekly Review
 
 ### :sparkles:Notable Projects & Community Tools
