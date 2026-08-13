@@ -39,7 +39,6 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 
 * [Ask the Rambam RAG Tutorial](https://www.youtube.com/watch?v=CNIO2MsfeTo)  - A retrieval-augmented Q\&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
 * [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
-* [ChavrutAI](https://chavrutai.com/contents) - Free digital platform designed to make the Babylonian Talmud accessible through modern technology and intuitive design.
 * [DafBuddy](https://dafbuddy.com/) - A free platform that supports Gemara learning for students of all backgrounds by drawing on Sefaria’s text and translation API, integrating page-based layouts reflecting the traditional structure of a Talmud page, and offering an AI-powered study companion.
 * [Dafyomi AI Summary](https://dormantone.github.io/dafyomi/) - Explores, summarizes, and translates key insights from the Talmud.
 * [Darshan AI](https://darshan.siddur.xyz/) - A platform that can create an entire lesson with just a few clicks, as well as citing sources and linking to the Sefaria Library.
@@ -69,6 +68,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [AllDaf](https://alldaf.org/) - Daf Yomi app created by the Orthodox Union with an English translation of the Talmud sourced from the Sefaria Library.
 - [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - Daily learning about the halakhah (Jewish law) that governs daily life.
 - [Bavli Kilvavi](https://bavli.onrender.com/) - A website for studying the Babylonian Talmud that brings together Rishonim, Acharonim, biographical details of Tannaim and Amoraim, and much more for a rich and accessible study experience. Available in Hebrew only.
+- [Bekiut](https://bekiut.com/) - Free digital platform providing an opinionated, user-friendly presentation of the Talmud and other classic Jewish texts, with particular emphasis on UX/UI and making the text more accessible and easier to read and navigate (along with additional tools and features).
 - [Binata](https://binata-ai.com/) - an AI Torah study assistant that answers questions with sourced references across Torah literature, with a built-in document editor and AI writing tools.
 - [Daf Quiz](https://dafquiz.com/daf-yomi) - Web application that generates a daily multiple-choice quiz based on the relevant page of Talmud, according to the Daf Yomi cycle. (Link to source code: [https://github.com/bentekkie/daf_quiz](https://github.com/bentekkie/daf_quiz))
 - [Daily Torah Study Trmnl Plugin](https://usetrmnl.com/recipes/151619) - Plugin for the Trmnl, which uses Sefaria’s Calendars API to present a daily Torah study schedule.
