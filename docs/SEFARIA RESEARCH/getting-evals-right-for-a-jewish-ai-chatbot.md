@@ -35,12 +35,12 @@ We started with many scorers and a lot of trial and error. Over time, we've iden
 
 To maintain quality, we use three distinct types of evaluations:
 
-- **Deterministic Scorers:** a script that verifies specific parameters. For example: ensuring every linked Sefaria source actually resolves to a real page in the Library.
-- **LLM as Judge:** a script that evaluates whether the chatbotExamples: If the question asked had an antisemitic taste to it, did the guardrail catch it and provide the correct answer. Another classification covers queries that request a rabbinic ruling (Psak). A good answer supplies relevant sources and leaves the decision to the user; a failing answer issues the ruling directly
-- **Subject Matter Experts (Human Evaluation) —** How well did the assistant do in terms of the sources it cited, and did it actually answer the question? This is sometimes a random sample to confirm things are working as expected, and sometimes a targeted review — for instance, when users flag an issue, or when the team ships a change like a new tool or a bug fix and needs to verify that previously failing answers are now resolved.
+- **Deterministic Scorers:** This refers to a script that verifies specific parameters. For example: ensuring every linked Sefaria source actually resolves to a real page in the Library.
+- **LLM as Judge:** This refers to an evaluation of whether the guardrails are operating as intended. For example, if a question had an antisemitic tone, this ensures that the guardrail caught it and provided the correct answer. Or, if the query requested a rabbinic ruling, this ensures that the answer supplies relevant sources and leaves the decision to the user, whereas a failing answer would issue a rabbinic ruling directly.
+- **Subject Matter Experts (Human Evaluation):&#x20;**&#x54;his refers to an evaluation of how well the assistant did in terms of the sources it cited, and whether it actually answered the question. This is sometimes a random sample to confirm things are working as expected, and sometimes a targeted review. We use targeted reviews in a number of situations, such as when users flag an issue or when we ship a change (e.g., a new tool or a bug fix) and need to verify that previously failing answers are now resolved.
 
-## Our current practice
+## Our Current Practice
 
-<br />We are using Braintrust for this part of the evaluation platform. The scorers, datasets, and prompts live in the codebase. Each scorer is a Python file that gets built and pushed to Braintrust via CLI, goes through code review, and is versioned in git alongside the agent changes that prompted it.
+We are using Braintrust for this part of the evaluation platform. The scorers, datasets, and prompts live in the codebase. Each scorer is a Python file that is built and pushed to Braintrust via the CLI, goes through code review, and is versioned in GitHub alongside the agent changes that prompted it.
 
-An eval suite passes if it meets or exceeds the previously defined threshold for that scorer — or a custom threshold defined for the specific case being tested.
+An eval suite passes if it meets or exceeds the previously defined threshold for that scorer, or for a custom threshold defined for the specific case being tested.
