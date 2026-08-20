@@ -13,6 +13,45 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## August 21st, 2026: Weekly Review
+
+### **New Community Project**:&#x20;
+
+Developer shared an independent translation studio built on the Sefaria API that enables human-reviewed translation drafts without writing to the main library. This is a good reference implementation for developers building read-only applications on Sefaria data. The project is open for community feedback.&#x20;
+
+### Community News&#x20;
+
+**Developer Fundraising Initiative**: The Sefaria team launched a $5,000 fundraising goal (with 1:1 matching through October 5) specifically targeting the developer community. This supports the free API and data infrastructure that enables third-party tools. More details: [https://donate.sefaria.org/give/451346](https://donate.sefaria.org/give/451346)&#x20;
+
+### Key Takeaway&#x20;
+
+The week showcased both the generosity of Sefaria's free developer resources and an emerging ecosystem of specialized tools being built on top of the platform. The translation studio example demonstrates the potential for domain-specific applications that leverage Sefaria's core data without competing with the main library.
+
+## August 14th, 2026: Weekly Review
+
+### Notable Discussion: Graph Database for Sefaria Data&#x20;
+
+**Question:** Developer raised an interesting architectural question about building a GraphDB for Sefaria's data as a community side project. While initially seeming like a good fit, they struggled to identify unique use cases during POC implementation.&#x20;
+
+**Key Insight:** It was clarified that the distinction between graph databases and query languages, and pointed to an existing reference: the [yochai-kg project](https://github.com/lightning-learning-Studios/yochai-kg) from Lightning Studios, which demonstrates an open, read-only approach to knowledge graph implementations. This could serve as a template for thinking about a "slimmer open source alternative."&#x20;
+
+**Takeaway:** Before investing in graph infrastructure, the community should first validate concrete use cases. The referenced yochai-kg project may provide a starting point for exploration.&#x20;
+
+### Link Quality Issue Reported&#x20;
+
+**Bug Report:** User identified a potential issue with automated linking where Likutei Halachot (Torah 1, Hilchot Kriyat Shema) incorrectly links to Shulchan Aruch chapter 65 instead of Likutei Moharan chapter 65. This suggests the automated linking system may need refinement for complex citation relationships.&#x20;
+
+### Community Wins&#x20;
+
+Four new projects were added to the **Powered-by-Sefaria page**:&#x20;
+
+- **My Torah Quest:&#x20;**&#x47;amified Mishnah quiz using Sefaria API + AI&#x20;
+- **Vehagita**: Torah social network built on Sefaria texts
+- &#x20;**HolyScroll**: Open-source iPhone app for distraction-free study&#x20;
+- **Kabbalah of Time** - Kabbalistic yearly cycle mapper&#x20;
+
+Projects can be submitted via the [community submission form](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form).
+
 ## August 7th, 2026: Weekly Review
 
 ### :sparkles:Notable Projects & Community Tools
