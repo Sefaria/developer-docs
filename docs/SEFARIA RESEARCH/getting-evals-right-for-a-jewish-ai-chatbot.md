@@ -2,7 +2,7 @@
 title: Getting Evals Right for a Jewish AI Chatbot
 excerpt: Learn about our process and priorities for developing the Library Assistant
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
