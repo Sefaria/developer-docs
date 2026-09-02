@@ -48,6 +48,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Ituria](https://github.com/Sivan22/ituria) - This AI-agent-based search (GitHub repository) is based on [Otzaria](https://github.com/Sivan22/otzaria).
 * [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
 * [Lilmod](https://www.lilmod.app) - A digital workspace for reading and annotating Torah texts pulled from Sefaria, with AI-powered tools integrated to support deeper, more intuitive learning.
+* [Mekoros ](https://mekoros.com)- An AI Torah research tool that cuts through hallucinations by delivering verified, source-checked mekoros for any topic in Torah, powered by Sefaria's texts, MCP, and vector search.
 * [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
 * [My Torah Quest](https://mytorahquest.com/) - A gamified Mishnah quiz app that uses Sefaria's texts and a trained LLM to generate questions, helping students across North America independently test their learning in a fun, self-paced format.
 * [Orayta: Torah in Your Time](https://preview--orayta-learning-path.lovable.app/) - AI-powered learning app that helps busy people integrate Torah study into daily life by providing a tailored learning session with direct links to the Sefaria Library.
@@ -97,6 +98,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Siddurim.com](https://play.google.com/store/apps/dev?id=6639480761921000346) - Real siddur featuring original pages of the Kavanat Halev siddur, Nusach Edot HaMizrach.
 - [Sidur KTS](https://toraparatodos.com/) - a mobile prayer application designed for Spanish speakers who are new to the Western Sephardic tradition.
 - [Talmud.page](https://talmud.page/) - A simpler way to read the Talmud (among other texts), optimized for both mobile and web reading experiences.
+- [Talmud Navigator](https://talmud-lookup.talmud-lookup-worker.workers.dev/) - A mobile-friendly study tool that aggregates per-line Tanakh sources for every daf, offers tap-to-lookup for any Hebrew word, and enables side-by-side Bavli-Yerushalmi comparison — all built on Sefaria's API.
 - [Tanach Study](https://tanachstudy.com/) - Online education platform that revolutionizes the way we study our foundational texts.
 - [Tehillim Reader](https://arithmomaniac.github.io/tehillim-reader/) - A kid-friendly Tehillim reading site that highlights each word or syllable as you navigate via keyboard, mouse, or scroll wheel, with text pre-fetched from the Sefaria API and bundled for fast, offline-capable use. [Github documentation](https://github.com/Arithmomaniac/tehillim-reader)
 - [The Daf Yomi Portal](http://daf-yomi.com/dafYomi.aspx) - App designed to support daily Talmud study, with English text from the Sefaria Library.
@@ -177,10 +179,12 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Sefaria Extension for Raycast](https://www.raycast.com/danyeric123/sefaria) - An unofficial Raycast extension that provides access to Sefaria.org, the free digital library of Jewish texts, through the Sefaria API.
 - [RecurrentRav, code on GitHub ](https://github.com/leerosenthalj/RecurrentRav)- Recurrent Neural Network generation of pseudo-Mishnah, powered by Sefaria.
 - [Sefaria .NET Framework, code on GitHub](https://github.com/orenfromberg/sefariadotnet)
+- [Sefaria-Container-Unofficial](https://github.com/orxaicom/Sefaria-Container-Unofficial) - Builds and publishes a docker container to run Sefaria
+- [Sefaria-Desktop-Unofficial](https://github.com/orxaicom/Sefaria-Desktop-Unofficial) - Desktop app for the Sefaria Library. Work in progress. Currently only Linux-supported.
 - [Sefaria Embedded, code on GitHub](https://github.com/nassan/sefaria-embedded/tree/master) - A server for generating embeddable iframes for texts via Sefaria API.
+- [Sefaria Translation Studio](https://github.com/av1m/sefaria-translation-studio) - A local Next.js studio for AI-assisted, human-reviewed translation of Sefaria texts, designed as a documented proof-of-concept workflow where a model drafts and a fluent reviewer edits.
 - [Sefaria Wordpress Plugin, code on Github](https://github.com/JoshMB/sefaria-wp-plugin)
 - [Shnayim Mikrah](https://www.npmjs.com/package/@orthodox-union/shnayimmikrah) - A wrapper over the Sefaria API to enable presenting Shnayim Mikrah text by aliyah.
 - [Stndr](https://github.com/danilius/Stndr) -A focused desktop Jewish text reader that brings the Sefaria library offline with tabbed navigation, commentaries, cross-references, and advanced search, built for in-depth personal study.
+- [Torah MCP](https://torah-mcp.jonathan-ef2.workers.dev) - An MCP server that connects Claude directly to Sefaria's texts, commentaries, and study calendars, ensuring AI answers to halachic and textual questions are grounded in the actual sources rather than model memory.
 - [Yolaroo Library of Jewish Texts, code on GitHub](https://github.com/yolaroo/SefariaiOSv0.1)
-- [Sefaria-Container-Unofficial](https://github.com/orxaicom/Sefaria-Container-Unofficial) - Builds and publishes a docker container to run Sefaria
-- [Sefaria-Desktop-Unofficial](https://github.com/orxaicom/Sefaria-Desktop-Unofficial) - Desktop app for the Sefaria Library. Work in progress. Currently only Linux-supported.
