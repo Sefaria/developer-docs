@@ -47,6 +47,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [Hevruta AI](https://hevruta-ai.com/) - A beautifully designed web app that pairs learners with an AI study companion for an immersive, chavruta-style Torah learning experience.
 * [Ituria](https://github.com/Sivan22/ituria) - This AI-agent-based search (GitHub repository) is based on [Otzaria](https://github.com/Sivan22/otzaria).
 * [LadderAI](https://ladderai.app/) - An ESP32-based physical AI device, offering instant voice and text access to Claude and ChatGPT, and reads Tanakh and Zohar texts available via Sefaria's API aloud to users.
+* [Lilmod](https://www.lilmod.app) - A digital workspace for reading and annotating Torah texts pulled from Sefaria, with AI-powered tools integrated to support deeper, more intuitive learning.
 * [Mishneh AI](https://mishneh.ai/) - This AI-powered Torah study platform offers chavruta-style learning modes, fully cited responses linked to the Sefaria Library, and personalized tools directly connected to foundational Jewish texts.
 * [My Torah Quest](https://mytorahquest.com/) - A gamified Mishnah quiz app that uses Sefaria's texts and a trained LLM to generate questions, helping students across North America independently test their learning in a fun, self-paced format.
 * [Orayta: Torah in Your Time](https://preview--orayta-learning-path.lovable.app/) - AI-powered learning app that helps busy people integrate Torah study into daily life by providing a tailored learning session with direct links to the Sefaria Library.
@@ -66,6 +67,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 
 - [AlHaTorah](https://alhatorah.org/) - Tools for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
 - [AllDaf](https://alldaf.org/) - Daf Yomi app created by the Orthodox Union with an English translation of the Talmud sourced from the Sefaria Library.
+- ASHAN — Timely Zohar Portions - A Hebrew-calendar Android app that delivers daily Zohar study aligned to the weekly parasha, powered by Sefaria's texts API.
 - [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - Daily learning about the halakhah (Jewish law) that governs daily life.
 - [Bavli Kilvavi](https://bavli.onrender.com/) - A website for studying the Babylonian Talmud that brings together Rishonim, Acharonim, biographical details of Tannaim and Amoraim, and much more for a rich and accessible study experience. Available in Hebrew only.
 - [Bekiut](https://bekiut.com/) - Free digital platform providing an opinionated, user-friendly presentation of the Talmud and other classic Jewish texts, with particular emphasis on UX/UI and making the text more accessible and easier to read and navigate (along with additional tools and features).
