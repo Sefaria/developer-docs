@@ -13,6 +13,49 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## September 4th, 2026: Weekly Review
+
+### &#x20;🚨 Infrastructure Alert&#x20;
+
+**API Rate Limiting Reminder**: The team reported a spike in traffic causing performance degradation. Developers are urged to implement self-imposed rate limiting and consider bulk-downloading via [Sefaria-Export](https://github.com/Sefaria/Sefaria-Export) instead of repeated API calls. Contact [developers@sefaria.org](mailto:developers@sefaria.org) with questions.&#x20;
+
+### 🔧 Technical Improvements&#x20;
+
+**OpenAPI Spec Validation**: Microsoft employees working on a Sefaria-oriented project in the hackathon completed a validation audit of the Sefaria OpenAPI specification and published a formal patch/overlay with corrections. See the [full audit and reproduction guide](https://gist.github.com/Arithmomaniac/9df021bd09c1b69289dc920d9940f448).&#x20;
+
+### 📦 New Projects on Powered-by-Sefaria&#x20;
+
+Six projects were added to the ecosystem:&#x20;
+
+- **Lilmod** – AI-assisted reading and annotation workspace&#x20;
+- **ASHAN** – Daily Zohar study app aligned to parashat hashavua&#x20;
+- **Talmud Navigator** – Mobile tool with per-line sources and Bavli-Yerushalmi comparison&#x20;
+- **Mekoros** – AI research engine providing hallucination-free sources&#x20;
+- **Sefaria Translation Studio** – Local AI-assisted translation with human editorial review&#x20;
+- **Torah MCP** – Claude integration via Model Context Protocol for grounded AI responses&#x20;
+- **Notable submission**: AutoParashah – an AI-powered weekly publication with interpretive analysis of Rashi commentary, available in 4 languages (EN, PT, ES, FR).
+
+  &#x20;[Submit your project here](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form)&#x20;
+
+### 💡 Community Insight&#x20;
+
+Developers raised an interesting point: most ecosystem apps could benefit from MCP server implementations to enable interoperability and complementary use cases through AI assistants like Claude. **SeferAI** was highlighted as already offering this capability.
+
+## August 28th, 2026: Weekly Review
+
+### Notable Questions & Updates&#x20;
+
+- **Kehati Commentary Status** - Community member inquired about availability of Kehati's commentary on the Mishnah (including English translation)&#x20;
+- **Response:** Sefaria team confirmed it's on the roadmap for future release, though specific timeline wasn't provided. Underlying reasons (likely copyright-related) weren't detailed in the response.&#x20;
+
+### Interesting Insights&#x20;
+
+**Graph Data Opportunities**
+
+- Discussion emerged around potential GraphQL/data analysis use cases&#x20;
+- **Key insight:** Community identified valuable analytics opportunities around source sheet usage patterns: Most/least frequently used verses, verse co-occurrence patterns (which texts are used together), comparative analysis of popular vs. underutilized readings. This could provide interesting metrics for understanding how Jewish texts are being studied and taught on the platform&#x20;
+- **Note:** This week's activity was relatively light with focused discussion on one feature request and exploratory data analysis ideas. No technical issues or bug reports were logged.
+
 ## August 21st, 2026: Weekly Review
 
 ### **New Community Project**:&#x20;
