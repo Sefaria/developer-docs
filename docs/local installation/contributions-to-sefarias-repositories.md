@@ -1,7 +1,9 @@
 ---
-title: Contributions to Sefaria's Repositories
+title: Public Contributions
 deprecated: false
 hidden: false
+link:
+  new_tab: false
 metadata:
   robots: index
 ---
