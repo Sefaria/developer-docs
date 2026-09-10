@@ -13,6 +13,15 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+### Notable Projects & Announcements&#x20;
+
+- **Sefarim Demo Launch** – A community member announced the public release of [https://demo.sefarim.net](https://demo.sefarim.net), an LLM-powered application that generates Torah-related content with citation verification against primary sources. The demo includes a 5-question free tier and full app registration. Notably, extensive LLM model testing was conducted (Opus 5, Fable 5.1, GPT 6 Astra, GPT 5.6 Terra) before settling on Opus 4.8. This is a good example of rigorous model evaluation for Sefaria use cases.&#x20;
+- **Phrase-Based Textual Connection Search** – Another developer is building a specialized search tool that identifies remmez-level (allusion) connections across the Tanach, with a companion tool for drosh/sod (homiletic/mystical) analysis leveraging Chassidic and Kabbalistic texts. The application targets Torah study groups and drosh preparers seeking to move beyond p'shat (literal) interpretation. An interesting use case for semantic search in Talmudic/Kabbalistic contexts.&#x20;
+
+### Community Growth&#x20;
+
+The Discord saw a surge of new members on September 7th, attributed to a _Sefaria Scoop_ email announcement. Worth monitoring engagement patterns as the community scales. --- **Recommendation**: The Sefarim project's approach to LLM citation verification could be valuable documentation for developers building AI-assisted Sefaria applications.
+
 ## September 4th, 2026: Weekly Review
 
 ### &#x20;🚨 Infrastructure Alert&#x20;
