@@ -13,6 +13,8 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## September 11th, 2026: Weekly Review
+
 ### Notable Projects & Announcements&#x20;
 
 - **Sefarim Demo Launch** – A community member announced the public release of [https://demo.sefarim.net](https://demo.sefarim.net), an LLM-powered application that generates Torah-related content with citation verification against primary sources. The demo includes a 5-question free tier and full app registration. Notably, extensive LLM model testing was conducted (Opus 5, Fable 5.1, GPT 6 Astra, GPT 5.6 Terra) before settling on Opus 4.8. This is a good example of rigorous model evaluation for Sefaria use cases.&#x20;
