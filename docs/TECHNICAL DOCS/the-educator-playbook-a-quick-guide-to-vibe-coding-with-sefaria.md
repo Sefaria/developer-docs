@@ -11,7 +11,7 @@ Welcome to the Educator’s Playbook! Below, you’ll find information about how
 [I want to build with learning schedules (i.e. Parasha, Daf Yomi etc)](https://developers.sefaria.org/#prompt-1-i-want-to-build-with-text-related-data)
 [I want to build with linked texts data (how different texts connect)](https://developers.sefaria.org/docs/the-educator-playbook-a-quick-guide-to-vibe-coding-with-sefaria#prompt-3-i-want-to-build-with-data-about-linked-texts)
 [I want to build with languages and translations of texts](https://developers.sefaria.org/docs/the-educator-playbook-a-quick-guide-to-vibe-coding-with-sefaria#prompt-3-i-want-to-build-with-data-about-linked-texts)
-I want my AI to see all the data available from Sefaria
+[I want my AI to see all the data available from Sefaria](https://developers.sefaria.org/docs/the-educator-playbook-a-quick-guide-to-vibe-coding-with-sefaria#prompt-3-i-want-to-build-with-data-about-linked-texts)
 
 ### Prompt #1: I want to build with text-related data
 
