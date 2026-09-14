@@ -7,7 +7,7 @@ metadata:
 ---
 Welcome to the Educator’s Playbook! Below, you’ll find information about how to make sure you get the data you need from Sefaria’s database. Click the links below to see what to add to a specific prompt you have to ensure your AI Assistant is building the tool you intend it to build.
 
-I want to build with text data
+[I want to build with text data](https://developers.sefaria.org/#prompt-1-i-want-to-build-with-text-related-data)
 I want to build with learning schedules (i.e. Parasha, Daf Yomi etc)
 I want to build with linked texts data (how different texts connect)
 I want to build with languages and translations of texts
@@ -93,7 +93,6 @@ Fetch the complete documentation index at: [https://developers.sefaria.org/llms.
 
 ### Prompt #3: I want to build with data about linked texts
 
-
 To build with linked texts, enter your prompt, then add the following text on the line below it. This ensures that the AI Assistant knows the correct pathways to use to retrieve Sefaria’s data.
 
 ```text
@@ -125,7 +124,6 @@ Fetch the complete documentation index at: [https://developers.sefaria.org/llms.
 
 ### Prompt #4: I want to build with languages and translations of texts
 
-
 To build with languages and translations, input your prompt, then add the following text on the line below your prompt. This ensures that the AI Assistant knows the correct pathways to use to retrieve Sefaria’s data.
 
 ```text
@@ -156,7 +154,6 @@ Fetch the complete documentation index at: [https://developers.sefaria.org/llms.
 <br />
 
 ### Prompt #5: I want my AI to see all the data available from Sefaria
-
 
 To build generally with Sefaria’s data, input your prompt, then add the following text on the line below your prompt. This ensures that the AI Assistant knows the correct pathways to use to retrieve Sefaria’s data.
 
