@@ -13,6 +13,61 @@ Sefaria hosts a Developer Community on Discord where folks can learn, build and 
 
 # Archive
 
+## October 5th, 2026: Weekly Review
+
+### Notable Discussion
+
+[Sefaria Frontend Toolkit](https://github.com/Arithmomaniac/sefaria-frontend-toolkit) Feedback - Previously, a developer shared a new Sefaria web components library, which generated valuable early feedback from other developers, including one who is building [Sefarim](https://sefarim.net) – an AI Q\&A system over the Sefaria library with multi-language support and cited sources.&#x20;
+
+Key Requests/Issues Raised:&#x20;
+
+1. **Language Fallback Support**: Components are currently fixed to Hebrew/English. Request for French language support with graceful fallback to English when translations unavailable.&#x20;
+2. &#x20;**Licensing**: GPL-3.0 is incompatible with browser-bundled web apps. Request to consider more permissive licenses (MIT/Apache).&#x20;
+3. **NPM Distribution**: GitHub Packages token requirements create friction for deployments. Request for standard npm registry publishing.
+
+General consistency improvements and language fallback support are in scope, though language fallbacks may require composing lower-level components
+
+- Documentation updates planned to clarify component composition patterns&#x20;
+- Cannot comment on licensing/distribution plans yet – "stay tuned"&#x20;
+
+Worth noting: This exchange highlights real adoption friction points for new open-source libraries: language i18n, license compatibility, and distribution convenience are blocking factors for potential users.
+
+## September 25th, 2026: Weekly Review
+
+### New Tools & Libraries&#x20;
+
+**Sefaria Frontend Toolkit Alpha Released** - A developer announced an early alpha of the [Sefaria Frontend Toolkit](https://github.com/Arithmomaniac/sefaria-frontend-toolkit), a new project aimed at simplifying Sefaria integration.&#x20;
+
+The toolkit consists of three components:&#x20;
+
+1. **API Client** - Auto-generated from OpenAI definitions with enhancements&#x20;
+2. **Text Processing Library** - Transforms inline tags to safe HTML and handles punctuation&#x20;
+3. **Web Components** - Framework-agnostic components compatible with React, Alpine.js, and Vanilla JS&#x20;
+
+**Status:** Early alpha with incomplete documentation. Developers interested in testing should grab the release and provide feedback. More details expected soon.&#x20;
+
+This toolkit could be valuable for developers building Sefaria integrations, particularly those looking for a standardized way to handle Sefaria text rendering across different JavaScript frameworks. The framework-agnostic approach via Web Components is worth noting for teams with mixed tech stacks.
+
+## September 18th, 2026: Weekly Review
+
+### Community & Culture&#x20;
+
+The Sefaria Developer Outreach Team shared a thoughtful Rosh Hashanah reflection on the community's recent accomplishments, highlighting shipped projects ranging from AI-powered study tools to offline apps and MCP integrations. The message emphasized the collaborative spirit developers have shown in helping each other and sharing institutional knowledge.&#x20;
+
+### Notable Projects & Insights&#x20;
+
+**Sefarim Demo** — A developer showcased an impressive project (demo.sefarim.net) built on the Sefaria API with hebcal integration for date/Shabbat calculations. Notably, it's running on a **Raspberry Pi with Cloudflare tunnel**, demonstrating that sophisticated Sefaria-powered applications don't require heavy infrastructure.&#x20;
+
+**TTS Pronunciation Tip** — For developers working with text-to-speech, Kokoro (a 82M parameter TTS model) properly handles IPA syntax and correctly pronounces Sefaria as /səfˈɑːɹiə/.&#x20;
+
+### Support Takeaway&#x20;
+
+When building on Sefaria's APIs, consider pairing with complementary services like hebcal for calendar/timing features—it's a proven winning combination.&#x20;
+
+### Call to Action&#x20;
+
+A matching gift campaign is active through October 5, with a $5,000 community fundraising goal (1:1 match). Developers are invited to contribute to support Sefaria's free data and services. [Donate here](https://discord.com/channels/1240573950182817792/1240573950182817795/1556540700370141255).&#x20;
+
 ## September 11th, 2026: Weekly Review
 
 ### Notable Projects & Announcements&#x20;
