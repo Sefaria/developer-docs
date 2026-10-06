@@ -20,7 +20,7 @@ Welcome to the Educator’s Playbook! Below, you’ll find information about how
 ```text
 The Addendum
 
-When building this, please ONLY get texts from Sefaria via the most updated texts API endpoint, the documentation from developers.sefaria.org
+When building this, please *ONLY* get texts from Sefaria via the most updated texts API endpoint, the documentation from developers.sefaria.org
 
 Below is a summary of [https://developers.sefaria.org/reference/get-v3-texts](https://developers.sefaria.org/reference/get-v3-texts). Go to [https://developers.sefaria.org/reference/get-v3-texts.md](https://developers.sefaria.org/reference/get-v3-texts.md) to get the full documentation and OpenAPI spec.
 
