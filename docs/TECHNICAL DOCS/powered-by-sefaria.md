@@ -36,6 +36,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 ### AI Projects
 
 - [AI Torah](https://aitorah.ai/) - Instant Torah answers to any question about Jewish law and life, drawing on the breadth of Sefaria's library.&#x20;
+- [AI Sefarim](https://aisefarim.com) - An English-language library of kabbalistic and chassidic texts, many never before translated, that pulls each passage and its linked sources from Sefaria to create AI-assisted elucidations, with daily study podcasts and videos.
 
 * [Ask the Rambam RAG Tutorial](https://www.youtube.com/watch?v=CNIO2MsfeTo)  - A retrieval-augmented Q\&A tool that answers user questions exclusively from the text of Rambam's Mishneh Torah, ensuring every response is grounded in the source itself rather than generative speculation.
 * [Build a Torah-Powered AI Chatbot](https://medium.com/@trademamba/build-a-torah-powered-ai-chatbot-83483b09d757) - A tutorial for building a simple Retrieval-Augmented Generation (RAG) chatbot that answers questions using only the Five Books of Moses (Chumash).
@@ -56,6 +57,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 * [RavGPT.ai](https://ravgpt.ai/) - An AI model designed to make Torah learning more accessible.
 * [Seferai.org](https://seferai.org/) - Helps users explore Jewish texts with AI-powered insights.
 * [Sefaria Chat](https://sefaria-chat.up.railway.app/) - This AI-powered tool provides cited, sourced answers to questions about Jewish texts, drawn directly from sources in the Sefaria Library.
+* [Today's Daf](https://daf-yomi.dev) - A free daily Daf Yomi page for Talmud newcomers that pairs the day's English text from Sefaria with a short, clearly labeled AI note limited to the words on that page. Source code: [https://github.com/eichenbaumj/daf-yomi](https://github.com/eichenbaumj/daf-yomi)
 * [Torah Chat](https://apps.microsoft.com/detail/9pkgfhbjlz52?hl=en-US\&gl=US) - A desktop app that uses AI to support exploration of the Sefaria Library by retrieving cited passages with Hebrew and Aramaic alongside English translations and commentaries. See the [source code on Github](https://github.com/jleznek/torah-chat).
 * [Torah Research Board](https://torah-research.yaakovbeckerman.com/) - An infinite-canvas research tool that pulls Torah texts and commentaries from Sefaria and pairs them with an AI analysis engine, designed for deep, multi-source study across foundational topics.
 * [Torah Scholar (OpenClaw/MCP Format)](https://github.com/abeperl/torah-scholar) - This AI agent skill (OpenClaw/MCP format) gives AI assistants instant access to the Sefaria Library, allowing users to search texts, retrieve verses in Hebrew and English, find commentaries, and more.
