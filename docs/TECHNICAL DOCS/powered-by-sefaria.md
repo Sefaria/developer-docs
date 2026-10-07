@@ -8,12 +8,12 @@ excerpt: >-
   project!](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form) 
 deprecated: false
 hidden: false
+link:
+  new_tab: false
 metadata:
   title: ''
   description: ''
   robots: index
-next:
-  description: ''
 ---
 > _Please note: All the projects below are built by individuals unaffiliated with Sefaria. While they rely on our data and API, they represent only the developers who created them. Sefaria is proud to power a diverse collection of projects, as this is a key part of our mission — providing the tech that brings the Jewish people into the digital age. If you encounter any challenges with the tools and products below, please contact the relevant developer._
 
@@ -102,9 +102,11 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Talmud.page](https://talmud.page/) - A simpler way to read the Talmud (among other texts), optimized for both mobile and web reading experiences.
 - [Talmud Navigator](https://talmud-lookup.talmud-lookup-worker.workers.dev/) - A mobile-friendly study tool that aggregates per-line Tanakh sources for every daf, offers tap-to-lookup for any Hebrew word, and enables side-by-side Bavli-Yerushalmi comparison — all built on Sefaria's API.
 - [Tanach Study](https://tanachstudy.com/) - Online education platform that revolutionizes the way we study our foundational texts.
+- [Tehillim Opening](https://tehillim.bellelli.info/) - A bilingual Hebrew-English Tehillim and Tanakh study app that combines Sefaria texts with daily study, personalized openings, segulot, and memorial prayers.
 - [Tehillim Reader](https://arithmomaniac.github.io/tehillim-reader/) - A kid-friendly Tehillim reading site that highlights each word or syllable as you navigate via keyboard, mouse, or scroll wheel, with text pre-fetched from the Sefaria API and bundled for fast, offline-capable use. [Github documentation](https://github.com/Arithmomaniac/tehillim-reader)
 - [The Daf Yomi Portal](http://daf-yomi.com/dafYomi.aspx) - App designed to support daily Talmud study, with English text from the Sefaria Library.
 - [The People's Talmud](https://www.thepeoplestalmud.com/) - Free, searchable online platform offering over 7,500 sections of the Talmud, 3,500 thematic links, and 3,000 one-line brain teasers designed to guide users through the Talmud’s wisdom in a personalized, curiosity-driven way.
+- [The Tanaj Hub](https://thetanajhub.com) - An app for studying and exploring the Tanakh through texts, questions, and games, built by a Chidon HaTanakh participant to make learning fun and creative.
 - [Torah Framework](https://www.torahframework.com/) - A Torah learning tool that guides you through eight interconnected lenses — from themes and concepts to history and practical skills.
 - [Torah Library Add On for Google Docs](https://workspace.google.com/marketplace/app/torah_library/947071438143) - Helps users create beautiful and collaborative source sheets with ease.
 - [TorahApp](https://thetorahapp.org/download?\&utm_campaign=9d917a99) - Integrates the Sefaria Library with shiurim (lessons) from YUTorah & OUTorah.
@@ -175,6 +177,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Bisl Torah](https://github.com/DaveDushi/bisl-torah)  - A developer-focused tool that surfaces a daily bite-sized Torah learning snippet from the Sefaria Library in a popup beside your terminal while an AI coding agent processes your prompt.
 - [Learn](https://github.com/luvchurchill/learn) - CLI for accessing text from Sefaria in the terminal.
 - [Sefaria Sidebar Extension, code on GitHub](https://github.com/DovOps/SefariaSidebarExtension/) - Sidebar that brings up Sefaria resources on other related websites.
+- [Nextcloud Dashboard](https://apps.nextcloud.com/apps/sefaria_dashboard) - A Nextcloud dashboard widget that shows the Sefaria learning schedule right on a user's Nextcloud home screen.
 - [I’m Learning Lucky, code on GitHub](https://github.com/jmcaplan/sefariaExtension) - Chrome browser extension for Sefaria.org utilizing the [Sefaria API](https://github.com/Sefaria/Sefaria-Project/wiki/API-Documentation#sefaria-apis) to raise fun insights while studying a text on the platform.
 - [Talmud Sidebar Extension, code on GitHub](https://chrome.google.com/webstore/detail/talmud-sidebar-extension/dmpiiciebnbekblfbcdeogjkbbmeeimi) - Brings the comprehensive Sefaria library to any webpage that is learning a specific daf of Talmud.
 - [Alexa Torah Scholar, code on GitHub](https://github.com/pzp1997/alexa-torah-scholar) - Ask Amazon Alexa to recite verses and commentary from Tanakh.
