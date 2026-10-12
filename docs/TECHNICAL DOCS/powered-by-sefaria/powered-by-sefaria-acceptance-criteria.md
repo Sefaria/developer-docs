@@ -6,6 +6,8 @@ metadata:
   robots: index
 ---
 Powered by Sefaria is a curated showcase through which Sefaria highlights and amplifies projects that further our mission: making Jewish texts freely and meaningfully accessible to the world. The list of projects reflects Sefaria’s effort to curate a selection of submissions that we’re excited to highlight. Use of Sefaria’s API or data does not automatically result in inclusion.
+
+
 What we look for:
 
 Sefaria prioritizes projects that:
