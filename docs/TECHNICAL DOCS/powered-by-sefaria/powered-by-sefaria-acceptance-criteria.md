@@ -1,5 +1,5 @@
 ---
-title: Powered by Sefaria Acceptance Criteria
+title: Project Acceptance Criteria
 deprecated: false
 hidden: false
 metadata:
