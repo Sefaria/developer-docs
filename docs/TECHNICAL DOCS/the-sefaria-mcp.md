@@ -33,7 +33,7 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
 ## Quick Setup Guide
 
 1. Copy the relevant MCP URL:
-   1. Sefaria Texts MCP: [https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)
+   1. Sefaria Texts MCP: [https://mcp.sefaria.org/mcp](https://mcp.sefaria.org/sse)
    2. Sefaria Developers MCP: [https://developers.sefaria.org/mcp](https://developers.sefaria.org/mcp)
 2. Ensure `no auth` option is toggled
 3. Add to your AI Tool:
