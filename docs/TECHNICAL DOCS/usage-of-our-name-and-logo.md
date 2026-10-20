@@ -44,6 +44,12 @@ Each text in the Sefaria Library varies slightly in terms of copyright status an
 > - Underneath the title, background information, and (when available) date of composition, locate the Current Version subheading.
 > - Underneath the details about the current version being displayed, locate information about the source of acquisition.
 
+## Links License
+
+Sefaria’s links dataset (the connections between texts in our library, such as commentaries, quotations, and parallel passages) is released under the [CC-BY license](https://creativecommons.org/licenses/by/4.0/).
+
+Under this license you may copy, redistribute, adapt, and build on the links data for any purpose, including commercial use, as long as you give appropriate attribution. That means crediting Sefaria as the source, linking to the license, and saying whether you made changes.&#x20;
+
 ## Usage of Sefaria's Name and Logo
 
 While we make our data and code freely available for others to reuse, the same is not true of the name Sefaria and associated logos, which are under trademark. This trademark is essential, as it clarifies to users whether a particular application was developed by Sefaria or by a third party. That being said, we do offer the following badges for open use. These indicate to users that your project is powered by Sefaria, though not developed by Sefaria.
@@ -51,5 +57,3 @@ While we make our data and code freely available for others to reuse, the same i
 ![](https://files.readme.io/87c5652-image.png)
 
 ![](https://files.readme.io/dcee0a8-image.png)
-
-<br />
