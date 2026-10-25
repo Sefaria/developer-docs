@@ -20,7 +20,7 @@ An MCP is a standardized way for LLMs to connect to external data sources and AP
 
 This tool allows your AI assistant of choice to converse directly with the Sefaria API. This means your LLM can search and retrieve any data and write the code you need to build tools and programs based on Sefaria’s indices. Connect to Claude Code, Cursor, or any other MCP-Compatible AI tool, and watch the JavaScript write itself.
 
-### The Sefaria Texts MCP \[[https://mcp.sefaria.org/sse](https://mcp.sefaria.org/sse)]
+### The Sefaria Texts MCP \[[[https://mcp.sefaria.org/mcp](https://mcp.sefaria.org/sse)](https://mcp.sefaria.org/sse)]
 
 This tool allows your AI assistant of choice to converse directly with the Sefaria Library. This means your LLM can search and retrieve any text from our database and return a response with precise citations to specific sources. Now, when you ask Claude or ChatGPT what Rashi says about Genesis 1:6, you can be sure you’re getting a precise answer.
 
