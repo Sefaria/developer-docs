@@ -154,6 +154,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Gematriaphone](http://alexboxer.com/gematriaphone/) - Tool for turning Torah text into music by using Gematria.
 - [Liz Shayne's Visualizations of Sefaria Links](https://lizshayne.wordpress.com/tag/sefaria/) - Provides an artistic expression of the interconnections found in the Sefaria Library ([code on GitHub](https://github.com/LizShayne/Sefaria-Data-Viz)).
 - [Quantified Cantillation](https://quantifiedcantillation.nl/) - Provides users with a way to find out the possibilities of trope sequences as well as the probability of transition from one to another.
+- [PARDES](https://pardes.hive-project.com) - A research project that tests claims of hidden codes and structure in the Hebrew Bible, its ancient versions, and rabbinic literature against controls fixed in advance, publishing every result including nulls, using Sefaria's data export.
 - [Russel Neiss's Micrography](https://github.com/rneiss/micrography) - Converts an image and Jewish textual source into a computer-generated micrograph.
 - [Sefer Similarity Map ](https://jhostyk.github.io/SeferSimilarityMap/)- Uncovers the substructure of Jewish texts and visualizes the underlying relationships between them.
 - [Sefaria Networks](https://github.com/scopreon/sefaria-networks) - Studies the networks that use Sefaria.
