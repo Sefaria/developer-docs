@@ -201,3 +201,4 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [Stndr](https://github.com/danilius/Stndr) -A focused desktop Jewish text reader that brings the Sefaria library offline with tabbed navigation, commentaries, cross-references, and advanced search, built for in-depth personal study.
 - [Torah MCP](https://torah-mcp.jonathan-ef2.workers.dev) - An MCP server that connects Claude directly to Sefaria's texts, commentaries, and study calendars, ensuring AI answers to halachic and textual questions are grounded in the actual sources rather than model memory.
 - [Yolaroo Library of Jewish Texts, code on GitHub](https://github.com/yolaroo/SefariaiOSv0.1)
+- [סוגריים](https://sograyim-word.vercel.app/get/) -A Microsoft Word add-in that replaces source references typed in curly braces, such as {שמות ב, ג}, with the full source text in your document using the Sefaria API.
