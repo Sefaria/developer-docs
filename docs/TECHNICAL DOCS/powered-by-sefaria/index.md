@@ -70,6 +70,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 ### Learning & Study Tools
 
 - [AlHaTorah](https://alhatorah.org/) - Tools for studying Tanakh, including biblical commentaries sourced from the Sefaria Library.
+- [AutoParasha](https://autoparashah.org/) - Weekly multilingual Parashah and Haftarah study with AI-assisted analysis, Rashi sources, audio, illustrations, and a searchable archive.
 - [AllDaf](https://alldaf.org/) - Daf Yomi app created by the Orthodox Union with an English translation of the Talmud sourced from the Sefaria Library.
 - ASHAN — Timely Zohar Portions - A Hebrew-calendar Android app that delivers daily Zohar study aligned to the weekly parasha, powered by Sefaria's texts API.
 - [Arukh HaShulchan Yomi](http://www.aishdas.org/ahs-yomi/) - Daily learning about the halakhah (Jewish law) that governs daily life.
