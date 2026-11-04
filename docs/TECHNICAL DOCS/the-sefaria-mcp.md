@@ -40,7 +40,8 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
    1. **Claude**: Go to settings, add as a Custom Connector, enable.
    2. **Cursor**: Configure in MCP settings
    3. **ChatGPT**: Go to settings, then plugins, navigate to browse plugins, click on the "plus" button, configure accordingly
-   4. **Other Tools:** Use the MCP URL in your client's server configuration
+   4. **Gemini**: Click on the Gemini icon in the sidebar, click on the "more" button, followed by the "customize" button. Then, go to the "connectors" tab and click on the "+ custom" button and add the MCP URL.&#x20;
+   5. **Other Tools:** Use the MCP URL in your client's server configuration
 4. Start Exploring:
    1. Using the Sefaria Texts MCP, ask your questions about Jewish texts. For example:
       1. "What does Genesis 1:1 say?" or "Find me talmudic discussions about kindness"
