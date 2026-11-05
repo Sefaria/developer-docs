@@ -163,6 +163,7 @@ In addition to the projects below, there are also 150+ websites using the Sefari
 - [The Talmud Commentary Atlas](https://github.com/AChompSitsIn/The-Talmud-Commentary-Atlas?tab=readme-ov-file#visualizations) - Visualization of a selection of Sefaria’s data, including five visualizations presenting perspectives about Jewish scholarly commentaries on the Babylonian Talmud.
 - [Visualizations of Sefaria](https://guedalia.github.io/testab/test) - Provides visualizations of the landscape of Jewish texts.
 - [Eitz HaRabanim](https://eitz-harabanim.com/) - This project uses Sefaria data to create an interactive tree visualization of Talmudic sages, showing their teacher–student relationships and chronological connections, with dedicated pages for each rabbi. [Github documentation](https://github.com/ruebeckscube/talmud-family-tree)
+- [Talmud Map](https://talmudmap.com/) - An interactive map of where and when the Tannaim and Amoraim lived, letting users select any page of Talmud to see the generations of every sage who appears on it and where each one lived, built on Sefaria’s library.
 
 ***
 
