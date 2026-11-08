@@ -47,3 +47,5 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
       1. "What does Genesis 1:1 say?" or "Find me talmudic discussions about kindness"
    2. Using the Sefaria Developers MCP, ask the AI assistant to write code by pulling from our API. For example:
       1. “Help me build a GUI which uses the Sefaria API to focus on Sforno's commentary on Genesis.”
+
+Curious to learn more? Explore the code [here](https://github.com/Sefaria/sefaria-mcp).&#x20;
