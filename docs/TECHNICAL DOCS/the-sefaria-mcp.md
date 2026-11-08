@@ -14,7 +14,7 @@ The Sefaria MCP (Model Context Protocol) servers connect your favorite AI tools 
 
 ## What is an MCP?
 
-An MCP is a standardized way for LLMs to connect to external data sources and APIs. It's a bridge that lets your AI chat with databases, search engines, and specialized libraries. Think of it as an adaptor cable that lets your AI tools connect seamlessly with an external source.
+An MCP is a standardized way for LLMs to connect to external data sources and APIs. It's a bridge that lets your AI chat with databases, search engines, and specialized libraries. Think of it as an adaptor cable that lets your AI tools connect seamlessly with an external source.<br /><br />For those looking for a technical deep-dive, you can explore the code [here](https://github.com/Sefaria/sefaria-mcp).&#x20;
 
 ### The Sefaria Developers MCP \[[https://developers.sefaria.org/mcp](https://developers.sefaria.org/mcp)]
 
@@ -47,5 +47,3 @@ This tool allows your AI assistant of choice to converse directly with the Sefar
       1. "What does Genesis 1:1 say?" or "Find me talmudic discussions about kindness"
    2. Using the Sefaria Developers MCP, ask the AI assistant to write code by pulling from our API. For example:
       1. “Help me build a GUI which uses the Sefaria API to focus on Sforno's commentary on Genesis.”
-
-Curious to learn more? Explore the code [here](https://github.com/Sefaria/sefaria-mcp).&#x20;
