@@ -1,11 +1,5 @@
 ---
 title: Projects Powered By Sefaria
-excerpt: >-
-  Below is a partial list of third-party projects created by using Sefaria's API
-  and open-source data. We love to see what other people are building with our
-  materials. If you'd like to be featured on this page, [please tell us about
-  your
-  project!](https://sefaria.formstack.com/forms/powered_by_sefaria_submission_form) 
 deprecated: false
 hidden: false
 link:
@@ -15,7 +9,7 @@ metadata:
   description: ''
   robots: index
 ---
-> _Please note: All the projects in the gallery are built by individuals unaffiliated with Sefaria. While they rely on our data and API, they represent only the developers who created them. Sefaria is proud to power a diverse collection of projects, as this is a key part of our mission — providing the tech that brings the Jewish people into the digital age. If you encounter any challenges with the tools and products below, please contact the relevant developer._
+<br />
 
 <HTMLBlock>{`
 <style>
