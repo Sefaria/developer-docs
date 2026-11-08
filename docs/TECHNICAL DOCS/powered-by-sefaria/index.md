@@ -9,8 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-<br />
-
 <HTMLBlock>{`
 <style>
   .pbs-cta, .pbs-cta * { box-sizing: border-box; }
