@@ -2,7 +2,7 @@
 title: Getting Started With the Sefaria API
 excerpt: >-
   Learn how to use the Sefaria API to access Jewish texts and their
-  interconnections. Get started without needing API keys or authorization.
+  interconnections, and get a free API key for your project.
 deprecated: false
 hidden: false
 link:
@@ -33,7 +33,7 @@ For additional documentation, [check out our technical docs](https://developers.
 
 ## Getting Started
 
-You don't need much in order to get started with our API; all of our currently documented endpoints can be accessed without API keys, tokens, or authorization.
+You don't need much in order to get started with our API. **Get a free [API key](ref:api-keys)** in Developer Settings on sefaria.org and send it in the `x-api-key` header. Some endpoints, such as semantic search, require a key.
 
 **Need a simple example?** In this [tutorial](ref:tutorial-dvar-torah-outliner), we guide you step by step through a short script that uses a handful of endpoints.
 
