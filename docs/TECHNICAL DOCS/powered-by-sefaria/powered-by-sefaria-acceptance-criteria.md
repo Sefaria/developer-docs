@@ -17,6 +17,8 @@ Sefaria prioritizes projects that:
 - Contribute positively to the communities and audiences Sefaria serves
 - Demonstrate creativity, scholarship, or accessibility in ways that align with Sefaria’s values
 
+Projects that study movements or traditions historically related to Judaism through an academic or educational lens may be eligible, provided they meet the other eligibility criteria.
+
 How review works:
 
 Sefaria reviews each application individually and exercises full discretion in deciding whether a project is showcased. Applications will not be selected if they violate our terms of service or:
